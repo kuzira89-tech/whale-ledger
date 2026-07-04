@@ -1,0 +1,54 @@
+name: Update 13F data
+
+# 13F filings land quarterly (within 45 days of quarter-end). We poll on
+# weekday evenings during the filing windows; the pipeline is idempotent and
+# only commits when data actually changes, so frequent no-op runs are cheap.
+on:
+  schedule:
+    - cron: "17 22 * * 1-5"   # 22:17 UTC, Mon-Fri
+  workflow_dispatch: {}         # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-13f
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch filings and rebuild data.js
+        env:
+          # REQUIRED by SEC fair-access. Set repo secret EDGAR_USER_AGENT to
+          # something like:  whale-ledger youremail@example.com
+          EDGAR_USER_AGENT: ${{ secrets.EDGAR_USER_AGENT }}
+        run: |
+          python pipeline/run.py --cik 1067983 --quarters 8
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data site/data)" ]; then
+            git add data site/data
+            git commit -m "data: refresh 13F snapshots ($(date -u +%Y-%m-%d))"
+            git push
+          else
+            echo "No data changes."
+          fi
+
+  # ------------------------------------------------------------------
+  # Deployment is handled by Cloudflare Pages' Git integration:
+  #   Project settings -> Build:
+  #     Build command:        (none)
+  #     Build output dir:     site
+  # Every push to main redeploys automatically. No secrets needed there.
+  # ------------------------------------------------------------------

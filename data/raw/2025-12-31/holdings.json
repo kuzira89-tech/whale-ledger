@@ -1,0 +1,299 @@
+{
+ "period": "2025-12-31",
+ "holdings": [
+  [
+   "AAPL",
+   "Apple Inc",
+   "",
+   227917808,
+   61961735283
+  ],
+  [
+   "AXP",
+   "American Express Co",
+   "",
+   151610700,
+   56088378465
+  ],
+  [
+   "BAC",
+   "Bank of America Corp",
+   "",
+   517295934,
+   28451276370
+  ],
+  [
+   "KO",
+   "Coca-Cola Co",
+   "",
+   400000000,
+   27964000000
+  ],
+  [
+   "CVX",
+   "Chevron Corp",
+   "",
+   130156362,
+   19837131131
+  ],
+  [
+   "MCO",
+   "Moody's Corp",
+   "",
+   24669778,
+   12602556092
+  ],
+  [
+   "OXY",
+   "Occidental Petroleum Corp",
+   "",
+   264941431,
+   10894391643
+  ],
+  [
+   "CB",
+   "Chubb Ltd",
+   "",
+   34249183,
+   10689854998
+  ],
+  [
+   "KHC",
+   "Kraft Heinz Co",
+   "",
+   325634818,
+   7896644337
+  ],
+  [
+   "GOOGL",
+   "Alphabet Inc",
+   "CL A",
+   17846142,
+   5585842446
+  ],
+  [
+   "DVA",
+   "DaVita Inc",
+   "",
+   31759065,
+   3608147375
+  ],
+  [
+   "KR",
+   "Kroger Co",
+   "",
+   50000000,
+   3124000000
+  ],
+  [
+   "V",
+   "Visa Inc",
+   "CL A",
+   8297460,
+   2910002197
+  ],
+  [
+   "SIRI",
+   "Sirius XM Holdings Inc",
+   "",
+   124807117,
+   2495518305
+  ],
+  [
+   "MA",
+   "Mastercard Inc",
+   "CL A",
+   3986648,
+   2275897610
+  ],
+  [
+   "VRSN",
+   "VeriSign Inc",
+   "",
+   8989880,
+   2184091346
+  ],
+  [
+   "STZ",
+   "Constellation Brands Inc",
+   "",
+   13000000,
+   1793480000
+  ],
+  [
+   "COF",
+   "Capital One Financial Corp",
+   "",
+   7150000,
+   1732874000
+  ],
+  [
+   "UNH",
+   "UnitedHealth Group Inc",
+   "",
+   5039564,
+   1663610472
+  ],
+  [
+   "DPZ",
+   "Domino's Pizza Inc",
+   "",
+   3350000,
+   1396347000
+  ],
+  [
+   "ALLY",
+   "Ally Financial Inc",
+   "",
+   29000000,
+   1313410001
+  ],
+  [
+   "AON",
+   "Aon plc",
+   "",
+   3602995,
+   1271424876
+  ],
+  [
+   "NUE",
+   "Nucor Corp",
+   "",
+   6407749,
+   1045167939
+  ],
+  [
+   "LLYVK",
+   "Liberty Media Corp (Liberty Live)",
+   "CL C",
+   10917661,
+   907912688
+  ],
+  [
+   "LEN",
+   "Lennar Corp",
+   "",
+   7050950,
+   724837660
+  ],
+  [
+   "POOL",
+   "Pool Corp",
+   "",
+   3068885,
+   702007444
+  ],
+  [
+   "AMZN",
+   "Amazon.com Inc",
+   "",
+   2276000,
+   525346320
+  ],
+  [
+   "LPX",
+   "Louisiana-Pacific Corp",
+   "",
+   5664793,
+   457488683
+  ],
+  [
+   "LLYVA",
+   "Liberty Media Corp (Liberty Live)",
+   "CL A",
+   4986588,
+   406406923
+  ],
+  [
+   "NYT",
+   "New York Times Co",
+   "CL A",
+   5065744,
+   351663948
+  ],
+  [
+   "HEI.A",
+   "HEICO Corp",
+   "CL A",
+   1294612,
+   326798907
+  ],
+  [
+   "FWONK",
+   "Liberty Media Corp (Formula One)",
+   "CL C",
+   3018555,
+   297357853
+  ],
+  [
+   "CHTR",
+   "Charter Communications Inc",
+   "CL A",
+   1060882,
+   221459118
+  ],
+  [
+   "LAMR",
+   "Lamar Advertising Co",
+   "CL A",
+   1202410,
+   152201058
+  ],
+  [
+   "ALLE",
+   "Allegion plc",
+   "",
+   780133,
+   124212776
+  ],
+  [
+   "NVR",
+   "NVR Inc",
+   "",
+   11112,
+   81037260
+  ],
+  [
+   "JEF",
+   "Jefferies Financial Group Inc",
+   "",
+   433558,
+   26867589
+  ],
+  [
+   "DEO",
+   "Diageo plc",
+   "",
+   227750,
+   19647993
+  ],
+  [
+   "LILA",
+   "Liberty Latin America Ltd",
+   "CL A",
+   2396665,
+   17711354
+  ],
+  [
+   "LEN.B",
+   "Lennar Corp",
+   "CL B",
+   180980,
+   17214818
+  ],
+  [
+   "LILAK",
+   "Liberty Latin America Ltd",
+   "CL C",
+   1284020,
+   9578789
+  ],
+  [
+   "BATRK",
+   "Atlanta Braves Holdings Inc",
+   "SER C",
+   115428,
+   4553634
+  ]
+ ]
+}

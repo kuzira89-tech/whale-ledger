@@ -1,0 +1,32 @@
+{
+  "_note": "NOT from 13F. Manually maintained. Sources: Berkshire 10-Q consolidated balance sheet (cash / U.S. Treasury Bills / fixed-maturity bonds) and Japanese large-shareholding reports + Buffett's annual letter (the 5 trading houses). These figures do NOT feed the 13F weight/diff logic. Update by hand when new filings appear; see README. Roadmap: automate via 10-Q XBRL and EDINET.",
+  "japan": {
+    "as_of": "2025-12-31",
+    "cost_usd": 15400000000,
+    "market_usd": 35400000000,
+    "source": {
+      "ko": "일본 대량보유보고서 + 버핏 2025 연례서한 (2025년 말 기준)",
+      "ja": "日本の大量保有報告書 + バフェット2025年年次書簡 (2025年末時点)",
+      "en": "Japanese large-shareholding reports + Buffett's 2025 letter (as of end-2025)"
+    },
+    "holdings": [
+      {"code": "8058", "en": "Mitsubishi Corp", "ja": "三菱商事", "ko": "미쓰비시상사", "stake": "10.2%+"},
+      {"code": "8031", "en": "Mitsui & Co", "ja": "三井物産", "ko": "미쓰이물산", "stake": "10.1%"},
+      {"code": "8002", "en": "Marubeni Corp", "ja": "丸紅", "ko": "마루베니", "stake": "10.1%"},
+      {"code": "8053", "en": "Sumitomo Corp", "ja": "住友商事", "ko": "스미토모상사", "stake": "10.05%"},
+      {"code": "8001", "en": "ITOCHU Corp", "ja": "伊藤忠商事", "ko": "이토추상사", "stake": "8%+"}
+    ]
+  },
+  "balance_sheet": {
+    "source": {
+      "ko": "버크셔 10-Q 연결재무상태표",
+      "ja": "バークシャー 10-Q 連結貸借対照表",
+      "en": "Berkshire 10-Q consolidated balance sheet"
+    },
+    "by_period": {
+      "2025-09-30": {"cash": 76333000000, "tbills": 305367000000, "bonds": 17943000000, "cash_tbills": 381700000000},
+      "2025-12-31": {"cash": 51877000000, "tbills": 321434000000, "bonds": 17816000000, "cash_tbills": 373311000000},
+      "2026-03-31": {"cash": 58122000000, "tbills": 339261000000, "bonds": 17669000000, "cash_tbills": 397383000000}
+    }
+  }
+}

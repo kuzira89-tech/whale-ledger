@@ -1,0 +1,208 @@
+{
+ "period": "2026-03-31",
+ "holdings": [
+  [
+   "AAPL",
+   "Apple Inc",
+   "",
+   227917808,
+   57843260493
+  ],
+  [
+   "AXP",
+   "American Express Co",
+   "",
+   151610700,
+   45859204536
+  ],
+  [
+   "KO",
+   "Coca-Cola Co",
+   "",
+   400000000,
+   30420000000
+  ],
+  [
+   "BAC",
+   "Bank of America Corp",
+   "",
+   513624165,
+   25039178044
+  ],
+  [
+   "CVX",
+   "Chevron Corp",
+   "",
+   84375856,
+   17457364606
+  ],
+  [
+   "OXY",
+   "Occidental Petroleum Corp",
+   "",
+   264941431,
+   17221193015
+  ],
+  [
+   "GOOGL",
+   "Alphabet Inc",
+   "CL A",
+   54249798,
+   15600071913
+  ],
+  [
+   "CB",
+   "Chubb Ltd",
+   "",
+   34249183,
+   11162836215
+  ],
+  [
+   "MCO",
+   "Moody's Corp",
+   "",
+   24669778,
+   10762190653
+  ],
+  [
+   "KHC",
+   "Kraft Heinz Co",
+   "",
+   325634818,
+   7323527057
+  ],
+  [
+   "DVA",
+   "DaVita Inc",
+   "",
+   30100585,
+   4626158909
+  ],
+  [
+   "KR",
+   "Kroger Co",
+   "",
+   50000000,
+   3618000000
+  ],
+  [
+   "SIRI",
+   "Sirius XM Holdings Inc",
+   "",
+   124807117,
+   2880548260
+  ],
+  [
+   "DAL",
+   "Delta Air Lines Inc",
+   "",
+   39809456,
+   2646532635
+  ],
+  [
+   "VRSN",
+   "VeriSign Inc",
+   "",
+   8989880,
+   2232726597
+  ],
+  [
+   "COF",
+   "Capital One Financial Corp",
+   "",
+   7150000,
+   1304374500
+  ],
+  [
+   "NYT",
+   "New York Times Co",
+   "CL A",
+   15146535,
+   1268219376
+  ],
+  [
+   "ALLY",
+   "Ally Financial Inc",
+   "",
+   29000000,
+   1137670000
+  ],
+  [
+   "GOOG",
+   "Alphabet Inc",
+   "CL C",
+   3585215,
+   1028454775
+  ],
+  [
+   "LLYVK",
+   "Liberty Media Corp (Liberty Live)",
+   "CL C",
+   10587143,
+   996356028
+  ],
+  [
+   "LEN",
+   "Lennar Corp",
+   "",
+   10099642,
+   877052911
+  ],
+  [
+   "NUE",
+   "Nucor Corp",
+   "",
+   3907075,
+   660686383
+  ],
+  [
+   "LLYVA",
+   "Liberty Media Corp (Liberty Live)",
+   "CL A",
+   4986588,
+   456970925
+  ],
+  [
+   "LPX",
+   "Louisiana-Pacific Corp",
+   "",
+   5664793,
+   412113691
+  ],
+  [
+   "STZ",
+   "Constellation Brands Inc",
+   "",
+   632890,
+   94933500
+  ],
+  [
+   "NVR",
+   "NVR Inc",
+   "",
+   11112,
+   73226191
+  ],
+  [
+   "M",
+   "Macy's Inc",
+   "",
+   3038355,
+   54963842
+  ],
+  [
+   "LEN.B",
+   "Lennar Corp",
+   "CL B",
+   237703,
+   19995576
+  ],
+  [
+   "JEF",
+   "Jefferies Financial Group Inc",
+   "",
+   433558,
+   17892939
+  ]
+ ]
+}

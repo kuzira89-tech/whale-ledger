@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Build artifact for local preview (regenerated from index.html + data.js)
+site/preview.html
+
+# Node (only used for optional local render tests)
+node_modules/
+package-lock.json

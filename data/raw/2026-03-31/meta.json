@@ -1,0 +1,10 @@
+{
+  "period": "2026-03-31",
+  "filed": "2026-05-15",
+  "form": "13F-HR",
+  "accession": "0001193125-26-226661",
+  "total_value": 263095703570,
+  "summed_value": 263095703570,
+  "num_holdings": 29,
+  "source": "bootstrap: valuesider (derived from SEC 13F)"
+}
