@@ -1,0 +1,208 @@
+{
+ "period": "2026-06-30",
+ "holdings": [
+  [
+   "AAPL",
+   "Apple Inc",
+   "",
+   227917808,
+   65950296923
+  ],
+  [
+   "AXP",
+   "American Express Co",
+   "",
+   151610700,
+   51282319275
+  ],
+  [
+   "KO",
+   "Coca-Cola Co",
+   "",
+   400000000,
+   32508000000
+  ],
+  [
+   "GOOGL",
+   "Alphabet Inc",
+   "CL A",
+   78791167,
+   28157599351
+  ],
+  [
+   "BAC",
+   "Bank of America Corp",
+   "",
+   483394015,
+   27543790975
+  ],
+  [
+   "CVX",
+   "Chevron Corp",
+   "",
+   84375856,
+   13986141890
+  ],
+  [
+   "OXY",
+   "Occidental Petroleum Corp",
+   "",
+   264941431,
+   12868205304
+  ],
+  [
+   "CB",
+   "Chubb Ltd",
+   "",
+   34249183,
+   11670066615
+  ],
+  [
+   "MCO",
+   "Moody's Corp",
+   "",
+   24669778,
+   11173435852
+  ],
+  [
+   "GOOG",
+   "Alphabet Inc",
+   "CL C",
+   27188433,
+   9606489032
+  ],
+  [
+   "KHC",
+   "Kraft Heinz Co",
+   "",
+   325634818,
+   7691494401
+  ],
+  [
+   "DVA",
+   "DaVita Inc",
+   "",
+   28880209,
+   6425268898
+  ],
+  [
+   "DAL",
+   "Delta Air Lines Inc",
+   "",
+   57320000,
+   5368591200
+  ],
+  [
+   "829933100",
+   "SIRIUSXM HOLDINGS INC",
+   "",
+   124807117,
+   3686802237
+  ],
+  [
+   "VRSN",
+   "VeriSign Inc",
+   "",
+   8989880,
+   2261494212
+  ],
+  [
+   "KR",
+   "Kroger Co",
+   "",
+   39000000,
+   2165670000
+  ],
+  [
+   "ALLY",
+   "Ally Financial Inc",
+   "",
+   27000000,
+   1240650000
+  ],
+  [
+   "LEN",
+   "Lennar Corp",
+   "",
+   13111741,
+   1186481443
+  ],
+  [
+   "530909308",
+   "LIBERTY LIVE HOLDINGS INC",
+   "",
+   10587143,
+   1118425787
+  ],
+  [
+   "NYT",
+   "New York Times Co",
+   "CL A",
+   15700000,
+   1098686000
+  ],
+  [
+   "COF",
+   "Capital One Financial Corp",
+   "",
+   3000000,
+   601860000
+  ],
+  [
+   "530909100",
+   "LIBERTY LIVE HOLDINGS INC",
+   "",
+   4986588,
+   504941901
+  ],
+  [
+   "LPX",
+   "Louisiana-Pacific Corp",
+   "",
+   5664793,
+   445592617
+  ],
+  [
+   "NUE",
+   "Nucor Corp",
+   "",
+   1857752,
+   413814258
+  ],
+  [
+   "M",
+   "Macy's Inc",
+   "",
+   7347426,
+   173031882
+  ],
+  [
+   "NVR",
+   "NVR Inc",
+   "",
+   11112,
+   75710501
+  ],
+  [
+   "LEN.B",
+   "Lennar Corp",
+   "CL B",
+   298117,
+   26445959
+  ],
+  [
+   "JEF",
+   "Jefferies Financial Group Inc",
+   "",
+   433558,
+   21669229
+  ],
+  [
+   "23331A109",
+   "D R HORTON INC",
+   "",
+   3564,
+   580504
+  ]
+ ]
+}
