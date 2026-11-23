@@ -1,0 +1,11306 @@
+{
+"000000000":{
+"ticker":"",
+"type":""
+},
+"000360206":{
+"ticker":"AAON",
+"type":"Common Stock"
+},
+"000361105":{
+"ticker":"AIR",
+"type":"Common Stock"
+},
+"000899104":{
+"ticker":"ADMA",
+"type":"Common Stock"
+},
+"00090Q103":{
+"ticker":"ADT",
+"type":"Common Stock"
+},
+"00091E109":{
+"ticker":"ABSI",
+"type":"Common Stock"
+},
+"00091G104":{
+"ticker":"",
+"type":""
+},
+"000957100":{
+"ticker":"ABM",
+"type":"Common Stock"
+},
+"001055102":{
+"ticker":"AFL",
+"type":"Common Stock"
+},
+"001084102":{
+"ticker":"AGCO",
+"type":"Common Stock"
+},
+"00108J109":{
+"ticker":"ACMR",
+"type":"Common Stock"
+},
+"00123Q104":{
+"ticker":"AGNC",
+"type":"REIT"
+},
+"00130H105":{
+"ticker":"AES",
+"type":"Common Stock"
+},
+"00138L108":{
+"ticker":"RERE",
+"type":"ADR"
+},
+"00165C302":{
+"ticker":"AMC",
+"type":"Common Stock"
+},
+"001744101":{
+"ticker":"AMN",
+"type":"Common Stock"
+},
+"00182C103":{
+"ticker":"ANIP",
+"type":"Common Stock"
+},
+"00183L201":{
+"ticker":"ANGI",
+"type":"Common Stock"
+},
+"00187Y100":{
+"ticker":"APG",
+"type":"Common Stock"
+},
+"00191U102":{
+"ticker":"EFOR",
+"type":"Common Stock"
+},
+"00206R102":{
+"ticker":"T",
+"type":"Common Stock"
+},
+"002121101":{
+"ticker":"ATEN",
+"type":"Common Stock"
+},
+"00214Q104":{
+"ticker":"ARKK",
+"type":"ETP"
+},
+"00214Q302":{
+"ticker":"ARKG",
+"type":"ETP"
+},
+"00214Q500":{
+"ticker":"PRNT",
+"type":"ETP"
+},
+"00214Q724":{
+"ticker":"ARKY",
+"type":"ETP"
+},
+"00215W100":{
+"ticker":"ASX",
+"type":"ADR"
+},
+"00217D100":{
+"ticker":"ASTS",
+"type":"Common Stock"
+},
+"00217Y104":{
+"ticker":"ATS",
+"type":"Common Stock"
+},
+"002474104":{
+"ticker":"AZZ",
+"type":"Common Stock"
+},
+"002824100":{
+"ticker":"ABT",
+"type":"Common Stock"
+},
+"00287Y109":{
+"ticker":"ABBV",
+"type":"Common Stock"
+},
+"00288U106":{
+"ticker":"ABCL",
+"type":"Common Stock"
+},
+"002896207":{
+"ticker":"ANF",
+"type":"Common Stock"
+},
+"00370M103":{
+"ticker":"ABVX",
+"type":"ADR"
+},
+"00402L107":{
+"ticker":"ASO",
+"type":"Common Stock"
+},
+"00404A109":{
+"ticker":"ACHC",
+"type":"Common Stock"
+},
+"004225108":{
+"ticker":"ACAD",
+"type":"Common Stock"
+},
+"004239109":{
+"ticker":"AKR",
+"type":"REIT"
+},
+"00437E102":{
+"ticker":"ACCDUSD",
+"type":"Common Stock"
+},
+"004498101":{
+"ticker":"ACIW",
+"type":"Common Stock"
+},
+"00486H105":{
+"ticker":"ADTN",
+"type":"Common Stock"
+},
+"004966107":{
+"ticker":"ACCV",
+"type":"Common Stock"
+},
+"00508Y102":{
+"ticker":"AYI",
+"type":"Common Stock"
+},
+"005098108":{
+"ticker":"GOLF",
+"type":"Common Stock"
+},
+"00510N102":{
+"ticker":"TIC",
+"type":"Common Stock"
+},
+"00534A102":{
+"ticker":"IVVD",
+"type":"Common Stock"
+},
+"00650F109":{
+"ticker":"ADPT",
+"type":"Common Stock"
+},
+"006739106":{
+"ticker":"ADUS",
+"type":"Common Stock"
+},
+"00676P107":{
+"ticker":"ADEA",
+"type":"Common Stock"
+},
+"007002108":{
+"ticker":"",
+"type":""
+},
+"00724F101":{
+"ticker":"ADBE",
+"type":"Common Stock"
+},
+"00737L103":{
+"ticker":"CVSA",
+"type":"Common Stock"
+},
+"00751Y106":{
+"ticker":"AAP",
+"type":"Common Stock"
+},
+"0075W0155":{
+"ticker":"LSVD",
+"type":"ETP"
+},
+"00760J108":{
+"ticker":"AEHR",
+"type":"Common Stock"
+},
+"00766T100":{
+"ticker":"ACM",
+"type":"Common Stock"
+},
+"0076CA104":{
+"ticker":"AEG",
+"type":"NY Reg Shrs"
+},
+"00773J202":{
+"ticker":"SYRE",
+"type":"Common Stock"
+},
+"00773T101":{
+"ticker":"ASIX",
+"type":"Common Stock"
+},
+"007903107":{
+"ticker":"AMD",
+"type":"Common Stock"
+},
+"00790R104":{
+"ticker":"WMS",
+"type":"Common Stock"
+},
+"007973100":{
+"ticker":"AEIS",
+"type":"Common Stock"
+},
+"007973AE0":{
+"ticker":"",
+"type":""
+},
+"008073108":{
+"ticker":"AVAV",
+"type":"Common Stock"
+},
+"00810F106":{
+"ticker":"ASLE",
+"type":"Common Stock"
+},
+"008252108":{
+"ticker":"AMG",
+"type":"Common Stock"
+},
+"00827B106":{
+"ticker":"AFRM",
+"type":"Common Stock"
+},
+"00835Q202":{
+"ticker":"AEVA",
+"type":"Common Stock"
+},
+"00835T107":{
+"ticker":"AVEX",
+"type":"Common Stock"
+},
+"00846U101":{
+"ticker":"A",
+"type":"Common Stock"
+},
+"008474108":{
+"ticker":"AEM",
+"type":"Common Stock"
+},
+"00847J105":{
+"ticker":"AGYS",
+"type":"Common Stock"
+},
+"00847X104":{
+"ticker":"AGIO",
+"type":"Common Stock"
+},
+"008492100":{
+"ticker":"ADC",
+"type":"REIT"
+},
+"00851L103":{
+"ticker":"API",
+"type":"ADR"
+},
+"00857U107":{
+"ticker":"",
+"type":""
+},
+"009066101":{
+"ticker":"ABNB",
+"type":"Common Stock"
+},
+"009066AB7":{
+"ticker":"",
+"type":""
+},
+"00912X302":{
+"ticker":"ALGBP",
+"type":"Common Stock"
+},
+"009158106":{
+"ticker":"APD",
+"type":"Common Stock"
+},
+"00922R105":{
+"ticker":"ATSGEUR",
+"type":"Common Stock"
+},
+"009422106":{
+"ticker":"AIRO",
+"type":"Common Stock"
+},
+"00971T101":{
+"ticker":"AKAM",
+"type":"Common Stock"
+},
+"00971TAJ0":{
+"ticker":"",
+"type":""
+},
+"00971TAL5":{
+"ticker":"",
+"type":""
+},
+"00973Y108":{
+"ticker":"AKROGBP",
+"type":"Common Stock"
+},
+"01021M104":{
+"ticker":"AKTS",
+"type":"Common Stock"
+},
+"010911105":{
+"ticker":"ALMR",
+"type":"Common Stock"
+},
+"011311107":{
+"ticker":"ALG",
+"type":"Common Stock"
+},
+"011532108":{
+"ticker":"AGI",
+"type":"Common Stock"
+},
+"011642105":{
+"ticker":"ALRM",
+"type":"Common Stock"
+},
+"011659109":{
+"ticker":"ALK",
+"type":"Common Stock"
+},
+"012348108":{
+"ticker":"AIN",
+"type":"Common Stock"
+},
+"012653101":{
+"ticker":"ALB",
+"type":"Common Stock"
+},
+"013091103":{
+"ticker":"ACI",
+"type":"Common Stock"
+},
+"013872106":{
+"ticker":"AA",
+"type":"Common Stock"
+},
+"014491104":{
+"ticker":"ALEX",
+"type":"REIT"
+},
+"014752109":{
+"ticker":"ALX",
+"type":"REIT"
+},
+"015271109":{
+"ticker":"ARE",
+"type":"REIT"
+},
+"015857105":{
+"ticker":"AQN",
+"type":"Common Stock"
+},
+"01609W102":{
+"ticker":"BABA",
+"type":"ADR"
+},
+"016255101":{
+"ticker":"ALGN",
+"type":"Common Stock"
+},
+"01625V104":{
+"ticker":"ALHC",
+"type":"Common Stock"
+},
+"01626W101":{
+"ticker":"ALITEUR",
+"type":"Common Stock"
+},
+"01644J108":{
+"ticker":"ALKT",
+"type":"Common Stock"
+},
+"01741R102":{
+"ticker":"ATI",
+"type":"Common Stock"
+},
+"01748X102":{
+"ticker":"ALGT",
+"type":"Common Stock"
+},
+"01749D105":{
+"ticker":"ALGM",
+"type":"Common Stock"
+},
+"018581108":{
+"ticker":"BFH",
+"type":"Common Stock"
+},
+"01862Q107":{
+"ticker":"ALH",
+"type":"Common Stock"
+},
+"018802108":{
+"ticker":"LNT",
+"type":"Common Stock"
+},
+"018802AC2":{
+"ticker":"",
+"type":""
+},
+"01921D204":{
+"ticker":"AAUC",
+"type":"Common Stock"
+},
+"019330109":{
+"ticker":"ALNT",
+"type":"Common Stock"
+},
+"01973R101":{
+"ticker":"ALSN",
+"type":"Common Stock"
+},
+"020002101":{
+"ticker":"ALL",
+"type":"Common Stock"
+},
+"020398707":{
+"ticker":"ALM",
+"type":"Common Stock"
+},
+"02043Q107":{
+"ticker":"ALNY",
+"type":"Common Stock"
+},
+"02043QAD9":{
+"ticker":"",
+"type":""
+},
+"020764106":{
+"ticker":"AMR",
+"type":"Common Stock"
+},
+"02079K404":{
+"ticker":"",
+"type":""
+},
+"02079K602":{
+"ticker":"",
+"type":""
+},
+"02081G201":{
+"ticker":"ATEC",
+"type":"Common Stock"
+},
+"021369103":{
+"ticker":"ALTREUR",
+"type":"Common Stock"
+},
+"02155H200":{
+"ticker":"ALT",
+"type":"Common Stock"
+},
+"02156K103":{
+"ticker":"OPTU",
+"type":"Common Stock"
+},
+"02156V109":{
+"ticker":"OKLO",
+"type":"Common Stock"
+},
+"02209S103":{
+"ticker":"MO",
+"type":"Common Stock"
+},
+"02215L209":{
+"ticker":"KNTK",
+"type":"Common Stock"
+},
+"02217A102":{
+"ticker":"AMPSUSD",
+"type":"Common Stock"
+},
+"022307102":{
+"ticker":"ALMS",
+"type":"Common Stock"
+},
+"023139884":{
+"ticker":"OSG",
+"type":"Common Stock"
+},
+"023193105":{
+"ticker":"AMBQ",
+"type":"Common Stock"
+},
+"023436108":{
+"ticker":"AMED",
+"type":"Common Stock"
+},
+"023576101":{
+"ticker":"AMTB",
+"type":"Common Stock"
+},
+"023586100":{
+"ticker":"UHAL",
+"type":"Common Stock"
+},
+"023586506":{
+"ticker":"UHAL.B",
+"type":"Common Stock"
+},
+"023608102":{
+"ticker":"AEE",
+"type":"Common Stock"
+},
+"02361E108":{
+"ticker":"AMRC",
+"type":"Common Stock"
+},
+"02376R102":{
+"ticker":"AAL",
+"type":"Common Stock"
+},
+"023939101":{
+"ticker":"AMTM",
+"type":"Common Stock"
+},
+"024013104":{
+"ticker":"AAT",
+"type":"REIT"
+},
+"025537101":{
+"ticker":"AEP",
+"type":"Common Stock"
+},
+"02553E106":{
+"ticker":"AEO",
+"type":"Common Stock"
+},
+"025932104":{
+"ticker":"AFG",
+"type":"Common Stock"
+},
+"02665T306":{
+"ticker":"AMH",
+"type":"REIT"
+},
+"026874784":{
+"ticker":"AIG",
+"type":"Common Stock"
+},
+"026948109":{
+"ticker":"AII",
+"type":"Common Stock"
+},
+"029899101":{
+"ticker":"AWR",
+"type":"Common Stock"
+},
+"03027X100":{
+"ticker":"AMT",
+"type":"REIT"
+},
+"03040WBE4":{
+"ticker":"",
+"type":""
+},
+"030420103":{
+"ticker":"AWK",
+"type":"Common Stock"
+},
+"03044L204":{
+"ticker":"AMWL",
+"type":"Common Stock"
+},
+"030506109":{
+"ticker":"AMWDEUR",
+"type":"Common Stock"
+},
+"03064D108":{
+"ticker":"COLD",
+"type":"REIT"
+},
+"03071H100":{
+"ticker":"AMSF",
+"type":"Common Stock"
+},
+"03073E105":{
+"ticker":"COR",
+"type":"Common Stock"
+},
+"03076C106":{
+"ticker":"AMP",
+"type":"Common Stock"
+},
+"03076K108":{
+"ticker":"ABCB",
+"type":"Common Stock"
+},
+"031100100":{
+"ticker":"AME",
+"type":"Common Stock"
+},
+"031162100":{
+"ticker":"AMGN",
+"type":"Common Stock"
+},
+"03152W109":{
+"ticker":"AM6",
+"type":"Common Stock"
+},
+"031652100":{
+"ticker":"AMKR",
+"type":"Common Stock"
+},
+"03168L105":{
+"ticker":"AMRX",
+"type":"Common Stock"
+},
+"032095101":{
+"ticker":"APH",
+"type":"Common Stock"
+},
+"03214Q108":{
+"ticker":"AMPX",
+"type":"Common Stock"
+},
+"03237H101":{
+"ticker":"AMLX",
+"type":"Common Stock"
+},
+"032654105":{
+"ticker":"ADI",
+"type":"Common Stock"
+},
+"033853102":{
+"ticker":"ANDG",
+"type":"Common Stock"
+},
+"034164103":{
+"ticker":"ANDE",
+"type":"Common Stock"
+},
+"03524A108":{
+"ticker":"BUD",
+"type":"ADR"
+},
+"035710839":{
+"ticker":"NLY",
+"type":"REIT"
+},
+"03662Q105":{
+"ticker":"AKX",
+"type":"Common Stock"
+},
+"03674X106":{
+"ticker":"AR",
+"type":"Common Stock"
+},
+"036752103":{
+"ticker":"ELV",
+"type":"Common Stock"
+},
+"03676B102":{
+"ticker":"AM",
+"type":"Common Stock"
+},
+"03743Q108":{
+"ticker":"APA",
+"type":"Common Stock"
+},
+"03748R747":{
+"ticker":"AIV",
+"type":"REIT"
+},
+"03753U106":{
+"ticker":"APLSUSD",
+"type":"Common Stock"
+},
+"037598109":{
+"ticker":"APOG",
+"type":"Common Stock"
+},
+"03761U502":{
+"ticker":"MFIC",
+"type":"Common Stock"
+},
+"03762U105":{
+"ticker":"9A1",
+"type":"REIT"
+},
+"03769M106":{
+"ticker":"APO",
+"type":"Common Stock"
+},
+"03769M304":{
+"ticker":"",
+"type":""
+},
+"03770N101":{
+"ticker":"",
+"type":""
+},
+"03782L101":{
+"ticker":"APPN",
+"type":"Common Stock"
+},
+"03783C100":{
+"ticker":"APPF",
+"type":"Common Stock"
+},
+"03784Y200":{
+"ticker":"APLE",
+"type":"REIT"
+},
+"03815J107":{
+"ticker":"AADX",
+"type":"Common Stock"
+},
+"038169207":{
+"ticker":"APLD",
+"type":"Common Stock"
+},
+"038169AB4":{
+"ticker":"",
+"type":""
+},
+"03820C105":{
+"ticker":"AIT",
+"type":"Common Stock"
+},
+"038222105":{
+"ticker":"AMAT",
+"type":"Common Stock"
+},
+"03823U102":{
+"ticker":"AAOI",
+"type":"Common Stock"
+},
+"03828A101":{
+"ticker":"APLT",
+"type":"Common Stock"
+},
+"03831W108":{
+"ticker":"APP",
+"type":"Common Stock"
+},
+"038336103":{
+"ticker":"ATR",
+"type":"Common Stock"
+},
+"03852U106":{
+"ticker":"ARMK",
+"type":"Common Stock"
+},
+"038923108":{
+"ticker":"ABR",
+"type":"REIT"
+},
+"03937C105":{
+"ticker":"ARCB",
+"type":"Common Stock"
+},
+"03938L203":{
+"ticker":"MT",
+"type":"NY Reg Shrs"
+},
+"03940C100":{
+"ticker":"ACLXGBX",
+"type":"Common Stock"
+},
+"03945R102":{
+"ticker":"ACHR",
+"type":"Common Stock"
+},
+"039483102":{
+"ticker":"ADM",
+"type":"Common Stock"
+},
+"03957W106":{
+"ticker":"AROC",
+"type":"Common Stock"
+},
+"039653100":{
+"ticker":"EOB",
+"type":"Common Stock"
+},
+"03969F109":{
+"ticker":"RCUS",
+"type":"Common Stock"
+},
+"03969K108":{
+"ticker":"ARQT",
+"type":"Common Stock"
+},
+"03969T109":{
+"ticker":"ARCT",
+"type":"Common Stock"
+},
+"03980N107":{
+"ticker":"ARDT",
+"type":"Common Stock"
+},
+"03990B101":{
+"ticker":"ARES",
+"type":"Common Stock"
+},
+"03990B309":{
+"ticker":"",
+"type":""
+},
+"04010E109":{
+"ticker":"AGX",
+"type":"Common Stock"
+},
+"04016X101":{
+"ticker":"ARGX",
+"type":"ADR"
+},
+"04040Y109":{
+"ticker":"ARIS",
+"type":"Common Stock"
+},
+"040413205":{
+"ticker":"ANET",
+"type":"Common Stock"
+},
+"040919102":{
+"ticker":"ARKB",
+"type":"ETP"
+},
+"04124A100":{
+"ticker":"APC",
+"type":"Common Stock"
+},
+"042068205":{
+"ticker":"ARM",
+"type":"ADR"
+},
+"042315705":{
+"ticker":"ARR",
+"type":"REIT"
+},
+"04247X102":{
+"ticker":"AWI",
+"type":"Common Stock"
+},
+"04271T100":{
+"ticker":"ARRY",
+"type":"Common Stock"
+},
+"042735100":{
+"ticker":"ARW",
+"type":"Common Stock"
+},
+"04280A100":{
+"ticker":"ARWR",
+"type":"Common Stock"
+},
+"04302A104":{
+"ticker":"AIP",
+"type":"Common Stock"
+},
+"04316A108":{
+"ticker":"APAM",
+"type":"Common Stock"
+},
+"04317A107":{
+"ticker":"ARTV",
+"type":"Common Stock"
+},
+"04335A105":{
+"ticker":"ARVN",
+"type":"Common Stock"
+},
+"04339D105":{
+"ticker":"ARXS",
+"type":"Common Stock"
+},
+"04342Y104":{
+"ticker":"ASAN",
+"type":"Common Stock"
+},
+"043436104":{
+"ticker":"ABG",
+"type":"Common Stock"
+},
+"04351P101":{
+"ticker":"",
+"type":""
+},
+"044186104":{
+"ticker":"ASH",
+"type":"Common Stock"
+},
+"045487105":{
+"ticker":"ASB",
+"type":"Common Stock"
+},
+"04621X108":{
+"ticker":"AIZ",
+"type":"Common Stock"
+},
+"046224101":{
+"ticker":"ASTE",
+"type":"Common Stock"
+},
+"04626A103":{
+"ticker":"ALAB",
+"type":"Common Stock"
+},
+"046353108":{
+"ticker":"AZNN",
+"type":"ADR"
+},
+"04635X102":{
+"ticker":"CATBUSD",
+"type":"Common Stock"
+},
+"046433108":{
+"ticker":"ATRO",
+"type":"Common Stock"
+},
+"04650F101":{
+"ticker":"ATAIEUR",
+"type":"Common Stock"
+},
+"04681Y103":{
+"ticker":"ASIC",
+"type":"Common Stock"
+},
+"047649108":{
+"ticker":"ATKRPLN",
+"type":"Common Stock"
+},
+"04911A107":{
+"ticker":"AUB",
+"type":"Common Stock"
+},
+"049468101":{
+"ticker":"TEAM",
+"type":"Common Stock"
+},
+"049560105":{
+"ticker":"ATO",
+"type":"Common Stock"
+},
+"04956D107":{
+"ticker":"ATMU",
+"type":"Common Stock"
+},
+"04963C209":{
+"ticker":"ATRC",
+"type":"Common Stock"
+},
+"04965M106":{
+"ticker":"ATAT",
+"type":"ADR"
+},
+"04965N104":{
+"ticker":"RNA",
+"type":"Common Stock"
+},
+"051774107":{
+"ticker":"AUR",
+"type":"Common Stock"
+},
+"051774115":{
+"ticker":"",
+"type":""
+},
+"052769106":{
+"ticker":"ADSK",
+"type":"Common Stock"
+},
+"05278C107":{
+"ticker":"ATHM",
+"type":"ADR"
+},
+"052800109":{
+"ticker":"ALV",
+"type":"Common Stock"
+},
+"053015103":{
+"ticker":"ADP",
+"type":"Common Stock"
+},
+"05329W102":{
+"ticker":"AN",
+"type":"Common Stock"
+},
+"053332102":{
+"ticker":"AZO",
+"type":"Common Stock"
+},
+"053484101":{
+"ticker":"AVBC",
+"type":"REIT"
+},
+"05348Y105":{
+"ticker":"AVLN",
+"type":"Common Stock"
+},
+"05350V106":{
+"ticker":"8HH",
+"type":"Common Stock"
+},
+"05352A100":{
+"ticker":"AVTR",
+"type":"Common Stock"
+},
+"053604104":{
+"ticker":"AVPT",
+"type":"Common Stock"
+},
+"053611109":{
+"ticker":"AVY",
+"type":"Common Stock"
+},
+"05368V106":{
+"ticker":"AVNT",
+"type":"Common Stock"
+},
+"05368X102":{
+"ticker":"AVDX",
+"type":"Common Stock"
+},
+"05370A108":{
+"ticker":"RNAGBP",
+"type":"Common Stock"
+},
+"053774105":{
+"ticker":"CAR",
+"type":"Common Stock"
+},
+"05379B107":{
+"ticker":"AVA",
+"type":"Common Stock"
+},
+"053807103":{
+"ticker":"AVT",
+"type":"Common Stock"
+},
+"054540208":{
+"ticker":"ACLS",
+"type":"Common Stock"
+},
+"05463X106":{
+"ticker":"AXGN",
+"type":"Common Stock"
+},
+"05464C101":{
+"ticker":"AXON",
+"type":"Common Stock"
+},
+"05464T104":{
+"ticker":"AXSM",
+"type":"Common Stock"
+},
+"05478C105":{
+"ticker":"AZEK",
+"type":"Common Stock"
+},
+"05501U601":{
+"ticker":"AZUL",
+"type":"ADR"
+},
+"055298103":{
+"ticker":"BCBP",
+"type":"Common Stock"
+},
+"05534B760":{
+"ticker":"BCE",
+"type":"Common Stock"
+},
+"055477103":{
+"ticker":"BCAX",
+"type":"Common Stock"
+},
+"05550J101":{
+"ticker":"BJ",
+"type":"Common Stock"
+},
+"05561Q201":{
+"ticker":"BOKF",
+"type":"Common Stock"
+},
+"055622104":{
+"ticker":"BP",
+"type":"ADR"
+},
+"05577W200":{
+"ticker":"DOO",
+"type":"Common Stock"
+},
+"05589G102":{
+"ticker":"BWIN",
+"type":"Common Stock"
+},
+"05605H100":{
+"ticker":"BWXT",
+"type":"Common Stock"
+},
+"05637B105":{
+"ticker":"BLZE",
+"type":"Common Stock"
+},
+"056525108":{
+"ticker":"BMI",
+"type":"Common Stock"
+},
+"056752108":{
+"ticker":"BIDU",
+"type":"ADR"
+},
+"05722G100":{
+"ticker":"BKR",
+"type":"Common Stock"
+},
+"057665200":{
+"ticker":"BCPC",
+"type":"Common Stock"
+},
+"058498106":{
+"ticker":"BALL",
+"type":"Common Stock"
+},
+"05945F103":{
+"ticker":"BANF",
+"type":"Common Stock"
+},
+"05946K101":{
+"ticker":"BBVA",
+"type":"ADR"
+},
+"05961W105":{
+"ticker":"BMA",
+"type":"ADR"
+},
+"062540109":{
+"ticker":"BOH",
+"type":"Common Stock"
+},
+"063671101":{
+"ticker":"BMO",
+"type":"Common Stock"
+},
+"064058100":{
+"ticker":"BNY",
+"type":"Common Stock"
+},
+"064149107":{
+"ticker":"BNS",
+"type":"Common Stock"
+},
+"06417N103":{
+"ticker":"OZK",
+"type":"Common Stock"
+},
+"06652K103":{
+"ticker":"BKU",
+"type":"Common Stock"
+},
+"06652V208":{
+"ticker":"BANR",
+"type":"Common Stock"
+},
+"06738E204":{
+"ticker":"BCS",
+"type":"ADR"
+},
+"06777U200":{
+"ticker":"BNED",
+"type":"Common Stock"
+},
+"067806109":{
+"ticker":"BUSD",
+"type":"Common Stock"
+},
+"067901108":{
+"ticker":"ABX",
+"type":"Common Stock"
+},
+"068463108":{
+"ticker":"BBSI",
+"type":"Common Stock"
+},
+"06849F108":{
+"ticker":"B",
+"type":"Common Stock"
+},
+"070830104":{
+"ticker":"BBWI",
+"type":"Common Stock"
+},
+"071705107":{
+"ticker":"BLCO",
+"type":"Common Stock"
+},
+"071734107":{
+"ticker":"BHC",
+"type":"Common Stock"
+},
+"071813109":{
+"ticker":"BAX",
+"type":"Common Stock"
+},
+"07317Q105":{
+"ticker":"BTE",
+"type":"Common Stock"
+},
+"073685109":{
+"ticker":"BECNUSD",
+"type":"Common Stock"
+},
+"07373V105":{
+"ticker":"BEAM",
+"type":"Common Stock"
+},
+"07556Q881":{
+"ticker":"BZHGBP",
+"type":"Common Stock"
+},
+"075887109":{
+"ticker":"BDX",
+"type":"Common Stock"
+},
+"07725L102":{
+"ticker":"ONC",
+"type":"ADR"
+},
+"077454106":{
+"ticker":"BDC",
+"type":"Common Stock"
+},
+"07782B104":{
+"ticker":"BLTE",
+"type":"ADR"
+},
+"07831C103":{
+"ticker":"BRBR",
+"type":"Common Stock"
+},
+"08160H101":{
+"ticker":"BHE",
+"type":"Common Stock"
+},
+"08265T208":{
+"ticker":"BSY",
+"type":"Common Stock"
+},
+"08265TAB5":{
+"ticker":"",
+"type":""
+},
+"084423102":{
+"ticker":"WRB",
+"type":"Common Stock"
+},
+"084670108":{
+"ticker":"BRK.A",
+"type":"Common Stock"
+},
+"084670702":{
+"ticker":"BRK.B",
+"type":"Common Stock"
+},
+"084680107":{
+"ticker":"BBT",
+"type":"Common Stock"
+},
+"08579W103":{
+"ticker":"BERYEUR",
+"type":"Common Stock"
+},
+"086516101":{
+"ticker":"BBY",
+"type":"Common Stock"
+},
+"08659B102":{
+"ticker":"BBNX",
+"type":"Common Stock"
+},
+"086921103":{
+"ticker":"BETA",
+"type":"Common Stock"
+},
+"088606108":{
+"ticker":"BHP",
+"type":"ADR"
+},
+"08862E109":{
+"ticker":"BYNDHUF",
+"type":"Common Stock"
+},
+"08862L103":{
+"ticker":"",
+"type":""
+},
+"088929104":{
+"ticker":"BGC",
+"type":"Common Stock"
+},
+"089302103":{
+"ticker":"BIGGQ",
+"type":"Common Stock"
+},
+"090040106":{
+"ticker":"BILI",
+"type":"ADR"
+},
+"090043100":{
+"ticker":"BILL",
+"type":"Common Stock"
+},
+"090043AF7":{
+"ticker":"",
+"type":""
+},
+"090168105":{
+"ticker":"BLLN",
+"type":"Common Stock"
+},
+"090572207":{
+"ticker":"BIO",
+"type":"Common Stock"
+},
+"09058V103":{
+"ticker":"BCRX",
+"type":"Common Stock"
+},
+"09061G101":{
+"ticker":"BMRN",
+"type":"Common Stock"
+},
+"09062W204":{
+"ticker":"BLFS",
+"type":"Common Stock"
+},
+"09062X103":{
+"ticker":"BIIB",
+"type":"Common Stock"
+},
+"09073M104":{
+"ticker":"TECH",
+"type":"Common Stock"
+},
+"09075V102":{
+"ticker":"BNTX",
+"type":"ADR"
+},
+"09077B104":{
+"ticker":"BCABGBP",
+"type":"Common Stock"
+},
+"09175A206":{
+"ticker":"BMNR",
+"type":"Common Stock"
+},
+"091947101":{
+"ticker":"BTGO",
+"type":"Common Stock"
+},
+"092244102":{
+"ticker":"BRCB",
+"type":"Common Stock"
+},
+"09227Q100":{
+"ticker":"BLKB",
+"type":"Common Stock"
+},
+"09228F103":{
+"ticker":"BB",
+"type":"Common Stock"
+},
+"09239B109":{
+"ticker":"BL",
+"type":"Common Stock"
+},
+"09239BAD1":{
+"ticker":"",
+"type":""
+},
+"09239BAF6":{
+"ticker":"",
+"type":""
+},
+"09257W100":{
+"ticker":"BXMT",
+"type":"REIT"
+},
+"09260D107":{
+"ticker":"BX",
+"type":"Common Stock"
+},
+"09261X102":{
+"ticker":"BXSL",
+"type":"Common Stock"
+},
+"09263B207":{
+"ticker":"BKSY",
+"type":"Common Stock"
+},
+"092667104":{
+"ticker":"SRTA",
+"type":"Common Stock"
+},
+"09290D101":{
+"ticker":"BLK",
+"type":"Common Stock"
+},
+"09352U108":{
+"ticker":"BLND",
+"type":"Common Stock"
+},
+"093671105":{
+"ticker":"HRB",
+"type":"Common Stock"
+},
+"093712107":{
+"ticker":"BE",
+"type":"Common Stock"
+},
+"094235108":{
+"ticker":"BLMN",
+"type":"Common Stock"
+},
+"095306106":{
+"ticker":"BLBD",
+"type":"Common Stock"
+},
+"09581B103":{
+"ticker":"OWL",
+"type":"Common Stock"
+},
+"095924106":{
+"ticker":"OTF",
+"type":"Common Stock"
+},
+"09624H208":{
+"ticker":"BXC",
+"type":"Common Stock"
+},
+"09627Y109":{
+"ticker":"2655787D",
+"type":"Common Stock"
+},
+"09681N106":{
+"ticker":"BOBS",
+"type":"Common Stock"
+},
+"097023105":{
+"ticker":"BA",
+"type":"Common Stock"
+},
+"09739D100":{
+"ticker":"BCC",
+"type":"Common Stock"
+},
+"09857L108":{
+"ticker":"BKNG",
+"type":"Common Stock"
+},
+"09857LAN8":{
+"ticker":"",
+"type":""
+},
+"099406100":{
+"ticker":"BOOT",
+"type":"Common Stock"
+},
+"099502106":{
+"ticker":"BAH",
+"type":"Common Stock"
+},
+"099724106":{
+"ticker":"BWA",
+"type":"Common Stock"
+},
+"100557107":{
+"ticker":"SAM",
+"type":"Common Stock"
+},
+"101121101":{
+"ticker":"BXP",
+"type":"REIT"
+},
+"101137107":{
+"ticker":"BSX",
+"type":"Common Stock"
+},
+"10240L102":{
+"ticker":"BOW",
+"type":"Common Stock"
+},
+"10316T104":{
+"ticker":"BOX",
+"type":"Common Stock"
+},
+"103304101":{
+"ticker":"BYD",
+"type":"Common Stock"
+},
+"103310108":{
+"ticker":"BGSI",
+"type":"Common Stock"
+},
+"104674106":{
+"ticker":"BRC",
+"type":"Common Stock"
+},
+"10501L106":{
+"ticker":"BWAY",
+"type":"ADR"
+},
+"10552T107":{
+"ticker":"P5Y",
+"type":"ADR"
+},
+"10576N102":{
+"ticker":"BRZE",
+"type":"Common Stock"
+},
+"10806B100":{
+"ticker":"53S",
+"type":"Common Stock"
+},
+"10806X102":{
+"ticker":"BBIO",
+"type":"Common Stock"
+},
+"109194100":{
+"ticker":"BFAM",
+"type":"Common Stock"
+},
+"10922N103":{
+"ticker":"BHF",
+"type":"Common Stock"
+},
+"10948W103":{
+"ticker":"AAMI",
+"type":"Common Stock"
+},
+"10950A106":{
+"ticker":"BTSG",
+"type":"Common Stock"
+},
+"10950A205":{
+"ticker":"",
+"type":""
+},
+"109641100":{
+"ticker":"EAT",
+"type":"Common Stock"
+},
+"109696104":{
+"ticker":"BCO",
+"type":"Common Stock"
+},
+"110122108":{
+"ticker":"BMY",
+"type":"Common Stock"
+},
+"110448107":{
+"ticker":"BTI",
+"type":"ADR"
+},
+"11120U105":{
+"ticker":"BRX",
+"type":"REIT"
+},
+"11133T103":{
+"ticker":"BR",
+"type":"Common Stock"
+},
+"11135E203":{
+"ticker":"BNL",
+"type":"REIT"
+},
+"11135F101":{
+"ticker":"AVGO",
+"type":"Common Stock"
+},
+"112463104":{
+"ticker":"BKD",
+"type":"Common Stock"
+},
+"11271J107":{
+"ticker":"BN",
+"type":"Common Stock"
+},
+"11276H106":{
+"ticker":"BIPC",
+"type":"Common Stock"
+},
+"11285B108":{
+"ticker":"BEPC",
+"type":"Common Stock"
+},
+"113004105":{
+"ticker":"BAM",
+"type":"Common Stock"
+},
+"114340102":{
+"ticker":"AZTA",
+"type":"Common Stock"
+},
+"115236101":{
+"ticker":"BRO",
+"type":"Common Stock"
+},
+"115637100":{
+"ticker":"BF.A",
+"type":"Common Stock"
+},
+"115637209":{
+"ticker":"BF.B",
+"type":"Common Stock"
+},
+"116794108":{
+"ticker":"BRKR",
+"type":"Common Stock"
+},
+"116794207":{
+"ticker":"",
+"type":""
+},
+"117043109":{
+"ticker":"BC",
+"type":"Common Stock"
+},
+"11777Q209":{
+"ticker":"BTG",
+"type":"Common Stock"
+},
+"118440106":{
+"ticker":"BKE",
+"type":"Common Stock"
+},
+"12008R107":{
+"ticker":"BLDR",
+"type":"Common Stock"
+},
+"122017106":{
+"ticker":"BURL",
+"type":"Common Stock"
+},
+"124155102":{
+"ticker":"BFLY",
+"type":"Common Stock"
+},
+"12468P104":{
+"ticker":"AI",
+"type":"Common Stock"
+},
+"124765108":{
+"ticker":"CAE",
+"type":"Common Stock"
+},
+"124805102":{
+"ticker":"XC4",
+"type":"Common Stock"
+},
+"124830878":{
+"ticker":"CBL",
+"type":"REIT"
+},
+"12503M108":{
+"ticker":"CBOE",
+"type":"Common Stock"
+},
+"12504L109":{
+"ticker":"CBRE",
+"type":"Common Stock"
+},
+"12510Q100":{
+"ticker":"CCC",
+"type":"Common Stock"
+},
+"125141101":{
+"ticker":"CECO",
+"type":"Common Stock"
+},
+"12514G108":{
+"ticker":"CDW",
+"type":"Common Stock"
+},
+"125269100":{
+"ticker":"CF",
+"type":"Common Stock"
+},
+"12532H104":{
+"ticker":"GIB",
+"type":"Common Stock"
+},
+"12541W209":{
+"ticker":"CHRW",
+"type":"Common Stock"
+},
+"125523100":{
+"ticker":"CI",
+"type":"Common Stock"
+},
+"12572Q105":{
+"ticker":"CME",
+"type":"Common Stock"
+},
+"125896100":{
+"ticker":"CMS",
+"type":"Common Stock"
+},
+"126117100":{
+"ticker":"CNA",
+"type":"Common Stock"
+},
+"12618T105":{
+"ticker":"CRAI",
+"type":"Common Stock"
+},
+"12621E103":{
+"ticker":"CNO",
+"type":"Common Stock"
+},
+"126327105":{
+"ticker":"LAW",
+"type":"Common Stock"
+},
+"126349109":{
+"ticker":"",
+"type":""
+},
+"126402106":{
+"ticker":"CSW",
+"type":"Common Stock"
+},
+"126408103":{
+"ticker":"CSX",
+"type":"Common Stock"
+},
+"126501105":{
+"ticker":"CTS",
+"type":"Common Stock"
+},
+"12653C108":{
+"ticker":"CNX",
+"type":"Common Stock"
+},
+"126600105":{
+"ticker":"CVBF",
+"type":"Common Stock"
+},
+"12662P108":{
+"ticker":"CVI",
+"type":"Common Stock"
+},
+"126638105":{
+"ticker":"CVRX",
+"type":"Common Stock"
+},
+"126650100":{
+"ticker":"CVS",
+"type":"Common Stock"
+},
+"12674W109":{
+"ticker":"CABA",
+"type":"Common Stock"
+},
+"12685J105":{
+"ticker":"CABO",
+"type":"Common Stock"
+},
+"12685JAG0":{
+"ticker":"",
+"type":""
+},
+"127055101":{
+"ticker":"CBT",
+"type":"Common Stock"
+},
+"127097103":{
+"ticker":"CTRA",
+"type":"Common Stock"
+},
+"127190304":{
+"ticker":"CACI",
+"type":"Common Stock"
+},
+"127203107":{
+"ticker":"WHD",
+"type":"Common Stock"
+},
+"127387108":{
+"ticker":"CDNS",
+"type":"Common Stock"
+},
+"12740C103":{
+"ticker":"BXSEUR",
+"type":"Common Stock"
+},
+"12769G100":{
+"ticker":"CZR",
+"type":"Common Stock"
+},
+"128030202":{
+"ticker":"CALM",
+"type":"Common Stock"
+},
+"128246105":{
+"ticker":"CVGW",
+"type":"Common Stock"
+},
+"129500104":{
+"ticker":"CAL",
+"type":"Common Stock"
+},
+"13057Q305":{
+"ticker":"CRC",
+"type":"Common Stock"
+},
+"130788102":{
+"ticker":"CWT",
+"type":"Common Stock"
+},
+"13100M509":{
+"ticker":"CALX",
+"type":"Common Stock"
+},
+"131193104":{
+"ticker":"CALY",
+"type":"Common Stock"
+},
+"133131102":{
+"ticker":"CPT",
+"type":"REIT"
+},
+"13321L108":{
+"ticker":"CCJ",
+"type":"Common Stock"
+},
+"134429109":{
+"ticker":"CPB",
+"type":"Common Stock"
+},
+"13462K109":{
+"ticker":"CWH",
+"type":"Common Stock"
+},
+"13463J101":{
+"ticker":"CAMP",
+"type":"Common Stock"
+},
+"134748102":{
+"ticker":"CAN",
+"type":"ADR"
+},
+"135086106":{
+"ticker":"GOOS",
+"type":"Common Stock"
+},
+"136069101":{
+"ticker":"CM",
+"type":"Common Stock"
+},
+"136375102":{
+"ticker":"CNI",
+"type":"Common Stock"
+},
+"136385101":{
+"ticker":"CNQ",
+"type":"Common Stock"
+},
+"13646K108":{
+"ticker":"CP",
+"type":"Common Stock"
+},
+"138103106":{
+"ticker":"UTE0",
+"type":"Common Stock"
+},
+"14149Y108":{
+"ticker":"CAH",
+"type":"Common Stock"
+},
+"14167L103":{
+"ticker":"CDNA",
+"type":"Common Stock"
+},
+"14174T107":{
+"ticker":"CTRE",
+"type":"REIT"
+},
+"141788109":{
+"ticker":"CARG",
+"type":"Common Stock"
+},
+"142152107":{
+"ticker":"CAI",
+"type":"Common Stock"
+},
+"142339100":{
+"ticker":"CSL",
+"type":"Common Stock"
+},
+"14280C105":{
+"ticker":"CARL",
+"type":"Common Stock"
+},
+"143130102":{
+"ticker":"KMX",
+"type":"Common Stock"
+},
+"14316J108":{
+"ticker":"CG",
+"type":"Common Stock"
+},
+"143658300":{
+"ticker":"",
+"type":""
+},
+"14365C103":{
+"ticker":"POH3",
+"type":"ADR"
+},
+"143905107":{
+"ticker":"CSV",
+"type":"Common Stock"
+},
+"144285103":{
+"ticker":"CRS",
+"type":"Common Stock"
+},
+"14448C104":{
+"ticker":"CARR",
+"type":"Common Stock"
+},
+"146229109":{
+"ticker":"CRI",
+"type":"Common Stock"
+},
+"146280508":{
+"ticker":"SILA",
+"type":"REIT"
+},
+"146869102":{
+"ticker":"CVNA",
+"type":"Common Stock"
+},
+"147448104":{
+"ticker":"CWST",
+"type":"Common Stock"
+},
+"147528103":{
+"ticker":"CASY",
+"type":"Common Stock"
+},
+"14843C105":{
+"ticker":"CSTL",
+"type":"Common Stock"
+},
+"14888U101":{
+"ticker":"CPRXEUR",
+"type":"Common Stock"
+},
+"148929102":{
+"ticker":"CAVA",
+"type":"Common Stock"
+},
+"149123101":{
+"ticker":"CAT",
+"type":"Common Stock"
+},
+"149150104":{
+"ticker":"CATY",
+"type":"Common Stock"
+},
+"149568107":{
+"ticker":"CVCO",
+"type":"Common Stock"
+},
+"150870103":{
+"ticker":"CE",
+"type":"Common Stock"
+},
+"15101Q207":{
+"ticker":"CLS",
+"type":"Common Stock"
+},
+"15102K100":{
+"ticker":"CELC",
+"type":"Common Stock"
+},
+"15118V207":{
+"ticker":"CELH",
+"type":"Common Stock"
+},
+"151290889":{
+"ticker":"CX",
+"type":"ADR"
+},
+"15135B101":{
+"ticker":"CNC",
+"type":"Common Stock"
+},
+"15135U109":{
+"ticker":"CVE",
+"type":"Common Stock"
+},
+"15189T107":{
+"ticker":"CNP",
+"type":"Common Stock"
+},
+"15189TBD8":{
+"ticker":"",
+"type":""
+},
+"152006102":{
+"ticker":"CGAU",
+"type":"Common Stock"
+},
+"15202L107":{
+"ticker":"CSR",
+"type":"REIT"
+},
+"152413100":{
+"ticker":"CBC",
+"type":"Common Stock"
+},
+"153527106":{
+"ticker":"CENT",
+"type":"Common Stock"
+},
+"153527205":{
+"ticker":"CENTA",
+"type":"Common Stock"
+},
+"155923105":{
+"ticker":"CTRI",
+"type":"Common Stock"
+},
+"156431108":{
+"ticker":"CENX",
+"type":"Common Stock"
+},
+"15643U104":{
+"ticker":"LEU",
+"type":"Common Stock"
+},
+"156504300":{
+"ticker":"CCS",
+"type":"Common Stock"
+},
+"15675D103":{
+"ticker":"CBRS",
+"type":"Common Stock"
+},
+"15677J108":{
+"ticker":"DAY",
+"type":"Common Stock"
+},
+"15677JAD0":{
+"ticker":"",
+"type":""
+},
+"15678C102":{
+"ticker":"CBLL",
+"type":"Common Stock"
+},
+"15687V109":{
+"ticker":"CERT",
+"type":"Common Stock"
+},
+"157085101":{
+"ticker":"CERS",
+"type":"Common Stock"
+},
+"157210105":{
+"ticker":"CEVA",
+"type":"Common Stock"
+},
+"15743P104":{
+"ticker":"CHA",
+"type":"ADR"
+},
+"15872M104":{
+"ticker":"APY1EUR",
+"type":"Common Stock"
+},
+"15961R105":{
+"ticker":"",
+"type":""
+},
+"15961R303":{
+"ticker":"CHPT",
+"type":"Common Stock"
+},
+"159864107":{
+"ticker":"CRL",
+"type":"Common Stock"
+},
+"16115Q308":{
+"ticker":"GTLS",
+"type":"Common Stock"
+},
+"163072101":{
+"ticker":"CAKE",
+"type":"Common Stock"
+},
+"163072AA9":{
+"ticker":"",
+"type":""
+},
+"163086101":{
+"ticker":"CHEF",
+"type":"Common Stock"
+},
+"16359R103":{
+"ticker":"CHE",
+"type":"Common Stock"
+},
+"163851108":{
+"ticker":"CC",
+"type":"Common Stock"
+},
+"16411R208":{
+"ticker":"LNG",
+"type":"Common Stock"
+},
+"165167735":{
+"ticker":"EXE",
+"type":"Common Stock"
+},
+"165303108":{
+"ticker":"CPK",
+"type":"Common Stock"
+},
+"16679L109":{
+"ticker":"CHWY",
+"type":"Common Stock"
+},
+"16934Q802":{
+"ticker":"CIM",
+"type":"REIT"
+},
+"16935C109":{
+"ticker":"CHYM",
+"type":"Common Stock"
+},
+"169656105":{
+"ticker":"CMG",
+"type":"Common Stock"
+},
+"169905106":{
+"ticker":"CHH",
+"type":"Common Stock"
+},
+"171340102":{
+"ticker":"CHD",
+"type":"Common Stock"
+},
+"171484108":{
+"ticker":"CHDN",
+"type":"Common Stock"
+},
+"171757206":{
+"ticker":"CDTX",
+"type":"Common Stock"
+},
+"171779309":{
+"ticker":"CIEN",
+"type":"Common Stock"
+},
+"172062101":{
+"ticker":"CINF",
+"type":"Common Stock"
+},
+"17243V102":{
+"ticker":"CNK",
+"type":"Common Stock"
+},
+"17253J106":{
+"ticker":"CIFR",
+"type":"Common Stock"
+},
+"172573107":{
+"ticker":"CRCL",
+"type":"Common Stock"
+},
+"172755100":{
+"ticker":"CRUS",
+"type":"Common Stock"
+},
+"17275R102":{
+"ticker":"CSCO",
+"type":"Common Stock"
+},
+"172908105":{
+"ticker":"CTAS",
+"type":"Common Stock"
+},
+"174610105":{
+"ticker":"CFG",
+"type":"Common Stock"
+},
+"177835105":{
+"ticker":"CHCO",
+"type":"Common Stock"
+},
+"17888H103":{
+"ticker":"CIVI",
+"type":"Common Stock"
+},
+"184496107":{
+"ticker":"CLH",
+"type":"Common Stock"
+},
+"18452B209":{
+"ticker":"CLSK",
+"type":"Common Stock"
+},
+"18453H106":{
+"ticker":"CCOGBP",
+"type":"Common Stock"
+},
+"18467V109":{
+"ticker":"YOU",
+"type":"Common Stock"
+},
+"185123106":{
+"ticker":"CWAN",
+"type":"Common Stock"
+},
+"18539C105":{
+"ticker":"NY4B",
+"type":"Common Stock"
+},
+"18539C204":{
+"ticker":"CWEN",
+"type":"Common Stock"
+},
+"185899101":{
+"ticker":"CLF",
+"type":"Common Stock"
+},
+"189054109":{
+"ticker":"CLX",
+"type":"Common Stock"
+},
+"18915M107":{
+"ticker":"NET",
+"type":"Common Stock"
+},
+"18915MAC1":{
+"ticker":"",
+"type":""
+},
+"191098102":{
+"ticker":"COKE",
+"type":"Common Stock"
+},
+"191241108":{
+"ticker":"KOF",
+"type":"ADR"
+},
+"192108504":{
+"ticker":"CDE",
+"type":"Common Stock"
+},
+"19239V302":{
+"ticker":"CCOI",
+"type":"Common Stock"
+},
+"19240Q201":{
+"ticker":"COGT",
+"type":"Common Stock"
+},
+"192422103":{
+"ticker":"CGNX",
+"type":"Common Stock"
+},
+"192446102":{
+"ticker":"CTSH",
+"type":"Common Stock"
+},
+"19247A100":{
+"ticker":"CNS",
+"type":"Common Stock"
+},
+"19247G107":{
+"ticker":"COHR",
+"type":"Common Stock"
+},
+"192576106":{
+"ticker":"COHU",
+"type":"Common Stock"
+},
+"19260Q107":{
+"ticker":"COIN",
+"type":"Common Stock"
+},
+"194014502":{
+"ticker":"ENOV",
+"type":"Common Stock"
+},
+"194162103":{
+"ticker":"CL",
+"type":"Common Stock"
+},
+"19459J104":{
+"ticker":"COLL",
+"type":"Common Stock"
+},
+"194693107":{
+"ticker":"CIGI",
+"type":"Common Stock"
+},
+"197236102":{
+"ticker":"COLB",
+"type":"Common Stock"
+},
+"197641103":{
+"ticker":"9666661D",
+"type":"Common Stock"
+},
+"198516106":{
+"ticker":"COLM",
+"type":"Common Stock"
+},
+"199908104":{
+"ticker":"FIX",
+"type":"Common Stock"
+},
+"20030N101":{
+"ticker":"CMCSA",
+"type":"Common Stock"
+},
+"200340107":{
+"ticker":"CMA",
+"type":"Common Stock"
+},
+"200525103":{
+"ticker":"CBSH",
+"type":"Common Stock"
+},
+"201723103":{
+"ticker":"CMC",
+"type":"Common Stock"
+},
+"20337X109":{
+"ticker":"VISN",
+"type":"Common Stock"
+},
+"203607106":{
+"ticker":"CBU",
+"type":"Common Stock"
+},
+"203668108":{
+"ticker":"CYH",
+"type":"Common Stock"
+},
+"20369C106":{
+"ticker":"CHCT",
+"type":"REIT"
+},
+"204166102":{
+"ticker":"CVLT",
+"type":"Common Stock"
+},
+"20441A102":{
+"ticker":"SBS",
+"type":"ADR"
+},
+"204448104":{
+"ticker":"BVN",
+"type":"ADR"
+},
+"20451N101":{
+"ticker":"CMP",
+"type":"Common Stock"
+},
+"20451Q104":{
+"ticker":"CODI",
+"type":"Common Stock"
+},
+"20451W101":{
+"ticker":"CMPS",
+"type":"ADR"
+},
+"20459V105":{
+"ticker":"GPGI",
+"type":"Common Stock"
+},
+"20464U100":{
+"ticker":"COMP",
+"type":"Common Stock"
+},
+"205887102":{
+"ticker":"CAG",
+"type":"Common Stock"
+},
+"20602D101":{
+"ticker":"CNXC",
+"type":"Common Stock"
+},
+"20603L102":{
+"ticker":"CON",
+"type":"Common Stock"
+},
+"20717M103":{
+"ticker":"8QR",
+"type":"Common Stock"
+},
+"20717MAB9":{
+"ticker":"",
+"type":""
+},
+"207410101":{
+"ticker":"CNMD",
+"type":"Common Stock"
+},
+"20825C104":{
+"ticker":"COP",
+"type":"Common Stock"
+},
+"209115104":{
+"ticker":"ED",
+"type":"Common Stock"
+},
+"21037T109":{
+"ticker":"CEG",
+"type":"Common Stock"
+},
+"21044C107":{
+"ticker":"ROAD",
+"type":"Common Stock"
+},
+"21217B100":{
+"ticker":"CTNM",
+"type":"Common Stock"
+},
+"216648501":{
+"ticker":"COO",
+"type":"Common Stock"
+},
+"21676P103":{
+"ticker":"CPS",
+"type":"Common Stock"
+},
+"217204106":{
+"ticker":"CPRT",
+"type":"Common Stock"
+},
+"218352102":{
+"ticker":"CORT",
+"type":"Common Stock"
+},
+"21867A105":{
+"ticker":"CLB",
+"type":"Common Stock"
+},
+"21871X109":{
+"ticker":"CRBG",
+"type":"Common Stock"
+},
+"21873S108":{
+"ticker":"CRWV",
+"type":"Common Stock"
+},
+"21874A106":{
+"ticker":"CORZ",
+"type":"Common Stock"
+},
+"21874A114":{
+"ticker":"CORZW",
+"type":"Equity WRT"
+},
+"21874C102":{
+"ticker":"CNM",
+"type":"Common Stock"
+},
+"218937100":{
+"ticker":"CNR",
+"type":"Common Stock"
+},
+"21900C308":{
+"ticker":"CRMD",
+"type":"Common Stock"
+},
+"219350105":{
+"ticker":"GLW",
+"type":"Common Stock"
+},
+"219798105":{
+"ticker":"QDEL",
+"type":"Common Stock"
+},
+"219948106":{
+"ticker":"CPAY",
+"type":"Common Stock"
+},
+"22002T108":{
+"ticker":"CDP",
+"type":"REIT"
+},
+"22052L104":{
+"ticker":"CTVA",
+"type":"Common Stock"
+},
+"221006109":{
+"ticker":"CRVL",
+"type":"Common Stock"
+},
+"22160K105":{
+"ticker":"COST",
+"type":"Common Stock"
+},
+"22160N109":{
+"ticker":"CSGP",
+"type":"Common Stock"
+},
+"222070203":{
+"ticker":"COTY",
+"type":"Common Stock"
+},
+"22266M104":{
+"ticker":"COUR",
+"type":"Common Stock"
+},
+"22266T109":{
+"ticker":"CPNG",
+"type":"Common Stock"
+},
+"222795502":{
+"ticker":"CUZ",
+"type":"REIT"
+},
+"22410J106":{
+"ticker":"CBRL",
+"type":"Common Stock"
+},
+"224408104":{
+"ticker":"CR",
+"type":"Common Stock"
+},
+"224441105":{
+"ticker":"CXT",
+"type":"Common Stock"
+},
+"225310101":{
+"ticker":"CACC",
+"type":"Common Stock"
+},
+"225447AD3":{
+"ticker":"",
+"type":""
+},
+"22663K107":{
+"ticker":"CRNXGBP",
+"type":"Common Stock"
+},
+"227046109":{
+"ticker":"CROX",
+"type":"Common Stock"
+},
+"227483104":{
+"ticker":"CCRN",
+"type":"Common Stock"
+},
+"22788C105":{
+"ticker":"CRWD",
+"type":"Common Stock"
+},
+"22822V101":{
+"ticker":"CCI",
+"type":"REIT"
+},
+"228368106":{
+"ticker":"CCK",
+"type":"Common Stock"
+},
+"229050307":{
+"ticker":"CYRX",
+"type":"Common Stock"
+},
+"22948Q101":{
+"ticker":"CTO",
+"type":"REIT"
+},
+"229663109":{
+"ticker":"CUBE",
+"type":"REIT"
+},
+"229899109":{
+"ticker":"CFR",
+"type":"Common Stock"
+},
+"231021106":{
+"ticker":"CMI",
+"type":"Common Stock"
+},
+"23128Q101":{
+"ticker":"CURB",
+"type":"REIT"
+},
+"231561101":{
+"ticker":"CW",
+"type":"Common Stock"
+},
+"23204G100":{
+"ticker":"CUBI",
+"type":"Common Stock"
+},
+"23204X103":{
+"ticker":"CTOS",
+"type":"Common Stock"
+},
+"23255M303":{
+"ticker":"KRSA",
+"type":"Common Stock"
+},
+"23282W605":{
+"ticker":"CYTK",
+"type":"Common Stock"
+},
+"233051879":{
+"ticker":"ASHR",
+"type":"ETP"
+},
+"23306J309":{
+"ticker":"DBVT",
+"type":"ADR"
+},
+"233331107":{
+"ticker":"DTE",
+"type":"Common Stock"
+},
+"233377407":{
+"ticker":"DXPE",
+"type":"Common Stock"
+},
+"23345M107":{
+"ticker":"DTM",
+"type":"Common Stock"
+},
+"23355L106":{
+"ticker":"DXC",
+"type":"Common Stock"
+},
+"234264109":{
+"ticker":"DAKT",
+"type":"Common Stock"
+},
+"235825205":{
+"ticker":"DAN",
+"type":"Common Stock"
+},
+"235851102":{
+"ticker":"DHR",
+"type":"Common Stock"
+},
+"237194105":{
+"ticker":"DRI",
+"type":"Common Stock"
+},
+"237266101":{
+"ticker":"DAR",
+"type":"Common Stock"
+},
+"23804L103":{
+"ticker":"DDOG",
+"type":"Common Stock"
+},
+"238337109":{
+"ticker":"PLAY",
+"type":"Common Stock"
+},
+"23954D109":{
+"ticker":"DAWNGBX",
+"type":"Common Stock"
+},
+"243537107":{
+"ticker":"DECK",
+"type":"Common Stock"
+},
+"244199105":{
+"ticker":"DE",
+"type":"Common Stock"
+},
+"24477V105":{
+"ticker":"DFTX",
+"type":"Common Stock"
+},
+"24665A103":{
+"ticker":"DK",
+"type":"Common Stock"
+},
+"24703L202":{
+"ticker":"DELL",
+"type":"Common Stock"
+},
+"248019101":{
+"ticker":"DLX",
+"type":"Common Stock"
+},
+"24823R105":{
+"ticker":"DNLI",
+"type":"Common Stock"
+},
+"248356107":{
+"ticker":"DNN",
+"type":"Common Stock"
+},
+"24906P109":{
+"ticker":"XRAY",
+"type":"Common Stock"
+},
+"249906108":{
+"ticker":"DSGX",
+"type":"Common Stock"
+},
+"25058X303":{
+"ticker":"DM2USD",
+"type":"Common Stock"
+},
+"25179M103":{
+"ticker":"DVN",
+"type":"Common Stock"
+},
+"252131107":{
+"ticker":"DXCM",
+"type":"Common Stock"
+},
+"252131AM9":{
+"ticker":"",
+"type":""
+},
+"252784301":{
+"ticker":"DRH",
+"type":"REIT"
+},
+"25278X109":{
+"ticker":"FANG",
+"type":"Common Stock"
+},
+"253393102":{
+"ticker":"DKS",
+"type":"Common Stock"
+},
+"253868103":{
+"ticker":"DLR",
+"type":"REIT"
+},
+"25401T603":{
+"ticker":"",
+"type":""
+},
+"25402D102":{
+"ticker":"DOCN",
+"type":"Common Stock"
+},
+"25402DAB8":{
+"ticker":"",
+"type":""
+},
+"254067101":{
+"ticker":"DDS",
+"type":"Common Stock"
+},
+"25432X102":{
+"ticker":"DCOM",
+"type":"Common Stock"
+},
+"254423106":{
+"ticker":"DIN",
+"type":"Common Stock"
+},
+"25445D101":{
+"ticker":"DDL",
+"type":"ADR"
+},
+"254543101":{
+"ticker":"DIOD",
+"type":"Common Stock"
+},
+"254687106":{
+"ticker":"DIS",
+"type":"Common Stock"
+},
+"254709108":{
+"ticker":"DFSEUR",
+"type":"Common Stock"
+},
+"25525P107":{
+"ticker":"DHC",
+"type":"REIT"
+},
+"256163106":{
+"ticker":"DOCU",
+"type":"Common Stock"
+},
+"25659T107":{
+"ticker":"DLB",
+"type":"Common Stock"
+},
+"256677105":{
+"ticker":"DG",
+"type":"Common Stock"
+},
+"256746108":{
+"ticker":"DLTR",
+"type":"Common Stock"
+},
+"25746U109":{
+"ticker":"D",
+"type":"Common Stock"
+},
+"257554105":{
+"ticker":"HUCK",
+"type":"Common Stock"
+},
+"257651109":{
+"ticker":"DCI",
+"type":"Common Stock"
+},
+"257701201":{
+"ticker":"DGICA",
+"type":"Common Stock"
+},
+"25809K105":{
+"ticker":"DASH",
+"type":"Common Stock"
+},
+"258278100":{
+"ticker":"DORM",
+"type":"Common Stock"
+},
+"25862V105":{
+"ticker":"DV",
+"type":"Common Stock"
+},
+"25960P109":{
+"ticker":"DEI",
+"type":"REIT"
+},
+"25960R105":{
+"ticker":"PLOW",
+"type":"Common Stock"
+},
+"260003108":{
+"ticker":"DOV",
+"type":"Common Stock"
+},
+"260557103":{
+"ticker":"DOW",
+"type":"Common Stock"
+},
+"26142RAB0":{
+"ticker":"",
+"type":""
+},
+"26142V105":{
+"ticker":"DKNG",
+"type":"Common Stock"
+},
+"26210C104":{
+"ticker":"DBX",
+"type":"Common Stock"
+},
+"26210CAC8":{
+"ticker":"",
+"type":""
+},
+"26210CAD6":{
+"ticker":"",
+"type":""
+},
+"26210V102":{
+"ticker":"DRVN",
+"type":"Common Stock"
+},
+"264147109":{
+"ticker":"DCO",
+"type":"Common Stock"
+},
+"26441C204":{
+"ticker":"DUK",
+"type":"Common Stock"
+},
+"26484T106":{
+"ticker":"DNB",
+"type":"Common Stock"
+},
+"26603R106":{
+"ticker":"DUOL",
+"type":"Common Stock"
+},
+"26614N102":{
+"ticker":"DWDPEUR",
+"type":"Common Stock"
+},
+"26614N201":{
+"ticker":"DD",
+"type":"Common Stock"
+},
+"26622P107":{
+"ticker":"DOCS",
+"type":"Common Stock"
+},
+"26701L100":{
+"ticker":"BROS",
+"type":"Common Stock"
+},
+"26740W109":{
+"ticker":"QBTS",
+"type":"Common Stock"
+},
+"267475101":{
+"ticker":"DY",
+"type":"Common Stock"
+},
+"268150109":{
+"ticker":"DT",
+"type":"Common Stock"
+},
+"268158201":{
+"ticker":"DVAX",
+"type":"Common Stock"
+},
+"26817Q886":{
+"ticker":"DX",
+"type":"REIT"
+},
+"26818M108":{
+"ticker":"DYN",
+"type":"Common Stock"
+},
+"26853E102":{
+"ticker":"EH",
+"type":"ADR"
+},
+"26856L103":{
+"ticker":"ELF",
+"type":"Common Stock"
+},
+"268603107":{
+"ticker":"LOCO",
+"type":"Common Stock"
+},
+"26875P101":{
+"ticker":"EOG",
+"type":"Common Stock"
+},
+"26884L109":{
+"ticker":"EQT",
+"type":"Common Stock"
+},
+"26884U109":{
+"ticker":"EPR",
+"type":"REIT"
+},
+"26922A842":{
+"ticker":"JETS",
+"type":"ETP"
+},
+"26951R104":{
+"ticker":"EFSI",
+"type":"Common Stock"
+},
+"26969P108":{
+"ticker":"EXP",
+"type":"Common Stock"
+},
+"27579R104":{
+"ticker":"EWBC",
+"type":"Common Stock"
+},
+"27627N105":{
+"ticker":"EBC",
+"type":"Common Stock"
+},
+"277276101":{
+"ticker":"EGP",
+"type":"REIT"
+},
+"277432100":{
+"ticker":"EMN",
+"type":"Common Stock"
+},
+"277461406":{
+"ticker":"KODK",
+"type":"Common Stock"
+},
+"278642103":{
+"ticker":"EBAY",
+"type":"Common Stock"
+},
+"278768106":{
+"ticker":"ECHO",
+"type":"Common Stock"
+},
+"278768AB2":{
+"ticker":"",
+"type":""
+},
+"278865100":{
+"ticker":"ECL",
+"type":"Common Stock"
+},
+"27923Q109":{
+"ticker":"ECVT",
+"type":"Common Stock"
+},
+"28035Q102":{
+"ticker":"EPC",
+"type":"Common Stock"
+},
+"28036F105":{
+"ticker":"EWTX",
+"type":"Common Stock"
+},
+"281020107":{
+"ticker":"EIX",
+"type":"Common Stock"
+},
+"28176E108":{
+"ticker":"EW",
+"type":"Common Stock"
+},
+"28256A109":{
+"ticker":"ENRD",
+"type":"ADR"
+},
+"28414H103":{
+"ticker":"ELAN",
+"type":"Common Stock"
+},
+"284825106":{
+"ticker":"ETRA",
+"type":"Common Stock"
+},
+"285512109":{
+"ticker":"4EA",
+"type":"Common Stock"
+},
+"28618M106":{
+"ticker":"ESI",
+"type":"Common Stock"
+},
+"29082A107":{
+"ticker":"EMBJ",
+"type":"ADR"
+},
+"29084Q100":{
+"ticker":"EME",
+"type":"Common Stock"
+},
+"291011104":{
+"ticker":"EMR",
+"type":"Common Stock"
+},
+"29109X106":{
+"ticker":"AZPN1USD",
+"type":"Common Stock"
+},
+"292104106":{
+"ticker":"ESRT",
+"type":"REIT"
+},
+"292218104":{
+"ticker":"EIG",
+"type":"Common Stock"
+},
+"29249E109":{
+"ticker":"ACT",
+"type":"Common Stock"
+},
+"29250N105":{
+"ticker":"ENB",
+"type":"Common Stock"
+},
+"29251M106":{
+"ticker":"ENTA",
+"type":"Common Stock"
+},
+"292554102":{
+"ticker":"ECPG",
+"type":"Common Stock"
+},
+"29259W700":{
+"ticker":"EU",
+"type":"Common Stock"
+},
+"29261A100":{
+"ticker":"EHC",
+"type":"Common Stock"
+},
+"292671708":{
+"ticker":"UUUU",
+"type":"Common Stock"
+},
+"29272W109":{
+"ticker":"ENR",
+"type":"Common Stock"
+},
+"29275Y102":{
+"ticker":"ENS",
+"type":"Common Stock"
+},
+"292765104":{
+"ticker":"EPAC",
+"type":"Common Stock"
+},
+"29332G102":{
+"ticker":"EHABGBP",
+"type":"Common Stock"
+},
+"29337E102":{
+"ticker":"ELVN",
+"type":"Common Stock"
+},
+"29355A107":{
+"ticker":"ENPH",
+"type":"Common Stock"
+},
+"29355AAH0":{
+"ticker":"",
+"type":""
+},
+"29355X107":{
+"ticker":"NPO",
+"type":"Common Stock"
+},
+"29358P101":{
+"ticker":"ENSG",
+"type":"Common Stock"
+},
+"293594107":{
+"ticker":"ENVX",
+"type":"Common Stock"
+},
+"29362U104":{
+"ticker":"ENTG",
+"type":"Common Stock"
+},
+"29364G103":{
+"ticker":"ETR",
+"type":"Common Stock"
+},
+"29390K102":{
+"ticker":"NVRI",
+"type":"Common Stock"
+},
+"29414B104":{
+"ticker":"EPAM",
+"type":"Common Stock"
+},
+"29415C101":{
+"ticker":"EOSE",
+"type":"Common Stock"
+},
+"29415F104":{
+"ticker":"NVST",
+"type":"Common Stock"
+},
+"294268107":{
+"ticker":"PLUS",
+"type":"Common Stock"
+},
+"29430C102":{
+"ticker":"VSTS",
+"type":"Common Stock"
+},
+"294429105":{
+"ticker":"EFX",
+"type":"Common Stock"
+},
+"29444U700":{
+"ticker":"EQIX",
+"type":"REIT"
+},
+"29445S100":{
+"ticker":"EQPT",
+"type":"Common Stock"
+},
+"29446M102":{
+"ticker":"EQNR",
+"type":"ADR"
+},
+"29446Y502":{
+"ticker":"EQX",
+"type":"Common Stock"
+},
+"29452E101":{
+"ticker":"EQH",
+"type":"Common Stock"
+},
+"294628102":{
+"ticker":"HP5A",
+"type":"REIT"
+},
+"29472R108":{
+"ticker":"ELS",
+"type":"REIT"
+},
+"29476L107":{
+"ticker":"VMRK",
+"type":"REIT"
+},
+"29479A108":{
+"ticker":"ERAS",
+"type":"Common Stock"
+},
+"294821608":{
+"ticker":"ERIC",
+"type":"ADR"
+},
+"29530P102":{
+"ticker":"ERIE",
+"type":"Common Stock"
+},
+"296006109":{
+"ticker":"ERO",
+"type":"Common Stock"
+},
+"296013105":{
+"ticker":"EROC",
+"type":"Common Stock"
+},
+"29605J106":{
+"ticker":"ESAB",
+"type":"Common Stock"
+},
+"296315104":{
+"ticker":"ESE",
+"type":"Common Stock"
+},
+"29664W105":{
+"ticker":"ESPREUR",
+"type":"Common Stock"
+},
+"29670E107":{
+"ticker":"EPRT",
+"type":"REIT"
+},
+"29670G102":{
+"ticker":"WTRG",
+"type":"Common Stock"
+},
+"297178105":{
+"ticker":"ESS",
+"type":"REIT"
+},
+"29772L108":{
+"ticker":"ETON",
+"type":"Common Stock"
+},
+"29786A106":{
+"ticker":"ETSY",
+"type":"Common Stock"
+},
+"29786AAJ5":{
+"ticker":"",
+"type":""
+},
+"29788T103":{
+"ticker":"ETWOGBP",
+"type":"Common Stock"
+},
+"298736109":{
+"ticker":"EEFT",
+"type":"Common Stock"
+},
+"29977A105":{
+"ticker":"EVR",
+"type":"Common Stock"
+},
+"30034W106":{
+"ticker":"EVRG",
+"type":"Common Stock"
+},
+"30040P103":{
+"ticker":"EVTC",
+"type":"Common Stock"
+},
+"30040W108":{
+"ticker":"ES",
+"type":"Common Stock"
+},
+"300426103":{
+"ticker":"ECG",
+"type":"Common Stock"
+},
+"30049H102":{
+"ticker":"EVLV",
+"type":"Common Stock"
+},
+"30050B101":{
+"ticker":"EVH",
+"type":"Common Stock"
+},
+"30052C107":{
+"ticker":"EOLS",
+"type":"Common Stock"
+},
+"30052F100":{
+"ticker":"EVGO",
+"type":"Common Stock"
+},
+"30063P105":{
+"ticker":"EXK",
+"type":"Common Stock"
+},
+"30069T101":{
+"ticker":"EE",
+"type":"Common Stock"
+},
+"30161N101":{
+"ticker":"EXC",
+"type":"Common Stock"
+},
+"30161Q104":{
+"ticker":"EXEL",
+"type":"Common Stock"
+},
+"30190A104":{
+"ticker":"FG",
+"type":"Common Stock"
+},
+"302081104":{
+"ticker":"EXLS",
+"type":"Common Stock"
+},
+"30212P303":{
+"ticker":"EXPE",
+"type":"Common Stock"
+},
+"302130109":{
+"ticker":"EXPD",
+"type":"Common Stock"
+},
+"30214U102":{
+"ticker":"EXPO",
+"type":"Common Stock"
+},
+"30225T102":{
+"ticker":"EXR",
+"type":"REIT"
+},
+"30226D106":{
+"ticker":"EXTR",
+"type":"Common Stock"
+},
+"302301106":{
+"ticker":"EZPW",
+"type":"Common Stock"
+},
+"30231G102":{
+"ticker":"EXMOC",
+"type":"Common Stock"
+},
+"30233Q108":{
+"ticker":"XOM",
+"type":"Common Stock"
+},
+"302491303":{
+"ticker":"FMC",
+"type":"Common Stock"
+},
+"302492103":{
+"ticker":"FLYW",
+"type":"Common Stock"
+},
+"302520101":{
+"ticker":"FNB",
+"type":"Common Stock"
+},
+"30260D103":{
+"ticker":"FIGS",
+"type":"Common Stock"
+},
+"302635206":{
+"ticker":"FSK",
+"type":"Common Stock"
+},
+"302941109":{
+"ticker":"FCN",
+"type":"Common Stock"
+},
+"30303M102":{
+"ticker":"META",
+"type":"Common Stock"
+},
+"303075105":{
+"ticker":"FDS",
+"type":"Common Stock"
+},
+"30320C301":{
+"ticker":"FTCI",
+"type":"Common Stock"
+},
+"303250104":{
+"ticker":"FICO",
+"type":"Common Stock"
+},
+"30609A109":{
+"ticker":"OKE",
+"type":"Common Stock"
+},
+"311642102":{
+"ticker":"FARO",
+"type":"Common Stock"
+},
+"31188V100":{
+"ticker":"FSLY",
+"type":"Common Stock"
+},
+"311900104":{
+"ticker":"FAST",
+"type":"Common Stock"
+},
+"313148306":{
+"ticker":"AGM",
+"type":"Common Stock"
+},
+"313745101":{
+"ticker":"FRT",
+"type":"REIT"
+},
+"313855108":{
+"ticker":"FSS",
+"type":"Common Stock"
+},
+"314211103":{
+"ticker":"FHI",
+"type":"Common Stock"
+},
+"31428X106":{
+"ticker":"FDX",
+"type":"Common Stock"
+},
+"314352105":{
+"ticker":"FDXF",
+"type":"Common Stock"
+},
+"31488V107":{
+"ticker":"FERG",
+"type":"Common Stock"
+},
+"314911108":{
+"ticker":"FRMI",
+"type":"Common Stock"
+},
+"31556C106":{
+"ticker":"FRVO",
+"type":"Common Stock"
+},
+"315616102":{
+"ticker":"FFIV",
+"type":"Common Stock"
+},
+"316092873":{
+"ticker":"FCOM",
+"type":"ETP"
+},
+"31620M106":{
+"ticker":"FIS",
+"type":"Common Stock"
+},
+"31620R303":{
+"ticker":"FNF",
+"type":"Common Stock"
+},
+"316773100":{
+"ticker":"FITB",
+"type":"Common Stock"
+},
+"316841105":{
+"ticker":"FIG",
+"type":"Common Stock"
+},
+"31810T101":{
+"ticker":"FINV",
+"type":"ADR"
+},
+"31816X106":{
+"ticker":"FLY",
+"type":"Common Stock"
+},
+"31846B108":{
+"ticker":"FA",
+"type":"Common Stock"
+},
+"31847R102":{
+"ticker":"FAF",
+"type":"Common Stock"
+},
+"318672706":{
+"ticker":"FBP",
+"type":"Common Stock"
+},
+"318916103":{
+"ticker":"FBMSUSD",
+"type":"Common Stock"
+},
+"31946M103":{
+"ticker":"FCNCA",
+"type":"Common Stock"
+},
+"319829107":{
+"ticker":"FCF",
+"type":"Common Stock"
+},
+"320209109":{
+"ticker":"FFBC",
+"type":"Common Stock"
+},
+"32020R109":{
+"ticker":"FFIN",
+"type":"Common Stock"
+},
+"320517105":{
+"ticker":"FHN",
+"type":"Common Stock"
+},
+"32051X108":{
+"ticker":"FHB",
+"type":"Common Stock"
+},
+"32054K103":{
+"ticker":"FR",
+"type":"REIT"
+},
+"32055Y201":{
+"ticker":"FIBK",
+"type":"Common Stock"
+},
+"32076V103":{
+"ticker":"AG",
+"type":"Common Stock"
+},
+"320817109":{
+"ticker":"FRME",
+"type":"Common Stock"
+},
+"336433107":{
+"ticker":"FSLR",
+"type":"Common Stock"
+},
+"336901103":{
+"ticker":"SRCE",
+"type":"Common Stock"
+},
+"337185102":{
+"ticker":"TRAX",
+"type":"Common Stock"
+},
+"33767E202":{
+"ticker":"FSV",
+"type":"Common Stock"
+},
+"33767U107":{
+"ticker":"FSUN",
+"type":"Common Stock"
+},
+"33768G107":{
+"ticker":"FCFS",
+"type":"Common Stock"
+},
+"337738108":{
+"ticker":"FISV",
+"type":"Common Stock"
+},
+"337932107":{
+"ticker":"FE",
+"type":"Common Stock"
+},
+"33829M101":{
+"ticker":"FIVE",
+"type":"Common Stock"
+},
+"338307101":{
+"ticker":"FIVN",
+"type":"Common Stock"
+},
+"33830T103":{
+"ticker":"FSBC",
+"type":"Common Stock"
+},
+"33833X101":{
+"ticker":"FPLSF",
+"type":"Common Stock"
+},
+"343412102":{
+"ticker":"FLR",
+"type":"Common Stock"
+},
+"343498101":{
+"ticker":"FLO",
+"type":"Common Stock"
+},
+"34354P105":{
+"ticker":"FLS",
+"type":"Common Stock"
+},
+"34379V103":{
+"ticker":"FLNC",
+"type":"Common Stock"
+},
+"34385P108":{
+"ticker":"LAB",
+"type":"Common Stock"
+},
+"343928107":{
+"ticker":"FLYX",
+"type":"Common Stock"
+},
+"343928115":{
+"ticker":"FLYX.WS",
+"type":"Equity WRT"
+},
+"344849104":{
+"ticker":"WOO",
+"type":"Common Stock"
+},
+"345370860":{
+"ticker":"F",
+"type":"Common Stock"
+},
+"345370CZ1":{
+"ticker":"",
+"type":""
+},
+"34629L202":{
+"ticker":"FRGE",
+"type":"Common Stock"
+},
+"34631F102":{
+"ticker":"FPS",
+"type":"Common Stock"
+},
+"346375108":{
+"ticker":"FORM",
+"type":"Common Stock"
+},
+"349381103":{
+"ticker":"FIGR",
+"type":"Common Stock"
+},
+"349553107":{
+"ticker":"FTS",
+"type":"Common Stock"
+},
+"34959E109":{
+"ticker":"FTNT",
+"type":"Common Stock"
+},
+"34959J108":{
+"ticker":"FTV",
+"type":"Common Stock"
+},
+"34964C106":{
+"ticker":"FBIN",
+"type":"Common Stock"
+},
+"34965K107":{
+"ticker":"FTRE",
+"type":"Common Stock"
+},
+"34984V209":{
+"ticker":"FET",
+"type":"Common Stock"
+},
+"34986A104":{
+"ticker":"FWRD",
+"type":"Common Stock"
+},
+"349942102":{
+"ticker":"FSM",
+"type":"Common Stock"
+},
+"35086T109":{
+"ticker":"FCPT",
+"type":"REIT"
+},
+"35104E100":{
+"ticker":"FDMT",
+"type":"Common Stock"
+},
+"35137L105":{
+"ticker":"FOXA",
+"type":"Common Stock"
+},
+"35137L204":{
+"ticker":"FOX",
+"type":"Common Stock"
+},
+"35168W103":{
+"ticker":"",
+"type":""
+},
+"351858105":{
+"ticker":"FNV",
+"type":"Common Stock"
+},
+"35243J101":{
+"ticker":"FBRT",
+"type":"REIT"
+},
+"353514102":{
+"ticker":"FELE",
+"type":"Common Stock"
+},
+"354613101":{
+"ticker":"BEN",
+"type":"Common Stock"
+},
+"35661P100":{
+"ticker":"FRNM",
+"type":"Common Stock"
+},
+"35671D857":{
+"ticker":"FCX",
+"type":"Common Stock"
+},
+"358039105":{
+"ticker":"FRPT",
+"type":"Common Stock"
+},
+"358054104":{
+"ticker":"FRSH",
+"type":"Common Stock"
+},
+"35834F104":{
+"ticker":"TE",
+"type":"Common Stock"
+},
+"35905A109":{
+"ticker":"FTDR",
+"type":"Common Stock"
+},
+"35909D109":{
+"ticker":"FYBR",
+"type":"Common Stock"
+},
+"35909R108":{
+"ticker":"ULCC",
+"type":"Common Stock"
+},
+"35922N100":{
+"ticker":"FVR",
+"type":"REIT"
+},
+"359694106":{
+"ticker":"FUL",
+"type":"Common Stock"
+},
+"35969L108":{
+"ticker":"YMM",
+"type":"ADR"
+},
+"360271100":{
+"ticker":"FULT",
+"type":"Common Stock"
+},
+"361008105":{
+"ticker":"FNKO",
+"type":"Common Stock"
+},
+"36118L106":{
+"ticker":"FUTU",
+"type":"ADR"
+},
+"361448103":{
+"ticker":"GATX",
+"type":"Common Stock"
+},
+"36162J106":{
+"ticker":"GEO",
+"type":"Common Stock"
+},
+"36164V800":{
+"ticker":"GLIBK",
+"type":"Common Stock"
+},
+"36165L108":{
+"ticker":"GDS",
+"type":"ADR"
+},
+"36168Q104":{
+"ticker":"GFL",
+"type":"Common Stock"
+},
+"36237H101":{
+"ticker":"GIII",
+"type":"Common Stock"
+},
+"36251C103":{
+"ticker":"GMS1EUR",
+"type":"Common Stock"
+},
+"36257Y109":{
+"ticker":"GOTU",
+"type":"ADR"
+},
+"36262G101":{
+"ticker":"GXO",
+"type":"Common Stock"
+},
+"36266G107":{
+"ticker":"GEHC",
+"type":"Common Stock"
+},
+"36315X101":{
+"ticker":"LKFT",
+"type":"ADR"
+},
+"36317J209":{
+"ticker":"GLXY",
+"type":"Common Stock"
+},
+"36322Q206":{
+"ticker":"",
+"type":""
+},
+"363576109":{
+"ticker":"AJG",
+"type":"Common Stock"
+},
+"36467J108":{
+"ticker":"GLPI",
+"type":"REIT"
+},
+"36467W109":{
+"ticker":"GME",
+"type":"Common Stock"
+},
+"36467W117":{
+"ticker":"",
+"type":""
+},
+"36472T109":{
+"ticker":"TDAY",
+"type":"Common Stock"
+},
+"364760108":{
+"ticker":"GAP",
+"type":"Common Stock"
+},
+"366505105":{
+"ticker":"GTX",
+"type":"Common Stock"
+},
+"366651107":{
+"ticker":"IT",
+"type":"Common Stock"
+},
+"36828A101":{
+"ticker":"GEV",
+"type":"Common Stock"
+},
+"36831E108":{
+"ticker":"GCMG",
+"type":"Common Stock"
+},
+"36866J105":{
+"ticker":"GEMI",
+"type":"Common Stock"
+},
+"36870C104":{
+"ticker":"GENK",
+"type":"Common Stock"
+},
+"36870W100":{
+"ticker":"SAEN",
+"type":"ADR"
+},
+"368736104":{
+"ticker":"GNRC",
+"type":"Common Stock"
+},
+"369550108":{
+"ticker":"GD",
+"type":"Common Stock"
+},
+"369604301":{
+"ticker":"GE",
+"type":"Common Stock"
+},
+"370334104":{
+"ticker":"GIS",
+"type":"Common Stock"
+},
+"37045V100":{
+"ticker":"GM",
+"type":"Common Stock"
+},
+"370920100":{
+"ticker":"GENB",
+"type":"Common Stock"
+},
+"371901109":{
+"ticker":"GNTX",
+"type":"Common Stock"
+},
+"372460105":{
+"ticker":"GPC",
+"type":"Common Stock"
+},
+"37247D106":{
+"ticker":"GNW",
+"type":"Common Stock"
+},
+"37253A103":{
+"ticker":"THRM",
+"type":"Common Stock"
+},
+"373737105":{
+"ticker":"GGB",
+"type":"ADR"
+},
+"374297109":{
+"ticker":"GTY",
+"type":"REIT"
+},
+"374689107":{
+"ticker":"ROCK",
+"type":"Common Stock"
+},
+"375558103":{
+"ticker":"GILD",
+"type":"Common Stock"
+},
+"375916103":{
+"ticker":"GIL",
+"type":"Common Stock"
+},
+"37611X209":{
+"ticker":"DNA",
+"type":"Common Stock"
+},
+"37637K108":{
+"ticker":"GTLB",
+"type":"Common Stock"
+},
+"37637Q105":{
+"ticker":"GBCI",
+"type":"Common Stock"
+},
+"377322102":{
+"ticker":"GKOS",
+"type":"Common Stock"
+},
+"37733W204":{
+"ticker":"GSK",
+"type":"ADR"
+},
+"37890B100":{
+"ticker":"",
+"type":""
+},
+"37892E102":{
+"ticker":"GIC",
+"type":"Common Stock"
+},
+"378973507":{
+"ticker":"GSAT",
+"type":"Common Stock"
+},
+"379378201":{
+"ticker":"GNL",
+"type":"REIT"
+},
+"37940X102":{
+"ticker":"GPN",
+"type":"Common Stock"
+},
+"37940XAU6":{
+"ticker":"",
+"type":""
+},
+"37950E259":{
+"ticker":"ARGT",
+"type":"ETP"
+},
+"37954Y871":{
+"ticker":"URA",
+"type":"ETP"
+},
+"379577208":{
+"ticker":"GMED",
+"type":"Common Stock"
+},
+"379598105":{
+"ticker":"GLOO",
+"type":"Common Stock"
+},
+"37959E102":{
+"ticker":"GL",
+"type":"Common Stock"
+},
+"38013D106":{
+"ticker":"GMRS",
+"type":"Common Stock"
+},
+"380237107":{
+"ticker":"GDDY",
+"type":"Common Stock"
+},
+"38059T106":{
+"ticker":"GFI",
+"type":"ADR"
+},
+"381013101":{
+"ticker":"GDEN",
+"type":"Common Stock"
+},
+"38141G104":{
+"ticker":"GS",
+"type":"Common Stock"
+},
+"382550101":{
+"ticker":"GT",
+"type":"Common Stock"
+},
+"38267D109":{
+"ticker":"GSHD",
+"type":"Common Stock"
+},
+"384109104":{
+"ticker":"GGG",
+"type":"Common Stock"
+},
+"384637104":{
+"ticker":"GHC",
+"type":"Common Stock"
+},
+"384747101":{
+"ticker":"GRAL",
+"type":"Common Stock"
+},
+"384802104":{
+"ticker":"GWW",
+"type":"Common Stock"
+},
+"38526M106":{
+"ticker":"LOPE",
+"type":"Common Stock"
+},
+"387328107":{
+"ticker":"GVA",
+"type":"Common Stock"
+},
+"387437205":{
+"ticker":"GRTUF",
+"type":"REIT"
+},
+"388689101":{
+"ticker":"GPK",
+"type":"Common Stock"
+},
+"389375106":{
+"ticker":"GTN",
+"type":"Common Stock"
+},
+"389637109":{
+"ticker":"GBTC",
+"type":"ETP"
+},
+"38964R203":{
+"ticker":"ETH",
+"type":"ETP"
+},
+"389930207":{
+"ticker":"BTC",
+"type":"ETP"
+},
+"390607109":{
+"ticker":"GLDD",
+"type":"Common Stock"
+},
+"392709101":{
+"ticker":"GRBK",
+"type":"Common Stock"
+},
+"393222104":{
+"ticker":"GPRE",
+"type":"Common Stock"
+},
+"393657101":{
+"ticker":"GBX",
+"type":"Common Stock"
+},
+"397624107":{
+"ticker":"GEF",
+"type":"Common Stock"
+},
+"39813G109":{
+"ticker":"GDYN",
+"type":"Common Stock"
+},
+"398182303":{
+"ticker":"AHR",
+"type":"REIT"
+},
+"39818P799":{
+"ticker":"PKST",
+"type":"REIT"
+},
+"398433102":{
+"ticker":"GFF",
+"type":"Common Stock"
+},
+"398438408":{
+"ticker":"GRFS",
+"type":"ADR"
+},
+"39854F101":{
+"ticker":"GRND",
+"type":"Common Stock"
+},
+"39874R101":{
+"ticker":"GO",
+"type":"Common Stock"
+},
+"398905109":{
+"ticker":"GPI",
+"type":"Common Stock"
+},
+"399909100":{
+"ticker":"GGAL",
+"type":"ADR"
+},
+"40054J109":{
+"ticker":"AERO",
+"type":"ADR"
+},
+"40131M109":{
+"ticker":"GH",
+"type":"Common Stock"
+},
+"401617105":{
+"ticker":"GU9",
+"type":"Common Stock"
+},
+"40171V100":{
+"ticker":"GWRE",
+"type":"Common Stock"
+},
+"402635502":{
+"ticker":"GPOR",
+"type":"Common Stock"
+},
+"403949100":{
+"ticker":"DINO",
+"type":"Common Stock"
+},
+"404030108":{
+"ticker":"HEESEUR",
+"type":"Common Stock"
+},
+"40412C101":{
+"ticker":"HCA",
+"type":"Common Stock"
+},
+"40415F101":{
+"ticker":"HDB",
+"type":"ADR"
+},
+"40416E103":{
+"ticker":"HCI",
+"type":"Common Stock"
+},
+"404251100":{
+"ticker":"HNI",
+"type":"Common Stock"
+},
+"40434L105":{
+"ticker":"HPQ",
+"type":"Common Stock"
+},
+"404609109":{
+"ticker":"HCKT",
+"type":"Common Stock"
+},
+"405024100":{
+"ticker":"HAE",
+"type":"Common Stock"
+},
+"405166109":{
+"ticker":"HGTY",
+"type":"Common Stock"
+},
+"405552100":{
+"ticker":"HLN",
+"type":"ADR"
+},
+"406216101":{
+"ticker":"HAL",
+"type":"Common Stock"
+},
+"40637H109":{
+"ticker":"HALO",
+"type":"Common Stock"
+},
+"407497106":{
+"ticker":"HLNE",
+"type":"Common Stock"
+},
+"410120109":{
+"ticker":"HWC",
+"type":"Common Stock"
+},
+"410345102":{
+"ticker":"HN9",
+"type":"Common Stock"
+},
+"41068X100":{
+"ticker":"HASI",
+"type":"Common Stock"
+},
+"410867105":{
+"ticker":"THG",
+"type":"Common Stock"
+},
+"41151J745":{
+"ticker":"INFO",
+"type":"ETP"
+},
+"412822108":{
+"ticker":"HOG",
+"type":"Common Stock"
+},
+"413160102":{
+"ticker":"HLIT",
+"type":"Common Stock"
+},
+"413197104":{
+"ticker":"HRMY",
+"type":"Common Stock"
+},
+"413216300":{
+"ticker":"HMY",
+"type":"ADR"
+},
+"415858109":{
+"ticker":"HROW",
+"type":"Common Stock"
+},
+"415864107":{
+"ticker":"HA7",
+"type":"Common Stock"
+},
+"416515104":{
+"ticker":"HIG",
+"type":"Common Stock"
+},
+"418056107":{
+"ticker":"HAS",
+"type":"Common Stock"
+},
+"418100103":{
+"ticker":"HCP2EUR",
+"type":"Common Stock"
+},
+"419870100":{
+"ticker":"HE",
+"type":"Common Stock"
+},
+"420201105":{
+"ticker":"HAWK",
+"type":"Common Stock"
+},
+"421298100":{
+"ticker":"HAYW",
+"type":"Common Stock"
+},
+"42222N103":{
+"ticker":"HSTM",
+"type":"Common Stock"
+},
+"42226A107":{
+"ticker":"HQY",
+"type":"Common Stock"
+},
+"42226K105":{
+"ticker":"HR",
+"type":"REIT"
+},
+"42234Q102":{
+"ticker":"HTLFEUR",
+"type":"Common Stock"
+},
+"42238D107":{
+"ticker":"HTFL",
+"type":"Common Stock"
+},
+"42250P103":{
+"ticker":"DOC",
+"type":"REIT"
+},
+"422704106":{
+"ticker":"HL",
+"type":"Common Stock"
+},
+"422806109":{
+"ticker":"HEI",
+"type":"Common Stock"
+},
+"42328H109":{
+"ticker":"HLIO",
+"type":"Common Stock"
+},
+"423403104":{
+"ticker":"MOMO",
+"type":"ADR"
+},
+"423452101":{
+"ticker":"HP",
+"type":"Common Stock"
+},
+"423494103":{
+"ticker":"COAG",
+"type":"Common Stock"
+},
+"426281101":{
+"ticker":"JKHY",
+"type":"Common Stock"
+},
+"42703MAF0":{
+"ticker":"",
+"type":""
+},
+"42704L104":{
+"ticker":"HRI",
+"type":"Common Stock"
+},
+"427866108":{
+"ticker":"HSY",
+"type":"Common Stock"
+},
+"428040DJ5":{
+"ticker":"",
+"type":""
+},
+"428050108":{
+"ticker":"HSAI",
+"type":"ADR"
+},
+"42806J148":{
+"ticker":"HTZWW",
+"type":"Equity WRT"
+},
+"42806J700":{
+"ticker":"HTZ",
+"type":"Common Stock"
+},
+"42809H107":{
+"ticker":"HES",
+"type":"Common Stock"
+},
+"428103105":{
+"ticker":"HESM",
+"type":"Common Stock"
+},
+"42824C109":{
+"ticker":"HPE",
+"type":"Common Stock"
+},
+"428291108":{
+"ticker":"HXL",
+"type":"Common Stock"
+},
+"431284108":{
+"ticker":"HIW",
+"type":"REIT"
+},
+"431571108":{
+"ticker":"9HI",
+"type":"Common Stock"
+},
+"432705309":{
+"ticker":"CNTN",
+"type":"Common Stock"
+},
+"432748101":{
+"ticker":"HTH",
+"type":"Common Stock"
+},
+"43283X105":{
+"ticker":"HGV",
+"type":"Common Stock"
+},
+"43289P106":{
+"ticker":"HIMX",
+"type":"ADR"
+},
+"433000106":{
+"ticker":"HIMS",
+"type":"Common Stock"
+},
+"43300A203":{
+"ticker":"HLT",
+"type":"Common Stock"
+},
+"433313103":{
+"ticker":"HNGE",
+"type":"Common Stock"
+},
+"433539202":{
+"ticker":"HIPO",
+"type":"Common Stock"
+},
+"43538H103":{
+"ticker":"HLLY",
+"type":"Common Stock"
+},
+"436440101":{
+"ticker":"HO1",
+"type":"Common Stock"
+},
+"436893200":{
+"ticker":"HOMB",
+"type":"Common Stock"
+},
+"437076102":{
+"ticker":"HD",
+"type":"Common Stock"
+},
+"438333106":{
+"ticker":"HNST",
+"type":"Common Stock"
+},
+"43849R105":{
+"ticker":"HONA",
+"type":"Common Stock"
+},
+"438516106":{
+"ticker":"",
+"type":""
+},
+"438516205":{
+"ticker":"HON",
+"type":"Common Stock"
+},
+"43940T109":{
+"ticker":"HOPE",
+"type":"Common Stock"
+},
+"440327104":{
+"ticker":"HMN",
+"type":"Common Stock"
+},
+"440452100":{
+"ticker":"HRL",
+"type":"Common Stock"
+},
+"44107P104":{
+"ticker":"HST",
+"type":"REIT"
+},
+"441593100":{
+"ticker":"HLI",
+"type":"Common Stock"
+},
+"44267T102":{
+"ticker":"HHH",
+"type":"Common Stock"
+},
+"443201108":{
+"ticker":"HWM",
+"type":"Common Stock"
+},
+"443320106":{
+"ticker":"HUBG",
+"type":"Common Stock"
+},
+"44332N106":{
+"ticker":"HTHT",
+"type":"ADR"
+},
+"443510607":{
+"ticker":"HUBB",
+"type":"Common Stock"
+},
+"443573100":{
+"ticker":"HUBS",
+"type":"Common Stock"
+},
+"443628102":{
+"ticker":"HBM",
+"type":"Common Stock"
+},
+"444097109":{
+"ticker":"",
+"type":""
+},
+"444859102":{
+"ticker":"HUM",
+"type":"Common Stock"
+},
+"445658107":{
+"ticker":"JBHT",
+"type":"Common Stock"
+},
+"446150104":{
+"ticker":"HBAN",
+"type":"Common Stock"
+},
+"446413106":{
+"ticker":"HII",
+"type":"Common Stock"
+},
+"447011107":{
+"ticker":"HUN",
+"type":"Common Stock"
+},
+"447462102":{
+"ticker":"HURN",
+"type":"Common Stock"
+},
+"44812J104":{
+"ticker":"HUT",
+"type":"Common Stock"
+},
+"44852D108":{
+"ticker":"HUYA",
+"type":"ADR"
+},
+"448579102":{
+"ticker":"H",
+"type":"Common Stock"
+},
+"44891N208":{
+"ticker":"PPLI",
+"type":"Common Stock"
+},
+"448947507":{
+"ticker":"IDT",
+"type":"Common Stock"
+},
+"44916Y106":{
+"ticker":"PURR",
+"type":"Common Stock"
+},
+"44925C103":{
+"ticker":"ICFI",
+"type":"Common Stock"
+},
+"44930G107":{
+"ticker":"ICUI",
+"type":"Common Stock"
+},
+"44951W106":{
+"ticker":"IESC",
+"type":"Common Stock"
+},
+"44980X109":{
+"ticker":"IPGP",
+"type":"Common Stock"
+},
+"450056106":{
+"ticker":"IRTC",
+"type":"Common Stock"
+},
+"45073V108":{
+"ticker":"ITT",
+"type":"Common Stock"
+},
+"450913108":{
+"ticker":"IAG",
+"type":"Common Stock"
+},
+"45104G104":{
+"ticker":"IBN",
+"type":"ADR"
+},
+"451051106":{
+"ticker":"IBTA",
+"type":"Common Stock"
+},
+"451107106":{
+"ticker":"IDA",
+"type":"Common Stock"
+},
+"45166A102":{
+"ticker":"IDYA",
+"type":"Common Stock"
+},
+"45167R104":{
+"ticker":"IEX",
+"type":"Common Stock"
+},
+"45168D104":{
+"ticker":"IDXX",
+"type":"Common Stock"
+},
+"45174J509":{
+"ticker":"IHRT",
+"type":"Common Stock"
+},
+"452308109":{
+"ticker":"ITW",
+"type":"Common Stock"
+},
+"452327109":{
+"ticker":"ILMN",
+"type":"Common Stock"
+},
+"45245E109":{
+"ticker":"IMAX",
+"type":"Common Stock"
+},
+"452521107":{
+"ticker":"IMMR",
+"type":"Common Stock"
+},
+"45258D105":{
+"ticker":"IMCR",
+"type":"ADR"
+},
+"45258J102":{
+"ticker":"IMVT",
+"type":"Common Stock"
+},
+"453038408":{
+"ticker":"IMO",
+"type":"Common Stock"
+},
+"453204109":{
+"ticker":"PI",
+"type":"Common Stock"
+},
+"45332Y109":{
+"ticker":"NARIUSD",
+"type":"Common Stock"
+},
+"45337C102":{
+"ticker":"INCY",
+"type":"Common Stock"
+},
+"45378A106":{
+"ticker":"IRT",
+"type":"REIT"
+},
+"453836108":{
+"ticker":"INDB",
+"type":"Common Stock"
+},
+"45579U109":{
+"ticker":"SUPN",
+"type":"Common Stock"
+},
+"456237106":{
+"ticker":"ILPT",
+"type":"REIT"
+},
+"45674M101":{
+"ticker":"96Z",
+"type":"Common Stock"
+},
+"45676K103":{
+"ticker":"INFQ",
+"type":"Common Stock"
+},
+"456788108":{
+"ticker":"INFY",
+"type":"ADR"
+},
+"45687V106":{
+"ticker":"IR",
+"type":"Common Stock"
+},
+"45688C107":{
+"ticker":"NGVT",
+"type":"Common Stock"
+},
+"457152106":{
+"ticker":"INGM",
+"type":"Common Stock"
+},
+"457187102":{
+"ticker":"INGR",
+"type":"Common Stock"
+},
+"45720N103":{
+"ticker":"INBX",
+"type":"Common Stock"
+},
+"45765U103":{
+"ticker":"NSIT",
+"type":"Common Stock"
+},
+"457669307":{
+"ticker":"INSM",
+"type":"Common Stock"
+},
+"45768S105":{
+"ticker":"IOSP",
+"type":"Common Stock"
+},
+"457730109":{
+"ticker":"INSP",
+"type":"Common Stock"
+},
+"45778Q107":{
+"ticker":"NSP",
+"type":"Common Stock"
+},
+"45780R101":{
+"ticker":"IBP",
+"type":"Common Stock"
+},
+"45781M101":{
+"ticker":"INVA",
+"type":"Common Stock"
+},
+"45781V101":{
+"ticker":"IIPR",
+"type":"REIT"
+},
+"45784P101":{
+"ticker":"PODD",
+"type":"Common Stock"
+},
+"457985208":{
+"ticker":"IART",
+"type":"Common Stock"
+},
+"458140100":{
+"ticker":"INTC",
+"type":"Common Stock"
+},
+"45826H109":{
+"ticker":"WGB",
+"type":"Common Stock"
+},
+"45826J105":{
+"ticker":"NTLA",
+"type":"Common Stock"
+},
+"45827U109":{
+"ticker":"INTA",
+"type":"Common Stock"
+},
+"45828L108":{
+"ticker":"IAS",
+"type":"Common Stock"
+},
+"458334109":{
+"ticker":"IPAR",
+"type":"Common Stock"
+},
+"45841N107":{
+"ticker":"IBKR",
+"type":"Common Stock"
+},
+"458665304":{
+"ticker":"TILE",
+"type":"Common Stock"
+},
+"45866F104":{
+"ticker":"ICE",
+"type":"Common Stock"
+},
+"45867G101":{
+"ticker":"IDCC",
+"type":"Common Stock"
+},
+"459044103":{
+"ticker":"IBOC",
+"type":"Common Stock"
+},
+"459200101":{
+"ticker":"IBM",
+"type":"Common Stock"
+},
+"459506101":{
+"ticker":"IFF",
+"type":"Common Stock"
+},
+"46005L101":{
+"ticker":"IMXI",
+"type":"Common Stock"
+},
+"460146103":{
+"ticker":"IP",
+"type":"Common Stock"
+},
+"460690100":{
+"ticker":"IPG",
+"type":"Common Stock"
+},
+"46090E103":{
+"ticker":"QQQ",
+"type":"ETP"
+},
+"46116X101":{
+"ticker":"ITCIEUR",
+"type":"Common Stock"
+},
+"461202103":{
+"ticker":"INTU",
+"type":"Common Stock"
+},
+"46120E602":{
+"ticker":"ISRG",
+"type":"Common Stock"
+},
+"46124J201":{
+"ticker":"IVT",
+"type":"REIT"
+},
+"46125A100":{
+"ticker":"LUNR",
+"type":"Common Stock"
+},
+"46131B704":{
+"ticker":"IVR",
+"type":"REIT"
+},
+"46137V357":{
+"ticker":"RSP",
+"type":"ETP"
+},
+"46138E461":{
+"ticker":"PBUS",
+"type":"ETP"
+},
+"46138G706":{
+"ticker":"TAN",
+"type":"ETP"
+},
+"46187W107":{
+"ticker":"INVH",
+"type":"REIT"
+},
+"462222100":{
+"ticker":"IONS",
+"type":"Common Stock"
+},
+"46222L108":{
+"ticker":"IONQ",
+"type":"Common Stock"
+},
+"462260100":{
+"ticker":"IOVA",
+"type":"Common Stock"
+},
+"46266A109":{
+"ticker":"IRMD",
+"type":"Common Stock"
+},
+"46266C105":{
+"ticker":"IQV",
+"type":"Common Stock"
+},
+"46267X108":{
+"ticker":"IQ",
+"type":"ADR"
+},
+"46269C102":{
+"ticker":"IRDM",
+"type":"Common Stock"
+},
+"46284V101":{
+"ticker":"IRM",
+"type":"REIT"
+},
+"46333X108":{
+"ticker":"IRWD",
+"type":"Common Stock"
+},
+"464286400":{
+"ticker":"EWZ",
+"type":"ETP"
+},
+"464286509":{
+"ticker":"EWC",
+"type":"ETP"
+},
+"464286764":{
+"ticker":"EWP",
+"type":"ETP"
+},
+"464286772":{
+"ticker":"EWY",
+"type":"ETP"
+},
+"464286822":{
+"ticker":"EWW",
+"type":"ETP"
+},
+"464287184":{
+"ticker":"FXI",
+"type":"ETP"
+},
+"464287200":{
+"ticker":"IVV",
+"type":"ETP"
+},
+"464287234":{
+"ticker":"EEM",
+"type":"ETP"
+},
+"464287242":{
+"ticker":"LQD",
+"type":"ETP"
+},
+"464287432":{
+"ticker":"TLT",
+"type":"ETP"
+},
+"464287440":{
+"ticker":"IEF",
+"type":"ETP"
+},
+"464287465":{
+"ticker":"EFA",
+"type":"ETP"
+},
+"464287515":{
+"ticker":"IGV",
+"type":"ETP"
+},
+"464287598":{
+"ticker":"IWD",
+"type":"ETP"
+},
+"464287614":{
+"ticker":"IWF",
+"type":"ETP"
+},
+"464287622":{
+"ticker":"IWB",
+"type":"ETP"
+},
+"464287655":{
+"ticker":"IWM",
+"type":"ETP"
+},
+"464287739":{
+"ticker":"IYR",
+"type":"ETP"
+},
+"464288414":{
+"ticker":"MUB",
+"type":"ETP"
+},
+"464288513":{
+"ticker":"HYG",
+"type":"ETP"
+},
+"464288588":{
+"ticker":"MBB",
+"type":"ETP"
+},
+"464288794":{
+"ticker":"IAI",
+"type":"ETP"
+},
+"464288810":{
+"ticker":"IHI",
+"type":"ETP"
+},
+"46428R107":{
+"ticker":"GSG",
+"type":"ETP"
+},
+"46429B671":{
+"ticker":"MCHI",
+"type":"ETP"
+},
+"46432F842":{
+"ticker":"IEFA",
+"type":"ETP"
+},
+"46434G103":{
+"ticker":"IEMG",
+"type":"ETP"
+},
+"46434G764":{
+"ticker":"EMXC",
+"type":"ETP"
+},
+"46438F101":{
+"ticker":"IBIT",
+"type":"ETP"
+},
+"46438R105":{
+"ticker":"ETHAEUR",
+"type":"ETP"
+},
+"46500E867":{
+"ticker":"ISOU",
+"type":"Common Stock"
+},
+"465562106":{
+"ticker":"ITUB",
+"type":"ADR"
+},
+"465741106":{
+"ticker":"ITRI",
+"type":"Common Stock"
+},
+"46578C108":{
+"ticker":"IE",
+"type":"Common Stock"
+},
+"46590V100":{
+"ticker":"JBGS",
+"type":"REIT"
+},
+"46591M109":{
+"ticker":"JOYY",
+"type":"ADR"
+},
+"466032109":{
+"ticker":"JJSF",
+"type":"Common Stock"
+},
+"46625H100":{
+"ticker":"JPM",
+"type":"Common Stock"
+},
+"466313103":{
+"ticker":"JBL",
+"type":"Common Stock"
+},
+"466367109":{
+"ticker":"JACK",
+"type":"Common Stock"
+},
+"46817M107":{
+"ticker":"JXN",
+"type":"Common Stock"
+},
+"46982L108":{
+"ticker":"J",
+"type":"Common Stock"
+},
+"47074L105":{
+"ticker":"JAMF",
+"type":"Common Stock"
+},
+"471024109":{
+"ticker":"JAN",
+"type":"REIT"
+},
+"472145AF8":{
+"ticker":"",
+"type":""
+},
+"47215P106":{
+"ticker":"JD",
+"type":"ADR"
+},
+"47215PAJ5":{
+"ticker":"",
+"type":""
+},
+"47248R103":{
+"ticker":"JCAP",
+"type":"Common Stock"
+},
+"47580P103":{
+"ticker":"JELD",
+"type":"Common Stock"
+},
+"47668J102":{
+"ticker":"JMKE",
+"type":"Common Stock"
+},
+"477143101":{
+"ticker":"JBLU",
+"type":"Common Stock"
+},
+"477143AR2":{
+"ticker":"",
+"type":""
+},
+"477839104":{
+"ticker":"JBTM",
+"type":"Common Stock"
+},
+"477839AB0":{
+"ticker":"",
+"type":""
+},
+"478160104":{
+"ticker":"JNJ",
+"type":"Common Stock"
+},
+"48020Q107":{
+"ticker":"JLL",
+"type":"Common Stock"
+},
+"48123V102":{
+"ticker":"ZD",
+"type":"Common Stock"
+},
+"48203R104":{
+"ticker":"JNP",
+"type":"Common Stock"
+},
+"48238T109":{
+"ticker":"OPLN",
+"type":"Common Stock"
+},
+"48242W106":{
+"ticker":"KBR",
+"type":"Common Stock"
+},
+"482480100":{
+"ticker":"KLAC",
+"type":"Common Stock"
+},
+"482497104":{
+"ticker":"BEKE",
+"type":"ADR"
+},
+"48251K100":{
+"ticker":"KREF",
+"type":"REIT"
+},
+"48251W104":{
+"ticker":"KKR",
+"type":"Common Stock"
+},
+"48268K101":{
+"ticker":"KT",
+"type":"ADR"
+},
+"48282T104":{
+"ticker":"KAI",
+"type":"Common Stock"
+},
+"482931102":{
+"ticker":"KLRA",
+"type":"Common Stock"
+},
+"483007704":{
+"ticker":"KALU",
+"type":"Common Stock"
+},
+"48553T106":{
+"ticker":"BZ",
+"type":"ADR"
+},
+"48581R205":{
+"ticker":"KSPI",
+"type":"ADR"
+},
+"485924104":{
+"ticker":"KRMN",
+"type":"Common Stock"
+},
+"485925101":{
+"ticker":"KARD",
+"type":"Common Stock"
+},
+"48666K109":{
+"ticker":"KBH",
+"type":"Common Stock"
+},
+"486917107":{
+"ticker":"KEEL",
+"type":"Common Stock"
+},
+"487836108":{
+"ticker":"KEL",
+"type":"Common Stock"
+},
+"488401100":{
+"ticker":"KMPR",
+"type":"Common Stock"
+},
+"489170100":{
+"ticker":"KMT",
+"type":"Common Stock"
+},
+"489398107":{
+"ticker":"KWGBP",
+"type":"Common Stock"
+},
+"49177J102":{
+"ticker":"J4D",
+"type":"Common Stock"
+},
+"492327101":{
+"ticker":"KROS",
+"type":"Common Stock"
+},
+"49271V100":{
+"ticker":"KDP",
+"type":"Common Stock"
+},
+"493267108":{
+"ticker":"KEY",
+"type":"Common Stock"
+},
+"49338L103":{
+"ticker":"KEYS",
+"type":"Common Stock"
+},
+"49427F108":{
+"ticker":"KRC",
+"type":"REIT"
+},
+"494368103":{
+"ticker":"KMB",
+"type":"Common Stock"
+},
+"49446R109":{
+"ticker":"KIM",
+"type":"REIT"
+},
+"49456B101":{
+"ticker":"KMI",
+"type":"Common Stock"
+},
+"49456W105":{
+"ticker":"KLC",
+"type":"Common Stock"
+},
+"496902404":{
+"ticker":"KGC",
+"type":"Common Stock"
+},
+"49714P108":{
+"ticker":"KNSL",
+"type":"Common Stock"
+},
+"497266106":{
+"ticker":"KEX",
+"type":"Common Stock"
+},
+"49803T300":{
+"ticker":"KRG",
+"type":"REIT"
+},
+"49845K101":{
+"ticker":"KVYO",
+"type":"Common Stock"
+},
+"498894104":{
+"ticker":"KNF",
+"type":"Common Stock"
+},
+"499049104":{
+"ticker":"KNX",
+"type":"Common Stock"
+},
+"49926D109":{
+"ticker":"KN",
+"type":"Common Stock"
+},
+"500081104":{
+"ticker":"KDK",
+"type":"Common Stock"
+},
+"50012A108":{
+"ticker":"KGS",
+"type":"Common Stock"
+},
+"50015M109":{
+"ticker":"KOD",
+"type":"Common Stock"
+},
+"500255104":{
+"ticker":"KSS",
+"type":"Common Stock"
+},
+"50050N103":{
+"ticker":"KTB",
+"type":"Common Stock"
+},
+"500643200":{
+"ticker":"KFY",
+"type":"Common Stock"
+},
+"500688106":{
+"ticker":"KOS",
+"type":"Common Stock"
+},
+"500767306":{
+"ticker":"KWEB",
+"type":"ETP"
+},
+"50077B207":{
+"ticker":"KTOS",
+"type":"Common Stock"
+},
+"50101L106":{
+"ticker":"DNUT",
+"type":"Common Stock"
+},
+"501147102":{
+"ticker":"KRYS",
+"type":"Common Stock"
+},
+"501242101":{
+"ticker":"KLIC",
+"type":"Common Stock"
+},
+"50155Q100":{
+"ticker":"KD",
+"type":"Common Stock"
+},
+"501575104":{
+"ticker":"KYMR",
+"type":"Common Stock"
+},
+"50180M108":{
+"ticker":"LBRX",
+"type":"Common Stock"
+},
+"50187T106":{
+"ticker":"LGIH",
+"type":"Common Stock"
+},
+"501889208":{
+"ticker":"LKQ",
+"type":"Common Stock"
+},
+"50189K103":{
+"ticker":"LCII",
+"type":"Common Stock"
+},
+"50202M102":{
+"ticker":"LI",
+"type":"ADR"
+},
+"50212V100":{
+"ticker":"LPLA",
+"type":"Common Stock"
+},
+"502160104":{
+"ticker":"LXU",
+"type":"Common Stock"
+},
+"502175102":{
+"ticker":"LTC",
+"type":"REIT"
+},
+"502431109":{
+"ticker":"LHX",
+"type":"Common Stock"
+},
+"504922105":{
+"ticker":"LH",
+"type":"Common Stock"
+},
+"505336107":{
+"ticker":"LZB",
+"type":"Common Stock"
+},
+"505743104":{
+"ticker":"LADR",
+"type":"REIT"
+},
+"512807306":{
+"ticker":"LRCX",
+"type":"Common Stock"
+},
+"513272104":{
+"ticker":"LW",
+"type":"Common Stock"
+},
+"513847103":{
+"ticker":"MZTI",
+"type":"Common Stock"
+},
+"514952100":{
+"ticker":"LB",
+"type":"Common Stock"
+},
+"515098101":{
+"ticker":"LSTR",
+"type":"Common Stock"
+},
+"516544103":{
+"ticker":"LNTH",
+"type":"Common Stock"
+},
+"516806205":{
+"ticker":"8LP1",
+"type":"Common Stock"
+},
+"517834107":{
+"ticker":"LVS",
+"type":"Common Stock"
+},
+"51817R205":{
+"ticker":"LTM",
+"type":"ADR"
+},
+"518415104":{
+"ticker":"LSCC",
+"type":"Common Stock"
+},
+"518439104":{
+"ticker":"EL",
+"type":"Common Stock"
+},
+"518613203":{
+"ticker":"LAUR",
+"type":"Common Stock"
+},
+"52110M109":{
+"ticker":"LAZ",
+"type":"Common Stock"
+},
+"521865204":{
+"ticker":"LEA",
+"type":"Common Stock"
+},
+"524660107":{
+"ticker":"LEG1GBP",
+"type":"Common Stock"
+},
+"52466B103":{
+"ticker":"LZ",
+"type":"Common Stock"
+},
+"52476L109":{
+"ticker":"LGN",
+"type":"Common Stock"
+},
+"52490G102":{
+"ticker":"LEGN",
+"type":"ADR"
+},
+"525327102":{
+"ticker":"LDOS",
+"type":"Common Stock"
+},
+"525558201":{
+"ticker":"LMAT",
+"type":"Common Stock"
+},
+"52567D107":{
+"ticker":"LMND",
+"type":"Common Stock"
+},
+"52603A208":{
+"ticker":"HAPN",
+"type":"Common Stock"
+},
+"526107107":{
+"ticker":"LII",
+"type":"Common Stock"
+},
+"52661A108":{
+"ticker":"DRS",
+"type":"Common Stock"
+},
+"52736R102":{
+"ticker":"LEVI",
+"type":"Common Stock"
+},
+"528877103":{
+"ticker":"LX",
+"type":"ADR"
+},
+"529043101":{
+"ticker":"",
+"type":""
+},
+"529043408":{
+"ticker":"LXN0",
+"type":"REIT"
+},
+"530307107":{
+"ticker":"LBRDA",
+"type":"Common Stock"
+},
+"530307305":{
+"ticker":"8L8C",
+"type":"Common Stock"
+},
+"53115L104":{
+"ticker":"LBRT",
+"type":"Common Stock"
+},
+"531229755":{
+"ticker":"FWONK",
+"type":"Common Stock"
+},
+"531229771":{
+"ticker":"FWONA",
+"type":"Common Stock"
+},
+"53190C102":{
+"ticker":"LTH",
+"type":"Common Stock"
+},
+"532206109":{
+"ticker":"LIF",
+"type":"Common Stock"
+},
+"53220K504":{
+"ticker":"LGND",
+"type":"Common Stock"
+},
+"53229C107":{
+"ticker":"LSPD",
+"type":"Common Stock"
+},
+"53229X101":{
+"ticker":"LFTO",
+"type":"Common Stock"
+},
+"532457108":{
+"ticker":"LLY",
+"type":"Common Stock"
+},
+"533714101":{
+"ticker":"LCLN",
+"type":"Common Stock"
+},
+"533900106":{
+"ticker":"LECO",
+"type":"Common Stock"
+},
+"534187109":{
+"ticker":"LNC",
+"type":"Common Stock"
+},
+"535219109":{
+"ticker":"LIND",
+"type":"Common Stock"
+},
+"535555106":{
+"ticker":"LNN",
+"type":"Common Stock"
+},
+"53566V106":{
+"ticker":"LINE",
+"type":"REIT"
+},
+"535919401":{
+"ticker":"LGFEUR",
+"type":"Common Stock"
+},
+"535919500":{
+"ticker":"LGF.BEUR",
+"type":"Common Stock"
+},
+"53626N102":{
+"ticker":"LION",
+"type":"Common Stock"
+},
+"53635B107":{
+"ticker":"LQDT",
+"type":"Common Stock"
+},
+"53635D202":{
+"ticker":"LQDA",
+"type":"Common Stock"
+},
+"536797103":{
+"ticker":"LAD",
+"type":"Common Stock"
+},
+"53680QAA6":{
+"ticker":"",
+"type":""
+},
+"537008104":{
+"ticker":"LFUS",
+"type":"Common Stock"
+},
+"538034109":{
+"ticker":"LYV",
+"type":"Common Stock"
+},
+"53803X105":{
+"ticker":"LOB",
+"type":"Common Stock"
+},
+"53815P108":{
+"ticker":"XIM",
+"type":"Common Stock"
+},
+"539439109":{
+"ticker":"LYG",
+"type":"ADR"
+},
+"53947R105":{
+"ticker":"LOAR",
+"type":"Common Stock"
+},
+"539830109":{
+"ticker":"LMT",
+"type":"Common Stock"
+},
+"540424108":{
+"ticker":"L",
+"type":"Common Stock"
+},
+"548661107":{
+"ticker":"LOW",
+"type":"Common Stock"
+},
+"549498103":{
+"ticker":"CCIVGBP",
+"type":"Common Stock"
+},
+"549498202":{
+"ticker":"LCID",
+"type":"Common Stock"
+},
+"54975P201":{
+"ticker":"LUUSD",
+"type":"ADR"
+},
+"550021109":{
+"ticker":"LULU",
+"type":"Common Stock"
+},
+"550241103":{
+"ticker":"LUMN",
+"type":"Common Stock"
+},
+"55024U109":{
+"ticker":"LITE",
+"type":"Common Stock"
+},
+"55024UAD1":{
+"ticker":"",
+"type":""
+},
+"55024UAF6":{
+"ticker":"",
+"type":""
+},
+"55087P104":{
+"ticker":"LYFT",
+"type":"Common Stock"
+},
+"55261F104":{
+"ticker":"MTB",
+"type":"Common Stock"
+},
+"552690109":{
+"ticker":"MDU",
+"type":"Common Stock"
+},
+"55272X607":{
+"ticker":"MFA",
+"type":"REIT"
+},
+"55277P104":{
+"ticker":"MGEE",
+"type":"Common Stock"
+},
+"552848103":{
+"ticker":"MTG",
+"type":"Common Stock"
+},
+"55287L101":{
+"ticker":"MBX",
+"type":"Common Stock"
+},
+"55293N109":{
+"ticker":"MDA",
+"type":"Common Stock"
+},
+"552953101":{
+"ticker":"MGM",
+"type":"Common Stock"
+},
+"55303J106":{
+"ticker":"CASK",
+"type":"Common Stock"
+},
+"55305B101":{
+"ticker":"MHO",
+"type":"Common Stock"
+},
+"55306N104":{
+"ticker":"MKSI",
+"type":"Common Stock"
+},
+"55318A108":{
+"ticker":"MNTN",
+"type":"Common Stock"
+},
+"553368101":{
+"ticker":"MP",
+"type":"Common Stock"
+},
+"55345K103":{
+"ticker":"37M",
+"type":"Common Stock"
+},
+"553498106":{
+"ticker":"MSA",
+"type":"Common Stock"
+},
+"553530106":{
+"ticker":"MSM",
+"type":"Common Stock"
+},
+"55354G100":{
+"ticker":"MSCI",
+"type":"Common Stock"
+},
+"55405W104":{
+"ticker":"MYRG",
+"type":"Common Stock"
+},
+"55405Y100":{
+"ticker":"MTSI",
+"type":"Common Stock"
+},
+"554382101":{
+"ticker":"MAC",
+"type":"REIT"
+},
+"554489104":{
+"ticker":"",
+"type":""
+},
+"556269108":{
+"ticker":"SHOO",
+"type":"Common Stock"
+},
+"55658T105":{
+"ticker":"MAIR",
+"type":"Common Stock"
+},
+"558256103":{
+"ticker":"MSGE",
+"type":"Common Stock"
+},
+"55825T103":{
+"ticker":"MSGK",
+"type":"Common Stock"
+},
+"55826T102":{
+"ticker":"SPHR",
+"type":"Common Stock"
+},
+"558868105":{
+"ticker":"MDGL",
+"type":"Common Stock"
+},
+"559166103":{
+"ticker":"MGIC",
+"type":"Common Stock"
+},
+"559222401":{
+"ticker":"MGA",
+"type":"Common Stock"
+},
+"55939A107":{
+"ticker":"MAGN",
+"type":"Common Stock"
+},
+"55955D100":{
+"ticker":"MGNI",
+"type":"Common Stock"
+},
+"559663109":{
+"ticker":"MGY",
+"type":"Common Stock"
+},
+"56035L104":{
+"ticker":"MAIN",
+"type":"Common Stock"
+},
+"56117J100":{
+"ticker":"MBUU",
+"type":"Common Stock"
+},
+"562750109":{
+"ticker":"MANH",
+"type":"Common Stock"
+},
+"56418H100":{
+"ticker":"MAN",
+"type":"Common Stock"
+},
+"56501R106":{
+"ticker":"MFC",
+"type":"Common Stock"
+},
+"565394103":{
+"ticker":"CART",
+"type":"Common Stock"
+},
+"565788106":{
+"ticker":"MARA",
+"type":"Common Stock"
+},
+"56585A102":{
+"ticker":"MPC",
+"type":"Common Stock"
+},
+"56600D107":{
+"ticker":"MRVI",
+"type":"Common Stock"
+},
+"566324109":{
+"ticker":"MMI",
+"type":"Common Stock"
+},
+"567908108":{
+"ticker":"HZO",
+"type":"Common Stock"
+},
+"570535104":{
+"ticker":"MKL",
+"type":"Common Stock"
+},
+"57060D108":{
+"ticker":"MKTX",
+"type":"Common Stock"
+},
+"57064N201":{
+"ticker":"MKFG",
+"type":"Common Stock"
+},
+"57142B104":{
+"ticker":"",
+"type":""
+},
+"57164Y107":{
+"ticker":"VAC",
+"type":"Common Stock"
+},
+"57164YAD9":{
+"ticker":"",
+"type":""
+},
+"571748102":{
+"ticker":"MRSH",
+"type":"Common Stock"
+},
+"571903202":{
+"ticker":"MAR",
+"type":"Common Stock"
+},
+"573075108":{
+"ticker":"MRTN",
+"type":"Common Stock"
+},
+"573284106":{
+"ticker":"MLM",
+"type":"Common Stock"
+},
+"573874104":{
+"ticker":"MRVL",
+"type":"Common Stock"
+},
+"574599106":{
+"ticker":"MAS",
+"type":"Common Stock"
+},
+"574795100":{
+"ticker":"MASI1",
+"type":"Common Stock"
+},
+"576323109":{
+"ticker":"MTZ",
+"type":"Common Stock"
+},
+"57638P104":{
+"ticker":"MBC",
+"type":"Common Stock"
+},
+"576485205":{
+"ticker":"MTDR",
+"type":"Common Stock"
+},
+"57667L107":{
+"ticker":"MTCH",
+"type":"Common Stock"
+},
+"57667T100":{
+"ticker":"MTLS",
+"type":"ADR"
+},
+"576690101":{
+"ticker":"MTRN",
+"type":"Common Stock"
+},
+"576853105":{
+"ticker":"MTRX",
+"type":"Common Stock"
+},
+"57686G105":{
+"ticker":"MATX",
+"type":"Common Stock"
+},
+"577081102":{
+"ticker":"MAT",
+"type":"Common Stock"
+},
+"577096100":{
+"ticker":"MTTRGBP",
+"type":"Common Stock"
+},
+"57776J100":{
+"ticker":"MXL",
+"type":"Common Stock"
+},
+"577933104":{
+"ticker":"MMS",
+"type":"Common Stock"
+},
+"579780206":{
+"ticker":"MKC",
+"type":"Common Stock"
+},
+"580135101":{
+"ticker":"MCD",
+"type":"Common Stock"
+},
+"58039P305":{
+"ticker":"MUX",
+"type":"Common Stock"
+},
+"580589109":{
+"ticker":"MGRC",
+"type":"Common Stock"
+},
+"580907103":{
+"ticker":"MH",
+"type":"Common Stock"
+},
+"58155Q103":{
+"ticker":"MCK",
+"type":"Common Stock"
+},
+"58450V104":{
+"ticker":"MAX",
+"type":"Common Stock"
+},
+"58463J304":{
+"ticker":"MPT",
+"type":"REIT"
+},
+"58506Q109":{
+"ticker":"MEDP",
+"type":"Common Stock"
+},
+"58507V107":{
+"ticker":"MDLN",
+"type":"Common Stock"
+},
+"586001109":{
+"ticker":"75Z",
+"type":"Common Stock"
+},
+"58733R102":{
+"ticker":"MELI",
+"type":"Common Stock"
+},
+"58933Y105":{
+"ticker":"MRK",
+"type":"Common Stock"
+},
+"589378108":{
+"ticker":"MRCY",
+"type":"Common Stock"
+},
+"589400100":{
+"ticker":"MCY",
+"type":"Common Stock"
+},
+"589889104":{
+"ticker":"MMSI",
+"type":"Common Stock"
+},
+"59001A102":{
+"ticker":"MTH",
+"type":"Common Stock"
+},
+"59102M104":{
+"ticker":"MGX",
+"type":"Common Stock"
+},
+"59151K108":{
+"ticker":"MEOH",
+"type":"Common Stock"
+},
+"591520200":{
+"ticker":"MEI",
+"type":"Common Stock"
+},
+"59156R108":{
+"ticker":"MET",
+"type":"Common Stock"
+},
+"591774104":{
+"ticker":"MCB",
+"type":"Common Stock"
+},
+"59267L107":{
+"ticker":"",
+"type":""
+},
+"592688105":{
+"ticker":"MTD",
+"type":"Common Stock"
+},
+"59356Q108":{
+"ticker":"MIAX",
+"type":"Common Stock"
+},
+"594918104":{
+"ticker":"MSFT",
+"type":"Common Stock"
+},
+"594972408":{
+"ticker":"MSTR",
+"type":"Common Stock"
+},
+"594972AE1":{
+"ticker":"",
+"type":""
+},
+"594972AJ0":{
+"ticker":"",
+"type":""
+},
+"595017104":{
+"ticker":"MCHP",
+"type":"Common Stock"
+},
+"595112103":{
+"ticker":"MU",
+"type":"Common Stock"
+},
+"59522J103":{
+"ticker":"MAA",
+"type":"REIT"
+},
+"596278101":{
+"ticker":"MIDD",
+"type":"Common Stock"
+},
+"59739R104":{
+"ticker":"MFP",
+"type":"Common Stock"
+},
+"600544100":{
+"ticker":"MLKN",
+"type":"Common Stock"
+},
+"600551204":{
+"ticker":"MLR",
+"type":"Common Stock"
+},
+"601137102":{
+"ticker":"MRP",
+"type":"REIT"
+},
+"602496101":{
+"ticker":"MDXG",
+"type":"Common Stock"
+},
+"603158106":{
+"ticker":"MTX",
+"type":"Common Stock"
+},
+"60365F109":{
+"ticker":"MMED",
+"type":"Common Stock"
+},
+"60471A101":{
+"ticker":"MIR",
+"type":"Common Stock"
+},
+"604749101":{
+"ticker":"MIRM",
+"type":"Common Stock"
+},
+"60646V105":{
+"ticker":"",
+"type":""
+},
+"60741F104":{
+"ticker":"MBLY",
+"type":"Common Stock"
+},
+"60770K107":{
+"ticker":"MRNA",
+"type":"Common Stock"
+},
+"607828100":{
+"ticker":"MOD",
+"type":"Common Stock"
+},
+"60784B101":{
+"ticker":"",
+"type":""
+},
+"60786M105":{
+"ticker":"MC",
+"type":"Common Stock"
+},
+"608190104":{
+"ticker":"MHK",
+"type":"Common Stock"
+},
+"60855R100":{
+"ticker":"MOH",
+"type":"Common Stock"
+},
+"60871R209":{
+"ticker":"TAP",
+"type":"Common Stock"
+},
+"609027107":{
+"ticker":"MCRI",
+"type":"Common Stock"
+},
+"609207105":{
+"ticker":"MDLZ",
+"type":"Common Stock"
+},
+"60937P106":{
+"ticker":"MDB",
+"type":"Common Stock"
+},
+"60938K304":{
+"ticker":"",
+"type":""
+},
+"609839105":{
+"ticker":"MPWR",
+"type":"Common Stock"
+},
+"61174X109":{
+"ticker":"MNST",
+"type":"Common Stock"
+},
+"61225M102":{
+"ticker":"GLUE",
+"type":"Common Stock"
+},
+"615394202":{
+"ticker":"MOG.A",
+"type":"Common Stock"
+},
+"61559X104":{
+"ticker":"MLTX",
+"type":"Common Stock"
+},
+"617446448":{
+"ticker":"MS",
+"type":"Common Stock"
+},
+"617700109":{
+"ticker":"MORN",
+"type":"Common Stock"
+},
+"61945C103":{
+"ticker":"MOS",
+"type":"Common Stock"
+},
+"620076307":{
+"ticker":"MSI",
+"type":"Common Stock"
+},
+"624756102":{
+"ticker":"MLI",
+"type":"Common Stock"
+},
+"624758108":{
+"ticker":"MWA",
+"type":"Common Stock"
+},
+"62482R107":{
+"ticker":"07WA",
+"type":"Common Stock"
+},
+"62548M209":{
+"ticker":"CTEV",
+"type":"Common Stock"
+},
+"626717102":{
+"ticker":"MUR",
+"type":"Common Stock"
+},
+"626755102":{
+"ticker":"MUSA",
+"type":"Common Stock"
+},
+"628464109":{
+"ticker":"MYE",
+"type":"Common Stock"
+},
+"628778102":{
+"ticker":"NBTB",
+"type":"Common Stock"
+},
+"62878D100":{
+"ticker":"NABL",
+"type":"Common Stock"
+},
+"62886HAX9":{
+"ticker":"",
+"type":""
+},
+"62886HBD2":{
+"ticker":"",
+"type":""
+},
+"62914V106":{
+"ticker":"NIO",
+"type":"ADR"
+},
+"629209305":{
+"ticker":"NMIH",
+"type":"Common Stock"
+},
+"629377508":{
+"ticker":"NRG",
+"type":"Common Stock"
+},
+"62955J103":{
+"ticker":"NOV",
+"type":"Common Stock"
+},
+"63001N106":{
+"ticker":"NATL",
+"type":"Common Stock"
+},
+"63008G203":{
+"ticker":"NNDM",
+"type":"ADR"
+},
+"630402105":{
+"ticker":"NSSC",
+"type":"Common Stock"
+},
+"631103108":{
+"ticker":"NDAQ",
+"type":"Common Stock"
+},
+"632307104":{
+"ticker":"NTRA",
+"type":"Common Stock"
+},
+"635017106":{
+"ticker":"FIZZ",
+"type":"Common Stock"
+},
+"636180101":{
+"ticker":"NFG",
+"type":"Common Stock"
+},
+"63633D104":{
+"ticker":"NHI",
+"type":"REIT"
+},
+"637215104":{
+"ticker":"NPK",
+"type":"Common Stock"
+},
+"637417106":{
+"ticker":"NNN",
+"type":"REIT"
+},
+"637870106":{
+"ticker":"NSA",
+"type":"REIT"
+},
+"63845R107":{
+"ticker":"EYE",
+"type":"Common Stock"
+},
+"63886Q109":{
+"ticker":"NGS",
+"type":"Common Stock"
+},
+"639057207":{
+"ticker":"NWG",
+"type":"ADR"
+},
+"639193101":{
+"ticker":"NAVN",
+"type":"Common Stock"
+},
+"63942X106":{
+"ticker":"NVTS",
+"type":"Common Stock"
+},
+"63947X101":{
+"ticker":"NCNO",
+"type":"Common Stock"
+},
+"640268306":{
+"ticker":"NKTR",
+"type":"Common Stock"
+},
+"640491106":{
+"ticker":"NEOG",
+"type":"Common Stock"
+},
+"64049M209":{
+"ticker":"NEO",
+"type":"Common Stock"
+},
+"64073B103":{
+"ticker":"NP",
+"type":"Common Stock"
+},
+"64082B102":{
+"ticker":"NRDS",
+"type":"Common Stock"
+},
+"640979100":{
+"ticker":"NMRA",
+"type":"Common Stock"
+},
+"64107A113":{
+"ticker":"NPWR.WS",
+"type":"Equity WRT"
+},
+"64110D104":{
+"ticker":"NTAP",
+"type":"Common Stock"
+},
+"64110L106":{
+"ticker":"NFLX",
+"type":"Common Stock"
+},
+"64110W102":{
+"ticker":"NTES",
+"type":"ADR"
+},
+"64115T104":{
+"ticker":"NTCT",
+"type":"Common Stock"
+},
+"64119N608":{
+"ticker":"NTSK",
+"type":"Common Stock"
+},
+"64119V303":{
+"ticker":"NTST",
+"type":"REIT"
+},
+"64125C109":{
+"ticker":"NBIX",
+"type":"Common Stock"
+},
+"64125S104":{
+"ticker":"LIME",
+"type":"Common Stock"
+},
+"641288105":{
+"ticker":"NPCE",
+"type":"Common Stock"
+},
+"64361Q101":{
+"ticker":"VNOM",
+"type":"Common Stock"
+},
+"644393100":{
+"ticker":"NFE1EUR",
+"type":"Common Stock"
+},
+"644393308":{
+"ticker":"NFE",
+"type":"Common Stock"
+},
+"644535106":{
+"ticker":"NGDN",
+"type":"Common Stock"
+},
+"645827205":{
+"ticker":"IDR",
+"type":"Common Stock"
+},
+"646025106":{
+"ticker":"NJR",
+"type":"Common Stock"
+},
+"647581206":{
+"ticker":"EDU",
+"type":"ADR"
+},
+"64828T201":{
+"ticker":"RITM",
+"type":"REIT"
+},
+"649445400":{
+"ticker":"FLG",
+"type":"Common Stock"
+},
+"651229106":{
+"ticker":"NWL",
+"type":"Common Stock"
+},
+"651587107":{
+"ticker":"NEU",
+"type":"Common Stock"
+},
+"65158N102":{
+"ticker":"NMRK",
+"type":"Common Stock"
+},
+"651639106":{
+"ticker":"NEM",
+"type":"Common Stock"
+},
+"651718504":{
+"ticker":"NPKI",
+"type":"Common Stock"
+},
+"65249B109":{
+"ticker":"NWSA",
+"type":"Common Stock"
+},
+"65249B208":{
+"ticker":"NWS",
+"type":"Common Stock"
+},
+"65290E101":{
+"ticker":"NXT",
+"type":"Common Stock"
+},
+"65336K103":{
+"ticker":"NXST",
+"type":"Common Stock"
+},
+"65339F101":{
+"ticker":"NEE",
+"type":"Common Stock"
+},
+"65339F655":{
+"ticker":"",
+"type":""
+},
+"65340P106":{
+"ticker":"NXE",
+"type":"Common Stock"
+},
+"65341B106":{
+"ticker":"XIFR",
+"type":"Common Stock"
+},
+"65341D102":{
+"ticker":"NXRT",
+"type":"REIT"
+},
+"65345M108":{
+"ticker":"NXDR",
+"type":"Common Stock"
+},
+"653656108":{
+"ticker":"NICE",
+"type":"ADR"
+},
+"653656AB4":{
+"ticker":"",
+"type":""
+},
+"654106103":{
+"ticker":"NKE",
+"type":"Common Stock"
+},
+"654110303":{
+"ticker":"8NI0",
+"type":"Common Stock"
+},
+"65443P102":{
+"ticker":"MASS",
+"type":"Common Stock"
+},
+"654484609":{
+"ticker":"NB",
+"type":"Common Stock"
+},
+"65473P105":{
+"ticker":"NI",
+"type":"Common Stock"
+},
+"65487K100":{
+"ticker":"LASR",
+"type":"Common Stock"
+},
+"654902204":{
+"ticker":"NOK",
+"type":"ADR"
+},
+"655663102":{
+"ticker":"NDSN",
+"type":"Common Stock"
+},
+"655664100":{
+"ticker":"JWNUSD",
+"type":"Common Stock"
+},
+"655844108":{
+"ticker":"NSC",
+"type":"Common Stock"
+},
+"665531307":{
+"ticker":"NOG",
+"type":"Common Stock"
+},
+"665859104":{
+"ticker":"NTRS",
+"type":"Common Stock"
+},
+"66661N886":{
+"ticker":"NPB",
+"type":"Common Stock"
+},
+"666807102":{
+"ticker":"NOC",
+"type":"Common Stock"
+},
+"667340103":{
+"ticker":"NWBI",
+"type":"Common Stock"
+},
+"66765N105":{
+"ticker":"NWN",
+"type":"Common Stock"
+},
+"667746101":{
+"ticker":"NWPX",
+"type":"Common Stock"
+},
+"668074305":{
+"ticker":"NWZA",
+"type":"Common Stock"
+},
+"668771108":{
+"ticker":"GEN",
+"type":"Common Stock"
+},
+"66981J102":{
+"ticker":"MNSO",
+"type":"ADR"
+},
+"66987E206":{
+"ticker":"NG",
+"type":"Common Stock"
+},
+"670002401":{
+"ticker":"NVAX",
+"type":"Common Stock"
+},
+"67000B104":{
+"ticker":"NOVT",
+"type":"Common Stock"
+},
+"67000B203":{
+"ticker":"",
+"type":""
+},
+"670100205":{
+"ticker":"NVO",
+"type":"ADR"
+},
+"67011P100":{
+"ticker":"DNOW",
+"type":"Common Stock"
+},
+"67059N108":{
+"ticker":"NTNX",
+"type":"Common Stock"
+},
+"67059NAK4":{
+"ticker":"",
+"type":""
+},
+"67066G104":{
+"ticker":"NVDA",
+"type":"Common Stock"
+},
+"670703107":{
+"ticker":"",
+"type":""
+},
+"67077M108":{
+"ticker":"NTR",
+"type":"Common Stock"
+},
+"67079K100":{
+"ticker":"SMR",
+"type":"Common Stock"
+},
+"67080M103":{
+"ticker":"NRIX",
+"type":"Common Stock"
+},
+"67080N101":{
+"ticker":"NUVB",
+"type":"Common Stock"
+},
+"670837103":{
+"ticker":"OGE",
+"type":"Common Stock"
+},
+"67098H104":{
+"ticker":"OI",
+"type":"Common Stock"
+},
+"67103H107":{
+"ticker":"ORLY",
+"type":"Common Stock"
+},
+"671044105":{
+"ticker":"OSIS",
+"type":"Common Stock"
+},
+"674215207":{
+"ticker":"CHRD",
+"type":"Common Stock"
+},
+"674599162":{
+"ticker":"OXY.WS",
+"type":"Equity WRT"
+},
+"675222400":{
+"ticker":"OGC",
+"type":"Common Stock"
+},
+"675232102":{
+"ticker":"OII",
+"type":"Common Stock"
+},
+"675234108":{
+"ticker":"OCFC",
+"type":"Common Stock"
+},
+"675746606":{
+"ticker":"ONIT",
+"type":"Common Stock"
+},
+"67576A100":{
+"ticker":"OCUL",
+"type":"Common Stock"
+},
+"677864100":{
+"ticker":"ODC",
+"type":"Common Stock"
+},
+"678026105":{
+"ticker":"OIS",
+"type":"Common Stock"
+},
+"679295105":{
+"ticker":"OKTA",
+"type":"Common Stock"
+},
+"679295AD7":{
+"ticker":"",
+"type":""
+},
+"679295AF2":{
+"ticker":"",
+"type":""
+},
+"679369108":{
+"ticker":"OLPXGBP",
+"type":"Common Stock"
+},
+"679580100":{
+"ticker":"ODFL",
+"type":"Common Stock"
+},
+"680033107":{
+"ticker":"ONB",
+"type":"Common Stock"
+},
+"680223104":{
+"ticker":"ORI",
+"type":"Common Stock"
+},
+"68062P106":{
+"ticker":"OLMA",
+"type":"Common Stock"
+},
+"680665205":{
+"ticker":"OLN",
+"type":"Common Stock"
+},
+"681116109":{
+"ticker":"OLLI",
+"type":"Common Stock"
+},
+"68134L109":{
+"ticker":"OLOGBX",
+"type":"Common Stock"
+},
+"68162K106":{
+"ticker":"ZEUS",
+"type":"Common Stock"
+},
+"68170A108":{
+"ticker":"OMDA",
+"type":"Common Stock"
+},
+"681919106":{
+"ticker":"OMC",
+"type":"Common Stock"
+},
+"681936100":{
+"ticker":"OHI",
+"type":"REIT"
+},
+"68213N109":{
+"ticker":"OMCL",
+"type":"Common Stock"
+},
+"682189105":{
+"ticker":"ON",
+"type":"Common Stock"
+},
+"682189AS4":{
+"ticker":"",
+"type":""
+},
+"68235P108":{
+"ticker":"OGS",
+"type":"Common Stock"
+},
+"68236H204":{
+"ticker":"ONDS",
+"type":"Common Stock"
+},
+"68236V401":{
+"ticker":"FRMM",
+"type":"Common Stock"
+},
+"68237F108":{
+"ticker":"OFRM",
+"type":"Common Stock"
+},
+"682406103":{
+"ticker":"OLP",
+"type":"REIT"
+},
+"682680103":{
+"ticker":"OKEEUR",
+"type":"Common Stock"
+},
+"68268W103":{
+"ticker":"OMF",
+"type":"Common Stock"
+},
+"68278B107":{
+"ticker":"K4F",
+"type":"Common Stock"
+},
+"683344105":{
+"ticker":"ONTO",
+"type":"Common Stock"
+},
+"68339B104":{
+"ticker":"ONTF",
+"type":"Common Stock"
+},
+"683416101":{
+"ticker":"OOMA",
+"type":"Common Stock"
+},
+"683712103":{
+"ticker":"OPEN",
+"type":"Common Stock"
+},
+"683712129":{
+"ticker":"",
+"type":""
+},
+"683712137":{
+"ticker":"",
+"type":""
+},
+"683712145":{
+"ticker":"",
+"type":""
+},
+"683715106":{
+"ticker":"OTEX",
+"type":"Common Stock"
+},
+"68375N103":{
+"ticker":"OPK",
+"type":"Common Stock"
+},
+"683797104":{
+"ticker":"OPY",
+"type":"Common Stock"
+},
+"68386H103":{
+"ticker":"OPFI",
+"type":"Common Stock"
+},
+"68389X105":{
+"ticker":"ORCL",
+"type":"Common Stock"
+},
+"68389X204":{
+"ticker":"",
+"type":""
+},
+"68390D106":{
+"ticker":"OR",
+"type":"Common Stock"
+},
+"68404L201":{
+"ticker":"OPCH",
+"type":"Common Stock"
+},
+"68621F102":{
+"ticker":"ORGO",
+"type":"Common Stock"
+},
+"68622P109":{
+"ticker":"ORIC",
+"type":"Common Stock"
+},
+"68622V106":{
+"ticker":"OGN",
+"type":"Common Stock"
+},
+"68629Y103":{
+"ticker":"ONL",
+"type":"REIT"
+},
+"68634K106":{
+"ticker":"OLA",
+"type":"Common Stock"
+},
+"686688102":{
+"ticker":"ORA",
+"type":"Common Stock"
+},
+"68752L100":{
+"ticker":"KIDS",
+"type":"Common Stock"
+},
+"687604108":{
+"ticker":"ORKA",
+"type":"Common Stock"
+},
+"687793109":{
+"ticker":"OSCR",
+"type":"Common Stock"
+},
+"688239201":{
+"ticker":"OSK",
+"type":"Common Stock"
+},
+"68827L101":{
+"ticker":"",
+"type":""
+},
+"68902V107":{
+"ticker":"OTIS",
+"type":"Common Stock"
+},
+"689648103":{
+"ticker":"OTTR",
+"type":"Common Stock"
+},
+"68989M202":{
+"ticker":"OUST",
+"type":"Common Stock"
+},
+"690045109":{
+"ticker":"GEAR1",
+"type":"Common Stock"
+},
+"69007J304":{
+"ticker":"OUT",
+"type":"REIT"
+},
+"69047Q102":{
+"ticker":"OVV",
+"type":"Common Stock"
+},
+"690732102":{
+"ticker":"ACCH",
+"type":"Common Stock"
+},
+"690742101":{
+"ticker":"OC",
+"type":"Common Stock"
+},
+"69121K104":{
+"ticker":"OBDC",
+"type":"Common Stock"
+},
+"691497309":{
+"ticker":"OXM",
+"type":"Common Stock"
+},
+"691543847":{
+"ticker":"OXLC",
+"type":"Closed-End Fund"
+},
+"69318G106":{
+"ticker":"PBF",
+"type":"Common Stock"
+},
+"693282105":{
+"ticker":"PDFS",
+"type":"Common Stock"
+},
+"69331C108":{
+"ticker":"PCG",
+"type":"Common Stock"
+},
+"69331C306":{
+"ticker":"",
+"type":""
+},
+"69331CAL2":{
+"ticker":"",
+"type":""
+},
+"69343T107":{
+"ticker":"PJT",
+"type":"Common Stock"
+},
+"693475105":{
+"ticker":"PNC",
+"type":"Common Stock"
+},
+"69349H107":{
+"ticker":"TXNM",
+"type":"Common Stock"
+},
+"693506107":{
+"ticker":"PPG",
+"type":"Common Stock"
+},
+"69351T106":{
+"ticker":"PPL",
+"type":"Common Stock"
+},
+"693656100":{
+"ticker":"PVH",
+"type":"Common Stock"
+},
+"69366J200":{
+"ticker":"PTCT",
+"type":"Common Stock"
+},
+"69370C100":{
+"ticker":"PTC",
+"type":"Common Stock"
+},
+"693718108":{
+"ticker":"PCAR",
+"type":"Common Stock"
+},
+"69380Q107":{
+"ticker":"PACS",
+"type":"Common Stock"
+},
+"69404D108":{
+"ticker":"PACB",
+"type":"Common Stock"
+},
+"69478X105":{
+"ticker":"LF2",
+"type":"Common Stock"
+},
+"695127100":{
+"ticker":"82P",
+"type":"Common Stock"
+},
+"695156109":{
+"ticker":"PKG",
+"type":"Common Stock"
+},
+"69526K105":{
+"ticker":"PTVEUSD",
+"type":"Common Stock"
+},
+"69553P100":{
+"ticker":"PD",
+"type":"Common Stock"
+},
+"69608A108":{
+"ticker":"PLTR",
+"type":"Common Stock"
+},
+"697435105":{
+"ticker":"PANW",
+"type":"Common Stock"
+},
+"69753M105":{
+"ticker":"PLMR",
+"type":"Common Stock"
+},
+"697660207":{
+"ticker":"PAM",
+"type":"ADR"
+},
+"697900108":{
+"ticker":"PAAS",
+"type":"Common Stock"
+},
+"698813102":{
+"ticker":"PZZA",
+"type":"Common Stock"
+},
+"69888T207":{
+"ticker":"PARR",
+"type":"Common Stock"
+},
+"69924R108":{
+"ticker":"6PM",
+"type":"REIT"
+},
+"69932A204":{
+"ticker":"SKYD",
+"type":"Common Stock"
+},
+"70014A104":{
+"ticker":"PKE",
+"type":"Common Stock"
+},
+"700517105":{
+"ticker":"PK",
+"type":"REIT"
+},
+"701094104":{
+"ticker":"PH",
+"type":"Common Stock"
+},
+"70202L102":{
+"ticker":"PSN",
+"type":"Common Stock"
+},
+"703343103":{
+"ticker":"PATK",
+"type":"Common Stock"
+},
+"703395103":{
+"ticker":"PDCOEUR",
+"type":"Common Stock"
+},
+"70339W104":{
+"ticker":"PTRN",
+"type":"Common Stock"
+},
+"703481101":{
+"ticker":"PTEN",
+"type":"Common Stock"
+},
+"704326107":{
+"ticker":"PAYX",
+"type":"Common Stock"
+},
+"70432V102":{
+"ticker":"PAYC",
+"type":"Common Stock"
+},
+"70435P102":{
+"ticker":"PYCR",
+"type":"Common Stock"
+},
+"70438V106":{
+"ticker":"PCTY",
+"type":"Common Stock"
+},
+"70439P108":{
+"ticker":"PAY",
+"type":"Common Stock"
+},
+"70450C101":{
+"ticker":"PAYP",
+"type":"ADR"
+},
+"70450Y103":{
+"ticker":"PYPL",
+"type":"Common Stock"
+},
+"70451X104":{
+"ticker":"PAYO",
+"type":"Common Stock"
+},
+"704551100":{
+"ticker":"BTU",
+"type":"Common Stock"
+},
+"70509V100":{
+"ticker":"PEB",
+"type":"REIT"
+},
+"705573103":{
+"ticker":"PEGA",
+"type":"Common Stock"
+},
+"70614W100":{
+"ticker":"PTON",
+"type":"Common Stock"
+},
+"706327103":{
+"ticker":"PBA",
+"type":"Common Stock"
+},
+"707569109":{
+"ticker":"PENN",
+"type":"Common Stock"
+},
+"707569AU3":{
+"ticker":"",
+"type":""
+},
+"70805E109":{
+"ticker":"PNTG",
+"type":"Common Stock"
+},
+"70931T103":{
+"ticker":"PMT",
+"type":"REIT"
+},
+"70932M107":{
+"ticker":"PFSI",
+"type":"Common Stock"
+},
+"70959W103":{
+"ticker":"PAG",
+"type":"Common Stock"
+},
+"70975L107":{
+"ticker":"PEN",
+"type":"Common Stock"
+},
+"713317105":{
+"ticker":"PEPG",
+"type":"Common Stock"
+},
+"713448108":{
+"ticker":"PEP",
+"type":"Common Stock"
+},
+"71363P106":{
+"ticker":"PRDO",
+"type":"Common Stock"
+},
+"71377A103":{
+"ticker":"PFGC",
+"type":"Common Stock"
+},
+"71377E105":{
+"ticker":"PFMTUSD",
+"type":"Common Stock"
+},
+"71385M107":{
+"ticker":"PRM",
+"type":"Common Stock"
+},
+"714046109":{
+"ticker":"RVTY",
+"type":"Common Stock"
+},
+"71424F105":{
+"ticker":"PR",
+"type":"Common Stock"
+},
+"714266103":{
+"ticker":"PPTA",
+"type":"Common Stock"
+},
+"71531T105":{
+"ticker":"PSUS",
+"type":"Closed-End Fund"
+},
+"71531U102":{
+"ticker":"PS",
+"type":"Common Stock"
+},
+"71535D106":{
+"ticker":"PSNL",
+"type":"Common Stock"
+},
+"715684106":{
+"ticker":"TLK",
+"type":"ADR"
+},
+"71601V105":{
+"ticker":"WOOF",
+"type":"Common Stock"
+},
+"71654V408":{
+"ticker":"PBR",
+"type":"ADR"
+},
+"717081103":{
+"ticker":"PFE",
+"type":"Common Stock"
+},
+"718172109":{
+"ticker":"PM",
+"type":"Common Stock"
+},
+"71844V201":{
+"ticker":"PECO",
+"type":"REIT"
+},
+"718546104":{
+"ticker":"PSX",
+"type":"Common Stock"
+},
+"719405102":{
+"ticker":"PLAB",
+"type":"Common Stock"
+},
+"71944F106":{
+"ticker":"PHR",
+"type":"Common Stock"
+},
+"720190206":{
+"ticker":"PDM",
+"type":"REIT"
+},
+"72147K108":{
+"ticker":"PPC",
+"type":"Common Stock"
+},
+"722304102":{
+"ticker":"PDD",
+"type":"ADR"
+},
+"72346Q104":{
+"ticker":"99988EUR",
+"type":"Common Stock"
+},
+"723484101":{
+"ticker":"PNW",
+"type":"Common Stock"
+},
+"72348N109":{
+"ticker":"PNFP",
+"type":"Common Stock"
+},
+"72352L106":{
+"ticker":"PINS",
+"type":"Common Stock"
+},
+"724078100":{
+"ticker":"PJCEUR",
+"type":"Common Stock"
+},
+"724078209":{
+"ticker":"PIPR",
+"type":"Common Stock"
+},
+"724479100":{
+"ticker":"PBI",
+"type":"Common Stock"
+},
+"72703H101":{
+"ticker":"PLNT",
+"type":"Common Stock"
+},
+"72703X106":{
+"ticker":"PL",
+"type":"Common Stock"
+},
+"72815L107":{
+"ticker":"PLTK",
+"type":"Common Stock"
+},
+"729132100":{
+"ticker":"PLXS",
+"type":"Common Stock"
+},
+"72919P202":{
+"ticker":"PLUG",
+"type":"Common Stock"
+},
+"729640102":{
+"ticker":"PLYM",
+"type":"REIT"
+},
+"731068102":{
+"ticker":"PII",
+"type":"Common Stock"
+},
+"732908108":{
+"ticker":"PONY",
+"type":"ADR"
+},
+"733174700":{
+"ticker":"BPOP",
+"type":"Common Stock"
+},
+"736508847":{
+"ticker":"POR",
+"type":"Common Stock"
+},
+"737446104":{
+"ticker":"POST",
+"type":"Common Stock"
+},
+"737446AT1":{
+"ticker":"",
+"type":""
+},
+"73754Y100":{
+"ticker":"PTB",
+"type":"Common Stock"
+},
+"73757R102":{
+"ticker":"PSTL",
+"type":"REIT"
+},
+"737630103":{
+"ticker":"PCH",
+"type":"REIT"
+},
+"739128106":{
+"ticker":"POWL",
+"type":"Common Stock"
+},
+"739276103":{
+"ticker":"POWI",
+"type":"Common Stock"
+},
+"74006W207":{
+"ticker":"PRAX",
+"type":"Common Stock"
+},
+"74112D101":{
+"ticker":"PBH",
+"type":"Common Stock"
+},
+"74144T108":{
+"ticker":"TROW",
+"type":"Common Stock"
+},
+"741511109":{
+"ticker":"PSMT",
+"type":"Common Stock"
+},
+"741623102":{
+"ticker":"PRMB",
+"type":"Common Stock"
+},
+"74164F103":{
+"ticker":"PRIM",
+"type":"Common Stock"
+},
+"74164M108":{
+"ticker":"PRI",
+"type":"Common Stock"
+},
+"74168J101":{
+"ticker":"PRME",
+"type":"Common Stock"
+},
+"74251V102":{
+"ticker":"PFG",
+"type":"Common Stock"
+},
+"742718109":{
+"ticker":"PG",
+"type":"Common Stock"
+},
+"74275K108":{
+"ticker":"PCOR",
+"type":"Common Stock"
+},
+"74276L105":{
+"ticker":"PRCT",
+"type":"Common Stock"
+},
+"74276R102":{
+"ticker":"PRVA",
+"type":"Common Stock"
+},
+"74317M104":{
+"ticker":"PAL",
+"type":"Common Stock"
+},
+"74319R101":{
+"ticker":"PRG",
+"type":"Common Stock"
+},
+"743312100":{
+"ticker":"PRGS",
+"type":"Common Stock"
+},
+"743315103":{
+"ticker":"PGR",
+"type":"Common Stock"
+},
+"74340E103":{
+"ticker":"PGNY",
+"type":"Common Stock"
+},
+"74340W103":{
+"ticker":"PLD",
+"type":"REIT"
+},
+"74346Y103":{
+"ticker":"PRO",
+"type":"Common Stock"
+},
+"74347M108":{
+"ticker":"PUMP",
+"type":"Common Stock"
+},
+"743606105":{
+"ticker":"PB",
+"type":"Common Stock"
+},
+"74366E102":{
+"ticker":"PTGX",
+"type":"Common Stock"
+},
+"743713109":{
+"ticker":"PRLB",
+"type":"Common Stock"
+},
+"74386T105":{
+"ticker":"PFS",
+"type":"Common Stock"
+},
+"744320102":{
+"ticker":"PRU",
+"type":"Common Stock"
+},
+"744573106":{
+"ticker":"PEG",
+"type":"Common Stock"
+},
+"74460D109":{
+"ticker":"PSA",
+"type":"REIT"
+},
+"745848101":{
+"ticker":"LUNG",
+"type":"Common Stock"
+},
+"745867101":{
+"ticker":"PHM",
+"type":"Common Stock"
+},
+"74587B101":{
+"ticker":"PLSE",
+"type":"Common Stock"
+},
+"74623V103":{
+"ticker":"PCT",
+"type":"Common Stock"
+},
+"74624M102":{
+"ticker":"P",
+"type":"Common Stock"
+},
+"747316107":{
+"ticker":"KWR",
+"type":"Common Stock"
+},
+"747324101":{
+"ticker":"PYXS",
+"type":"Common Stock"
+},
+"74736K101":{
+"ticker":"QRVOEUR",
+"type":"Common Stock"
+},
+"74736L109":{
+"ticker":"QTWO",
+"type":"Common Stock"
+},
+"74743L100":{
+"ticker":"Q",
+"type":"Common Stock"
+},
+"747525103":{
+"ticker":"QCOM",
+"type":"Common Stock"
+},
+"74758T303":{
+"ticker":"QLYS",
+"type":"Common Stock"
+},
+"74762E102":{
+"ticker":"PWR",
+"type":"Common Stock"
+},
+"74765K105":{
+"ticker":"QSI",
+"type":"Common Stock"
+},
+"74767V109":{
+"ticker":"QS",
+"type":"Common Stock"
+},
+"74768A104":{
+"ticker":"QNT",
+"type":"Common Stock"
+},
+"74834L100":{
+"ticker":"DGX",
+"type":"Common Stock"
+},
+"74915M100":{
+"ticker":"",
+"type":""
+},
+"74935Q107":{
+"ticker":"RBA",
+"type":"Common Stock"
+},
+"749527107":{
+"ticker":"1RG",
+"type":"Common Stock"
+},
+"749607107":{
+"ticker":"RLI",
+"type":"Common Stock"
+},
+"74965L101":{
+"ticker":"RLJ",
+"type":"REIT"
+},
+"74967R106":{
+"ticker":"RMR",
+"type":"Common Stock"
+},
+"74967X103":{
+"ticker":"RH",
+"type":"Common Stock"
+},
+"749685103":{
+"ticker":"RPM",
+"type":"Common Stock"
+},
+"74982T103":{
+"ticker":"RXO",
+"type":"Common Stock"
+},
+"750236101":{
+"ticker":"RDN",
+"type":"Common Stock"
+},
+"750491102":{
+"ticker":"RDNT",
+"type":"Common Stock"
+},
+"750917106":{
+"ticker":"RMBS",
+"type":"Common Stock"
+},
+"750940108":{
+"ticker":"RAL",
+"type":"Common Stock"
+},
+"75120L100":{
+"ticker":"",
+"type":""
+},
+"75120L209":{
+"ticker":"RLYB",
+"type":"Common Stock"
+},
+"751212101":{
+"ticker":"RL",
+"type":"Common Stock"
+},
+"75134P600":{
+"ticker":"METC",
+"type":"Common Stock"
+},
+"75281A109":{
+"ticker":"RRC",
+"type":"Common Stock"
+},
+"75282U104":{
+"ticker":"RNGR",
+"type":"Common Stock"
+},
+"753422104":{
+"ticker":"RPD",
+"type":"Common Stock"
+},
+"753422AF1":{
+"ticker":"",
+"type":""
+},
+"75381A108":{
+"ticker":"REA",
+"type":"Common Stock"
+},
+"75383L102":{
+"ticker":"RAPP",
+"type":"Common Stock"
+},
+"754730109":{
+"ticker":"RJF",
+"type":"Common Stock"
+},
+"754907103":{
+"ticker":"RYN",
+"type":"REIT"
+},
+"75508B104":{
+"ticker":"RYAM",
+"type":"Common Stock"
+},
+"75513E101":{
+"ticker":"RTX",
+"type":"Common Stock"
+},
+"75524B104":{
+"ticker":"RBC",
+"type":"Common Stock"
+},
+"75524W108":{
+"ticker":"2RM",
+"type":"Common Stock"
+},
+"75605Y106":{
+"ticker":"HOUSEUR",
+"type":"Common Stock"
+},
+"756109104":{
+"ticker":"O",
+"type":"REIT"
+},
+"75629V104":{
+"ticker":"RXRX",
+"type":"Common Stock"
+},
+"75700L108":{
+"ticker":"RRR",
+"type":"Common Stock"
+},
+"75704L104":{
+"ticker":"RDVT",
+"type":"Common Stock"
+},
+"75734B100":{
+"ticker":"RDDT",
+"type":"Common Stock"
+},
+"75737F108":{
+"ticker":"RDFN",
+"type":"Common Stock"
+},
+"75776W103":{
+"ticker":"RDW",
+"type":"Common Stock"
+},
+"75867H106":{
+"ticker":"REF",
+"type":"Common Stock"
+},
+"758750103":{
+"ticker":"RRX",
+"type":"Common Stock"
+},
+"758849103":{
+"ticker":"REG",
+"type":"REIT"
+},
+"75886F107":{
+"ticker":"REGN",
+"type":"Common Stock"
+},
+"75901B107":{
+"ticker":"RGNX",
+"type":"Common Stock"
+},
+"75902K106":{
+"ticker":"RM",
+"type":"Common Stock"
+},
+"7591EP100":{
+"ticker":"RF",
+"type":"Common Stock"
+},
+"759351604":{
+"ticker":"RGA",
+"type":"Common Stock"
+},
+"75943R102":{
+"ticker":"RLAY",
+"type":"Common Stock"
+},
+"759509102":{
+"ticker":"RS",
+"type":"Common Stock"
+},
+"759530108":{
+"ticker":"RELX",
+"type":"ADR"
+},
+"75960P104":{
+"ticker":"RELY",
+"type":"Common Stock"
+},
+"75970E107":{
+"ticker":"RNST",
+"type":"Common Stock"
+},
+"759916109":{
+"ticker":"RGEN",
+"type":"Common Stock"
+},
+"76009N100":{
+"ticker":"UPBD",
+"type":"Common Stock"
+},
+"760125104":{
+"ticker":"RTO",
+"type":"ADR"
+},
+"760273102":{
+"ticker":"RPTX",
+"type":"Common Stock"
+},
+"760281204":{
+"ticker":"RBCAA",
+"type":"Common Stock"
+},
+"760759100":{
+"ticker":"RSG",
+"type":"Common Stock"
+},
+"761152107":{
+"ticker":"RMD",
+"type":"Common Stock"
+},
+"76118Y104":{
+"ticker":"REZI",
+"type":"Common Stock"
+},
+"76131D103":{
+"ticker":"QSR",
+"type":"Common Stock"
+},
+"76131N101":{
+"ticker":"ROICUSD",
+"type":"REIT"
+},
+"761330109":{
+"ticker":"RVNCEUR",
+"type":"Common Stock"
+},
+"76155X100":{
+"ticker":"RVMD",
+"type":"Common Stock"
+},
+"76169C100":{
+"ticker":"REXR",
+"type":"REIT"
+},
+"76171L106":{
+"ticker":"REYN",
+"type":"Common Stock"
+},
+"76243J105":{
+"ticker":"RYTM",
+"type":"Common Stock"
+},
+"766559702":{
+"ticker":"RIGL",
+"type":"Common Stock"
+},
+"76655K103":{
+"ticker":"RGTI",
+"type":"Common Stock"
+},
+"76680R206":{
+"ticker":"RNG",
+"type":"Common Stock"
+},
+"76680RAH0":{
+"ticker":"",
+"type":""
+},
+"767204100":{
+"ticker":"RIO",
+"type":"ADR"
+},
+"767292105":{
+"ticker":"RIOT",
+"type":"Common Stock"
+},
+"767292AB1":{
+"ticker":"",
+"type":""
+},
+"76954A103":{
+"ticker":"RIVN",
+"type":"Common Stock"
+},
+"76954AAB9":{
+"ticker":"",
+"type":""
+},
+"76954AAD5":{
+"ticker":"",
+"type":""
+},
+"770323103":{
+"ticker":"RHI",
+"type":"Common Stock"
+},
+"770700102":{
+"ticker":"HOOD",
+"type":"Common Stock"
+},
+"770701100":{
+"ticker":"RVI",
+"type":"Closed-End Fund"
+},
+"771049103":{
+"ticker":"RBLX",
+"type":"Common Stock"
+},
+"77311W101":{
+"ticker":"RKT",
+"type":"Common Stock"
+},
+"773121108":{
+"ticker":"RKLB",
+"type":"Common Stock"
+},
+"773122106":{
+"ticker":"25718EUR",
+"type":"Common Stock"
+},
+"77313F106":{
+"ticker":"RCKT",
+"type":"Common Stock"
+},
+"773903109":{
+"ticker":"ROK",
+"type":"Common Stock"
+},
+"775109200":{
+"ticker":"RCI",
+"type":"Common Stock"
+},
+"775133101":{
+"ticker":"ROG",
+"type":"Common Stock"
+},
+"77543R102":{
+"ticker":"",
+"type":""
+},
+"775711104":{
+"ticker":"ROL",
+"type":"Common Stock"
+},
+"77664L207":{
+"ticker":"ROOT",
+"type":"Common Stock"
+},
+"776696106":{
+"ticker":"ROP",
+"type":"Common Stock"
+},
+"778296103":{
+"ticker":"ROST",
+"type":"Common Stock"
+},
+"778920306":{
+"ticker":"SHAZ",
+"type":"Common Stock"
+},
+"780087102":{
+"ticker":"RY",
+"type":"Common Stock"
+},
+"780259305":{
+"ticker":"SHEL",
+"type":"ADR"
+},
+"780287108":{
+"ticker":"RGLD",
+"type":"Common Stock"
+},
+"781154109":{
+"ticker":"RBRK",
+"type":"Common Stock"
+},
+"781846209":{
+"ticker":"RUSHA",
+"type":"Common Stock"
+},
+"782011100":{
+"ticker":"RSI",
+"type":"Common Stock"
+},
+"78349D107":{
+"ticker":"RXST",
+"type":"Common Stock"
+},
+"783513203":{
+"ticker":"RYAAY",
+"type":"ADR"
+},
+"78351F107":{
+"ticker":"RYAN",
+"type":"Common Stock"
+},
+"783549108":{
+"ticker":"R",
+"type":"Common Stock"
+},
+"78377T107":{
+"ticker":"RHP",
+"type":"REIT"
+},
+"783859101":{
+"ticker":"STBA",
+"type":"Common Stock"
+},
+"78392B206":{
+"ticker":"SKHY",
+"type":"ADR"
+},
+"78409V104":{
+"ticker":"SPGI",
+"type":"Common Stock"
+},
+"78410G104":{
+"ticker":"SBAC",
+"type":"REIT"
+},
+"784117103":{
+"ticker":"SEIC",
+"type":"Common Stock"
+},
+"784305104":{
+"ticker":"HTO",
+"type":"Common Stock"
+},
+"78440P306":{
+"ticker":"SKM",
+"type":"ADR"
+},
+"78440X887":{
+"ticker":"SLG",
+"type":"REIT"
+},
+"78442P106":{
+"ticker":"SLM",
+"type":"Common Stock"
+},
+"78454L100":{
+"ticker":"SM",
+"type":"Common Stock"
+},
+"78462F953":{
+"ticker":"",
+"type":""
+},
+"78463M107":{
+"ticker":"SPSC",
+"type":"Common Stock"
+},
+"78463V107":{
+"ticker":"GLD",
+"type":"ETP"
+},
+"78464A474":{
+"ticker":"SPSB",
+"type":"ETP"
+},
+"78464A581":{
+"ticker":"XHE",
+"type":"ETP"
+},
+"78464A631":{
+"ticker":"XAR",
+"type":"ETP"
+},
+"78464A698":{
+"ticker":"KRE",
+"type":"ETP"
+},
+"78464A755":{
+"ticker":"XME",
+"type":"ETP"
+},
+"78464A771":{
+"ticker":"KCE",
+"type":"ETP"
+},
+"78464A797":{
+"ticker":"KBE",
+"type":"ETP"
+},
+"78464A870":{
+"ticker":"XBI",
+"type":"ETP"
+},
+"78464A888":{
+"ticker":"XHB",
+"type":"ETP"
+},
+"78467J100":{
+"ticker":"SSNC",
+"type":"Common Stock"
+},
+"78468R556":{
+"ticker":"XOP",
+"type":"ETP"
+},
+"78468R622":{
+"ticker":"JNK",
+"type":"ETP"
+},
+"784730103":{
+"ticker":"SSRM",
+"type":"Common Stock"
+},
+"78473E103":{
+"ticker":"SPXC",
+"type":"Common Stock"
+},
+"78475V103":{
+"ticker":"MWH",
+"type":"Common Stock"
+},
+"78573L106":{
+"ticker":"SBRA",
+"type":"REIT"
+},
+"78573M104":{
+"ticker":"SABR",
+"type":"Common Stock"
+},
+"78574H104":{
+"ticker":"SOC",
+"type":"Common Stock"
+},
+"78646V107":{
+"ticker":"SAFE",
+"type":"REIT"
+},
+"78648T100":{
+"ticker":"SAFT",
+"type":"Common Stock"
+},
+"78709Y105":{
+"ticker":"SAIA",
+"type":"Common Stock"
+},
+"78781J109":{
+"ticker":"SAIL",
+"type":"Common Stock"
+},
+"790148100":{
+"ticker":"JOE",
+"type":"Common Stock"
+},
+"79466L302":{
+"ticker":"CRM",
+"type":"Common Stock"
+},
+"79546E104":{
+"ticker":"SBH",
+"type":"Common Stock"
+},
+"79589L106":{
+"ticker":"IOT",
+"type":"Common Stock"
+},
+"80004C200":{
+"ticker":"SNDK",
+"type":"Common Stock"
+},
+"80013R206":{
+"ticker":"AYS1",
+"type":"Common Stock"
+},
+"800363103":{
+"ticker":"SD2",
+"type":"Common Stock"
+},
+"800422107":{
+"ticker":"JBSS",
+"type":"Common Stock"
+},
+"801056102":{
+"ticker":"SANM",
+"type":"Common Stock"
+},
+"80105N105":{
+"ticker":"SNY",
+"type":"ADR"
+},
+"803054204":{
+"ticker":"SAP",
+"type":"ADR"
+},
+"803607100":{
+"ticker":"SRPT",
+"type":"Common Stock"
+},
+"804395101":{
+"ticker":"BFS",
+"type":"REIT"
+},
+"80517M109":{
+"ticker":"SVV",
+"type":"Common Stock"
+},
+"806037107":{
+"ticker":"SCSC",
+"type":"Common Stock"
+},
+"806407102":{
+"ticker":"HSIC",
+"type":"Common Stock"
+},
+"806857108":{
+"ticker":"SLB",
+"type":"Common Stock"
+},
+"80689H102":{
+"ticker":"SNDR",
+"type":"Common Stock"
+},
+"807066105":{
+"ticker":"SCHL",
+"type":"Common Stock"
+},
+"80706P103":{
+"ticker":"SRRK",
+"type":"Common Stock"
+},
+"80810D103":{
+"ticker":"SDGR",
+"type":"Common Stock"
+},
+"808513105":{
+"ticker":"SCHW",
+"type":"Common Stock"
+},
+"808541106":{
+"ticker":"MATV",
+"type":"Common Stock"
+},
+"808625107":{
+"ticker":"SAIC",
+"type":"Common Stock"
+},
+"80874P109":{
+"ticker":"LNWO",
+"type":"Common Stock"
+},
+"80880W106":{
+"ticker":"SCLXUSD",
+"type":"Common Stock"
+},
+"80880W205":{
+"ticker":"SCLX",
+"type":"Common Stock"
+},
+"810186106":{
+"ticker":"SMG",
+"type":"Common Stock"
+},
+"811033109":{
+"ticker":"SCTX",
+"type":"Common Stock"
+},
+"81141R100":{
+"ticker":"SE",
+"type":"ADR"
+},
+"811543107":{
+"ticker":"SEB",
+"type":"Common Stock"
+},
+"811927102":{
+"ticker":"SA",
+"type":"Common Stock"
+},
+"81211K100":{
+"ticker":"SEE",
+"type":"Common Stock"
+},
+"812215200":{
+"ticker":"SEG",
+"type":"Common Stock"
+},
+"81282V100":{
+"ticker":"PRKS",
+"type":"Common Stock"
+},
+"81369Y100":{
+"ticker":"XLB",
+"type":"ETP"
+},
+"81369Y209":{
+"ticker":"XLV",
+"type":"ETP"
+},
+"81369Y308":{
+"ticker":"XLP",
+"type":"ETP"
+},
+"81369Y407":{
+"ticker":"XLY",
+"type":"ETP"
+},
+"81369Y506":{
+"ticker":"XLE",
+"type":"ETP"
+},
+"81369Y605":{
+"ticker":"XLF",
+"type":"ETP"
+},
+"81369Y704":{
+"ticker":"XLI",
+"type":"ETP"
+},
+"81369Y886":{
+"ticker":"XLU",
+"type":"ETP"
+},
+"81517B101":{
+"ticker":"SECZ",
+"type":"Common Stock"
+},
+"81619Q105":{
+"ticker":"SEMEUR",
+"type":"Common Stock"
+},
+"816300107":{
+"ticker":"SIGI",
+"type":"Common Stock"
+},
+"81663L200":{
+"ticker":"WGS",
+"type":"Common Stock"
+},
+"81684M104":{
+"ticker":"SMLRUSD",
+"type":"Common Stock"
+},
+"816850101":{
+"ticker":"SMTC",
+"type":"Common Stock"
+},
+"816851109":{
+"ticker":"SRE",
+"type":"Common Stock"
+},
+"81686C104":{
+"ticker":"SEMREUR",
+"type":"Common Stock"
+},
+"81725T100":{
+"ticker":"SXT",
+"type":"Common Stock"
+},
+"81726A209":{
+"ticker":"",
+"type":""
+},
+"81730H109":{
+"ticker":"S",
+"type":"Common Stock"
+},
+"81734D104":{
+"ticker":"SEPN",
+"type":"Common Stock"
+},
+"817565104":{
+"ticker":"SCI",
+"type":"Common Stock"
+},
+"81761L102":{
+"ticker":"",
+"type":""
+},
+"81762P102":{
+"ticker":"NOW",
+"type":"Common Stock"
+},
+"81764X103":{
+"ticker":"TTAN",
+"type":"Common Stock"
+},
+"81768T108":{
+"ticker":"SFBS",
+"type":"Common Stock"
+},
+"819047101":{
+"ticker":"SHAK",
+"type":"Common Stock"
+},
+"824348106":{
+"ticker":"SHW",
+"type":"Common Stock"
+},
+"82452J109":{
+"ticker":"FOUR",
+"type":"Common Stock"
+},
+"82489W107":{
+"ticker":"SHLS",
+"type":"Common Stock"
+},
+"82509L107":{
+"ticker":"SHOP",
+"type":"Common Stock"
+},
+"825690100":{
+"ticker":"SSTK",
+"type":"Common Stock"
+},
+"825698103":{
+"ticker":"SPARUSD",
+"type":"Common Stock"
+},
+"82575P107":{
+"ticker":"SBSW",
+"type":"ADR"
+},
+"826599102":{
+"ticker":"SGML",
+"type":"Common Stock"
+},
+"82686Q101":{
+"ticker":"SLN",
+"type":"ADR"
+},
+"826919102":{
+"ticker":"SLAB",
+"type":"Common Stock"
+},
+"827048109":{
+"ticker":"SLGN",
+"type":"Common Stock"
+},
+"82835W108":{
+"ticker":"SPRY",
+"type":"Common Stock"
+},
+"82846H405":{
+"ticker":"QXO",
+"type":"Common Stock"
+},
+"828730200":{
+"ticker":"SFNC",
+"type":"Common Stock"
+},
+"828806109":{
+"ticker":"SPG",
+"type":"REIT"
+},
+"82900L102":{
+"ticker":"SMPL",
+"type":"Common Stock"
+},
+"829073105":{
+"ticker":"SSD",
+"type":"Common Stock"
+},
+"829242106":{
+"ticker":"SBGI",
+"type":"Common Stock"
+},
+"829401108":{
+"ticker":"SION",
+"type":"Common Stock"
+},
+"82968B103":{
+"ticker":"SIRIEUR",
+"type":"Common Stock"
+},
+"82981J851":{
+"ticker":"SITC",
+"type":"REIT"
+},
+"82982L103":{
+"ticker":"SITE",
+"type":"Common Stock"
+},
+"82982T106":{
+"ticker":"SITM",
+"type":"Common Stock"
+},
+"83001C108":{
+"ticker":"FUN",
+"type":"Common Stock"
+},
+"830566105":{
+"ticker":"SKAA",
+"type":"Common Stock"
+},
+"83056P715":{
+"ticker":"SKE",
+"type":"Common Stock"
+},
+"830830105":{
+"ticker":"SKY",
+"type":"Common Stock"
+},
+"830879102":{
+"ticker":"SKYW",
+"type":"Common Stock"
+},
+"83088M102":{
+"ticker":"SWKS",
+"type":"Common Stock"
+},
+"83089J108":{
+"ticker":"",
+"type":""
+},
+"830940102":{
+"ticker":"SKWD",
+"type":"Common Stock"
+},
+"831349105":{
+"ticker":"SLDE",
+"type":"Common Stock"
+},
+"83175M205":{
+"ticker":"SNN",
+"type":"ADR"
+},
+"831865209":{
+"ticker":"AOS",
+"type":"Common Stock"
+},
+"83192D402":{
+"ticker":"SMA",
+"type":"REIT"
+},
+"83193G107":{
+"ticker":"SMRT",
+"type":"Common Stock"
+},
+"83200N103":{
+"ticker":"SMARGBP",
+"type":"Common Stock"
+},
+"832248207":{
+"ticker":"SFD",
+"type":"Common Stock"
+},
+"832696405":{
+"ticker":"SJM",
+"type":"Common Stock"
+},
+"833034101":{
+"ticker":"SNA",
+"type":"Common Stock"
+},
+"83304A106":{
+"ticker":"SNAP",
+"type":"Common Stock"
+},
+"83304AAB2":{
+"ticker":"",
+"type":""
+},
+"83304AAF3":{
+"ticker":"",
+"type":""
+},
+"83304AAH9":{
+"ticker":"",
+"type":""
+},
+"83304AAK2":{
+"ticker":"",
+"type":""
+},
+"833445109":{
+"ticker":"SNOW",
+"type":"Common Stock"
+},
+"833635105":{
+"ticker":"SQM",
+"type":"ADR"
+},
+"83406F102":{
+"ticker":"SOFI",
+"type":"Common Stock"
+},
+"83417M104":{
+"ticker":"SEDG",
+"type":"Common Stock"
+},
+"83417Q204":{
+"ticker":"0OIA",
+"type":"Common Stock"
+},
+"83418M103":{
+"ticker":"SEI",
+"type":"Common Stock"
+},
+"834203309":{
+"ticker":"SLNOEUR",
+"type":"Common Stock"
+},
+"83443Q103":{
+"ticker":"SOLS",
+"type":"Common Stock"
+},
+"83444M101":{
+"ticker":"SOLV",
+"type":"Common Stock"
+},
+"835495102":{
+"ticker":"SON",
+"type":"Common Stock"
+},
+"835699307":{
+"ticker":"SONY",
+"type":"ADR"
+},
+"83570H108":{
+"ticker":"SONO",
+"type":"Common Stock"
+},
+"83601L102":{
+"ticker":"SHC",
+"type":"Common Stock"
+},
+"836100107":{
+"ticker":"SOUN",
+"type":"Common Stock"
+},
+"83671M105":{
+"ticker":"SOBO",
+"type":"Common Stock"
+},
+"840441109":{
+"ticker":"SSBUSD",
+"type":"Common Stock"
+},
+"842587107":{
+"ticker":"SO",
+"type":"Common Stock"
+},
+"842587DZ7":{
+"ticker":"",
+"type":""
+},
+"842587ED5":{
+"ticker":"",
+"type":""
+},
+"84265V105":{
+"ticker":"SCCO",
+"type":"Common Stock"
+},
+"842873101":{
+"ticker":"SFST",
+"type":"Common Stock"
+},
+"84472E102":{
+"ticker":"SSB",
+"type":"Common Stock"
+},
+"844741108":{
+"ticker":"LUV",
+"type":"Common Stock"
+},
+"844895102":{
+"ticker":"SWX",
+"type":"Common Stock"
+},
+"84615Q103":{
+"ticker":"SPCX",
+"type":"Common Stock"
+},
+"84790A105":{
+"ticker":"SPB",
+"type":"Common Stock"
+},
+"848574109":{
+"ticker":"S9Q",
+"type":"Common Stock"
+},
+"84857L101":{
+"ticker":"SR",
+"type":"Common Stock"
+},
+"84921RAB6":{
+"ticker":"",
+"type":""
+},
+"85205L107":{
+"ticker":"SWTXUSD",
+"type":"Common Stock"
+},
+"85205TAQ3":{
+"ticker":"",
+"type":""
+},
+"852066208":{
+"ticker":"SII",
+"type":"Common Stock"
+},
+"85207H104":{
+"ticker":"PHYS",
+"type":"Closed-End Fund"
+},
+"85208M102":{
+"ticker":"SFM",
+"type":"Common Stock"
+},
+"85208P303":{
+"ticker":"URNM",
+"type":"ETP"
+},
+"85208P808":{
+"ticker":"URNJ",
+"type":"ETP"
+},
+"85208T107":{
+"ticker":"CXM",
+"type":"Common Stock"
+},
+"85209W109":{
+"ticker":"SPT",
+"type":"Common Stock"
+},
+"852234103":{
+"ticker":"XYZ",
+"type":"Common Stock"
+},
+"852312305":{
+"ticker":"STAA",
+"type":"Common Stock"
+},
+"85254J102":{
+"ticker":"STAG",
+"type":"REIT"
+},
+"853666105":{
+"ticker":"SMP",
+"type":"Common Stock"
+},
+"854231107":{
+"ticker":"SXI",
+"type":"Common Stock"
+},
+"85423L103":{
+"ticker":"SARO",
+"type":"Common Stock"
+},
+"854502101":{
+"ticker":"SWK",
+"type":"Common Stock"
+},
+"85472N109":{
+"ticker":"STN",
+"type":"Common Stock"
+},
+"85512G106":{
+"ticker":"STHO",
+"type":"Common Stock"
+},
+"855244109":{
+"ticker":"SBUX",
+"type":"Common Stock"
+},
+"85571B105":{
+"ticker":"STWD",
+"type":"REIT"
+},
+"855919106":{
+"ticker":"STRZ",
+"type":"Common Stock"
+},
+"857477103":{
+"ticker":"STT",
+"type":"Common Stock"
+},
+"858119100":{
+"ticker":"STLD",
+"type":"Common Stock"
+},
+"858155203":{
+"ticker":"GJB",
+"type":"Common Stock"
+},
+"858586100":{
+"ticker":"SCL",
+"type":"Common Stock"
+},
+"858927106":{
+"ticker":"STEL",
+"type":"Common Stock"
+},
+"85914M107":{
+"ticker":"STEP",
+"type":"Common Stock"
+},
+"859241101":{
+"ticker":"STRL",
+"type":"Common Stock"
+},
+"860372101":{
+"ticker":"STC",
+"type":"Common Stock"
+},
+"860630102":{
+"ticker":"SF",
+"type":"Common Stock"
+},
+"860897107":{
+"ticker":"SFIX",
+"type":"Common Stock"
+},
+"861012102":{
+"ticker":"STM",
+"type":"NY Reg Shrs"
+},
+"861025104":{
+"ticker":"SYBT",
+"type":"Common Stock"
+},
+"86150R107":{
+"ticker":"STOK",
+"type":"Common Stock"
+},
+"861896108":{
+"ticker":"SNEX",
+"type":"Common Stock"
+},
+"86272C103":{
+"ticker":"STRA",
+"type":"Common Stock"
+},
+"86333M108":{
+"ticker":"LRN",
+"type":"Common Stock"
+},
+"863667101":{
+"ticker":"SYK",
+"type":"Common Stock"
+},
+"86384P109":{
+"ticker":"STUB",
+"type":"Common Stock"
+},
+"864159108":{
+"ticker":"RGR",
+"type":"Common Stock"
+},
+"86562M209":{
+"ticker":"SMFG",
+"type":"ADR"
+},
+"86614U100":{
+"ticker":"7SU",
+"type":"Common Stock"
+},
+"86627T108":{
+"ticker":"SMMT",
+"type":"Common Stock"
+},
+"866674104":{
+"ticker":"SUI",
+"type":"REIT"
+},
+"866683105":{
+"ticker":"SNCY",
+"type":"Common Stock"
+},
+"866796105":{
+"ticker":"SLF",
+"type":"Common Stock"
+},
+"866966104":{
+"ticker":"SUNB",
+"type":"Common Stock"
+},
+"867224107":{
+"ticker":"SU",
+"type":"Common Stock"
+},
+"86722A103":{
+"ticker":"SXC",
+"type":"Common Stock"
+},
+"86765Q106":{
+"ticker":"SUNC",
+"type":"Common Stock"
+},
+"86771W105":{
+"ticker":"RUN",
+"type":"Common Stock"
+},
+"86771WAD7":{
+"ticker":"",
+"type":""
+},
+"867866105":{
+"ticker":"SSMR",
+"type":"Common Stock"
+},
+"867892101":{
+"ticker":"SHO",
+"type":"REIT"
+},
+"867975104":{
+"ticker":"SNREN",
+"type":"ADR"
+},
+"86800U302":{
+"ticker":"SMCI",
+"type":"Common Stock"
+},
+"86800U500":{
+"ticker":"",
+"type":""
+},
+"868459108":{
+"ticker":"",
+"type":""
+},
+"86881A100":{
+"ticker":"SGRY",
+"type":"Common Stock"
+},
+"868873100":{
+"ticker":"SU6",
+"type":"Common Stock"
+},
+"87043Q108":{
+"ticker":"SG",
+"type":"Common Stock"
+},
+"871332102":{
+"ticker":"SLVM",
+"type":"Common Stock"
+},
+"87151X101":{
+"ticker":"SYM",
+"type":"Common Stock"
+},
+"87157D109":{
+"ticker":"SYNA",
+"type":"Common Stock"
+},
+"871607107":{
+"ticker":"SNPS",
+"type":"Common Stock"
+},
+"87161C501":{
+"ticker":"SYU1",
+"type":"Common Stock"
+},
+"87162W100":{
+"ticker":"SNX",
+"type":"Common Stock"
+},
+"87165B103":{
+"ticker":"SYF",
+"type":"Common Stock"
+},
+"871829107":{
+"ticker":"SYY",
+"type":"Common Stock"
+},
+"87240R107":{
+"ticker":"TFSL",
+"type":"Common Stock"
+},
+"87241L109":{
+"ticker":"TFII",
+"type":"Common Stock"
+},
+"872540109":{
+"ticker":"TJX",
+"type":"Common Stock"
+},
+"87256C101":{
+"ticker":"TKO",
+"type":"Common Stock"
+},
+"87261Y106":{
+"ticker":"TMC",
+"type":"Common Stock"
+},
+"872657101":{
+"ticker":"TPG",
+"type":"Common Stock"
+},
+"87265H109":{
+"ticker":"T86",
+"type":"Common Stock"
+},
+"87266M107":{
+"ticker":"TRTX",
+"type":"REIT"
+},
+"87283Q305":{
+"ticker":"TGRW",
+"type":"ETP"
+},
+"87283Q404":{
+"ticker":"TDVG",
+"type":"ETP"
+},
+"87283Q503":{
+"ticker":"TSPA",
+"type":"ETP"
+},
+"87305R109":{
+"ticker":"TTMI",
+"type":"Common Stock"
+},
+"87318A101":{
+"ticker":"TWFG",
+"type":"Common Stock"
+},
+"87357P100":{
+"ticker":"TCMD",
+"type":"Common Stock"
+},
+"874039100":{
+"ticker":"TSM",
+"type":"ADR"
+},
+"874054109":{
+"ticker":"TTWO",
+"type":"Common Stock"
+},
+"874060205":{
+"ticker":"TAK",
+"type":"ADR"
+},
+"874080104":{
+"ticker":"TAL",
+"type":"ADR"
+},
+"87422Q109":{
+"ticker":"TLN",
+"type":"Common Stock"
+},
+"87427V103":{
+"ticker":"TALK1",
+"type":"Common Stock"
+},
+"87484T108":{
+"ticker":"TALO",
+"type":"Common Stock"
+},
+"87507T101":{
+"ticker":"TBN",
+"type":"Common Stock"
+},
+"875372203":{
+"ticker":"TNDM",
+"type":"Common Stock"
+},
+"875465106":{
+"ticker":"SKT",
+"type":"REIT"
+},
+"876030107":{
+"ticker":"TPR",
+"type":"Common Stock"
+},
+"87612E106":{
+"ticker":"TGT",
+"type":"Common Stock"
+},
+"87612G101":{
+"ticker":"TRGP",
+"type":"Common Stock"
+},
+"87650L103":{
+"ticker":"TARS",
+"type":"Common Stock"
+},
+"87724P106":{
+"ticker":"TMHCGBP",
+"type":"Common Stock"
+},
+"877619106":{
+"ticker":"TSHA",
+"type":"Common Stock"
+},
+"87807B107":{
+"ticker":"TRP",
+"type":"Common Stock"
+},
+"878742204":{
+"ticker":"TECK",
+"type":"Common Stock"
+},
+"87874R308":{
+"ticker":"TTGT",
+"type":"Common Stock"
+},
+"87901J105":{
+"ticker":"TGNA",
+"type":"Common Stock"
+},
+"87918A105":{
+"ticker":"TDOC",
+"type":"Common Stock"
+},
+"879360105":{
+"ticker":"TDY",
+"type":"Common Stock"
+},
+"879369106":{
+"ticker":"TFX",
+"type":"Common Stock"
+},
+"879433829":{
+"ticker":"TDS",
+"type":"Common Stock"
+},
+"87971M103":{
+"ticker":"TU",
+"type":"Common Stock"
+},
+"88023B103":{
+"ticker":"TEM",
+"type":"Common Stock"
+},
+"88023U101":{
+"ticker":"SGI",
+"type":"Common Stock"
+},
+"88025T102":{
+"ticker":"TENB",
+"type":"Common Stock"
+},
+"88025U109":{
+"ticker":"TXG",
+"type":"Common Stock"
+},
+"88031M109":{
+"ticker":"TS",
+"type":"ADR"
+},
+"88033G407":{
+"ticker":"THC",
+"type":"Common Stock"
+},
+"880345103":{
+"ticker":"TNC",
+"type":"Common Stock"
+},
+"88034P109":{
+"ticker":"TME",
+"type":"ADR"
+},
+"88076W103":{
+"ticker":"TDC",
+"type":"Common Stock"
+},
+"880770102":{
+"ticker":"TER",
+"type":"Common Stock"
+},
+"880779103":{
+"ticker":"TEX",
+"type":"Common Stock"
+},
+"88080T104":{
+"ticker":"WULF",
+"type":"Common Stock"
+},
+"880881107":{
+"ticker":"430",
+"type":"Common Stock"
+},
+"88146M101":{
+"ticker":"TRNO",
+"type":"REIT"
+},
+"88160R101":{
+"ticker":"TSLA",
+"type":"Common Stock"
+},
+"881624209":{
+"ticker":"TEVAN",
+"type":"ADR"
+},
+"88162F105":{
+"ticker":"TTI",
+"type":"Common Stock"
+},
+"88162G103":{
+"ticker":"TTEK",
+"type":"Common Stock"
+},
+"88224Q107":{
+"ticker":"TXCP",
+"type":"Common Stock"
+},
+"882508104":{
+"ticker":"TXN",
+"type":"Common Stock"
+},
+"88262P102":{
+"ticker":"TPL",
+"type":"Common Stock"
+},
+"882681109":{
+"ticker":"TXRH",
+"type":"Common Stock"
+},
+"883203101":{
+"ticker":"TXT",
+"type":"Common Stock"
+},
+"88322Q108":{
+"ticker":"TGTX",
+"type":"Common Stock"
+},
+"88337F105":{
+"ticker":"ODP1",
+"type":"Common Stock"
+},
+"88339J105":{
+"ticker":"TTD",
+"type":"Common Stock"
+},
+"88339P101":{
+"ticker":"REAL",
+"type":"Common Stock"
+},
+"883556102":{
+"ticker":"TMO",
+"type":"Common Stock"
+},
+"88362T103":{
+"ticker":"8TG",
+"type":"Common Stock"
+},
+"88428H101":{
+"ticker":"ETHQ",
+"type":"ETP"
+},
+"88428J107":{
+"ticker":"SOLQ",
+"type":"ETP"
+},
+"884903808":{
+"ticker":"",
+"type":""
+},
+"884903881":{
+"ticker":"TRI",
+"type":"Common Stock"
+},
+"885160101":{
+"ticker":"THO",
+"type":"Common Stock"
+},
+"88554D205":{
+"ticker":"DDD",
+"type":"Common Stock"
+},
+"88557W101":{
+"ticker":"QFIN",
+"type":"ADR"
+},
+"88579Y101":{
+"ticker":"MMM",
+"type":"Common Stock"
+},
+"886029206":{
+"ticker":"THRY",
+"type":"Common Stock"
+},
+"88642R109":{
+"ticker":"TDW",
+"type":"Common Stock"
+},
+"887389104":{
+"ticker":"TKR",
+"type":"Common Stock"
+},
+"88822Q103":{
+"ticker":"TIPT",
+"type":"Common Stock"
+},
+"88830M102":{
+"ticker":"TWI",
+"type":"Common Stock"
+},
+"888787108":{
+"ticker":"TOST",
+"type":"Common Stock"
+},
+"889478103":{
+"ticker":"TOL",
+"type":"Common Stock"
+},
+"89055F103":{
+"ticker":"28T",
+"type":"Common Stock"
+},
+"891092108":{
+"ticker":"TTC",
+"type":"Common Stock"
+},
+"891160509":{
+"ticker":"TD",
+"type":"Common Stock"
+},
+"89214P109":{
+"ticker":"TOWN",
+"type":"Common Stock"
+},
+"892356106":{
+"ticker":"TSCO",
+"type":"Common Stock"
+},
+"892672106":{
+"ticker":"TW",
+"type":"Common Stock"
+},
+"89346D107":{
+"ticker":"TAC",
+"type":"Common Stock"
+},
+"893641100":{
+"ticker":"TDG",
+"type":"Common Stock"
+},
+"89377M109":{
+"ticker":"TMDX",
+"type":"Common Stock"
+},
+"89400J107":{
+"ticker":"TRU",
+"type":"Common Stock"
+},
+"894164102":{
+"ticker":"TNL",
+"type":"Common Stock"
+},
+"89417E109":{
+"ticker":"TRV",
+"type":"Common Stock"
+},
+"89422G107":{
+"ticker":"TVTX",
+"type":"Common Stock"
+},
+"89455T109":{
+"ticker":"TMCI",
+"type":"Common Stock"
+},
+"89469A104":{
+"ticker":"THS",
+"type":"Common Stock"
+},
+"89531P105":{
+"ticker":"TREX",
+"type":"Common Stock"
+},
+"89532M101":{
+"ticker":"TRVI",
+"type":"Common Stock"
+},
+"896095106":{
+"ticker":"TCBK",
+"type":"Common Stock"
+},
+"896215209":{
+"ticker":"TRS",
+"type":"Common Stock"
+},
+"896239100":{
+"ticker":"TRMB",
+"type":"Common Stock"
+},
+"896288107":{
+"ticker":"TNET",
+"type":"Common Stock"
+},
+"896522109":{
+"ticker":"TRN",
+"type":"Common Stock"
+},
+"89677Q107":{
+"ticker":"TCOM",
+"type":"ADR"
+},
+"89679E300":{
+"ticker":"TFIN",
+"type":"Common Stock"
+},
+"89679M104":{
+"ticker":"TFPM",
+"type":"Common Stock"
+},
+"89680M101":{
+"ticker":"TLSI",
+"type":"Common Stock"
+},
+"896818101":{
+"ticker":"TG7",
+"type":"Common Stock"
+},
+"896945201":{
+"ticker":"TRIP",
+"type":"Common Stock"
+},
+"898202106":{
+"ticker":"TRUP",
+"type":"Common Stock"
+},
+"89832Q109":{
+"ticker":"TFC",
+"type":"Common Stock"
+},
+"898402102":{
+"ticker":"TRMK",
+"type":"Common Stock"
+},
+"901109108":{
+"ticker":"TPC",
+"type":"Common Stock"
+},
+"90138A103":{
+"ticker":"VNET",
+"type":"ADR"
+},
+"90138F102":{
+"ticker":"TWLO",
+"type":"Common Stock"
+},
+"90184D100":{
+"ticker":"TWST",
+"type":"Common Stock"
+},
+"90187B804":{
+"ticker":"TWO1",
+"type":"REIT"
+},
+"902252105":{
+"ticker":"TYL",
+"type":"Common Stock"
+},
+"902494103":{
+"ticker":"TSN",
+"type":"Common Stock"
+},
+"902653104":{
+"ticker":"UDR",
+"type":"REIT"
+},
+"902673102":{
+"ticker":"UFPT",
+"type":"Common Stock"
+},
+"902681105":{
+"ticker":"UGI",
+"type":"Common Stock"
+},
+"902685106":{
+"ticker":"UDMY",
+"type":"Common Stock"
+},
+"902788108":{
+"ticker":"UMBF",
+"type":"Common Stock"
+},
+"90278Q108":{
+"ticker":"UFPI",
+"type":"Common Stock"
+},
+"902973304":{
+"ticker":"USB",
+"type":"Common Stock"
+},
+"90328M107":{
+"ticker":"USNA",
+"type":"Common Stock"
+},
+"90353T100":{
+"ticker":"UBER",
+"type":"Common Stock"
+},
+"90353W103":{
+"ticker":"UI",
+"type":"Common Stock"
+},
+"90364P105":{
+"ticker":"PATH",
+"type":"Common Stock"
+},
+"903731107":{
+"ticker":"ULS",
+"type":"Common Stock"
+},
+"90385V107":{
+"ticker":"UCTT",
+"type":"Common Stock"
+},
+"90400D108":{
+"ticker":"RARE",
+"type":"Common Stock"
+},
+"904311107":{
+"ticker":"UAA",
+"type":"Common Stock"
+},
+"904311206":{
+"ticker":"UA",
+"type":"Common Stock"
+},
+"904708104":{
+"ticker":"UNF",
+"type":"Common Stock"
+},
+"904767704":{
+"ticker":"",
+"type":""
+},
+"904767803":{
+"ticker":"UL",
+"type":"ADR"
+},
+"907818108":{
+"ticker":"UNP",
+"type":"Common Stock"
+},
+"90984P303":{
+"ticker":"UCB",
+"type":"Common Stock"
+},
+"909907107":{
+"ticker":"UBSI",
+"type":"Common Stock"
+},
+"910047109":{
+"ticker":"UAL",
+"type":"Common Stock"
+},
+"910340108":{
+"ticker":"UFCS",
+"type":"Common Stock"
+},
+"910710102":{
+"ticker":"ACIC",
+"type":"Common Stock"
+},
+"910873405":{
+"ticker":"UMC",
+"type":"ADR"
+},
+"911163103":{
+"ticker":"UNFI",
+"type":"Common Stock"
+},
+"911312106":{
+"ticker":"UPS",
+"type":"Common Stock"
+},
+"911363109":{
+"ticker":"URI",
+"type":"Common Stock"
+},
+"911922102":{
+"ticker":"USLM",
+"type":"Common Stock"
+},
+"912008109":{
+"ticker":"USFD",
+"type":"Common Stock"
+},
+"912909108":{
+"ticker":"USX1",
+"type":"Common Stock"
+},
+"912932100":{
+"ticker":"UNIT",
+"type":"Common Stock"
+},
+"91307C102":{
+"ticker":"UTHR",
+"type":"Common Stock"
+},
+"913259107":{
+"ticker":"UTL",
+"type":"Common Stock"
+},
+"91325V108":{
+"ticker":"",
+"type":""
+},
+"91332U101":{
+"ticker":"U",
+"type":"Common Stock"
+},
+"91332UAB7":{
+"ticker":"",
+"type":""
+},
+"91347P105":{
+"ticker":"OLED",
+"type":"Common Stock"
+},
+"91359V107":{
+"ticker":"UVE",
+"type":"Common Stock"
+},
+"913903100":{
+"ticker":"UHS",
+"type":"Common Stock"
+},
+"913915104":{
+"ticker":"UTI",
+"type":"Common Stock"
+},
+"91529Y106":{
+"ticker":"UNM",
+"type":"Common Stock"
+},
+"91678A107":{
+"ticker":"UPB",
+"type":"Common Stock"
+},
+"91680M107":{
+"ticker":"UPST",
+"type":"Common Stock"
+},
+"91688F104":{
+"ticker":"UPWK",
+"type":"Common Stock"
+},
+"91688R108":{
+"ticker":"URG",
+"type":"Common Stock"
+},
+"916896103":{
+"ticker":"UEC",
+"type":"Common Stock"
+},
+"917047102":{
+"ticker":"URBN",
+"type":"Common Stock"
+},
+"91704F104":{
+"ticker":"UE",
+"type":"REIT"
+},
+"91733P107":{
+"ticker":"USAR",
+"type":"Common Stock"
+},
+"918204108":{
+"ticker":"VFC",
+"type":"Common Stock"
+},
+"91823B109":{
+"ticker":"UWMC",
+"type":"Common Stock"
+},
+"918284100":{
+"ticker":"VSEC",
+"type":"Common Stock"
+},
+"918284209":{
+"ticker":"",
+"type":""
+},
+"91879Q109":{
+"ticker":"MTN",
+"type":"Common Stock"
+},
+"91912E105":{
+"ticker":"VALE",
+"type":"ADR"
+},
+"91913Y100":{
+"ticker":"VLO",
+"type":"Common Stock"
+},
+"919794107":{
+"ticker":"VLY",
+"type":"Common Stock"
+},
+"920253101":{
+"ticker":"VMI",
+"type":"Common Stock"
+},
+"92047W101":{
+"ticker":"VVV",
+"type":"Common Stock"
+},
+"921659108":{
+"ticker":"VNDA",
+"type":"Common Stock"
+},
+"92189F106":{
+"ticker":"GDX",
+"type":"ETP"
+},
+"92189F676":{
+"ticker":"SMH",
+"type":"ETP"
+},
+"92189H607":{
+"ticker":"OIH",
+"type":"ETP"
+},
+"922042858":{
+"ticker":"VWO",
+"type":"ETP"
+},
+"92204A405":{
+"ticker":"VFH",
+"type":"ETP"
+},
+"922280102":{
+"ticker":"VRNS",
+"type":"Common Stock"
+},
+"922280AD4":{
+"ticker":"",
+"type":""
+},
+"922417100":{
+"ticker":"VECO",
+"type":"Common Stock"
+},
+"92242T101":{
+"ticker":"VVX",
+"type":"Common Stock"
+},
+"92243G108":{
+"ticker":"PCVX",
+"type":"Common Stock"
+},
+"922475108":{
+"ticker":"VEEV",
+"type":"Common Stock"
+},
+"92259N302":{
+"ticker":"VELO",
+"type":"Common Stock"
+},
+"92276F100":{
+"ticker":"VTR",
+"type":"REIT"
+},
+"922908736":{
+"ticker":"VUG",
+"type":"ETP"
+},
+"922967104":{
+"ticker":"MANE",
+"type":"Common Stock"
+},
+"92333F101":{
+"ticker":"VG",
+"type":"Common Stock"
+},
+"92337F107":{
+"ticker":"VCYT",
+"type":"Common Stock"
+},
+"92337R101":{
+"ticker":"VERA",
+"type":"Common Stock"
+},
+"92338C103":{
+"ticker":"VLTO",
+"type":"Common Stock"
+},
+"92343V104":{
+"ticker":"VZ",
+"type":"Common Stock"
+},
+"923451108":{
+"ticker":"VBTX",
+"type":"Common Stock"
+},
+"92345Y106":{
+"ticker":"VRSK",
+"type":"Common Stock"
+},
+"92346J108":{
+"ticker":"VCEL",
+"type":"Common Stock"
+},
+"925050106":{
+"ticker":"VRNA",
+"type":"ADR"
+},
+"92511U102":{
+"ticker":"VRRM",
+"type":"Common Stock"
+},
+"925283103":{
+"ticker":"VSNT",
+"type":"Common Stock"
+},
+"92532F100":{
+"ticker":"VRTX",
+"type":"Common Stock"
+},
+"92537N108":{
+"ticker":"VRT",
+"type":"Common Stock"
+},
+"92538J106":{
+"ticker":"VERX",
+"type":"Common Stock"
+},
+"92539P101":{
+"ticker":"",
+"type":""
+},
+"92552V100":{
+"ticker":"VSAT",
+"type":"Common Stock"
+},
+"925550105":{
+"ticker":"VIAV",
+"type":"Common Stock"
+},
+"92556H206":{
+"ticker":"0VVB",
+"type":"Common Stock"
+},
+"92556V106":{
+"ticker":"VTRS",
+"type":"Common Stock"
+},
+"92556W104":{
+"ticker":"VIA",
+"type":"Common Stock"
+},
+"925652109":{
+"ticker":"VICI",
+"type":"REIT"
+},
+"925815102":{
+"ticker":"VICR",
+"type":"Common Stock"
+},
+"926400102":{
+"ticker":"VSXY",
+"type":"Common Stock"
+},
+"92645B103":{
+"ticker":"VCTR",
+"type":"Common Stock"
+},
+"92686J106":{
+"ticker":"VKTX",
+"type":"Common Stock"
+},
+"92719V100":{
+"ticker":"VMEOGBP",
+"type":"Common Stock"
+},
+"92763W103":{
+"ticker":"VIPS",
+"type":"ADR"
+},
+"92790C104":{
+"ticker":"VRDN",
+"type":"Common Stock"
+},
+"927959106":{
+"ticker":"VNOMUSD",
+"type":"Common Stock"
+},
+"928254101":{
+"ticker":"VIRT",
+"type":"Common Stock"
+},
+"92828Q109":{
+"ticker":"VRTS",
+"type":"Common Stock"
+},
+"928298108":{
+"ticker":"VSH",
+"type":"Common Stock"
+},
+"92837L109":{
+"ticker":"VIST",
+"type":"ADR"
+},
+"92839U206":{
+"ticker":"VC",
+"type":"Common Stock"
+},
+"92840M102":{
+"ticker":"VST",
+"type":"Common Stock"
+},
+"92846Q107":{
+"ticker":"COCO",
+"type":"Common Stock"
+},
+"92847W103":{
+"ticker":"VITL",
+"type":"Common Stock"
+},
+"92857W308":{
+"ticker":"VOD",
+"type":"ADR"
+},
+"928881101":{
+"ticker":"VNT",
+"type":"Common Stock"
+},
+"92892B103":{
+"ticker":"VOYG",
+"type":"Common Stock"
+},
+"929042109":{
+"ticker":"VNO",
+"type":"REIT"
+},
+"929089100":{
+"ticker":"VOYA",
+"type":"Common Stock"
+},
+"929160109":{
+"ticker":"VMC",
+"type":"Common Stock"
+},
+"929236107":{
+"ticker":"WDFC",
+"type":"Common Stock"
+},
+"929328102":{
+"ticker":"WSFS",
+"type":"Common Stock"
+},
+"92936U109":{
+"ticker":"WPC",
+"type":"REIT"
+},
+"92939U106":{
+"ticker":"WEC",
+"type":"Common Stock"
+},
+"92941V407":{
+"ticker":"YARW",
+"type":"Common Stock"
+},
+"929566107":{
+"ticker":"WNC",
+"type":"Common Stock"
+},
+"929740108":{
+"ticker":"WAB",
+"type":"Common Stock"
+},
+"931142103":{
+"ticker":"WMT",
+"type":"Common Stock"
+},
+"931427108":{
+"ticker":"WBA",
+"type":"Common Stock"
+},
+"93148P102":{
+"ticker":"WD",
+"type":"Common Stock"
+},
+"93403J106":{
+"ticker":"WRBY",
+"type":"Common Stock"
+},
+"934423104":{
+"ticker":"J5AD",
+"type":"Common Stock"
+},
+"934550203":{
+"ticker":"WMG",
+"type":"Common Stock"
+},
+"93627C101":{
+"ticker":"HCC",
+"type":"Common Stock"
+},
+"938824109":{
+"ticker":"WAFD",
+"type":"Common Stock"
+},
+"939653101":{
+"ticker":"WRI",
+"type":"REIT"
+},
+"940610108":{
+"ticker":"WASH",
+"type":"Common Stock"
+},
+"940923105":{
+"ticker":"WBI",
+"type":"Common Stock"
+},
+"94106B101":{
+"ticker":"WCN",
+"type":"Common Stock"
+},
+"94106L109":{
+"ticker":"WM",
+"type":"Common Stock"
+},
+"941848103":{
+"ticker":"WAT",
+"type":"Common Stock"
+},
+"942622200":{
+"ticker":"WSO",
+"type":"Common Stock"
+},
+"942749102":{
+"ticker":"WTS",
+"type":"Common Stock"
+},
+"94352A104":{
+"ticker":"WVE",
+"type":"Common Stock"
+},
+"94419L101":{
+"ticker":"W",
+"type":"Common Stock"
+},
+"94419LAF8":{
+"ticker":"",
+"type":""
+},
+"94419LAP6":{
+"ticker":"",
+"type":""
+},
+"94419LAR2":{
+"ticker":"",
+"type":""
+},
+"946784105":{
+"ticker":"WAY",
+"type":"Common Stock"
+},
+"947002101":{
+"ticker":"WLTH",
+"type":"Common Stock"
+},
+"94724R108":{
+"ticker":"WEAV",
+"type":"Common Stock"
+},
+"947890109":{
+"ticker":"WED",
+"type":"Common Stock"
+},
+"94845U105":{
+"ticker":"WBTN",
+"type":"Common Stock"
+},
+"948596101":{
+"ticker":"WB",
+"type":"ADR"
+},
+"948849104":{
+"ticker":"WMK",
+"type":"Common Stock"
+},
+"949746101":{
+"ticker":"WFC",
+"type":"Common Stock"
+},
+"95040Q104":{
+"ticker":"WELL",
+"type":"REIT"
+},
+"95058W100":{
+"ticker":"WEN",
+"type":"Common Stock"
+},
+"950755108":{
+"ticker":"WERN",
+"type":"Common Stock"
+},
+"950810101":{
+"ticker":"WSBC",
+"type":"Common Stock"
+},
+"95082P105":{
+"ticker":"WCC",
+"type":"Common Stock"
+},
+"950915108":{
+"ticker":"WRD",
+"type":"ADR"
+},
+"952845105":{
+"ticker":"WFG",
+"type":"Common Stock"
+},
+"955306105":{
+"ticker":"WST",
+"type":"Common Stock"
+},
+"957090103":{
+"ticker":"WABC",
+"type":"Common Stock"
+},
+"957638109":{
+"ticker":"WAL",
+"type":"Common Stock"
+},
+"958102105":{
+"ticker":"WDC",
+"type":"Common Stock"
+},
+"959802109":{
+"ticker":"WU",
+"type":"Common Stock"
+},
+"960413102":{
+"ticker":"WLK",
+"type":"Common Stock"
+},
+"96208T104":{
+"ticker":"WEX",
+"type":"Common Stock"
+},
+"962166104":{
+"ticker":"WY",
+"type":"REIT"
+},
+"962879102":{
+"ticker":"WPM",
+"type":"Common Stock"
+},
+"963320106":{
+"ticker":"WHR",
+"type":"Common Stock"
+},
+"968223206":{
+"ticker":"WLY",
+"type":"Common Stock"
+},
+"969457100":{
+"ticker":"WMB",
+"type":"Common Stock"
+},
+"969904101":{
+"ticker":"WSM",
+"type":"Common Stock"
+},
+"971378104":{
+"ticker":"WSC",
+"type":"Common Stock"
+},
+"974155103":{
+"ticker":"WING",
+"type":"Common Stock"
+},
+"974250102":{
+"ticker":"WINA",
+"type":"Common Stock"
+},
+"974637100":{
+"ticker":"WGO",
+"type":"Common Stock"
+},
+"97650W108":{
+"ticker":"WTFC",
+"type":"Common Stock"
+},
+"97651M109":{
+"ticker":"WIT",
+"type":"ADR"
+},
+"97717P104":{
+"ticker":"WT",
+"type":"Common Stock"
+},
+"97717PAD6":{
+"ticker":"",
+"type":""
+},
+"977852102":{
+"ticker":"CREEUSD",
+"type":"Common Stock"
+},
+"977852AB8":{
+"ticker":"",
+"type":""
+},
+"977852AD4":{
+"ticker":"",
+"type":""
+},
+"97785W106":{
+"ticker":"WOLF",
+"type":"Common Stock"
+},
+"978097103":{
+"ticker":"WWW",
+"type":"Common Stock"
+},
+"980745103":{
+"ticker":"WWD",
+"type":"Common Stock"
+},
+"98138H101":{
+"ticker":"WDAY",
+"type":"Common Stock"
+},
+"98139A105":{
+"ticker":"WK",
+"type":"Common Stock"
+},
+"981419104":{
+"ticker":"WRLD",
+"type":"Common Stock"
+},
+"981475106":{
+"ticker":"WKC",
+"type":"Common Stock"
+},
+"981811102":{
+"ticker":"WOR",
+"type":"Common Stock"
+},
+"982104101":{
+"ticker":"WS",
+"type":"Common Stock"
+},
+"98311A105":{
+"ticker":"WH",
+"type":"Common Stock"
+},
+"983134107":{
+"ticker":"WYNN",
+"type":"Common Stock"
+},
+"983793100":{
+"ticker":"XPO",
+"type":"Common Stock"
+},
+"98379L100":{
+"ticker":"XPEL",
+"type":"Common Stock"
+},
+"98386P102":{
+"ticker":"XE",
+"type":"Common Stock"
+},
+"98389B100":{
+"ticker":"XEL",
+"type":"Common Stock"
+},
+"98390R102":{
+"ticker":"XNDU",
+"type":"Common Stock"
+},
+"984017103":{
+"ticker":"XHR",
+"type":"REIT"
+},
+"98401F105":{
+"ticker":"XNCR",
+"type":"Common Stock"
+},
+"98419M100":{
+"ticker":"XYL",
+"type":"Common Stock"
+},
+"98420N105":{
+"ticker":"XENE",
+"type":"Common Stock"
+},
+"98421M106":{
+"ticker":"XRX",
+"type":"Common Stock"
+},
+"98422E103":{
+"ticker":"XERS",
+"type":"Common Stock"
+},
+"98423F109":{
+"ticker":"XMTR",
+"type":"Common Stock"
+},
+"984245100":{
+"ticker":"YPF",
+"type":"ADR"
+},
+"985817105":{
+"ticker":"YELP",
+"type":"Common Stock"
+},
+"98585C100":{
+"ticker":"YSWY",
+"type":"Common Stock"
+},
+"98585X104":{
+"ticker":"YETI",
+"type":"Common Stock"
+},
+"987084100":{
+"ticker":"YSS",
+"type":"Common Stock"
+},
+"98741T104":{
+"ticker":"DAO",
+"type":"ADR"
+},
+"988498101":{
+"ticker":"YUM",
+"type":"Common Stock"
+},
+"98850P109":{
+"ticker":"YUMC",
+"type":"Common Stock"
+},
+"98877R104":{
+"ticker":"ZKH",
+"type":"ADR"
+},
+"989207105":{
+"ticker":"ZBRA",
+"type":"Common Stock"
+},
+"98923K103":{
+"ticker":"ZKN",
+"type":"ADR"
+},
+"98937L105":{
+"ticker":"ZBIO",
+"type":"Common Stock"
+},
+"98954M101":{
+"ticker":"ZG",
+"type":"Common Stock"
+},
+"98954M200":{
+"ticker":"Z",
+"type":"Common Stock"
+},
+"98955N207":{
+"ticker":"ZH",
+"type":"ADR"
+},
+"98956A105":{
+"ticker":"ZETA",
+"type":"Common Stock"
+},
+"98956P102":{
+"ticker":"ZBH",
+"type":"Common Stock"
+},
+"989701107":{
+"ticker":"ZION",
+"type":"Common Stock"
+},
+"98978V103":{
+"ticker":"ZTS",
+"type":"Common Stock"
+},
+"98980A105":{
+"ticker":"ZTO",
+"type":"ADR"
+},
+"98980F104":{
+"ticker":"GTM",
+"type":"Common Stock"
+},
+"98980G102":{
+"ticker":"ZS",
+"type":"Common Stock"
+},
+"98980GAD4":{
+"ticker":"",
+"type":""
+},
+"98980L101":{
+"ticker":"ZM",
+"type":"Common Stock"
+},
+"98983L108":{
+"ticker":"ZWS",
+"type":"Common Stock"
+},
+"98985Y108":{
+"ticker":"ZYME",
+"type":"Common Stock"
+},
+"B38564108":{
+"ticker":"CMBT",
+"type":"Common Stock"
+},
+"B9151N105":{
+"ticker":"TTAM",
+"type":"Common Stock"
+},
+"D18190898":{
+"ticker":"DB",
+"type":"Common Stock"
+},
+"F21107101":{
+"ticker":"CSTM",
+"type":"Common Stock"
+},
+"F92124100":{
+"ticker":"TTE",
+"type":"Common Stock"
+},
+"G0084W101":{
+"ticker":"ADNT",
+"type":"Common Stock"
+},
+"G00894108":{
+"ticker":"ARX",
+"type":"Common Stock"
+},
+"G0118C105":{
+"ticker":"AGBK",
+"type":"Common Stock"
+},
+"G01767105":{
+"ticker":"ALKS",
+"type":"Common Stock"
+},
+"G0250X107":{
+"ticker":"AMCR",
+"type":"Common Stock"
+},
+"G0250X149":{
+"ticker":"AMCR",
+"type":"Common Stock"
+},
+"G02602103":{
+"ticker":"DOX",
+"type":"Common Stock"
+},
+"G0260P102":{
+"ticker":"AS",
+"type":"Common Stock"
+},
+"G0378L100":{
+"ticker":"AU",
+"type":"Common Stock"
+},
+"G0450A105":{
+"ticker":"ACGL",
+"type":"Common Stock"
+},
+"G0508H110":{
+"ticker":"ALTMEUR",
+"type":"Common Stock"
+},
+"G05384501":{
+"ticker":"8ZV",
+"type":"Common Stock"
+},
+"G0585R106":{
+"ticker":"AGO",
+"type":"Common Stock"
+},
+"G0593M107":{
+"ticker":"AZN",
+"type":"Common Stock"
+},
+"G0692U109":{
+"ticker":"AXS",
+"type":"Common Stock"
+},
+"G06973112":{
+"ticker":"AUGO",
+"type":"Common Stock"
+},
+"G0750C108":{
+"ticker":"AXTA",
+"type":"Common Stock"
+},
+"G0772R208":{
+"ticker":"NTB",
+"type":"Common Stock"
+},
+"G0896C103":{
+"ticker":"TBBB",
+"type":"Common Stock"
+},
+"G1110E107":{
+"ticker":"BHVN",
+"type":"Common Stock"
+},
+"G11448100":{
+"ticker":"BTDR",
+"type":"Common Stock"
+},
+"G1151C101":{
+"ticker":"ACN",
+"type":"Common Stock"
+},
+"G13311116":{
+"ticker":"SLMT",
+"type":"Common Stock"
+},
+"G16910120":{
+"ticker":"BLSH",
+"type":"Common Stock"
+},
+"G17434104":{
+"ticker":"BNT",
+"type":"Common Stock"
+},
+"G1827P106":{
+"ticker":"",
+"type":""
+},
+"G1828S109":{
+"ticker":"CEPV",
+"type":"Common Stock"
+},
+"G1890L107":{
+"ticker":"CPRI",
+"type":"Common Stock"
+},
+"G2004J103":{
+"ticker":"CCL",
+"type":"Common Stock"
+},
+"G2143T103":{
+"ticker":"CMPR",
+"type":"Common Stock"
+},
+"G21810109":{
+"ticker":"CLVT",
+"type":"Common Stock"
+},
+"G22845104":{
+"ticker":"OCTV",
+"type":"Common Stock"
+},
+"G2519Y108":{
+"ticker":"BAP",
+"type":"Common Stock"
+},
+"G25457105":{
+"ticker":"CRDO",
+"type":"Common Stock"
+},
+"G2545C104":{
+"ticker":"CBIO",
+"type":"Common Stock"
+},
+"G25508105":{
+"ticker":"CRH",
+"type":"Common Stock"
+},
+"G25839104":{
+"ticker":"CCEP",
+"type":"Common Stock"
+},
+"G2646Y104":{
+"ticker":"DMRA",
+"type":"Common Stock"
+},
+"G2662B103":{
+"ticker":"CRML",
+"type":"Common Stock"
+},
+"G2717B108":{
+"ticker":"9199067D",
+"type":"Common Stock"
+},
+"G2717C106":{
+"ticker":"CWK",
+"type":"Common Stock"
+},
+"G27358103":{
+"ticker":"DESP1EUR",
+"type":"Common Stock"
+},
+"G29183103":{
+"ticker":"ETN",
+"type":"Common Stock"
+},
+"G2R11M108":{
+"ticker":"DPC",
+"type":"Common Stock"
+},
+"G3075P101":{
+"ticker":"ESGRUSD",
+"type":"Common Stock"
+},
+"G31249108":{
+"ticker":"ESTA",
+"type":"Common Stock"
+},
+"G3198U102":{
+"ticker":"ESNT",
+"type":"Common Stock"
+},
+"G32089107":{
+"ticker":"ETOR",
+"type":"Common Stock"
+},
+"G3223R108":{
+"ticker":"EG",
+"type":"Common Stock"
+},
+"G3265R107":{
+"ticker":"APTV",
+"type":"Common Stock"
+},
+"G33033104":{
+"ticker":"KDK",
+"type":"Common Stock"
+},
+"G3303U112":{
+"ticker":"AAC.U",
+"type":"Unit"
+},
+"G3323L100":{
+"ticker":"FN",
+"type":"Common Stock"
+},
+"G3643J108":{
+"ticker":"FLUT",
+"type":"Common Stock"
+},
+"G3730V105":{
+"ticker":"FTAI",
+"type":"Common Stock"
+},
+"G39108108":{
+"ticker":"9666678D",
+"type":"Common Stock"
+},
+"G3922B107":{
+"ticker":"G",
+"type":"Common Stock"
+},
+"G3934V109":{
+"ticker":"GENI",
+"type":"Common Stock"
+},
+"G39387108":{
+"ticker":"GFS",
+"type":"Common Stock"
+},
+"G39637205":{
+"ticker":"2663476D",
+"type":"Common Stock"
+},
+"G4124C109":{
+"ticker":"GRAB",
+"type":"Common Stock"
+},
+"G4253H101":{
+"ticker":"JHX",
+"type":"Common Stock"
+},
+"G42706104":{
+"ticker":"HG",
+"type":"Common Stock"
+},
+"G4388N106":{
+"ticker":"HELE",
+"type":"Common Stock"
+},
+"G4412G101":{
+"ticker":"HLF",
+"type":"Common Stock"
+},
+"G4444H101":{
+"ticker":"BBOT",
+"type":"Common Stock"
+},
+"G4474Y214":{
+"ticker":"",
+"type":""
+},
+"G4705A100":{
+"ticker":"ICLR",
+"type":"Common Stock"
+},
+"G4740B105":{
+"ticker":"ICHR",
+"type":"Common Stock"
+},
+"G4766E116":{
+"ticker":"INDV",
+"type":"Common Stock"
+},
+"G4863A108":{
+"ticker":"BRSL",
+"type":"Common Stock"
+},
+"G48833118":{
+"ticker":"0WE",
+"type":"Common Stock"
+},
+"G491BT108":{
+"ticker":"IVZ",
+"type":"Common Stock"
+},
+"G50871105":{
+"ticker":"JAZZ",
+"type":"Common Stock"
+},
+"G51502105":{
+"ticker":"JCI",
+"type":"Common Stock"
+},
+"G52441105":{
+"ticker":"KMTS",
+"type":"Common Stock"
+},
+"G5279N105":{
+"ticker":"KLAR",
+"type":"Common Stock"
+},
+"G5490M118":{
+"ticker":"LWACU",
+"type":"Unit"
+},
+"G54950103":{
+"ticker":"LIN",
+"type":"Common Stock"
+},
+"G5509L101":{
+"ticker":"LIVN",
+"type":"Common Stock"
+},
+"G5960L103":{
+"ticker":"MDT",
+"type":"Common Stock"
+},
+"G5S37H101":{
+"ticker":"96665EUR",
+"type":"Common Stock"
+},
+"G61188101":{
+"ticker":"LBTYA",
+"type":"Common Stock"
+},
+"G61188127":{
+"ticker":"LBTYK",
+"type":"Common Stock"
+},
+"G63755105":{
+"ticker":"NIQ",
+"type":"Common Stock"
+},
+"G6375R107":{
+"ticker":"NESR",
+"type":"Common Stock"
+},
+"G65163100":{
+"ticker":"JOBY",
+"type":"Common Stock"
+},
+"G65431127":{
+"ticker":"NE",
+"type":"Common Stock"
+},
+"G6564A105":{
+"ticker":"NOMD",
+"type":"Common Stock"
+},
+"G65773106":{
+"ticker":"NAT",
+"type":"Common Stock"
+},
+"G66721104":{
+"ticker":"NCLH",
+"type":"Common Stock"
+},
+"G6674U108":{
+"ticker":"NVCR",
+"type":"Common Stock"
+},
+"G6700G107":{
+"ticker":"NVT",
+"type":"Common Stock"
+},
+"G68707101":{
+"ticker":"PAGS",
+"type":"Common Stock"
+},
+"G72800108":{
+"ticker":"PRTA",
+"type":"Common Stock"
+},
+"G7496G103":{
+"ticker":"RNR",
+"type":"Common Stock"
+},
+"G7500M104":{
+"ticker":"RNW",
+"type":"Common Stock"
+},
+"G76279101":{
+"ticker":"ROIV",
+"type":"Common Stock"
+},
+"G7709Q104":{
+"ticker":"RPRX",
+"type":"Common Stock"
+},
+"G7997R103":{
+"ticker":"STX",
+"type":"Common Stock"
+},
+"G7997W102":{
+"ticker":"SDRL",
+"type":"Common Stock"
+},
+"G7S00T104":{
+"ticker":"PNR",
+"type":"Common Stock"
+},
+"G7T16G103":{
+"ticker":"S3P",
+"type":"Common Stock"
+},
+"G8060N102":{
+"ticker":"ST",
+"type":"Common Stock"
+},
+"G8068L108":{
+"ticker":"SN",
+"type":"Common Stock"
+},
+"G81276100":{
+"ticker":"SIG",
+"type":"Common Stock"
+},
+"G81569108":{
+"ticker":"SIND",
+"type":"Common Stock"
+},
+"G8192H106":{
+"ticker":"SPNT",
+"type":"Common Stock"
+},
+"G8267P108":{
+"ticker":"SW",
+"type":"Common Stock"
+},
+"G8377R101":{
+"ticker":"GFUZ",
+"type":"Common Stock"
+},
+"G8473T100":{
+"ticker":"STE",
+"type":"Common Stock"
+},
+"G85158106":{
+"ticker":"STNE",
+"type":"Common Stock"
+},
+"G8588X103":{
+"ticker":"SGHC",
+"type":"Common Stock"
+},
+"G87052109":{
+"ticker":"TEL",
+"type":"Common Stock"
+},
+"G87110105":{
+"ticker":"FTI",
+"type":"Common Stock"
+},
+"G89479102":{
+"ticker":"TRMD",
+"type":"Common Stock"
+},
+"G8994E103":{
+"ticker":"TT",
+"type":"Common Stock"
+},
+"G9087Q102":{
+"ticker":"TROX",
+"type":"Common Stock"
+},
+"G93A5A101":{
+"ticker":"VIK",
+"type":"Common Stock"
+},
+"G9456A100":{
+"ticker":"GLNG",
+"type":"Common Stock"
+},
+"G9460G101":{
+"ticker":"VAL",
+"type":"Common Stock"
+},
+"G9470A102":{
+"ticker":"VTEX",
+"type":"Common Stock"
+},
+"G9572D103":{
+"ticker":"BULL",
+"type":"Common Stock"
+},
+"G9600F104":{
+"ticker":"VGNT",
+"type":"Common Stock"
+},
+"G9618E107":{
+"ticker":"WTM",
+"type":"Common Stock"
+},
+"G96629103":{
+"ticker":"WTW",
+"type":"Common Stock"
+},
+"G9723Y105":{
+"ticker":"WSE",
+"type":"Common Stock"
+},
+"G97822103":{
+"ticker":"PRGO",
+"type":"Common Stock"
+},
+"G98239109":{
+"ticker":"XP",
+"type":"Common Stock"
+},
+"H01301128":{
+"ticker":"ALC",
+"type":"Common Stock"
+},
+"H11356104":{
+"ticker":"BG",
+"type":"Common Stock"
+},
+"H17182108":{
+"ticker":"CRSP",
+"type":"Common Stock"
+},
+"H2906T109":{
+"ticker":"GRMN",
+"type":"Common Stock"
+},
+"H2927K103":{
+"ticker":"AMRZ",
+"type":"Common Stock"
+},
+"H33700107":{
+"ticker":"",
+"type":""
+},
+"H42097107":{
+"ticker":"UBS",
+"type":"Common Stock"
+},
+"H50430232":{
+"ticker":"LOGI",
+"type":"Common Stock"
+},
+"H5919C104":{
+"ticker":"ONON",
+"type":"Common Stock"
+},
+"H8088L103":{
+"ticker":"SRAD",
+"type":"Common Stock"
+},
+"H8817H100":{
+"ticker":"RIG",
+"type":"Common Stock"
+},
+"J35759125":{
+"ticker":"KMTUF",
+"type":"Common Stock"
+},
+"K08588103":{
+"ticker":"ASND",
+"type":"Common Stock"
+},
+"L01800108":{
+"ticker":"ALVO",
+"type":"Common Stock"
+},
+"L02235106":{
+"ticker":"AMBP",
+"type":"Common Stock"
+},
+"L44385109":{
+"ticker":"GLOB",
+"type":"Common Stock"
+},
+"L6388F110":{
+"ticker":"TIGO",
+"type":"Common Stock"
+},
+"L8681T102":{
+"ticker":"SPOT",
+"type":"Common Stock"
+},
+"M0740A108":{
+"ticker":"DRTS",
+"type":"Common Stock"
+},
+"M0854Q105":{
+"ticker":"ALLT",
+"type":"Common Stock"
+},
+"M1500S107":{
+"ticker":"ARYTF",
+"type":"Common Stock"
+},
+"M15342104":{
+"ticker":"AUDC",
+"type":"Common Stock"
+},
+"M2029K104":{
+"ticker":"BIRK",
+"type":"Common Stock"
+},
+"M20791105":{
+"ticker":"CAMT",
+"type":"Common Stock"
+},
+"M2197Q107":{
+"ticker":"CLBT",
+"type":"Common Stock"
+},
+"M22465104":{
+"ticker":"CHKP",
+"type":"Common Stock"
+},
+"M25133105":{
+"ticker":"CGNT",
+"type":"Common Stock"
+},
+"M25722105":{
+"ticker":"CGEN",
+"type":"Common Stock"
+},
+"M2682V108":{
+"ticker":"CYBR",
+"type":"Common Stock"
+},
+"M3760D101":{
+"ticker":"ESLT",
+"type":"Common Stock"
+},
+"M4056D110":{
+"ticker":"ENLT",
+"type":"Common Stock"
+},
+"M4130Y106":{
+"ticker":"ENLV",
+"type":"Common Stock"
+},
+"M4R82T106":{
+"ticker":"FVRR",
+"type":"Common Stock"
+},
+"M51474118":{
+"ticker":"GILT",
+"type":"Common Stock"
+},
+"M5216V106":{
+"ticker":"GLBE",
+"type":"Common Stock"
+},
+"M53213100":{
+"ticker":"ICL",
+"type":"Common Stock"
+},
+"M5425M103":{
+"ticker":"INMD",
+"type":"Common Stock"
+},
+"M61452112":{
+"ticker":"ISRO",
+"type":"Common Stock"
+},
+"M6158M104":{
+"ticker":"ITRN",
+"type":"Common Stock"
+},
+"M6191J100":{
+"ticker":"FROG",
+"type":"Common Stock"
+},
+"M6240T109":{
+"ticker":"KMDA",
+"type":"Common Stock"
+},
+"M68830112":{
+"ticker":"MDWD",
+"type":"Common Stock"
+},
+"M70700105":{
+"ticker":"NNOX",
+"type":"Common Stock"
+},
+"M7516K103":{
+"ticker":"NVMI",
+"type":"Common Stock"
+},
+"M7518J104":{
+"ticker":"ODD",
+"type":"Common Stock"
+},
+"M78673114":{
+"ticker":"PERI",
+"type":"Common Stock"
+},
+"M7S64H106":{
+"ticker":"MNDY",
+"type":"Common Stock"
+},
+"M7S64L123":{
+"ticker":"PGY",
+"type":"Common Stock"
+},
+"M7S750159":{
+"ticker":"NYAX",
+"type":"Common Stock"
+},
+"M81818102":{
+"ticker":"QLTU",
+"type":"Common Stock"
+},
+"M81865111":{
+"ticker":"RDCM",
+"type":"Common Stock"
+},
+"M81873107":{
+"ticker":"RDWR",
+"type":"Common Stock"
+},
+"M8216R109":{
+"ticker":"RSKD",
+"type":"Common Stock"
+},
+"M82363124":{
+"ticker":"",
+"type":""
+},
+"M84116108":{
+"ticker":"SILC",
+"type":"Common Stock"
+},
+"M84137104":{
+"ticker":"SMWB",
+"type":"Common Stock"
+},
+"M85548101":{
+"ticker":"SSYS",
+"type":"Common Stock"
+},
+"M8694L137":{
+"ticker":"SLGL",
+"type":"Common Stock"
+},
+"M8740S227":{
+"ticker":"TATT",
+"type":"Common Stock"
+},
+"M8744T106":{
+"ticker":"TBLA",
+"type":"Common Stock"
+},
+"M8769Q102":{
+"ticker":"TEVA",
+"type":"Common Stock"
+},
+"M87915274":{
+"ticker":"TSEM",
+"type":"Common Stock"
+},
+"M8T80P204":{
+"ticker":"NEXN",
+"type":"Common Stock"
+},
+"M9607U115":{
+"ticker":"VLN",
+"type":"Common Stock"
+},
+"M96088105":{
+"ticker":"URGN",
+"type":"Common Stock"
+},
+"M97628107":{
+"ticker":"",
+"type":""
+},
+"M98068105":{
+"ticker":"WIX",
+"type":"Common Stock"
+},
+"N00985106":{
+"ticker":"AER",
+"type":"Common Stock"
+},
+"N07059210":{
+"ticker":"ASML",
+"type":"NY Reg Shrs"
+},
+"N0731H103":{
+"ticker":"",
+"type":""
+},
+"N14506104":{
+"ticker":"ESTC",
+"type":"Common Stock"
+},
+"N20944109":{
+"ticker":"CNH",
+"type":"Common Stock"
+},
+"N2451R105":{
+"ticker":"CVAC",
+"type":"Common Stock"
+},
+"N30577105":{
+"ticker":"ZGN",
+"type":"Common Stock"
+},
+"N3167Y103":{
+"ticker":"RACE",
+"type":"Common Stock"
+},
+"N3168P101":{
+"ticker":"FER",
+"type":"Common Stock"
+},
+"N4732M103":{
+"ticker":"JBS",
+"type":"Common Stock"
+},
+"N52A8C105":{
+"ticker":"INIO",
+"type":"Common Stock"
+},
+"N53745100":{
+"ticker":"LYB",
+"type":"Common Stock"
+},
+"N5505D105":{
+"ticker":"MICC",
+"type":"Common Stock"
+},
+"N5749R100":{
+"ticker":"2GH",
+"type":"Common Stock"
+},
+"N62509109":{
+"ticker":"NAMS",
+"type":"Common Stock"
+},
+"N6596X109":{
+"ticker":"NXPI",
+"type":"Common Stock"
+},
+"N69605108":{
+"ticker":"PHVS",
+"type":"Common Stock"
+},
+"N69958101":{
+"ticker":"PICS",
+"type":"Common Stock"
+},
+"N70544106":{
+"ticker":"PL0",
+"type":"Common Stock"
+},
+"N72482149":{
+"ticker":"",
+"type":""
+},
+"N72482156":{
+"ticker":"QGEN",
+"type":"Common Stock"
+},
+"N72482206":{
+"ticker":"QGEN",
+"type":"Common Stock"
+},
+"N82405106":{
+"ticker":"STLA",
+"type":"Common Stock"
+},
+"N97284108":{
+"ticker":"NBIS",
+"type":"Common Stock"
+},
+"P31076105":{
+"ticker":"CPA",
+"type":"Common Stock"
+},
+"Q4982L109":{
+"ticker":"IREN",
+"type":"Common Stock"
+},
+"Q90630114":{
+"ticker":"TITMF",
+"type":"Common Stock"
+},
+"T9224W109":{
+"ticker":"STVN",
+"type":"Common Stock"
+},
+"V5633W109":{
+"ticker":"MMYT",
+"type":"Common Stock"
+},
+"V7780T103":{
+"ticker":"RCL",
+"type":"Common Stock"
+},
+"Y10230103":{
+"ticker":"BWLP",
+"type":"Common Stock"
+},
+"Y2573F102":{
+"ticker":"FLEX",
+"type":"Common Stock"
+},
+"Y2990R101":{
+"ticker":"HAFN",
+"type":"Common Stock"
+},
+"Y46717107":{
+"ticker":"KEN",
+"type":"Common Stock"
+},
+"Y62267409":{
+"ticker":"NMM",
+"type":"MLP"
+},
+"Y7388L103":{
+"ticker":"SB",
+"type":"Common Stock"
+},
+"Y7542C130":{
+"ticker":"STNG",
+"type":"Common Stock"
+},
+"Y8162K204":{
+"ticker":"SBLK",
+"type":"Common Stock"
+},
+"Y95308105":{
+"ticker":"96663EUR",
+"type":"Common Stock"
+}
+}
