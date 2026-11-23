@@ -40,6 +40,14 @@ def is_cusip(s: str) -> bool:
     return bool(re.fullmatch(r"[0-9A-Z]{9}", s)) and any(c.isdigit() for c in s)
 
 
+def load_tmap() -> dict:
+    """CUSIP → {ticker, name?, cl?}. OpenFIGI로 찾은 것 위에 손으로 관리하는 표를 덮어쓴다."""
+    figi = _json(os.path.join(ROOT, "pipeline", "figi_cache.json"), {})
+    tmap = {c: {"ticker": v["ticker"]} for c, v in figi.items() if v.get("ticker")}
+    tmap.update(_json(os.path.join(ROOT, "pipeline", "ticker_map.json"), {}).get("by_cusip", {}))
+    return tmap
+
+
 def load_quarter(slug: str, period: str, tmap: dict) -> dict:
     """스냅샷 한 분기를 읽는다. 행은 [티커, 이름, 종류, 주식 수, 평가액(, CUSIP)].
 
@@ -728,7 +736,7 @@ def write(path: str, text: str) -> None:
 
 def main() -> None:
     managers = _json(os.path.join(ROOT, "managers.json"), [])
-    tmap = _json(os.path.join(ROOT, "pipeline", "ticker_map.json"), {}).get("by_cusip", {})
+    tmap = load_tmap()
     ko = _json(os.path.join(HERE, "names_ko.json"), {})
 
     # 생성물만 지운다. site/privacy.html 같은 손으로 쓴 파일은 그대로 둔다.

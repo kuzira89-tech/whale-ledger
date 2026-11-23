@@ -14,6 +14,7 @@ import build  # noqa: E402
 import collect  # noqa: E402
 import edgar  # noqa: E402
 import parse_13f  # noqa: E402
+import tickers  # noqa: E402
 
 
 def table(rows):
@@ -57,6 +58,27 @@ class TestUnits(unittest.TestCase):
         hs = [self._mk(100, 23_000), self._mk(100, 15_000), self._mk(1_000_000, 400_000)]
         self.assertEqual(collect.normalize_units(hs), 1)
         self.assertEqual(hs[2].value, 400_000)
+
+
+class TestTickers(unittest.TestCase):
+    def test_prefers_us_composite_and_normalizes_share_class(self):
+        res = {"data": [{"ticker": "BRK/B", "exchCode": "UN", "marketSector": "Equity", "securityType": "Common Stock"},
+                        {"ticker": "BRK/B", "exchCode": "US", "marketSector": "Equity", "securityType": "Common Stock"},
+                        {"ticker": "BRYN", "exchCode": "GR", "marketSector": "Equity"}]}
+        self.assertEqual(tickers.pick(res), {"ticker": "BRK.B", "type": "Common Stock"})
+
+    def test_not_found_and_unusable_tickers(self):
+        self.assertIsNone(tickers.pick({"warning": "No identifier found."}))
+        self.assertIsNone(tickers.pick({"data": [{"ticker": "BAC PR L", "exchCode": "US"}]}))
+
+    def test_job_uses_cins_for_letter_prefixed_ids(self):
+        self.assertEqual(tickers.job("037833100", True), {"idType": "ID_CUSIP", "idValue": "037833100", "exchCode": "US"})
+        self.assertEqual(tickers.job("H1467J104", False), {"idType": "ID_CINS", "idValue": "H1467J104"})
+        self.assertEqual(tickers.job("H1467J104", False, swap=True)["idType"], "ID_CUSIP")
+
+    def test_site_map_lets_manual_entries_win(self):
+        tmap = build.load_tmap()
+        self.assertEqual(tmap["037833100"]["ticker"], "AAPL")
 
 
 class TestSources(unittest.TestCase):
