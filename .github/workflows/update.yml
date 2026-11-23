@@ -25,20 +25,24 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch filings and rebuild data.js
+      - name: Fetch filings for every manager in managers.json
         env:
           # REQUIRED by SEC fair-access. Set repo secret EDGAR_USER_AGENT to
           # something like:  whale-ledger youremail@example.com
           EDGAR_USER_AGENT: ${{ secrets.EDGAR_USER_AGENT }}
         run: |
-          python pipeline/run.py --cik 1067983 --quarters 8
+          python pipeline/collect.py --quarters 8
+
+      - name: Rebuild the static site
+        run: |
+          python sitegen/build.py
 
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain data site/data)" ]; then
-            git add data site/data
+          if [ -n "$(git status --porcelain data site)" ]; then
+            git add data site
             git commit -m "data: refresh 13F snapshots ($(date -u +%Y-%m-%d))"
             git push
           else

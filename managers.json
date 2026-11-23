@@ -1,0 +1,18 @@
+[
+  {"slug": "berkshire", "cik": 1067983, "expect": "BERKSHIRE HATHAWAY", "ko": "버크셔 해서웨이", "en": "Berkshire Hathaway Inc.", "person": "워런 버핏 회장", "place": "미국 오마하"},
+  {"slug": "bridgewater", "cik": 1350694, "expect": "BRIDGEWATER", "ko": "브리지워터", "en": "Bridgewater Associates", "person": "레이 달리오 창업", "place": "미국 웨스트포트"},
+  {"slug": "pershing-square", "cik": 1336528, "expect": "PERSHING SQUARE", "ko": "퍼싱 스퀘어", "en": "Pershing Square", "person": "빌 애크먼", "place": "미국 뉴욕"},
+  {"slug": "tiger-global", "cik": 1167483, "expect": "TIGER GLOBAL", "ko": "타이거 글로벌", "en": "Tiger Global Management", "person": "체이스 콜먼", "place": "미국 뉴욕"},
+  {"slug": "viking-global", "cik": 1103804, "expect": "VIKING GLOBAL", "ko": "바이킹 글로벌", "en": "Viking Global Investors", "person": "안드레아스 할보르센", "place": "미국 스탬퍼드"},
+  {"slug": "gates-foundation", "cik": 1166559, "expect": "GATES", "ko": "게이츠 재단 트러스트", "en": "Gates Foundation Trust", "person": "빌 게이츠", "place": "미국 커클랜드"},
+  {"slug": "ark", "cik": 1697748, "expect": "ARK INVEST", "ko": "ARK 인베스트", "en": "ARK Investment Management", "person": "캐시 우드", "place": "미국 세인트피터즈버그"},
+  {"slug": "duquesne", "cik": 1536411, "expect": "DUQUESNE", "ko": "듀케인 패밀리 오피스", "en": "Duquesne Family Office", "person": "스탠리 드러켄밀러", "place": "미국 뉴욕"},
+  {"slug": "baupost", "cik": 1061768, "expect": "BAUPOST", "ko": "바우포스트 그룹", "en": "Baupost Group", "person": "세스 클라만", "place": "미국 보스턴"},
+  {"slug": "third-point", "cik": 1040273, "expect": "THIRD POINT", "ko": "서드포인트", "en": "Third Point", "person": "대니얼 롭", "place": "미국 뉴욕"},
+  {"slug": "elliott", "cik": 1791786, "expect": "ELLIOTT", "ko": "엘리엇", "en": "Elliott Investment Management", "person": "폴 싱어", "place": "미국 웨스트팜비치"},
+  {"slug": "coatue", "cik": 1135730, "expect": "COATUE", "ko": "코아추", "en": "Coatue Management", "person": "필리프 라퐁", "place": "미국 뉴욕"},
+  {"slug": "soros", "cik": 1029160, "expect": "SOROS", "ko": "소로스 펀드", "en": "Soros Fund Management", "person": "조지 소로스", "place": "미국 뉴욕"},
+  {"slug": "nps", "cik": 1608046, "expect": "NATIONAL PENSION", "ko": "국민연금", "en": "National Pension Service", "person": "", "place": "대한민국"},
+  {"slug": "norges", "cik": 1374170, "expect": "NORGES", "ko": "노르웨이 연금", "en": "Norges Bank", "person": "", "place": "노르웨이"},
+  {"slug": "scion", "cik": 1649339, "expect": "SCION", "ko": "사이언 자산운용", "en": "Scion Asset Management", "person": "마이클 버리", "place": "미국", "status": "ended", "ended_note": "2025년 11월 SEC 등록을 말소했습니다. 마지막 공시는 2025 Q3입니다."}
+]

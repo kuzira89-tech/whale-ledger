@@ -1,4 +1,4 @@
-"""Unit tests for the 13F parser and diff logic. Pure stdlib unittest.
+"""Unit tests for the 13F parser. Pure stdlib unittest.
 
 Run from the repo root:  python -m unittest discover -s tests -v
 """
@@ -9,7 +9,6 @@ import unittest
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "pipeline"))
 
 import parse_13f  # noqa: E402
-import build_site_data as bsd  # noqa: E402
 
 FIXTURE = os.path.join(os.path.dirname(__file__), "fixture_infotable.xml")
 
@@ -72,40 +71,6 @@ class TestMergeAmendment(unittest.TestCase):
         merged = parse_13f.merge_amendment(base, amend, "NEW HOLDINGS")
         keys = sorted(h.key for h in merged)
         self.assertEqual(keys, ["AAA", "BBB"])
-
-
-class TestDiff(unittest.TestCase):
-    def _h(self, ticker, shares, value):
-        return {"key": ticker, "ticker": ticker, "name": ticker, "cl": "",
-                "shares": shares, "value": value}
-
-    def test_new_add_trim_keep_and_exit(self):
-        prev = [self._h("AAA", 100, 1000), self._h("BBB", 100, 1000),
-                self._h("CCC", 100, 1000), self._h("DDD", 100, 1000)]
-        cur = [self._h("AAA", 150, 1500),   # ADD
-               self._h("BBB", 60, 600),     # TRIM
-               self._h("CCC", 100, 1000),   # KEEP
-               self._h("EEE", 100, 1000)]   # NEW ; DDD exits
-        holdings, exits, stats = bsd._diff(cur, prev)
-        by = {h["ticker"]: h for h in holdings}
-        self.assertEqual(by["AAA"]["status"], "ADD")
-        self.assertEqual(by["BBB"]["status"], "TRIM")
-        self.assertEqual(by["CCC"]["status"], "KEEP")
-        self.assertEqual(by["EEE"]["status"], "NEW")
-        self.assertEqual(stats["new"], 1)
-        self.assertEqual(stats["exited"], 1)
-        self.assertEqual(exits[0]["ticker"], "DDD")
-
-    def test_base_quarter_has_no_diff(self):
-        cur = [self._h("AAA", 100, 1000)]
-        holdings, exits, stats = bsd._diff(cur, None)
-        self.assertEqual(holdings[0]["status"], "HOLD")
-        self.assertEqual(exits, [])
-
-    def test_weights_sum_to_100(self):
-        cur = [self._h("AAA", 1, 300), self._h("BBB", 1, 700)]
-        holdings, _, _ = bsd._diff(cur, None)
-        self.assertAlmostEqual(sum(h["weight"] for h in holdings), 100.0, places=2)
 
 
 if __name__ == "__main__":

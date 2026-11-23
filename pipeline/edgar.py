@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import time
 import urllib.request
 from dataclasses import dataclass, field
@@ -61,7 +62,7 @@ def _submissions_url(cik: int) -> str:
     return f"{SEC_DATA}/submissions/CIK{cik:010d}.json"
 
 
-def list_13f_filings(cik: int) -> list[Filing]:
+def list_13f_filings_with_name(cik: int) -> tuple[str, list[Filing]]:
     """Return all 13F-HR / 13F-HR/A filings from the recent submissions feed,
     newest first. (For a filer as active as Berkshire the recent feed is
     sufficient; older overflow files are ignored on purpose.)"""
@@ -84,7 +85,11 @@ def list_13f_filings(cik: int) -> list[Filing]:
             primary_doc=docs[i] if i < len(docs) else "",
         ))
     out.sort(key=lambda f: (f.report_date, f.filing_date), reverse=True)
-    return out
+    return data.get("name", ""), out
+
+
+def list_13f_filings(cik: int) -> list[Filing]:
+    return list_13f_filings_with_name(cik)[1]
 
 
 def _filing_index_url(cik: int, acc_nodash: str) -> str:
@@ -100,17 +105,49 @@ def resolve_info_table_url(cik: int, filing: Filing) -> str:
     folder = f"{SEC_WWW}/Archives/edgar/data/{cik}/{filing.acc_nodash}"
     idx = _get_json(f"{folder}/index.json")
     items = idx.get("directory", {}).get("item", [])
-    xmls = [it["name"] for it in items if it.get("name", "").lower().endswith(".xml")]
-    primary = filing.primary_doc.lower()
-    # Prefer an xml whose name is not the primary doc.
-    candidates = [x for x in xmls if x.lower() != primary]
-    # Heuristic: information tables often contain "table" / "info" / "form13f".
-    ranked = sorted(candidates, key=lambda x: (
-        0 if any(k in x.lower() for k in ("table", "infotable", "info_table")) else 1,
-        len(x),
-    ))
-    chosen = ranked[0] if ranked else (xmls[0] if xmls else "")
+    chosen = pick_info_table(items, filing.primary_doc)
     return f"{folder}/{chosen}" if chosen else ""
+
+
+def pick_info_table(items: list[dict], primary_doc: str = "") -> str:
+    """Pick the information-table XML out of a filing folder listing.
+
+    The cover page is always primary_doc.xml (the submissions feed reports it
+    with an XSL prefix such as "xslForm13F_X02/primary_doc.xml", so compare by
+    basename). Among the remaining XML files prefer one whose name says it is
+    the table; otherwise take the largest, since filers name the table freely.
+    """
+    primary = os.path.basename(primary_doc or "").lower()
+    cands = [it for it in items
+             if it.get("name", "").lower().endswith(".xml")
+             and it["name"].lower() not in (primary, "primary_doc.xml")]
+    if not cands:
+        return ""
+
+    def size(it: dict) -> int:
+        try:
+            return int(it.get("size") or 0)
+        except (TypeError, ValueError):
+            return 0
+
+    named = [it for it in cands
+             if any(k in it["name"].lower() for k in ("infotable", "info_table", "informationtable", "table"))]
+    return max(named or cands, key=size)["name"]
+
+
+def parse_amendment_type(cover_xml: str) -> str:
+    """Read <amendmentType> (RESTATEMENT / NEW HOLDINGS) from a 13F cover page."""
+    m = re.search(r"<(?:\w+:)?amendmentType>\s*([^<]+?)\s*</", cover_xml)
+    return m.group(1).upper() if m else ""
+
+
+def fetch_amendment_type(cik: int, filing: Filing) -> str:
+    """Amendment type of a 13F-HR/A, or "" when the cover page cannot be read."""
+    url = f"{SEC_WWW}/Archives/edgar/data/{cik}/{filing.acc_nodash}/primary_doc.xml"
+    try:
+        return parse_amendment_type(_get(url).decode("utf-8", errors="replace"))
+    except Exception:
+        return ""
 
 
 def fetch_info_table_xml(cik: int, filing: Filing) -> str:
