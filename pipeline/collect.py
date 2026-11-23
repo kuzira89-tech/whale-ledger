@@ -23,6 +23,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 RAW_DIR = os.path.join(ROOT, "data", "raw")
 SOURCE = "EDGAR 13F information table (data.sec.gov)"
+SCHEMA = 2  # 스냅샷을 만드는 규칙이 바뀌면 올린다. 값이 다른 스냅샷은 다시 받는다.
 
 
 def _json(path: str, default):
@@ -53,6 +54,25 @@ def build_period(cik: int, group: list[edgar.Filing], period: str) -> list[parse
             kind = "NEW HOLDINGS" if holdings and len(rows) < len(holdings) / 2 else "RESTATEMENT"
         holdings = parse_13f.merge_amendment(holdings, rows, kind)
     return holdings
+
+
+def normalize_units(holdings: list[parse_13f.RawHolding]) -> int:
+    """평가액을 천 달러 단위로 적은 공시를 달러로 고친다. 곱한 배수(1 또는 1000)를 돌려준다.
+
+    2023년부터 13F의 평가액은 달러 단위인데, 예전처럼 천 달러 단위로 내는 운용사가
+    남아 있다(바우포스트, 듀케인). 그런 공시는 주당 가격(평가액 / 주식 수)이 실제의
+    1/1000로 나온다. 주식 줄의 주당 가격 중앙값이 1달러에 못 미치면 천 달러 단위로 본다.
+    """
+    px = sorted(h.value / h.shares for h in holdings
+                if h.share_type == "SH" and h.shares > 0 and h.value > 0)
+    if not px:
+        return 1
+    thousands = px[len(px) // 2] < 1.0 if len(px) >= 3 else max(px) < 1.0
+    if not thousands:
+        return 1
+    for h in holdings:
+        h.value *= 1000
+    return 1000
 
 
 def to_row(h: parse_13f.RawHolding, tmap: dict) -> list:
@@ -98,7 +118,7 @@ def collect_manager(m: dict, tmap: dict, quarters: int, force: bool) -> int:
         accessions = [f.accession for f in group]
         pdir = os.path.join(RAW_DIR, slug, period)
         old = _json(os.path.join(pdir, "meta.json"), {})
-        if not force and old.get("accessions") == accessions:
+        if not force and old.get("accessions") == accessions and old.get("schema") == SCHEMA:
             continue
         try:
             holdings = build_period(cik, group, period)
@@ -109,6 +129,9 @@ def collect_manager(m: dict, tmap: dict, quarters: int, force: bool) -> int:
             print(f"  ! {slug} {period}: 보유 내역이 비었거나 평가액 합계가 0이라 저장하지 않았습니다 "
                   f"({len(holdings)}행, 공시 {', '.join(f.form + ' ' + f.accession for f in group)}).")
             continue
+        scale = normalize_units(holdings) if parse_13f.value_multiplier_for_period(period) == 1 else 1
+        if scale != 1:
+            print(f"  {slug} {period}: 평가액이 천 달러 단위로 적혀 있어 {scale}을 곱했습니다.")
         rows = sorted((to_row(h, tmap) for h in holdings), key=lambda r: -r[4])
         originals = [f for f in group if not f.form.endswith("/A")]
         first = (originals or group)[0]
@@ -123,6 +146,8 @@ def collect_manager(m: dict, tmap: dict, quarters: int, force: bool) -> int:
             "num_holdings": len(holdings),
             "entity": name,
             "cik": cik,
+            "unit_scale": scale,
+            "schema": SCHEMA,
             "source": SOURCE,
         }
         os.makedirs(pdir, exist_ok=True)

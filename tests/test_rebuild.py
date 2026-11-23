@@ -44,6 +44,21 @@ class TestNamespaces(unittest.TestCase):
                          ("90353T100", 34268000, 2350000000, "CALL"))
 
 
+class TestUnits(unittest.TestCase):
+    def _mk(self, shares, value, stype="SH"):
+        return parse_13f.RawHolding("X", "X", "COM", value, shares, stype, "")
+
+    def test_thousands_are_scaled_to_dollars(self):
+        hs = [self._mk(4_000_000, 933_000), self._mk(1_000_000, 175_430), self._mk(3_000_000, 389_540)]
+        self.assertEqual(collect.normalize_units(hs), 1000)
+        self.assertEqual(hs[0].value, 933_000_000)
+
+    def test_dollars_are_left_alone_even_with_one_penny_stock(self):
+        hs = [self._mk(100, 23_000), self._mk(100, 15_000), self._mk(1_000_000, 400_000)]
+        self.assertEqual(collect.normalize_units(hs), 1)
+        self.assertEqual(hs[2].value, 400_000)
+
+
 class TestSources(unittest.TestCase):
     """공시 주체가 바뀐 큰손: 분기마다 어느 CIK 것을 쓸지."""
 
