@@ -211,6 +211,36 @@ class TestTreemap(unittest.TestCase):
             self.assertLessEqual(y + h, 520 + 1e-6)
 
 
+class TestLanguages(unittest.TestCase):
+    def tearDown(self):
+        build.set_lang("ko")
+
+    def test_every_string_exists_in_both_languages(self):
+        self.assertEqual(set(build.T["ko"]), set(build.T["ja"]))
+        for key in ("st", "kind", "opt"):
+            self.assertEqual(set(build.T["ko"][key]), set(build.T["ja"][key]))
+
+    def test_urls_and_words_follow_the_language(self):
+        m = {"slug": "berkshire", "ko": "버크셔 해서웨이", "ja": "バークシャー・ハサウェイ", "en": "Berkshire Hathaway Inc.",
+             "place": "미국 오마하", "place_ja": "米国オマハ"}
+        row = {"st": "new", "pct": None, "mapped": True, "ticker": "AAPL", "name": "APPLE INC", "opt": "PUT", "cusip": ""}
+        build.NAMES.update(ko={"AAPL": "애플"}, ja={"AAPL": "アップル"})
+        build.set_lang("ko")
+        self.assertEqual(build.whale_url(m, "2026-06-30", "2026-09-30"), "/whales/berkshire/2026q2/")
+        self.assertEqual((build.mfield(m, "name"), build.mfield(m, "place"), build.pct_txt(row), build.tk_txt(row), build.name_txt(row)),
+                         ("버크셔 해서웨이", "미국 오마하", "신규", "AAPL 풋", "애플"))
+        build.set_lang("ja")
+        self.assertEqual(build.whale_url(m, "2026-09-30", "2026-09-30"), "/ja/whales/berkshire/")
+        self.assertEqual((build.mfield(m, "name"), build.mfield(m, "place"), build.pct_txt(row), build.tk_txt(row), build.name_txt(row)),
+                         ("バークシャー・ハサウェイ", "米国オマハ", "新規", "AAPL プット", "アップル"))
+
+    def test_name_dictionaries_cover_the_same_tickers(self):
+        ko = build._json(os.path.join(ROOT, "sitegen", "names_ko.json"), {})
+        ja = build._json(os.path.join(ROOT, "sitegen", "names_ja.json"), {})
+        self.assertEqual(set(ko), set(ja))
+        self.assertGreater(len(ko), 900)
+
+
 class TestKeyNormalization(unittest.TestCase):
     def test_repo_snapshots_have_no_cusip_only_rows_left_in_latest(self):
         tmap = build._json(os.path.join(ROOT, "pipeline", "ticker_map.json"), {})["by_cusip"]

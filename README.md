@@ -21,12 +21,16 @@ pipeline/
 sitegen/
   build.py               data/raw → site/ 정적 HTML
   names_ko.json          티커 → 한국어 종목명
+  names_ja.json          티커 → 일본어 종목명
 data/raw/<slug>/<분기>/  분기별 스냅샷 (holdings.json + meta.json)
 site/                    배포되는 폴더 (build.py가 생성, privacy.html만 손으로 관리)
 tests/                   unittest
 ```
 
 주소는 `/`(큰손 목록), `/whales/<slug>/`(최신 분기), `/whales/<slug>/2026q2/`(지난 분기)입니다.
+일본어판은 같은 구조로 `/ja/` 아래에 만듭니다. 화면 문구는 `sitegen/build.py`의 `T`,
+큰손 이름은 `managers.json`의 `ja`·`person_ja`·`place_ja`, 종목명은 `sitegen/names_ko.json`과
+`sitegen/names_ja.json`(티커 → 이름)에 있습니다. 사전에 없는 종목은 13F의 영문 발행사명으로 나옵니다.
 
 ## 로컬 실행
 
