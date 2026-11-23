@@ -10,8 +10,6 @@ h1,h2,p,ul{margin:0}ul{padding:0;list-style:none}
 .top{border-bottom:1px solid var(--ln)}
 .top .wrap{min-height:64px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 24px}
 .brand{font-size:17px;font-weight:700;letter-spacing:-.01em;text-decoration:none;padding:10px 0}
-nav{margin-right:auto}
-nav a{display:inline-block;padding:11px 14px;font-weight:700;text-underline-offset:6px;text-decoration-thickness:2px}
 .langs{display:flex;gap:2px;font-size:13px}
 .langs a{padding:12px 8px;color:var(--mt);text-decoration:none}
 .langs a[aria-current]{color:var(--tx);font-weight:700}

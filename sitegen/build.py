@@ -34,7 +34,7 @@ LANG_LABEL = {"ko": "한국어", "ja": "日本語"}
 
 T = {
     "ko": {
-        "site": "큰손 포트폴리오", "nav": "큰손", "nav_aria": "주 메뉴", "lang_aria": "언어",
+        "site": "큰손 포트폴리오", "nav": "큰손", "lang_aria": "언어",
         "footer": "출처는 미국 SEC EDGAR의 Form 13F-HR입니다. 13F에는 분기 말 미국 상장 주식 보유분만 들어가고, 공매도와 현금, 대부분의 해외 주식은 빠집니다. 공시는 분기가 끝나고 최대 45일 뒤에 나옵니다. 투자 권유가 아닙니다.",
         "privacy": "개인정보 처리방침",
         "as_of": "기준일", "filed": "공시일", "temp_src": "임시 데이터(2차 집계 출처)",
@@ -68,7 +68,7 @@ T = {
         "home_desc": "미국 SEC 13F 공시로 큰손들이 분기마다 무엇을 사고팔았는지 큰손별로 정리합니다.",
     },
     "ja": {
-        "site": "クジラ・ポートフォリオ", "nav": "大口投資家", "nav_aria": "メインメニュー", "lang_aria": "言語",
+        "site": "クジラ・ポートフォリオ", "nav": "大口投資家", "lang_aria": "言語",
         "footer": "出典は米国SEC EDGARのForm 13F-HRです。13Fには四半期末時点の米国上場株式の保有分だけが載り、空売り・現金・大半の海外株式は含まれません。開示は四半期末から最大45日後です。投資勧誘ではありません。",
         "privacy": "プライバシーポリシー",
         "as_of": "基準日", "filed": "開示日", "temp_src": "暫定データ(二次集計)",
@@ -407,7 +407,6 @@ def page(title: str, desc: str, body: str, paths: dict[str, str]) -> str:
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="{home}">{L['site']}</a>
-<nav aria-label="{L['nav_aria']}"><a href="{home}" aria-current="page">{L['nav']}</a></nav>
 <div class="langs" aria-label="{L['lang_aria']}">{switch}</div>
 </div></header>
 <main class="wrap">
@@ -748,8 +747,6 @@ h1,h2,p,ul{margin:0}ul{padding:0;list-style:none}
 .top{border-bottom:1px solid var(--ln)}
 .top .wrap{min-height:64px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 24px}
 .brand{font-size:17px;font-weight:700;letter-spacing:-.01em;text-decoration:none;padding:10px 0}
-nav{margin-right:auto}
-nav a{display:inline-block;padding:11px 14px;font-weight:700;text-underline-offset:6px;text-decoration-thickness:2px}
 .langs{display:flex;gap:2px;font-size:13px}
 .langs a{padding:12px 8px;color:var(--mt);text-decoration:none}
 .langs a[aria-current]{color:var(--tx);font-weight:700}
