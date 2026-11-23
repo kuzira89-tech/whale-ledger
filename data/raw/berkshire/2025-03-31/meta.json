@@ -1,0 +1,16 @@
+{
+  "period": "2025-03-31",
+  "filed": "2025-05-15",
+  "form": "13F-HR",
+  "accession": "0000950123-25-005701",
+  "accessions": [
+    "0000950123-25-005701",
+    "0000950123-25-008361"
+  ],
+  "amended": "2025-08-14",
+  "total_value": 259791053844,
+  "num_holdings": 39,
+  "entity": "BERKSHIRE HATHAWAY INC",
+  "cik": 1067983,
+  "source": "EDGAR 13F information table (data.sec.gov)"
+}

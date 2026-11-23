@@ -1,0 +1,16 @@
+{
+  "period": "2024-12-31",
+  "filed": "2025-02-14",
+  "form": "13F-HR",
+  "accession": "0001013594-25-000294",
+  "accessions": [
+    "0001013594-25-000294",
+    "0001013594-25-000512"
+  ],
+  "amended": "2025-04-28",
+  "total_value": 16675826932,
+  "num_holdings": 45,
+  "entity": "Elliott Investment Management L.P.",
+  "cik": 1791786,
+  "source": "EDGAR 13F information table (data.sec.gov)"
+}

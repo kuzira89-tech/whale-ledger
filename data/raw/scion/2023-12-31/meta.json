@@ -1,0 +1,16 @@
+{
+  "period": "2023-12-31",
+  "filed": "2024-02-14",
+  "form": "13F-HR",
+  "accession": "0000905148-24-000653",
+  "accessions": [
+    "0000905148-24-000653",
+    "0000905148-24-000751"
+  ],
+  "amended": "2024-02-16",
+  "total_value": 94591240,
+  "num_holdings": 25,
+  "entity": "Scion Asset Management, LLC",
+  "cik": 1649339,
+  "source": "EDGAR 13F information table (data.sec.gov)"
+}

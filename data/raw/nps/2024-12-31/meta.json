@@ -1,0 +1,15 @@
+{
+  "period": "2024-12-31",
+  "filed": "2025-02-05",
+  "form": "13F-HR",
+  "accession": "0001608046-25-000001",
+  "accessions": [
+    "0001608046-25-000001"
+  ],
+  "amended": "",
+  "total_value": 105669449414,
+  "num_holdings": 550,
+  "entity": "National Pension Service",
+  "cik": 1608046,
+  "source": "EDGAR 13F information table (data.sec.gov)"
+}

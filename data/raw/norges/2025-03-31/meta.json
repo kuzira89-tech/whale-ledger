@@ -1,0 +1,16 @@
+{
+  "period": "2025-03-31",
+  "filed": "2025-05-13",
+  "form": "13F-HR",
+  "accession": "0001374170-25-000049",
+  "accessions": [
+    "0001374170-25-000049",
+    "0001374170-26-000021"
+  ],
+  "amended": "2026-05-11",
+  "total_value": 712472908814,
+  "num_holdings": 1744,
+  "entity": "NORGES BANK",
+  "cik": 1374170,
+  "source": "EDGAR 13F information table (data.sec.gov)"
+}

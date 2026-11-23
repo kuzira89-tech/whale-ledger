@@ -3,7 +3,13 @@
   "filed": "2026-11-16",
   "form": "13F-HR",
   "accession": "0001193125-26-463399",
+  "accessions": [
+    "0001193125-26-463399"
+  ],
+  "amended": "",
   "total_value": 304196581325,
   "num_holdings": 30,
+  "entity": "BERKSHIRE HATHAWAY INC",
+  "cik": 1067983,
   "source": "EDGAR 13F information table (data.sec.gov)"
 }
