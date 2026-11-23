@@ -307,14 +307,23 @@ def page(title: str, desc: str, body: str) -> str:
 
 def treemap_html(q: dict, ko: dict) -> tuple[str, int]:
     rows = q["rows"]
-    main = [r for r in rows if r["w"] >= 0.45][:24]
+    main = [r for r in rows if r["w"] >= 0.45][:30]
     rest = rows[len(main):]
+    rest_share = sum(r["w"] for r in rest)
     items = [(r, r["value"]) for r in main]
-    if rest:
-        items.append((None, sum(r["value"] for r in rest)))
     W, H = 760.0, 520.0
+    if rest and rest_share >= 15:
+        # 종목이 수백 개인 포트폴리오는 "기타"가 절반을 넘기도 한다. 그럴 때는 기타를
+        # 오른쪽 기둥 하나로 빼고, 이름 있는 종목들만 왼쪽에 배치한다.
+        wm = W * (100 - rest_share) / 100
+        placed = squarify(items, wm, H) + [(None, wm, 0.0, W - wm, H)]
+    else:
+        if rest:
+            items.append((None, sum(r["value"] for r in rest)))
+            items.sort(key=lambda it: -it[1])   # squarify는 면적 내림차순을 가정한다
+        placed = squarify(items, W, H)
     tiles = []
-    for r, x, y, w, h in squarify(items, W, H):
+    for r, x, y, w, h in placed:
         a = w * h
         if a >= 55000 and w >= 180:
             tier = "xl"
@@ -346,8 +355,9 @@ def treemap_html(q: dict, ko: dict) -> tuple[str, int]:
             cls = "s-" + tone(r) + ("2" if soft else "")
         chg = f'<span class="ch">{pct_txt(r)}</span>' if moved else ""
         wt = f'<span class="wt">{r["w"]:.1f}%</span>'
-        tk = f'<span class="tk">{e(tk_txt(r))}</span>'
-        nm = f'<span class="nm">{e(name_txt(r, ko))}</span>'
+        label = tk_txt(r) if r["mapped"] else (nice(r["name"]).split() or ["?"])[0][:12]
+        tk = f'<span class="tk">{e(label)}</span>'
+        nm = f'<span class="nm">{e(name_txt(r, ko) if r["mapped"] else nice(r["name"]))}</span>'
         if tier in ("xl", "lg"):
             inner = f"<span>{tk}{nm}</span><span>{chg}{wt}</span>"
         elif tier == "md":
@@ -644,7 +654,7 @@ h2{font-size:20px;font-weight:700;letter-spacing:-.01em}
 .note{margin-top:12px;font-size:13px;color:var(--mt);text-wrap:pretty}
 .tm{margin-top:16px;position:relative;width:100%;aspect-ratio:760/520;container-type:inline-size;font-family:"Space Grotesk","Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
 .tile{position:absolute;border:2px solid var(--bg);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;line-height:1.15;background:var(--tile);color:var(--tx)}
-.tile span{display:block}.tile .tk{font-weight:700;white-space:nowrap}.tile .nm{margin-top:.5cqw;color:#AEB8C6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile span{display:block}.tile .tk{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.tile .nm{margin-top:.5cqw;color:#AEB8C6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tile .ch{font-weight:700}.tile .wt{font-weight:500}
 .tile.s-up{background:#FF8A4C;color:#1A0E06}.tile.s-up2{background:#6B3A1E;color:#FFD8C2}
 .tile.s-dn{background:#2A55BD;color:#fff}.tile.s-dn2{background:#1F3A7A;color:#DCE6FF}

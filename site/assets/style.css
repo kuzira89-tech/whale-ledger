@@ -34,7 +34,7 @@ h2{font-size:20px;font-weight:700;letter-spacing:-.01em}
 .note{margin-top:12px;font-size:13px;color:var(--mt);text-wrap:pretty}
 .tm{margin-top:16px;position:relative;width:100%;aspect-ratio:760/520;container-type:inline-size;font-family:"Space Grotesk","Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
 .tile{position:absolute;border:2px solid var(--bg);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;line-height:1.15;background:var(--tile);color:var(--tx)}
-.tile span{display:block}.tile .tk{font-weight:700;white-space:nowrap}.tile .nm{margin-top:.5cqw;color:#AEB8C6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile span{display:block}.tile .tk{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.tile .nm{margin-top:.5cqw;color:#AEB8C6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tile .ch{font-weight:700}.tile .wt{font-weight:500}
 .tile.s-up{background:#FF8A4C;color:#1A0E06}.tile.s-up2{background:#6B3A1E;color:#FFD8C2}
 .tile.s-dn{background:#2A55BD;color:#fff}.tile.s-dn2{background:#1F3A7A;color:#DCE6FF}
