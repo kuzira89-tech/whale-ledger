@@ -70,6 +70,8 @@ class TestTickers(unittest.TestCase):
     def test_not_found_and_unusable_tickers(self):
         self.assertIsNone(tickers.pick({"warning": "No identifier found."}))
         self.assertIsNone(tickers.pick({"data": [{"ticker": "BAC PR L", "exchCode": "US"}]}))
+        self.assertIsNone(tickers.pick({"data": [{"ticker": "SIRIEUR", "exchCode": "GR"}]}))
+        self.assertIsNone(tickers.pick({"data": [{"ticker": "2655787D", "exchCode": "US"}]}))
 
     def test_job_uses_cins_for_letter_prefixed_ids(self):
         self.assertEqual(tickers.job("037833100", True), {"idType": "ID_CUSIP", "idValue": "037833100", "exchCode": "US"})

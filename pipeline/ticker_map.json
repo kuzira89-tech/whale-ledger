@@ -58,6 +58,11 @@
     "90384S303": {"ticker": "ULTA", "name": "Ulta Beauty Inc", "cl": ""},
     "G6683N103": {"ticker": "NU", "name": "Nu Holdings Ltd", "cl": "CL A"},
     "78462F103": {"ticker": "SPY", "name": "SPDR S&P 500 ETF Trust", "cl": ""},
-    "922908363": {"ticker": "VOO", "name": "Vanguard S&P 500 ETF", "cl": ""}
+    "922908363": {"ticker": "VOO", "name": "Vanguard S&P 500 ETF", "cl": ""},
+    "30231G102": {"ticker": "XOM", "name": "Exxon Mobil Corp", "cl": ""},
+    "067901108": {"ticker": "B", "name": "Barrick Mining Corp", "cl": ""},
+    "884903808": {"ticker": "TRI", "name": "Thomson Reuters Corp", "cl": ""},
+    "724078100": {"ticker": "PIPR", "name": "Piper Sandler Companies", "cl": ""},
+    "77543R102": {"ticker": "ROKU", "name": "Roku Inc", "cl": "CL A"}
   }
 }

@@ -53,22 +53,23 @@ def wanted_cusips() -> list[str]:
 
 
 def clean_ticker(t: str) -> str:
-    """OpenFIGI는 주식 종류를 'BRK/B'처럼 적는다. 사이트에서는 'BRK.B'로 쓴다."""
+    """OpenFIGI는 주식 종류를 'BRK/B'처럼 적는다. 사이트에서는 'BRK.B'로 쓴다.
+
+    미국 티커 모양(글자 1~5개, 종류 접미사 선택)이 아니면 버린다. 상장폐지된 종목은
+    '2655787D' 같은 자리표시나 'SIRIEUR' 같은 해외 시세 코드가 돌아오기 때문이다.
+    """
     t = (t or "").strip().upper().replace("/", ".")
-    return t if re.fullmatch(r"[A-Z0-9.\-]{1,10}", t) else ""
+    return t if re.fullmatch(r"[A-Z]{1,5}(\.[A-Z]{1,2})?", t) else ""
 
 
 def pick(result: dict) -> dict | None:
     """매핑 응답 한 건에서 쓸 종목을 고른다. 없으면 None."""
     data = result.get("data") or []
-    data = [d for d in data if clean_ticker(d.get("ticker", ""))]
+    data = [d for d in data if d.get("exchCode") in US_VENUES and clean_ticker(d.get("ticker", ""))]
     if not data:
         return None
-    best = min(data, key=lambda d: (
-        0 if d.get("exchCode") in US_VENUES else 1,
-        US_VENUES.index(d["exchCode"]) if d.get("exchCode") in US_VENUES else 99,
-        0 if d.get("marketSector") == "Equity" else 1,
-    ))
+    best = min(data, key=lambda d: (US_VENUES.index(d["exchCode"]),
+                                    0 if d.get("marketSector") == "Equity" else 1))
     return {"ticker": clean_ticker(best["ticker"]), "type": best.get("securityType") or ""}
 
 
