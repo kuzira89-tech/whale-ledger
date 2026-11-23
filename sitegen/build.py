@@ -575,7 +575,7 @@ def render_home(entries: list[dict], ko: dict) -> str:
                 for r in picks)
         tag = ""
         if m.get("status") == "ended":
-            tag = '<span class="tag">공시 종료</span>'
+            tag = f'<span class="tag">공시 종료 · {qlabel(q["period"])} 기준</span>'
         elif q["period"] != newest:
             tag = f'<span class="tag">{qlabel(q["period"])} 기준</span>'
         person = f" · {e(m['person'])}" if m.get("person") else ""
