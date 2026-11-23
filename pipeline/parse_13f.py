@@ -10,21 +10,28 @@ handles the boundary so historical backfill stays consistent.
 """
 from __future__ import annotations
 
-import re
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
 
 
-def _strip_ns(xml_text: str) -> str:
-    # Remove xmlns declarations and any element/attribute namespace prefixes so
-    # ElementTree tag names are bare ("infoTable", "nameOfIssuer", ...).
-    xml_text = re.sub(r'\sxmlns(:\w+)?="[^"]*"', "", xml_text)
-    xml_text = re.sub(r"<(/?)(\w+):", r"<\1", xml_text)
-    return xml_text
+def _local(tag: str) -> str:
+    """Tag name without its namespace: "{http://...}infoTable" -> "infoTable"."""
+    return tag.rsplit("}", 1)[-1] if isinstance(tag, str) else ""
+
+
+def _child(el, name: str):
+    # Filers write the same table with a default namespace, with ns1:/n1:
+    # prefixes, or with extra xsi: attributes on the root. Matching on the local
+    # name reads all of them; stripping namespaces by regex broke on the
+    # prefixed attributes ("unbound prefix").
+    for c in el:
+        if _local(c.tag) == name:
+            return c
+    return None
 
 
 def _text(el, tag: str, default: str = "") -> str:
-    child = el.find(tag)
+    child = _child(el, tag)
     return child.text.strip() if child is not None and child.text else default
 
 
@@ -56,10 +63,12 @@ def value_multiplier_for_period(report_date: str) -> int:
 
 
 def parse_info_table(xml_text: str, report_date: str) -> list[RawHolding]:
-    root = ET.fromstring(_strip_ns(xml_text))
+    root = ET.fromstring(xml_text)
     mult = value_multiplier_for_period(report_date)
     agg: dict[str, RawHolding] = {}
-    for it in root.iter("infoTable"):
+    for it in root.iter():
+        if _local(it.tag) != "infoTable":
+            continue
         cusip = _text(it, "cusip")
         if not cusip:
             continue
@@ -70,7 +79,7 @@ def parse_info_table(xml_text: str, report_date: str) -> list[RawHolding]:
             value = int(round(float(raw_value))) * mult
         except ValueError:
             value = 0
-        shrs_el = it.find("shrsOrPrnAmt")
+        shrs_el = _child(it, "shrsOrPrnAmt")
         if shrs_el is not None:
             amount = _text(shrs_el, "sshPrnamt", "0").replace(",", "")
             stype = _text(shrs_el, "sshPrnamtType", "SH")

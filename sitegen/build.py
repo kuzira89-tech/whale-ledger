@@ -82,7 +82,9 @@ def load_manager(m: dict, tmap: dict) -> list[dict]:
     periods = sorted(d for d in os.listdir(mdir)
                      if re.fullmatch(r"\d{4}-\d{2}-\d{2}", d)
                      and os.path.exists(os.path.join(mdir, d, "holdings.json")))
-    return [load_quarter(m["slug"], p, tmap) for p in periods]
+    quarters = [load_quarter(m["slug"], p, tmap) for p in periods]
+    # 평가액 합계가 0인 스냅샷은 쓸 수 없는 자료다(비중을 계산할 수 없다).
+    return [q for q in quarters if q["rows"] and sum(r["value"] for r in q["rows"]) > 0]
 
 
 # ------------------------------------------------------------------ 분기 계산
@@ -395,7 +397,7 @@ COLS = ('<colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c
 
 def holdings_html(q: dict, ko: dict) -> str:
     rows = q["rows"]
-    wmax = rows[0]["w"] if rows else 1
+    wmax = (rows[0]["w"] if rows else 0) or 1
     head = ('<thead><tr><th scope="col">종목</th><th scope="col">비중</th><th scope="col" class="r">평가액</th>'
             '<th scope="col" class="r">보유 주식 수</th><th scope="col" class="r">이번 분기</th></tr></thead>')
     first, rest = rows[:10], rows[10:MAX_TABLE_ROWS]
@@ -490,6 +492,8 @@ def render_whale(m: dict, quarters: list[dict], idx: int, ko: dict) -> str:
     rest_note = (f'<p class="note">비중이 작은 {n_rest}개 종목은 "기타"로 묶었습니다. 전체는 아래 표에 있습니다.</p>'
                  if n_rest else "")
     ended = f'<p class="ended"><b>공시 종료</b>{e(m.get("ended_note", ""))}</p>' if m.get("status") == "ended" else ""
+    if m.get("note"):
+        ended += f'<p class="ended"><b>알아둘 점</b>{e(m["note"])}</p>'
 
     body = f"""
 <div class="head">

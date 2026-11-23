@@ -1,7 +1,7 @@
 [
   {"slug": "berkshire", "cik": 1067983, "expect": "BERKSHIRE HATHAWAY", "ko": "버크셔 해서웨이", "en": "Berkshire Hathaway Inc.", "person": "워런 버핏 회장", "place": "미국 오마하"},
   {"slug": "bridgewater", "cik": 1350694, "expect": "BRIDGEWATER", "ko": "브리지워터", "en": "Bridgewater Associates", "person": "레이 달리오 창업", "place": "미국 웨스트포트"},
-  {"slug": "pershing-square", "cik": 1336528, "expect": "PERSHING SQUARE", "ko": "퍼싱 스퀘어", "en": "Pershing Square", "person": "빌 애크먼", "place": "미국 뉴욕"},
+  {"slug": "pershing-square", "cik": 2026053, "expect": "PERSHING SQUARE", "ko": "퍼싱 스퀘어", "en": "Pershing Square Inc.", "person": "빌 애크먼", "place": "미국 뉴욕", "sources": [{"cik": 2026053, "from": "2026-06-30"}, {"cik": 1336528, "until": "2026-03-31"}], "note": "2026 Q2부터 공시 주체가 Pershing Square Inc.로 바뀌었습니다. 그 전 분기는 Pershing Square Capital Management의 공시입니다."},
   {"slug": "tiger-global", "cik": 1167483, "expect": "TIGER GLOBAL", "ko": "타이거 글로벌", "en": "Tiger Global Management", "person": "체이스 콜먼", "place": "미국 뉴욕"},
   {"slug": "viking-global", "cik": 1103804, "expect": "VIKING GLOBAL", "ko": "바이킹 글로벌", "en": "Viking Global Investors", "person": "안드레아스 할보르센", "place": "미국 스탬퍼드"},
   {"slug": "gates-foundation", "cik": 1166559, "expect": "GATES", "ko": "게이츠 재단 트러스트", "en": "Gates Foundation Trust", "person": "빌 게이츠", "place": "미국 커클랜드"},

@@ -25,6 +25,50 @@ def table(rows):
     return f'<informationTable xmlns="http://www.sec.gov/edgar/document/thirteenf/informationtable">{body}</informationTable>'
 
 
+class TestNamespaces(unittest.TestCase):
+    """실제 공시에서 파싱이 깨졌던 모양: 접두사 붙은 태그와 xsi: 속성."""
+
+    XML = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<ns1:informationTable xmlns:ns1="http://www.sec.gov/edgar/document/thirteenf/informationtable" '
+           'xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" '
+           'xsi:schemaLocation="http://www.sec.gov/edgar/document/thirteenf/informationtable eis_13FDocument.xsd">'
+           '<ns1:infoTable><ns1:nameOfIssuer>UBER TECHNOLOGIES INC</ns1:nameOfIssuer><ns1:titleOfClass>COM</ns1:titleOfClass>'
+           '<ns1:cusip>90353T100</ns1:cusip><ns1:value>2350000000</ns1:value>'
+           '<ns1:shrsOrPrnAmt><ns1:sshPrnamt>34268000</ns1:sshPrnamt><ns1:sshPrnamtType>SH</ns1:sshPrnamtType></ns1:shrsOrPrnAmt>'
+           '<ns1:putCall>Call</ns1:putCall></ns1:infoTable></ns1:informationTable>')
+
+    def test_prefixed_table_with_xsi_attribute(self):
+        rows = parse_13f.parse_info_table(self.XML, "2026-09-30")
+        self.assertEqual(len(rows), 1)
+        self.assertEqual((rows[0].cusip, rows[0].shares, rows[0].value, rows[0].put_call),
+                         ("90353T100", 34268000, 2350000000, "CALL"))
+
+
+class TestSources(unittest.TestCase):
+    """공시 주체가 바뀐 큰손: 분기마다 어느 CIK 것을 쓸지."""
+
+    def setUp(self):
+        self._orig = edgar.list_13f_filings_with_name
+        new = [edgar.Filing("N-3", "13F-HR", "2026-11-16", "2026-09-30"), edgar.Filing("N-2", "13F-HR", "2026-08-14", "2026-06-30"),
+               edgar.Filing("N-1", "13F-HR", "2026-05-15", "2026-03-31")]
+        old = [edgar.Filing("O-1", "13F-HR", "2026-05-15", "2026-03-31"), edgar.Filing("O-0", "13F-HR", "2026-02-17", "2025-12-31")]
+        edgar.list_13f_filings_with_name = lambda cik: ("PERSHING SQUARE INC.", new) if cik == 2 else ("Pershing Square Capital Management, L.P.", old)
+
+    def tearDown(self):
+        edgar.list_13f_filings_with_name = self._orig
+
+    def test_each_period_comes_from_the_right_filer(self):
+        m = {"slug": "p", "cik": 2, "expect": "PERSHING SQUARE",
+             "sources": [{"cik": 2, "from": "2026-06-30"}, {"cik": 1, "until": "2026-03-31"}]}
+        plan = collect.plan_periods(m)
+        self.assertEqual({p: v[0] for p, v in plan.items()},
+                         {"2026-09-30": 2, "2026-06-30": 2, "2026-03-31": 1, "2025-12-31": 1})
+        self.assertEqual(plan["2026-03-31"][2][0].accession, "O-1")
+
+    def test_wrong_name_is_skipped(self):
+        self.assertEqual(collect.plan_periods({"slug": "x", "cik": 2, "expect": "BERKSHIRE"}), {})
+
+
 class TestPickInfoTable(unittest.TestCase):
     def test_skips_cover_page_even_with_xsl_prefix(self):
         items = [{"name": "primary_doc.xml", "size": "2027"}, {"name": "form13f_20250930.xml", "size": "25360"}]

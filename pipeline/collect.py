@@ -63,17 +63,38 @@ def to_row(h: parse_13f.RawHolding, tmap: dict) -> list:
     return [ticker, ent.get("name") or h.name, ent.get("cl", ""), h.shares, h.value, h.cusip.upper()]
 
 
+def plan_periods(m: dict) -> dict[str, tuple[int, str, list[edgar.Filing]]]:
+    """분기 -> (CIK, SEC 등록명, 그 분기의 공시들).
+
+    보통은 CIK 하나다. 공시 주체가 중간에 바뀐 곳은 managers.json에
+    "sources": [{"cik": ..., "from": "2026-06-30"}, {"cik": ..., "until": "2026-03-31"}]
+    처럼 적는다. 한 분기는 먼저 적힌 source 것을 쓴다.
+    """
+    slug = m["slug"]
+    sources = m.get("sources") or [{"cik": m["cik"]}]
+    out: dict[str, tuple[int, str, list[edgar.Filing]]] = {}
+    for s in sources:
+        cik = int(s["cik"])
+        name, filings = edgar.list_13f_filings_with_name(cik)
+        want = (s.get("expect") or m.get("expect") or "").upper()
+        if want and want not in name.upper():
+            print(f"  ! {slug}: CIK {cik}의 SEC 등록명이 '{name}'입니다. '{want}'가 들어 있지 않아 건너뜁니다.")
+            continue
+        for period, group in edgar.group_by_period(filings).items():
+            if s.get("from") and period < s["from"]:
+                continue
+            if s.get("until") and period > s["until"]:
+                continue
+            out.setdefault(period, (cik, name, group))
+    return out
+
+
 def collect_manager(m: dict, tmap: dict, quarters: int, force: bool) -> int:
-    cik, slug = int(m["cik"]), m["slug"]
-    name, filings = edgar.list_13f_filings_with_name(cik)
-    want = (m.get("expect") or "").upper()
-    if want and want not in name.upper():
-        print(f"  ! {slug}: CIK {cik}의 SEC 등록명이 '{name}'입니다. '{want}'가 들어 있지 않아 건너뜁니다.")
-        return 0
-    by_period = edgar.group_by_period(filings)
+    slug = m["slug"]
+    by_period = plan_periods(m)
     written = 0
     for period in sorted(by_period, reverse=True)[:quarters]:
-        group = by_period[period]
+        cik, name, group = by_period[period]
         accessions = [f.accession for f in group]
         pdir = os.path.join(RAW_DIR, slug, period)
         old = _json(os.path.join(pdir, "meta.json"), {})
@@ -84,8 +105,9 @@ def collect_manager(m: dict, tmap: dict, quarters: int, force: bool) -> int:
         except Exception as ex:  # 한 분기가 실패해도 나머지는 계속한다
             print(f"  ! {slug} {period}: 받지 못했습니다 ({ex}). 기존 자료는 그대로 둡니다.")
             continue
-        if not holdings:
-            print(f"  ! {slug} {period}: 보유 내역이 비어 있어 저장하지 않았습니다.")
+        if not holdings or parse_13f.total_value(holdings) <= 0:
+            print(f"  ! {slug} {period}: 보유 내역이 비었거나 평가액 합계가 0이라 저장하지 않았습니다 "
+                  f"({len(holdings)}행, 공시 {', '.join(f.form + ' ' + f.accession for f in group)}).")
             continue
         rows = sorted((to_row(h, tmap) for h in holdings), key=lambda r: -r[4])
         originals = [f for f in group if not f.form.endswith("/A")]
@@ -100,6 +122,7 @@ def collect_manager(m: dict, tmap: dict, quarters: int, force: bool) -> int:
             "total_value": parse_13f.total_value(holdings),
             "num_holdings": len(holdings),
             "entity": name,
+            "cik": cik,
             "source": SOURCE,
         }
         os.makedirs(pdir, exist_ok=True)
