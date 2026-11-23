@@ -20,6 +20,9 @@ ROOT = os.path.dirname(HERE)
 RAW = os.path.join(ROOT, "data", "raw")
 SITE = os.path.join(ROOT, "site")
 SITE_NAME = "큰손 포트폴리오"
+SITE_URL = "https://whaleportfolio.com"   # 대표 주소. www로 들어와도 검색엔진에는 이 주소를 알린다.
+# 예전 사이트(ChatGPT Sites 시절)의 주소. 북마크나 검색으로 들어오면 홈으로 보낸다.
+OLD_PATHS = ("/dashboard", "/portfolio", "/consensus", "/advertising")
 MINUS = "−"
 MAX_TABLE_ROWS = 100
 MAX_MOVES = 10
@@ -283,7 +286,7 @@ def w_txt(w: float) -> str:
 
 # ------------------------------------------------------------------ 조각
 
-def page(title: str, desc: str, body: str) -> str:
+def page(title: str, desc: str, body: str, path: str) -> str:
     return f"""<!doctype html>
 <html lang="ko">
 <head>
@@ -291,6 +294,7 @@ def page(title: str, desc: str, body: str) -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
+<link rel="canonical" href="{SITE_URL}{path}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;display=swap">
@@ -305,7 +309,7 @@ def page(title: str, desc: str, body: str) -> str:
 {body}
 <footer>
 <p>출처는 미국 SEC EDGAR의 Form 13F-HR입니다. 13F에는 분기 말 미국 상장 주식 보유분만 들어가고, 공매도와 현금, 대부분의 해외 주식은 빠집니다. 공시는 분기가 끝나고 최대 45일 뒤에 나옵니다. 투자 권유가 아닙니다.</p>
-<a href="/privacy.html">개인정보 처리방침</a>
+<a href="/privacy">개인정보 처리방침</a>
 </footer>
 </main>
 </body>
@@ -558,7 +562,7 @@ def render_whale(m: dict, quarters: list[dict], idx: int, ko: dict) -> str:
     title = f"{m['ko']} 포트폴리오 {qlabel(q['period'])} | {SITE_NAME}"
     desc = (f"{m['ko']}의 {qlabel(q['period'])} 13F 공시. 공시 총액 {usd_head(q['total'])}, "
             f"보유 종목 {len(rows):,}개.")
-    return page(title, desc, body)
+    return page(title, desc, body, whale_url(m, q["period"], latest))
 
 
 def render_home(entries: list[dict], ko: dict) -> str:
@@ -622,7 +626,7 @@ def render_home(entries: list[dict], ko: dict) -> str:
 {waiting}
 """
     return page(f"{SITE_NAME} — 13F로 보는 큰손들의 분기별 매매",
-                "미국 SEC 13F 공시로 큰손들이 분기마다 무엇을 사고팔았는지 큰손별로 정리합니다.", body)
+                "미국 SEC 13F 공시로 큰손들이 분기마다 무엇을 사고팔았는지 큰손별로 정리합니다.", body, "/")
 
 
 CSS = """
@@ -744,7 +748,12 @@ def main() -> None:
         shutil.rmtree(os.path.join(SITE, stale), ignore_errors=True)
     write(os.path.join(SITE, "assets", "style.css"), CSS.strip() + "\n")
 
-    entries, pages = [], 0
+    # Cloudflare Pages는 site/_redirects를 읽는다. 쿼리스트링(?manager=...)은 구분하지 못한다.
+    write(os.path.join(SITE, "_redirects"),
+          "".join(f"{p} / 301\n{p}/* / 301\n" for p in OLD_PATHS))
+    write(os.path.join(SITE, "robots.txt"), f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
+
+    entries, pages, urls = [], 0, ["/"]
     for m in managers:
         quarters = load_manager(m, tmap)
         latest_mv = None
@@ -753,12 +762,16 @@ def main() -> None:
             is_latest = i == len(quarters) - 1
             sub = "" if is_latest else qslug(q["period"])
             write(os.path.join(SITE, "whales", m["slug"], sub, "index.html"), out)
+            urls.append(whale_url(m, q["period"], quarters[-1]["period"]))
             pages += 1
         if quarters:
             by = {x["period"]: x for x in quarters}
             latest_mv = diff(quarters[-1], by.get(prev_period(quarters[-1]["period"])))
         entries.append({"m": m, "quarters": quarters, "mv": latest_mv})
     write(os.path.join(SITE, "index.html"), render_home(entries, ko))
+    write(os.path.join(SITE, "sitemap.xml"),
+          '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+          + "".join(f"<url><loc>{SITE_URL}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
     have = sum(1 for x in entries if x["quarters"])
     print(f"built {pages + 1} pages  ({have}/{len(managers)} managers with data)")
 

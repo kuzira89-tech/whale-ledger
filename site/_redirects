@@ -1,0 +1,8 @@
+/dashboard / 301
+/dashboard/* / 301
+/portfolio / 301
+/portfolio/* / 301
+/consensus / 301
+/consensus/* / 301
+/advertising / 301
+/advertising/* / 301
