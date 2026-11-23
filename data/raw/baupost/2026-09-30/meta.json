@@ -7,9 +7,11 @@
     "0001061768-26-000015"
   ],
   "amended": "",
-  "total_value": 5045853,
+  "total_value": 5045853000,
   "num_holdings": 21,
   "entity": "BAUPOST GROUP LLC/MA",
   "cik": 1061768,
+  "unit_scale": 1000,
+  "schema": 2,
   "source": "EDGAR 13F information table (data.sec.gov)"
 }

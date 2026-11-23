@@ -11,5 +11,7 @@
   "num_holdings": 190,
   "entity": "SOROS FUND MANAGEMENT LLC",
   "cik": 1029160,
+  "unit_scale": 1,
+  "schema": 2,
   "source": "EDGAR 13F information table (data.sec.gov)"
 }

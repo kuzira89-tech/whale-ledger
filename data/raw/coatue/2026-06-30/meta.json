@@ -11,5 +11,7 @@
   "num_holdings": 66,
   "entity": "COATUE MANAGEMENT LLC",
   "cik": 1135730,
+  "unit_scale": 1,
+  "schema": 2,
   "source": "EDGAR 13F information table (data.sec.gov)"
 }

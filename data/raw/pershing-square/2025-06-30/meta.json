@@ -11,5 +11,7 @@
   "num_holdings": 11,
   "entity": "Pershing Square Capital Management, L.P.",
   "cik": 1336528,
+  "unit_scale": 1,
+  "schema": 2,
   "source": "EDGAR 13F information table (data.sec.gov)"
 }
