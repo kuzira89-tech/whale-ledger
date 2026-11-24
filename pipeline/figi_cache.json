@@ -191,6 +191,10 @@
 "ticker":"ADPT",
 "type":"Common Stock"
 },
+"00653Q102":{
+"ticker":"AHCO",
+"type":"Common Stock"
+},
 "006739106":{
 "ticker":"ADUS",
 "type":"Common Stock"
@@ -570,6 +574,10 @@
 "024013104":{
 "ticker":"AAT",
 "type":"REIT"
+},
+"024061103":{
+"ticker":"DCH",
+"type":"Common Stock"
 },
 "025537101":{
 "ticker":"AEP",
@@ -1395,6 +1403,10 @@
 "ticker":"",
 "type":"Common Stock"
 },
+"09077V100":{
+"ticker":"BIOA",
+"type":"Common Stock"
+},
 "09175A206":{
 "ticker":"BMNR",
 "type":"Common Stock"
@@ -1837,6 +1849,10 @@
 },
 "12740C103":{
 "ticker":"",
+"type":"Common Stock"
+},
+"127537207":{
+"ticker":"CDZI",
 "type":"Common Stock"
 },
 "12769G100":{
@@ -3819,6 +3835,10 @@
 "ticker":"GEO",
 "type":"Common Stock"
 },
+"36164V602":{
+"ticker":"GLIBA",
+"type":"Common Stock"
+},
 "36164V800":{
 "ticker":"GLIBK",
 "type":"Common Stock"
@@ -5367,6 +5387,10 @@
 "ticker":"LCII",
 "type":"Common Stock"
 },
+"501976104":{
+"ticker":"KYTX",
+"type":"Common Stock"
+},
 "50202M102":{
 "ticker":"LI",
 "type":"ADR"
@@ -6541,6 +6565,10 @@
 },
 "655844108":{
 "ticker":"NSC",
+"type":"Common Stock"
+},
+"66510M204":{
+"ticker":"NAK",
 "type":"Common Stock"
 },
 "665531307":{
@@ -8321,6 +8349,10 @@
 },
 "817565104":{
 "ticker":"SCI",
+"type":"Common Stock"
+},
+"81758H106":{
+"ticker":"SERV",
 "type":"Common Stock"
 },
 "81761L102":{
@@ -10900,6 +10932,10 @@
 "type":"Common Stock"
 },
 "H33700107":{
+"ticker":"",
+"type":""
+},
+"H33700115":{
 "ticker":"",
 "type":""
 },
