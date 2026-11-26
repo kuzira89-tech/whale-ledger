@@ -41,6 +41,12 @@ jobs:
         run: |
           python sitegen/build.py
 
+      # main에 푸시하면 곧바로 운영 사이트가 바뀐다. 검사에 걸리면 커밋하지 않고 여기서 멈춘다.
+      - name: Tests and site check
+        run: |
+          python -m unittest discover -s tests
+          python scripts/check_site.py
+
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"

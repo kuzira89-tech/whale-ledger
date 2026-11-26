@@ -1,0 +1,36 @@
+name: CI
+
+# PR과 작업 브랜치에서 같은 검사를 돌린다. main은 update.yml이 커밋 전에 직접 검사한다.
+on:
+  pull_request:
+  push:
+    branches: [rebuild]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Tests
+        run: python -m unittest discover -s tests
+
+      - name: The committed site matches its inputs and passes the site check
+        run: python scripts/check_site.py
+
+      - name: A fresh build produces the same pages
+        # 미리보기 PNG는 zlib 판에 따라 바이트가 달라질 수 있어 비교에서 뺀다.
+        run: |
+          python sitegen/build.py
+          git diff --exit-code --stat -- site ':!site/assets/og'
