@@ -4,7 +4,7 @@
 이번 분기에 무엇을 사고팔았는지 큰손별, 종목별, 분기별로 보여주는 정적 웹사이트입니다.
 
 - **서버 없음**: GitHub Actions가 EDGAR에서 공시를 받아 데이터와 HTML을 커밋하고,
-  Cloudflare Pages가 `site/` 폴더를 그대로 배포합니다.
+  Cloudflare가 `site/` 폴더를 그대로 배포합니다.
 - **가벼움**: 페이지는 완성된 HTML과 CSS 한 장입니다. 브라우저에서 도는 스크립트가 없고,
   트리맵과 막대는 빌드할 때 계산한 CSS 상자입니다.
 - **색 관례**: 늘림은 주황, 줄임은 파랑입니다.
@@ -86,8 +86,7 @@ python pipeline/collect.py --only berkshire  # 한 곳만
 
 ## 배포
 
-Cloudflare Pages를 이 저장소에 연결하고, Build command는 비우고 Build output directory를
-`site`로 둡니다. GitHub 저장소 시크릿 `EDGAR_USER_AGENT`가 필요합니다.
+Cloudflare(Workers Builds)가 이 저장소의 `main`을 보고 `site/` 폴더를 그대로 내보냅니다. 빌드 명령은 없습니다. GitHub 저장소 시크릿 `EDGAR_USER_AGENT`가 필요합니다.
 `.github/workflows/update.yml`이 평일마다 수집과 빌드를 돌리고, 테스트와 사이트 검사를 통과하고
 바뀐 것이 있을 때만 커밋합니다. `.github/workflows/ci.yml`은 PR과 `rebuild` 브랜치에서 같은 검사를 돌립니다.
 

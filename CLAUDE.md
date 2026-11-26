@@ -7,7 +7,8 @@
 - 화면: `python3 -m http.server -d site 8000` 뒤 헤드리스 크롬으로 캡처해서 직접 본다. 테스트는 배치가 깨진 것을 잡지 못한다.
 
 ## 배포
-- `main`이 운영이다. main에 푸시하면 Cloudflare가 `site/`를 그대로 내보낸다(빌드 명령 없음). 그래서 생성된 `site/`도 커밋한다.
+- `main`이 운영이다. main에 푸시하면 Cloudflare(Workers Builds, 워커 이름 `whale-ledger`)가 `site/`를 그대로 내보낸다. 그래서 생성된 `site/`도 커밋한다.
+- main이 아닌 브랜치에서는 GitHub에 "Workers Builds: whale-ledger" 검사가 실패로 뜬다. 2026-11-23의 rebuild 푸시(f32e5cc)에서도 그랬고, 같은 내용이 main에서는 정상 배포됐다. 원인은 Cloudflare 대시보드의 빌드 로그에 있고 여기서는 볼 수 없다. PR에서 봐야 할 검사는 CI의 `check`다.
 - 작업은 `rebuild` 브랜치에서 하고 PR로 main에 넣는다. main 반영은 사용자가 승인한다.
 - 평일 22:17 UTC에 Actions "Update 13F data"가 main에서 수집·생성·커밋한다. PR이 열려 있는 동안 main에 데이터 커밋이 생기면 `site/`가 충돌한다. main을 합치고 `python3 sitegen/build.py`로 다시 만든다.
 - www → 루트, 브라우저 언어별 `/ja/` 넘김은 Cloudflare 대시보드의 규칙이다. 리포에 없다.
