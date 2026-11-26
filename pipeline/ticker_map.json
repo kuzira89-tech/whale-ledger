@@ -63,6 +63,16 @@
     "067901108": {"ticker": "B", "name": "Barrick Mining Corp", "cl": ""},
     "884903808": {"ticker": "TRI", "name": "Thomson Reuters Corp", "cl": ""},
     "724078100": {"ticker": "PIPR", "name": "Piper Sandler Companies", "cl": ""},
-    "77543R102": {"ticker": "ROKU", "name": "Roku Inc", "cl": "CL A"}
+    "77543R102": {"ticker": "ROKU", "name": "Roku Inc", "cl": "CL A"},
+    "881624209": {"ticker": "TEVA", "name": "Teva Pharmaceutical Industries Ltd", "cl": ""},
+    "143658300": {"ticker": "CCL", "name": "Carnival Corp", "cl": ""},
+    "773122106": {"ticker": "RKLB", "name": "Rocket Lab Corp", "cl": ""},
+    "682680103": {"ticker": "OKE", "name": "ONEOK Inc", "cl": ""},
+    "Y95308105": {"ticker": "WVE", "name": "Wave Life Sciences", "cl": ""},
+    "549498103": {"ticker": "LCID", "name": "Lucid Group Inc", "cl": ""},
+    "15961R105": {"ticker": "CHPT", "name": "ChargePoint Holdings Inc", "cl": ""},
+    "904767704": {"ticker": "UL", "name": "Unilever PLC", "cl": ""},
+    "75120L100": {"ticker": "RLYB", "name": "Rallybio Corp", "cl": ""},
+    "438516106": {"ticker": "HON", "name": "Honeywell International Inc", "cl": ""}
   }
 }

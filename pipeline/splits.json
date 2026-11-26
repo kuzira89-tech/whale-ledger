@@ -1,0 +1,159 @@
+{
+  "_doc": "손으로 확인한 주식 분할. period는 분할이 반영된 첫 분기 말이다. sitegen/build.py가 직전 분기 주식 수에 ratio를 곱해 비교한다. 빌드 로그의 'unconfirmed split suspects'를 회사 공시로 확인한 뒤 여기에 옮긴다. 분할이 아니라 주가 급락이었다면 not_splits에 적는다.",
+  "splits": [
+    {
+      "ticker": "MTH",
+      "period": "2025-03-31",
+      "ratio": 2,
+      "note": "Meritage Homes 2-for-1, 2025-01"
+    },
+    {
+      "ticker": "RLI",
+      "period": "2025-03-31",
+      "ratio": 2,
+      "note": "RLI Corp 2-for-1, 2025-01"
+    },
+    {
+      "ticker": "COKE",
+      "period": "2025-06-30",
+      "ratio": 10,
+      "note": "Coca-Cola Consolidated 10-for-1, 2025-05"
+    },
+    {
+      "ticker": "FAST",
+      "period": "2025-06-30",
+      "ratio": 2,
+      "note": "Fastenal 2-for-1, 2025-05"
+    },
+    {
+      "ticker": "IBKR",
+      "period": "2025-06-30",
+      "ratio": 4,
+      "note": "Interactive Brokers 4-for-1, 2025-06"
+    },
+    {
+      "ticker": "ORLY",
+      "period": "2025-06-30",
+      "ratio": 15,
+      "note": "O'Reilly Automotive 15-for-1, 2025-06"
+    },
+    {
+      "ticker": "CHPT",
+      "period": "2025-09-30",
+      "ratio": 0.05,
+      "note": "ChargePoint 1-for-20 주식 병합, 2025-07. 식별 번호도 바뀜"
+    },
+    {
+      "ticker": "LCID",
+      "period": "2025-09-30",
+      "ratio": 0.1,
+      "note": "Lucid Group 1-for-10 주식 병합, 2025-09. 식별 번호도 바뀌어 ticker_map.json에서 이었다"
+    },
+    {
+      "ticker": "BN",
+      "period": "2025-12-31",
+      "ratio": 1.5,
+      "note": "Brookfield Corp 3-for-2, 2025-10"
+    },
+    {
+      "ticker": "NFLX",
+      "period": "2025-12-31",
+      "ratio": 10,
+      "note": "Netflix 10-for-1, 2025-11"
+    },
+    {
+      "ticker": "NOW",
+      "period": "2025-12-31",
+      "ratio": 5,
+      "note": "ServiceNow 5-for-1, 2025-12"
+    },
+    {
+      "ticker": "UL",
+      "period": "2025-12-31",
+      "ratio": 0.888889,
+      "note": "Unilever 9주를 8주로 병합, 2025-12. 식별 번호도 바뀜"
+    },
+    {
+      "ticker": "RLYB",
+      "period": "2026-03-31",
+      "ratio": 0.125,
+      "note": "Rallybio 1-for-8 주식 병합. 보유 주식 수가 정확히 1/8이 된 것으로 확인. 식별 번호도 바뀜"
+    },
+    {
+      "ticker": "BKNG",
+      "period": "2026-06-30",
+      "ratio": 25,
+      "note": "Booking Holdings 25-for-1, effective 2026-04-02",
+      "source": "https://www.sec.gov/Archives/edgar/data/0001075531/000107553126000037/bkng-20260630.htm"
+    },
+    {
+      "ticker": "CVNA",
+      "period": "2026-06-30",
+      "ratio": 5,
+      "note": "Carvana 5-for-1, effected 2026-05-08",
+      "source": "https://www.sec.gov/Archives/edgar/data/0001690820/000169082026000055/cvna-20260630.htm"
+    },
+    {
+      "ticker": "HON",
+      "period": "2026-06-30",
+      "ratio": 0.5,
+      "note": "Honeywell 1-for-2 주식 병합, 2026-06-29(에어로스페이스 분사와 함께). 식별 번호도 바뀜",
+      "source": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-399"
+    },
+    {
+      "ticker": "KLAC",
+      "period": "2026-06-30",
+      "ratio": 10,
+      "note": "KLA 10-for-1, effective 2026-06-11",
+      "source": "https://www.sec.gov/Archives/edgar/data/0000319201/000119312526212093/d116682d8k.htm"
+    },
+    {
+      "ticker": "APH",
+      "period": "2026-09-30",
+      "ratio": 2,
+      "note": "Amphenol 2-for-1, shares distributed 2026-09-02",
+      "source": "https://www.sec.gov/Archives/edgar/data/0000820313/000110465926091969/tm2622441d1_ex99-1.htm"
+    },
+    {
+      "ticker": "CRWD",
+      "period": "2026-09-30",
+      "ratio": 4,
+      "note": "CrowdStrike 4-for-1, split-adjusted trading from 2026-07-02",
+      "source": "https://www.sec.gov/Archives/edgar/data/0001535527/000153552726000022/crwd-20260603.htm"
+    },
+    {
+      "ticker": "MNST",
+      "period": "2026-09-30",
+      "ratio": 2,
+      "note": "Monster Beverage 2-for-1, split-adjusted trading from 2026-08-11",
+      "source": "https://www.sec.gov/Archives/edgar/data/0000865752/000110465926081842/tm2619964d1_ex99-1.htm"
+    }
+  ],
+  "not_splits": [
+    {
+      "ticker": "OGN",
+      "period": "2025-06-30",
+      "note": "Organon: 분기 중 주가 급락, 분할 공시 없음"
+    },
+    {
+      "ticker": "BRBR",
+      "period": "2025-09-30",
+      "note": "BellRing Brands: 분기 중 주가 급락, 분할 공시 없음"
+    },
+    {
+      "ticker": "FDS",
+      "period": "2025-09-30",
+      "note": "FactSet: 분기 중 주가 급락, 분할 공시 없음"
+    },
+    {
+      "ticker": "FMC",
+      "period": "2025-12-31",
+      "note": "FMC: 분기 중 주가 급락, 분할 공시 없음"
+    },
+    {
+      "ticker": "LRN",
+      "period": "2025-12-31",
+      "note": "Stride: 분기 중 주가 급락, 분할 공시 없음"
+    }
+  ]
+}

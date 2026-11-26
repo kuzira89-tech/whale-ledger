@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>13F 읽는 법 | 큰손 포트폴리오</title>
+<meta name="description" content="13F 공시가 무엇이고 무엇이 빠지는지, 이 사이트가 늘림·줄임과 추정 금액을 어떻게 계산하는지 정리했습니다.">
+<link rel="canonical" href="https://whaleportfolio.com/guide/">
+<link rel="alternate" hreflang="ko" href="https://whaleportfolio.com/guide/">
+<link rel="alternate" hreflang="ja" href="https://whaleportfolio.com/ja/guide/">
+<link rel="alternate" hreflang="x-default" href="https://whaleportfolio.com/guide/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="큰손 포트폴리오">
+<meta property="og:title" content="13F 읽는 법 | 큰손 포트폴리오">
+<meta property="og:description" content="13F 공시가 무엇이고 무엇이 빠지는지, 이 사이트가 늘림·줄임과 추정 금액을 어떻게 계산하는지 정리했습니다.">
+<meta property="og:url" content="https://whaleportfolio.com/guide/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://whaleportfolio.com/assets/og/site-2026q3.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/">큰손 포트폴리오</a>
+<nav aria-label="주 메뉴"><a href="/">큰손</a><a href="/stocks/">종목</a><a href="/quarters/2026q3/">분기 요약</a><a href="/guide/" aria-current="true">13F 안내</a></nav>
+<div class="langs" aria-label="언어"><a href="/guide/" lang="ko" hreflang="ko" aria-current="true">한국어</a><a href="/ja/guide/" lang="ja" hreflang="ja">日本語</a></div>
+</div></header>
+<main class="wrap">
+
+<div class="head home">
+<div>
+<p class="crumb">13F 안내</p>
+<h1>13F 읽는 법</h1>
+<p class="meta">이 사이트의 숫자가 어디서 왔고, 어디까지 믿을 수 있는지 정리했습니다.</p>
+</div>
+</div>
+<div class="prose">
+<section>
+<h2>13F란</h2>
+<p>미국 상장 주식 같은 대상 증권을 1억 달러 이상 운용하는 기관 투자자는 분기마다 보유 내역을 미국 증권거래위원회(SEC)에 내야 합니다. 이 보고서가 Form 13F입니다. 분기가 끝나고 45일 안에 내며, 누구나 SEC 사이트에서 볼 수 있습니다.</p>
+</section>
+<section>
+<h2>들어가는 것과 빠지는 것</h2>
+<ul>
+<li><b>들어가는 것</b> 미국 거래소에 상장된 주식과 ETF, 미국에 상장된 해외 기업 주식(ADR), 일부 옵션(풋·콜)과 전환사채.</li>
+<li><b>빠지는 것</b> 공매도, 현금, 대부분의 채권, 미국 밖 거래소의 주식, 비상장 지분. 예를 들어 버크셔 해서웨이의 일본 종합상사 지분은 13F에 나오지 않습니다.</li>
+<li><b>늦게 나오는 것</b> 기관이 SEC에 비공개를 요청하면 일부 종목은 몇 분기 뒤에야 공개됩니다.</li>
+</ul>
+</section>
+<section>
+<h2>읽을 때 알아둘 점</h2>
+<ul>
+<li><b>최대 45일 전의 모습입니다.</b> 13F는 분기 말 하루의 사진입니다. 그 뒤에 사고판 것은 다음 공시가 나올 때까지 알 수 없습니다.</li>
+<li><b>분기 중에 사고판 것은 보이지 않습니다.</b> 분기 초에 샀다가 분기 말 전에 팔았다면 흔적이 남지 않습니다.</li>
+<li><b>평가액은 분기 말 가격입니다.</b> 실제로 얼마에 샀는지는 13F에 없습니다.</li>
+<li><b>옵션은 크게 잡힙니다.</b> 풋·콜은 옵션 가격이 아니라 기초자산의 명목 금액으로 적습니다. 그래서 옵션이 많은 곳은 공시 총액이 실제 투자금보다 커 보입니다.</li>
+<li><b>전체 자산이 아닙니다.</b> 연금이나 재단은 13F에 나오는 미국 주식이 전체 자산의 일부일 뿐입니다.</li>
+</ul>
+</section>
+<section>
+<h2>이 사이트의 계산 방식</h2>
+<ul>
+<li><b>늘림·줄임</b> 직전 분기와 주식 수를 비교합니다. 가격이 올라 평가액이 커진 것은 늘림이 아닙니다.</li>
+<li><b>추정 금액</b> 주식 수 변화에 분기 말 가격을 곱했습니다. 전부 판 종목은 직전 분기 말 평가액을 씁니다. 실제 거래 금액과는 다릅니다.</li>
+<li><b>주식 분할</b> 공시로 확인한 분할은 분할 전 주식 수에 비율을 곱해 비교합니다. 아직 확인하지 못한 분할은 매수처럼 보일 수 있어, 분기 요약의 순위에서는 뺍니다.</li>
+<li><b>분사와 종목 코드 변경</b> 회사가 사업부를 떼어 내 주주에게 새 주식을 나눠 주면 그 주식은 신규 매수처럼 보입니다. 회사 재편으로 종목 코드가 바뀌면 확인된 것만 같은 종목으로 잇습니다.</li>
+<li><b>정정 공시</b> 기관이 공시를 고쳐 내면 고친 내용을 반영합니다.</li>
+<li><b>종목 이름과 티커</b> 13F에는 티커가 없어 증권 식별 번호(CUSIP)로 찾습니다. 찾지 못한 종목은 CUSIP 번호로 표시합니다.</li>
+<li><b>분기 요약</b> 직전 분기 자료가 있는 큰손만 셉니다. 종목이 수백 개인 곳은 거의 모든 종목을 조금씩 조정하므로, 주식 수를 5% 이상 바꾼 경우만 샀다·팔았다로 셉니다.</li>
+<li><b>종목 페이지</b> 세 곳 이상이 들고 있거나 어느 한 곳의 상위 25위 안에 드는 종목에 만듭니다.</li>
+<li><b>갱신</b> 평일마다 SEC에 새 공시가 있는지 확인합니다.</li>
+</ul>
+</section>
+<section>
+<h2>추적 대상</h2>
+<p class="wl"><a href="/whales/berkshire/">버크셔 해서웨이</a>, <a href="/whales/bridgewater/">브리지워터</a>, <a href="/whales/pershing-square/">퍼싱 스퀘어</a>, <a href="/whales/tiger-global/">타이거 글로벌</a>, <a href="/whales/viking-global/">바이킹 글로벌</a>, <a href="/whales/gates-foundation/">게이츠 재단 트러스트</a>, <a href="/whales/ark/">ARK 인베스트</a>, <a href="/whales/duquesne/">듀케인 패밀리 오피스</a>, <a href="/whales/baupost/">바우포스트 그룹</a>, <a href="/whales/third-point/">서드포인트</a>, <a href="/whales/elliott/">엘리엇</a>, <a href="/whales/coatue/">코아추</a>, <a href="/whales/soros/">소로스 펀드</a>, <a href="/whales/nps/">국민연금</a>, <a href="/whales/norges/">노르웨이 연금</a>, <a href="/whales/scion/">사이언 자산운용</a></p>
+</section>
+<section>
+<h2>투자 권유가 아닙니다</h2>
+<p>이 사이트는 공개된 공시를 보기 쉽게 옮긴 것입니다. 큰손이 샀다는 사실이 지금 사도 된다는 뜻은 아닙니다. 공시가 나왔을 때는 이미 팔았을 수도 있습니다.</p>
+</section>
+</div>
+
+<footer>
+<p>출처는 미국 SEC EDGAR의 Form 13F-HR입니다. 13F에는 분기 말 미국 상장 주식 보유분만 들어가고, 공매도와 현금, 대부분의 해외 주식은 빠집니다. 공시는 분기가 끝나고 최대 45일 뒤에 나옵니다. 투자 권유가 아닙니다.</p>
+<a href="/privacy">개인정보 처리방침</a>
+</footer>
+</main>
+</body>
+</html>

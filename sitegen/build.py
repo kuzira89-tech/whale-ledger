@@ -7,15 +7,27 @@ data/raw/<slug>/<period>/{holdings,meta}.json 스냅샷을 읽어 site/ 아래�
 
 한국어판은 사이트 뿌리(/)에, 일본어판은 /ja/ 아래에 같은 구조로 만든다.
 
+  /                     큰손 목록과 이번 분기 요약
+  /whales/<slug>/       큰손 한 곳(최신 분기), /whales/<slug>/2026q2/ 는 지난 분기
+  /stocks/<ticker>/     종목 하나를 누가 들고 있는지, /stocks/ 는 종목 목록
+  /quarters/2026q3/     한 분기에 큰손들이 함께 사고판 종목
+  /guide/               13F 읽는 법과 이 사이트의 계산 방식
+
   python sitegen/build.py            # site/ 전체 생성
 """
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import os
 import re
 import shutil
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import market   # noqa: E402
+import ogimage  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -27,6 +39,18 @@ OLD_PATHS = ("/dashboard", "/portfolio", "/consensus", "/advertising")
 MINUS = "−"
 MAX_TABLE_ROWS = 100
 MAX_MOVES = 10
+MAX_RANK = 10          # 분기 요약의 순위 길이
+HIST_QUARTERS = 8      # 분기별 흐름에 보여 줄 분기 수
+INDEX_ROWS = 200       # 종목 목록에서 표로 보여 줄 줄 수
+
+# main()이 채운다. 페이지를 만드는 함수들이 읽기만 한다.
+SPLITS: dict[tuple[str, str], float] = {}     # 확인된 주식 분할 (티커, 분기) → 비율
+SUSPECTS: dict[tuple[str, str], float] = {}   # 분할로 보이지만 확인하지 못한 것
+RENAMES: dict[tuple[str, str], tuple] = {}    # 식별 번호가 바뀐 것으로 보이는 (새 티커, 분기)
+STOCK_PAGES: set[str] = set()                 # 전용 페이지가 있는 티커
+NEWEST = ""                                   # 가장 많은 큰손이 공시한 최신 분기
+QUARTER_PAGES: list[str] = []                 # 요약 페이지가 있는 분기(오래된 것부터)
+SUMMARIES: dict[str, dict] = {}               # 분기 → market.quarter_summary() 결과
 
 LANGS = ("ko", "ja")
 PREFIX = {"ko": "", "ja": "/ja"}       # 언어별 주소 앞부분
@@ -66,6 +90,42 @@ T = {
         "basis": "{q} 기준", "waiting": "첫 수집을 기다리는 곳 {n}곳: ", "empty": "아직 수집된 분기가 없습니다",
         "home_title": "큰손 포트폴리오 — 13F로 보는 큰손들의 분기별 매매",
         "home_desc": "미국 SEC 13F 공시로 큰손들이 분기마다 무엇을 사고팔았는지 큰손별로 정리합니다.",
+        "nav_whales": "큰손", "nav_stocks": "종목", "nav_quarter": "분기 요약", "nav_guide": "13F 안내", "nav_aria": "주 메뉴",
+        "page_title_p": "{name}({person}) 포트폴리오 {q} | {site}",
+        "page_desc_p": "{person}의 {name} {q} 13F 공시. 공시 총액 {total}, 보유 종목 {n}개.",
+        "split_note": "주식 분할을 반영한 종목: {list}. 분할 전 주식 수에 분할 비율을 곱해 비교했습니다.",
+        "n_whales": "{n}곳", "rank": "{n}위",
+        "stocks": "종목", "st_holders": "보유한 큰손", "st_of": "추적 {n}곳 중", "st_value": "합계 평가액",
+        "st_up": "늘린 곳", "st_dn": "줄인 곳", "st_new": "신규 {n}", "st_exit": "청산 {n}",
+        "st_who": "누가 들고 있나", "st_who_cap": "{q} 말 기준입니다. 비중은 각 큰손의 포트폴리오에서 이 종목이 차지하는 몫입니다.",
+        "st_th": ("큰손", "포트폴리오 내 비중", "평가액", "보유 주식 수", "이번 분기"),
+        "st_exits": "이번 분기에 전부 판 곳",
+        "st_opts": "옵션 포지션", "st_opts_cap": "풋·콜은 기초자산의 명목 금액으로 공시됩니다. 위 합계에는 넣지 않았습니다.",
+        "st_hist": "분기별 움직임", "st_hist_cap": "숫자는 그 분기의 주식 수 변화입니다. 빈칸은 보유하지 않은 분기, 줄표는 자료가 없는 분기입니다.",
+        "cell": {"base": "보유", "keep": "유지", "new": "신규", "exit": "청산"},
+        "st_count_row": "보유한 곳",
+        "st_none": "지금은 추적 대상 가운데 이 종목을 보유한 곳이 없습니다.",
+        "stock_title": "{name}({tk}) 보유 큰손 {q} | {site}",
+        "stock_desc": "{tk} {name} — 보유한 큰손 {n}곳. {q}에 늘린 곳 {b}곳, 줄인 곳 {s}곳. 13F 공시 기준.",
+        "stocks_h1": "종목으로 보기",
+        "stocks_meta": "세 곳 이상이 들고 있거나 어느 한 곳의 상위 25위 안에 드는 종목 {n}개입니다. {q} 기준.",
+        "stocks_cols": ("종목", "보유한 큰손", "합계 평가액", "이번 분기"),
+        "stocks_title": "큰손들이 보유한 종목 {q} | {site}",
+        "stocks_desc": "13F 공시로 본 큰손 보유 종목 {n}개. 보유한 큰손이 많은 순서로 정리했습니다. {q} 기준.",
+        "stocks_more": "그 밖의 종목", "moved": "늘림 {b} · 줄임 {s}",
+        "q_title": "{q} 큰손 매매 요약 | {site}",
+        "q_desc": "{q}에 큰손 {n}곳이 함께 사고판 종목. 가장 많은 곳이 산 종목은 {a}, 가장 많은 곳이 판 종목은 {b}.",
+        "q_h1": "{q}에 큰손들이<br>함께 사고판 종목",
+        "q_meta": "직전 분기와 비교할 수 있는 {n}곳을 모았습니다. 주식 수를 5% 이상 바꾼 경우만 셉니다.",
+        "q_bought": "여러 곳이 산 종목", "q_sold": "여러 곳이 판 종목",
+        "q_bigbuy": "금액이 큰 매수", "q_bigsell": "금액이 큰 매도", "q_big": "금액이 큰 거래",
+        "q_held": "가장 널리 보유한 종목", "q_held_cap": "분기 말에 이 종목을 들고 있던 큰손 수와 평가액 합계입니다.",
+        "q_more": "외 {n}곳", "q_none": "해당하는 종목이 없습니다.", "q_other": "다른 분기",
+        "q_suspect": "주식 분할이나 종목 코드 변경으로 보이지만 아직 확인하지 못한 종목은 순위에서 뺐습니다: {list}",
+        "home_q": "{q} 한눈에", "home_q_more": "분기 요약 전체 보기",
+        "guide_title": "13F 읽는 법 | {site}",
+        "guide_desc": "13F 공시가 무엇이고 무엇이 빠지는지, 이 사이트가 늘림·줄임과 추정 금액을 어떻게 계산하는지 정리했습니다.",
+        "guide_whales": "추적 대상",
     },
     "ja": {
         "site": "クジラ・ポートフォリオ", "nav": "大口投資家", "lang_aria": "言語",
@@ -100,6 +160,42 @@ T = {
         "basis": "{q} 時点", "waiting": "初回の収集待ち {n}件: ", "empty": "まだ収集された四半期がありません",
         "home_title": "クジラ・ポートフォリオ — 13Fで見る大口投資家の四半期売買",
         "home_desc": "米国SECの13F開示から、大口投資家が四半期ごとに何を売買したかを投資家別にまとめます。",
+        "nav_whales": "大口投資家", "nav_stocks": "銘柄", "nav_quarter": "四半期まとめ", "nav_guide": "13Fの読み方", "nav_aria": "メインメニュー",
+        "page_title_p": "{name}({person}) ポートフォリオ {q} | {site}",
+        "page_desc_p": "{person}の{name}、{q} 13F開示。開示総額 {total}、保有銘柄 {n}。",
+        "split_note": "株式分割を反映した銘柄: {list}。分割前の株数に分割比率を掛けて比べています。",
+        "n_whales": "{n}社", "rank": "{n}位",
+        "stocks": "銘柄", "st_holders": "保有する投資家", "st_of": "追跡{n}社のうち", "st_value": "評価額の合計",
+        "st_up": "買い増し", "st_dn": "売り", "st_new": "新規 {n}", "st_exit": "全売却 {n}",
+        "st_who": "誰が保有しているか", "st_who_cap": "{q}末時点です。比率は各投資家のポートフォリオに占めるこの銘柄の割合です。",
+        "st_th": ("大口投資家", "ポートフォリオ内の比率", "評価額", "保有株数", "今四半期"),
+        "st_exits": "今四半期にすべて売却した投資家",
+        "st_opts": "オプション・ポジション", "st_opts_cap": "プット・コールは原資産の想定元本で開示されます。上の合計には含めていません。",
+        "st_hist": "四半期ごとの動き", "st_hist_cap": "数字はその四半期の株数の変化です。空欄は保有していない四半期、ダッシュはデータのない四半期です。",
+        "cell": {"base": "保有", "keep": "維持", "new": "新規", "exit": "全売却"},
+        "st_count_row": "保有社数",
+        "st_none": "現在、追跡対象の中にこの銘柄を保有する投資家はいません。",
+        "stock_title": "{name}({tk})を保有する大口投資家 {q} | {site}",
+        "stock_desc": "{tk} {name} — 保有する大口投資家は{n}社。{q}に買い増し{b}社、売り{s}社。13F開示ベース。",
+        "stocks_h1": "銘柄から見る",
+        "stocks_meta": "3社以上が保有しているか、いずれかの投資家の上位25位に入る{n}銘柄です。{q} 時点。",
+        "stocks_cols": ("銘柄", "保有する投資家", "評価額の合計", "今四半期"),
+        "stocks_title": "大口投資家が保有する銘柄 {q} | {site}",
+        "stocks_desc": "13F開示から見た大口投資家の保有{n}銘柄。保有する投資家の多い順にまとめました。{q} 時点。",
+        "stocks_more": "そのほかの銘柄", "moved": "買い増し {b} · 売り {s}",
+        "q_title": "{q} 大口投資家の売買まとめ | {site}",
+        "q_desc": "{q}に大口投資家{n}社がそろって売買した銘柄。最も多くの投資家が買ったのは{a}、売ったのは{b}。",
+        "q_h1": "{q}に大口投資家が<br>そろって売買した銘柄",
+        "q_meta": "前四半期と比べられる{n}社を集計しました。株数を5%以上変えた場合だけを数えています。",
+        "q_bought": "複数の投資家が買った銘柄", "q_sold": "複数の投資家が売った銘柄",
+        "q_bigbuy": "金額の大きい買い", "q_bigsell": "金額の大きい売り", "q_big": "金額の大きい売買",
+        "q_held": "最も広く保有されている銘柄", "q_held_cap": "四半期末にこの銘柄を保有していた投資家の数と評価額の合計です。",
+        "q_more": "ほか{n}社", "q_none": "該当する銘柄はありません。", "q_other": "ほかの四半期",
+        "q_suspect": "株式分割や銘柄コードの変更とみられるものの未確認の銘柄は順位から除きました: {list}",
+        "home_q": "{q} のまとめ", "home_q_more": "四半期まとめをすべて見る",
+        "guide_title": "13Fの読み方 | {site}",
+        "guide_desc": "13F開示とは何か、何が含まれないのか、このサイトが買い増し・売りと推定金額をどう計算しているかをまとめました。",
+        "guide_whales": "追跡対象",
     },
 }
 
@@ -228,18 +324,21 @@ def dot(d: str) -> str:
     return d.replace("-", ".") if d else ""
 
 
-def diff(cur: dict, prev: dict | None) -> dict | None:
+def diff(cur: dict, prev: dict | None, splits: dict | None = None) -> dict | None:
     """직전 분기와 비교해 cur의 각 행에 상태를 붙이고, 움직임 요약을 돌려준다.
 
     추정 금액은 주식 수 변화에 이번 분기 말 가격(평가액 / 주식 수)을 곱한 값이다.
     청산은 전분기 말 평가액을 쓴다. 13F에는 실제 거래 가격이 없다.
+
+    splits는 {(티커, 분기): 비율}이다. 그 분기에 주식 분할이 있었던 종목은 직전 분기
+    주식 수에 비율을 곱한 뒤 비교한다. 그러지 않으면 보유자 전원이 산 것처럼 보인다.
     """
     if prev is None:
         for r in cur["rows"]:
             r.update(st="base", pct=None, d=0, est=0)
         return None
     pb = {r["key"]: r for r in prev["rows"]}
-    buys, sells = [], []
+    buys, sells, adjusted = [], [], {}
     for r in cur["rows"]:
         p = pb.get(r["key"])
         px = r["value"] / r["shares"] if r["shares"] else 0
@@ -247,12 +346,19 @@ def diff(cur: dict, prev: dict | None) -> dict | None:
             r.update(st="new", pct=None, d=r["shares"], est=r["value"])
             buys.append(r)
             continue
-        d = r["shares"] - p["shares"]
+        base = p["shares"]
+        k = (splits or {}).get((r["ticker"], cur["period"]))
+        if k:
+            base = round(base * k)
+            adjusted[r["ticker"]] = k
+        d = r["shares"] - base
+        if k and abs(d) <= max(1, base * 0.0005):
+            d = 0          # 분할 때 생기는 단주 처리 정도의 차이는 매매로 보지 않는다
         if d == 0:
             r.update(st="keep", pct=0.0, d=0, est=0)
             continue
         r.update(st="add" if d > 0 else "trim",
-                 pct=(d / p["shares"] * 100 if p["shares"] else None),
+                 pct=(d / base * 100 if base else None),
                  d=d, est=abs(d) * px)
         (buys if d > 0 else sells).append(r)
     held = {r["key"] for r in cur["rows"]}
@@ -271,6 +377,7 @@ def diff(cur: dict, prev: dict | None) -> dict | None:
         "sell_total": sum(r["est"] for r in sells),
         "total_chg": (cur["total"] / prev["total"] - 1) * 100,
         "prev_total": prev["total"],
+        "splits": adjusted,
     }
 
 
@@ -346,6 +453,8 @@ def pct_txt(r: dict) -> str:
     if r["st"] == "base" or r["pct"] is None:
         return "—"
     p = r["pct"]
+    if abs(p) < 0.05:
+        return "≈0%"
     if abs(p) >= 1000:
         return f"{'+' if p > 0 else MINUS}{abs(p):,.0f}%"
     return f"{'+' if p > 0 else MINUS}{abs(p):.1f}%"
@@ -380,10 +489,49 @@ def whale_url(m: dict, period: str, latest: str, lang: str | None = None) -> str
     return base if period == latest else f"{base}{qslug(period)}/"
 
 
+def stock_slug(ticker: str) -> str:
+    return ticker.lower().replace(".", "-")
+
+
+def stock_url(ticker: str, lang: str | None = None) -> str:
+    return f"{PREFIX[lang or LANG]}/stocks/{stock_slug(ticker)}/"
+
+
+def quarter_url(period: str, lang: str | None = None) -> str:
+    return f"{PREFIX[lang or LANG]}/quarters/{qslug(period)}/"
+
+
+def tk_link(r: dict) -> str:
+    """티커 글자. 전용 페이지가 있는 종목이면 그 페이지로 잇는다."""
+    txt = e(tk_txt(r))
+    if r["mapped"] and r["ticker"] in STOCK_PAGES:
+        return f'<a href="{stock_url(r["ticker"])}">{txt}</a>'
+    return txt
+
+
+def person_name(m: dict) -> str:
+    """제목에 넣을 인물 이름. "창업"처럼 지금은 손을 뗀 사람이라는 표시가 붙은 곳은 뺀다."""
+    p = mfield(m, "person")
+    if not p or re.search(r"(창업|創業)$", p):
+        return ""
+    return re.sub(r"\s*(회장|会長)$", "", p)
+
+
+def og_path(name: str) -> str:
+    return f"/assets/og/{name}.png"
+
+
 # ------------------------------------------------------------------ 조각
 
-def page(title: str, desc: str, body: str, paths: dict[str, str]) -> str:
-    """paths: 언어 → 이 페이지의 그 언어 주소. 대표 주소와 언어 전환 링크에 쓴다."""
+LOCALE = {"ko": "ko_KR", "ja": "ja_JP"}
+
+
+def page(title: str, desc: str, body: str, paths: dict[str, str],
+         section: str = "", og: str = "") -> str:
+    """paths: 언어 → 이 페이지의 그 언어 주소. 대표 주소와 언어 전환 링크에 쓴다.
+
+    section은 머리말 메뉴에서 지금 있는 곳, og는 공유 미리보기 그림의 주소다.
+    """
     alts = "".join(f'<link rel="alternate" hreflang="{lg}" href="{SITE_URL}{p}">\n' for lg, p in paths.items())
     alts += f'<link rel="alternate" hreflang="x-default" href="{SITE_URL}{paths["ko"]}">\n'
     here = ' aria-current="true"'
@@ -391,15 +539,32 @@ def page(title: str, desc: str, body: str, paths: dict[str, str]) -> str:
         f'<a href="{p}" lang="{lg}" hreflang="{lg}"{here if lg == LANG else ""}>{LANG_LABEL[lg]}</a>'
         for lg, p in paths.items())
     home = PREFIX[LANG] + "/"
+    items = [("whales", home, L["nav_whales"]), ("stocks", PREFIX[LANG] + "/stocks/", L["nav_stocks"])]
+    if QUARTER_PAGES:
+        items.append(("quarters", quarter_url(QUARTER_PAGES[-1]), L["nav_quarter"]))
+    items.append(("guide", PREFIX[LANG] + "/guide/", L["nav_guide"]))
+    nav = "".join(f'<a href="{u}"{here if k == section else ""}>{t}</a>' for k, u, t in items)
+    image = SITE_URL + (og or og_path(f"site-{qslug(NEWEST)}" if NEWEST else "site"))
+    plain = re.sub(r"<[^>]+>", " ", title)
     return f"""<!doctype html>
 <html lang="{LANG}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(title)}</title>
+<title>{e(plain)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{SITE_URL}{paths[LANG]}">
-{alts}<link rel="preconnect" href="https://fonts.googleapis.com">
+{alts}<meta property="og:type" content="website">
+<meta property="og:site_name" content="{L['site']}">
+<meta property="og:title" content="{e(plain)}">
+<meta property="og:description" content="{e(desc)}">
+<meta property="og:url" content="{SITE_URL}{paths[LANG]}">
+<meta property="og:locale" content="{LOCALE[LANG]}">
+<meta property="og:image" content="{image}">
+<meta property="og:image:width" content="{ogimage.W}">
+<meta property="og:image:height" content="{ogimage.H}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;display=swap">
 <link rel="stylesheet" href="/assets/style.css">
@@ -407,6 +572,7 @@ def page(title: str, desc: str, body: str, paths: dict[str, str]) -> str:
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="{home}">{L['site']}</a>
+<nav aria-label="{L['nav_aria']}">{nav}</nav>
 <div class="langs" aria-label="{L['lang_aria']}">{switch}</div>
 </div></header>
 <main class="wrap">
@@ -421,13 +587,12 @@ def page(title: str, desc: str, body: str, paths: dict[str, str]) -> str:
 """
 
 
-def treemap_html(q: dict) -> tuple[str, int]:
-    rows = q["rows"]
+def treemap_layout(rows: list[dict], W: float, H: float) -> tuple[list[tuple], list[dict], float]:
+    """트리맵 배치. (칸 목록, "기타"로 묶인 행, 기타의 비중)을 돌려준다. 칸의 행이 None이면 기타다."""
     main = [r for r in rows if r["w"] >= 0.45][:30]
     rest = rows[len(main):]
     rest_share = sum(r["w"] for r in rest)
     items = [(r, r["value"]) for r in main]
-    W, H = 760.0, 520.0
     if rest and rest_share >= 15:
         # 종목이 수백 개인 포트폴리오는 "기타"가 절반을 넘기도 한다. 그럴 때는 기타를
         # 오른쪽 기둥 하나로 빼고, 이름 있는 종목들만 왼쪽에 배치한다.
@@ -438,6 +603,20 @@ def treemap_html(q: dict) -> tuple[str, int]:
             items.append((None, sum(r["value"] for r in rest)))
             items.sort(key=lambda it: -it[1])   # squarify는 면적 내림차순을 가정한다
         placed = squarify(items, W, H)
+    return placed, rest, rest_share
+
+
+def tile_class(r: dict) -> str:
+    """칸의 색. 신규와 5% 이상 변화는 진하게, 그보다 작은 변화는 옅게."""
+    if r.get("st") not in ("new", "add", "trim"):
+        return "s-nt"
+    soft = r["st"] != "new" and r["pct"] is not None and abs(r["pct"]) < 5
+    return "s-" + tone(r) + ("2" if soft else "")
+
+
+def treemap_html(q: dict) -> tuple[str, int]:
+    W, H = 760.0, 520.0
+    placed, rest, rest_share = treemap_layout(q["rows"], W, H)
     tiles = []
     for r, x, y, w, h in placed:
         a = w * h
@@ -466,10 +645,7 @@ def treemap_html(q: dict) -> tuple[str, int]:
             tiles.append(f'<div class="tile etc t-{tier}" style="{pos}" title="{label} · {L["sum"]} {rest_share:.1f}%">{inner}</div>')
             continue
         moved = r["st"] in ("new", "add", "trim")
-        cls = "s-nt"
-        if moved:
-            soft = r["st"] != "new" and r["pct"] is not None and abs(r["pct"]) < 5
-            cls = "s-" + tone(r) + ("2" if soft else "")
+        cls = tile_class(r)
         chg = f'<span class="ch">{pct_txt(r)}</span>' if moved else ""
         wt = f'<span class="wt">{r["w"]:.1f}%</span>'
         label = tk_txt(r) if r["mapped"] else (nice(r["name"]).split() or ["?"])[0][:12]
@@ -486,7 +662,10 @@ def treemap_html(q: dict) -> tuple[str, int]:
         else:
             inner = ""
         tip = f"{tk_txt(r)} {name_txt(r)} · {r['w']:.1f}% · {pct_txt(r)}"
-        tiles.append(f'<div class="tile {cls} t-{tier}" style="{pos}" title="{e(tip)}">{inner}</div>')
+        if r["mapped"] and r["ticker"] in STOCK_PAGES:
+            tiles.append(f'<a class="tile {cls} t-{tier}" href="{stock_url(r["ticker"])}" style="{pos}" title="{e(tip)}">{inner}</a>')
+        else:
+            tiles.append(f'<div class="tile {cls} t-{tier}" style="{pos}" title="{e(tip)}">{inner}</div>')
     return "\n".join(tiles), len(rest)
 
 
@@ -495,7 +674,7 @@ def moves_html(title: str, cls: str, rows: list[dict], total: float, sign: str) 
         return (f'<div class="mv"><div class="mvh {cls}"><h2>{title} 0</h2></div>'
                 f'<p class="note">{L["none"]}</p></div>')
     li = "\n".join(
-        f'<li><span class="n tk">{e(tk_txt(r))}</span>'
+        f'<li><span class="n tk">{tk_link(r)}</span>'
         f'<span class="n pc {cls}">{pct_txt(r)}</span>'
         f'<span class="n est">{usd_est(r["est"], sign)}</span></li>'
         for r in rows[:MAX_MOVES])
@@ -509,7 +688,7 @@ def table_rows(rows: list[dict], wmax: float) -> str:
     for r in rows:
         t = tone(r)
         out.append(
-            f'<tr><th scope="row"><div class="tkc"><span class="n tk">{e(tk_txt(r))}</span>'
+            f'<tr><th scope="row"><div class="tkc"><span class="n tk">{tk_link(r)}</span>'
             f'<span class="nm">{e(name_txt(r))}</span></div></th>'
             f'<td><div class="wcell"><span class="bar"><i style="width:{r["w"] / wmax * 100:.1f}%"></i></span>'
             f'<span class="n">{w_txt(r["w"])}</span></div></td>'
@@ -587,7 +766,7 @@ def render_whale(m: dict, quarters: list[dict], idx: int) -> str:
     latest = quarters[-1]["period"]
     by = {x["period"]: x for x in quarters}
     prev = by.get(prev_period(q["period"]))
-    mv = diff(q, prev)
+    mv = q["mv"] if "mv" in q else diff(q, prev, SPLITS)
     rows, meta = q["rows"], q["meta"]
     top10 = sum(r["w"] for r in rows[:10])
     tiles, n_rest = treemap_html(q)
@@ -610,6 +789,9 @@ def render_whale(m: dict, quarters: list[dict], idx: int) -> str:
         rail = (moves_html(L["buys"], "up", mv["buys"], mv["buy_total"], "+")
                 + moves_html(L["sells"], "dn", mv["sells"], mv["sell_total"], MINUS)
                 + f'<p class="note">{L["est_note"]}</p>')
+        if mv.get("splits"):
+            done = ", ".join(f"{e(t)} {market.split_label(k)}" for t, k in sorted(mv["splits"].items()))
+            rail += f'<p class="note">{L["split_note"].format(list=done)}</p>'
         cap = L["cap"]
     else:
         rail = f'<div class="mv"><p class="note">{L["noprev"].format(q=qlabel(prev_period(q["period"])))}</p></div>'
@@ -663,10 +845,14 @@ def render_whale(m: dict, quarters: list[dict], idx: int) -> str:
 <p class="src"><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK={int(m['cik']):010d}&amp;type=13F-HR">{L['sec']}</a>{acc}</p>
 </section>
 """
-    title = L["page_title"].format(name=name, q=qlabel(q["period"]), site=L["site"])
-    desc = L["page_desc"].format(name=name, q=qlabel(q["period"]), total=usd_head(q["total"]), n=f"{len(rows):,}")
+    person = person_name(m)
+    fmt = dict(name=name, person=person, q=qlabel(q["period"]), site=L["site"],
+               total=usd_head(q["total"]), n=f"{len(rows):,}")
+    title = L["page_title_p" if person else "page_title"].format(**fmt)
+    desc = L["page_desc_p" if person else "page_desc"].format(**fmt)
     paths = {lg: whale_url(m, q["period"], latest, lg) for lg in LANGS}
-    return page(title, desc, body, paths)
+    og = og_path(f"{m['slug']}-{qslug(latest)}") if q["period"] == latest else ""
+    return page(title, desc, body, paths, section="whales", og=og)
 
 
 def render_home(entries: list[dict]) -> str:
@@ -681,7 +867,7 @@ def render_home(entries: list[dict]) -> str:
     for x in live:
         m, qs = x["m"], x["quarters"]
         q = qs[-1]
-        mv = diff(q, {y["period"]: y for y in qs}.get(prev_period(q["period"])))
+        mv = q["mv"] if "mv" in q else diff(q, {y["period"]: y for y in qs}.get(prev_period(q["period"])), SPLITS)
         top = q["rows"][0]
         chips = ""
         if mv:
@@ -723,6 +909,7 @@ def render_home(entries: list[dict]) -> str:
 <p class="meta">{L['home_meta']}</p>
 </div>
 </div>
+{home_summary(SUMMARIES.get(NEWEST))}
 <div class="scroll">
 <div class="list">
 <div class="row lh"><span>{c[0]}</span><span class="num">{c[1]}</span><span class="num">{c[2]}</span><span>{c[3]}</span><span>{c[4]}</span></div>
@@ -731,7 +918,440 @@ def render_home(entries: list[dict]) -> str:
 </div>
 {waiting}
 """
-    return page(L["home_title"], L["home_desc"], body, {lg: PREFIX[lg] + "/" for lg in LANGS})
+    return page(L["home_title"], L["home_desc"], body, {lg: PREFIX[lg] + "/" for lg in LANGS}, section="whales")
+
+
+# ------------------------------------------------------------------ 종목 페이지
+
+def hist_periods() -> list[str]:
+    span, p = [], NEWEST
+    for _ in range(HIST_QUARTERS):
+        span.append(p)
+        p = prev_period(p)
+    return span[::-1]
+
+
+def stock_name(s: dict) -> str:
+    return NAMES[LANG].get(s["ticker"]) or nice(s["name"])
+
+
+def whale_a(m: dict) -> str:
+    return f'<a href="{PREFIX[LANG]}/whales/{m["slug"]}/">{e(mfield(m, "name"))}</a>'
+
+
+def stock_moves(s: dict) -> tuple[list, list, list]:
+    """최신 분기 기준으로 (늘린 곳, 줄인 곳, 전부 판 곳). 최신 분기 자료가 없는 큰손은 세지 않는다."""
+    cur = [h for h in s["holders"] if h["q"]["period"] == NEWEST]
+    ups = [h for h in cur if h["r"]["st"] in ("new", "add")]
+    dns = [h for h in cur if h["r"]["st"] == "trim"]
+    exits = [h for h in s["exits"] if h["q"]["period"] == NEWEST]
+    return ups, dns, exits
+
+
+def holder_rows(items: list[dict], wmax: float, show_rank: bool = True) -> str:
+    out = []
+    for h in items:
+        m, q, r = h["m"], h["q"], h["r"]
+        tag = "" if q["period"] == NEWEST else f'<span class="tag">{L["basis"].format(q=qlabel(q["period"]))}</span>'
+        opt = f'<span class="tag">{L["opt"][r["opt"]].strip()}</span>' if r["opt"] else ""
+        rank = f'<span class="rkx">{L["rank"].format(n=h["rank"])}</span>' if show_rank and h["rank"] else ""
+        out.append(
+            f'<tr><th scope="row"><div class="tkc"><span class="wn">{whale_a(m)}</span>{opt}{tag}</div></th>'
+            f'<td><div class="wcell"><span class="bar"><i style="width:{r["w"] / wmax * 100:.1f}%"></i></span>'
+            f'<span class="n">{w_txt(r["w"])}</span>{rank}</div></td>'
+            f'<td class="n r">{usd_tbl(r["value"])}</td>'
+            f'<td class="n r mt">{r["shares"]:,}</td>'
+            f'<td class="n r {tone(r)}">{pct_txt(r)}</td></tr>')
+    return "\n".join(out)
+
+
+def cell_html(c: dict | None) -> str:
+    """분기별 움직임 표의 한 칸."""
+    if c is None:
+        return '<td class="na">–</td>'
+    st = c["st"]
+    if st == "none":
+        return "<td></td>"
+    if st == "exit":
+        return f'<td><span class="c-x">{L["cell"]["exit"]}</span></td>'
+    label = L["cell"].get(st) or pct_txt(c)
+    return f'<td><span class="c{tile_class(c)[1:]}">{label}</span></td>'
+
+
+def render_stock(s: dict, entries: list[dict]) -> str:
+    tk, name = s["ticker"], stock_name(s)
+    tracked = sum(1 for x in entries if x["quarters"] and x["m"].get("status") != "ended")
+    ups, dns, exits = stock_moves(s)
+    n_new = sum(1 for h in ups if h["r"]["st"] == "new")
+    stats = [
+        (L["st_holders"], L["n_whales"].format(n=len(s["holders"])), L["st_of"].format(n=tracked)),
+        (L["st_value"], usd_head(s["value"]) if s["holders"] else "—", ""),
+        (L["st_up"], L["n_whales"].format(n=len(ups)), L["st_new"].format(n=n_new) if n_new else ""),
+        (L["st_dn"], L["n_whales"].format(n=len(dns) + len(exits)), L["st_exit"].format(n=len(exits)) if exits else ""),
+    ]
+    stats_html = "\n".join(
+        f'<div><span>{k}</span><b class="n">{v}</b>{f"<small>{sub}</small>" if sub else ""}</div>'
+        for k, v, sub in stats)
+
+    h = L["st_th"]
+    head = (f'<thead><tr><th scope="col">{h[0]}</th><th scope="col">{h[1]}</th><th scope="col" class="r">{h[2]}</th>'
+            f'<th scope="col" class="r">{h[3]}</th><th scope="col" class="r">{h[4]}</th></tr></thead>')
+    if s["holders"]:
+        wmax = max(x["r"]["w"] for x in s["holders"]) or 1
+        table = (f'<div class="scroll"><table>{COLS}{head}<tbody>\n'
+                 f'{holder_rows(s["holders"], wmax)}\n</tbody></table></div>')
+    else:
+        table = f'<p class="note">{L["st_none"]}</p>'
+    ex_html = ""
+    if s["exits"]:
+        ex_html = (f'<p class="exits"><b class="dn">{L["st_exits"]}</b>'
+                   + ", ".join(whale_a(x["m"]) for x in s["exits"]) + "</p>")
+    opts_html = ""
+    if s["opts"]:
+        wmax_o = max(x["r"]["w"] for x in s["opts"]) or 1
+        opts_html = (f'<section>\n<h2>{L["st_opts"]}</h2>\n<p class="cap">{L["st_opts_cap"]}</p>\n'
+                     f'<div class="scroll"><table>{COLS}<tbody>\n{holder_rows(s["opts"], wmax_o, False)}\n'
+                     f'</tbody></table></div>\n</section>')
+
+    periods = hist_periods()
+    hist = market.stock_history(entries, tk, periods)
+    hist_html = ""
+    if hist:
+        cols = '<col class="m1">' + '<col class="m2">' * len(periods)
+        th = "".join(f'<th scope="col" class="n">{qshort(p)}</th>' for p in periods)
+        trs = "\n".join(
+            f'<tr><th scope="row">{whale_a(row["m"])}</th>{"".join(cell_html(c) for c in row["cells"])}</tr>'
+            for row in hist)
+        counts = "".join(
+            '<td class="n">{}</td>'.format(
+                sum(1 for row in hist if row["cells"][i] and row["cells"][i]["st"] not in ("none", "exit")) or "")
+            for i in range(len(periods)))
+        hist_html = (f'<section>\n<h2>{L["st_hist"]}</h2>\n<p class="cap">{L["st_hist_cap"]}</p>\n'
+                     f'<div class="scroll"><table class="mx"><colgroup>{cols}</colgroup>'
+                     f'<thead><tr><th scope="col">{h[0]}</th>{th}</tr></thead><tbody>\n{trs}\n'
+                     f'<tr class="sumr"><th scope="row">{L["st_count_row"]}</th>{counts}</tr>\n'
+                     f'</tbody></table></div>\n</section>')
+
+    body = f"""
+<div class="head">
+<div>
+<p class="crumb"><a href="{PREFIX[LANG]}/stocks/">{L['stocks']}</a> / <span class="n">{e(tk)}</span></p>
+<h1>{e(name)} <span class="n tkh">{e(tk)}</span></h1>
+<p class="meta">{e(nice(s['name']))} · {L['basis'].format(q=qlabel(NEWEST))}</p>
+</div>
+</div>
+<div class="stats">
+{stats_html}
+</div>
+
+<section>
+<h2>{L['st_who']}</h2>
+<p class="cap">{L['st_who_cap'].format(q=qlabel(NEWEST))}</p>
+{table}
+{ex_html}
+</section>
+{hist_html}
+{opts_html}
+"""
+    fmt = dict(name=name, tk=tk, q=qlabel(NEWEST), site=L["site"], n=len(s["holders"]),
+               b=len(ups), s=len(dns) + len(exits))
+    return page(L["stock_title"].format(**fmt), L["stock_desc"].format(**fmt), body,
+                {lg: stock_url(tk, lg) for lg in LANGS}, section="stocks")
+
+
+KCOLS = '<colgroup><col class="k1"><col class="k2"><col class="k3"><col class="k4"></colgroup>'
+
+
+def render_stocks_index(stocks: dict[str, dict]) -> str:
+    """전용 페이지가 있는 종목의 목록. 보유한 큰손이 많은 순서다."""
+    items = sorted((stocks[t] for t in STOCK_PAGES), key=lambda s: (-len(s["holders"]), -s["value"], s["ticker"]))
+    top, rest = items[:INDEX_ROWS], items[INDEX_ROWS:]
+    nmax = max((len(s["holders"]) for s in items), default=1) or 1
+    c = L["stocks_cols"]
+    rows = []
+    for s in top:
+        ups, dns, exits = stock_moves(s)
+        b, d = len(ups), len(dns) + len(exits)
+        moved = L["moved"].format(b=b, s=d) if b or d else "—"
+        rows.append(
+            f'<tr><th scope="row"><div class="tkc"><span class="n tk"><a href="{stock_url(s["ticker"])}">{e(s["ticker"])}</a></span>'
+            f'<span class="nm">{e(stock_name(s))}</span></div></th>'
+            f'<td><div class="wcell"><span class="bar"><i style="width:{len(s["holders"]) / nmax * 100:.0f}%"></i></span>'
+            f'<span class="n">{L["n_whales"].format(n=len(s["holders"]))}</span></div></td>'
+            f'<td class="n r">{usd_tbl(s["value"])}</td>'
+            f'<td class="r mt">{moved}</td></tr>')
+    more = ""
+    if rest:
+        links = "".join(f'<a class="n" href="{stock_url(s["ticker"])}">{e(s["ticker"])}</a>'
+                        for s in sorted(rest, key=lambda s: s["ticker"]))
+        more = f'<section>\n<h2>{L["stocks_more"]}</h2>\n<div class="tklist">{links}</div>\n</section>'
+    body = f"""
+<div class="head home">
+<div>
+<p class="crumb n">{qlabel(NEWEST)} · {L['as_of']} {dot(NEWEST)}</p>
+<h1>{L['stocks_h1']}</h1>
+<p class="meta">{L['stocks_meta'].format(n=f"{len(items):,}", q=qlabel(NEWEST))}</p>
+</div>
+</div>
+<div class="scroll idx"><table>{KCOLS}
+<thead><tr><th scope="col">{c[0]}</th><th scope="col">{c[1]}</th><th scope="col" class="r">{c[2]}</th><th scope="col" class="r">{c[3]}</th></tr></thead>
+<tbody>
+{chr(10).join(rows)}
+</tbody></table></div>
+{more}
+"""
+    fmt = dict(q=qlabel(NEWEST), site=L["site"], n=f"{len(items):,}")
+    return page(L["stocks_title"].format(**fmt), L["stocks_desc"].format(**fmt), body,
+                {lg: PREFIX[lg] + "/stocks/" for lg in LANGS}, section="stocks")
+
+
+# ------------------------------------------------------------------ 분기 요약
+
+def who_txt(pairs: list[tuple], limit: int = 4) -> str:
+    """"버크셔 신규 · 타이거 +32.0%" 꼴로 누가 어떻게 했는지 적는다."""
+    parts = [f'{e(mfield(m, "name"))} {L["kind"][r["st"]] if r["st"] in ("new", "exit") else pct_txt(r)}'
+             for m, r in pairs[:limit]]
+    if len(pairs) > limit:
+        parts.append(L["q_more"].format(n=len(pairs) - limit))
+    return " · ".join(parts)
+
+
+def summary_lists(sm: dict) -> dict:
+    """분기 요약에서 화면에 올릴 것만 고른다. 확인하지 못한 분할 의심 종목은 뺀다."""
+    sus = {t for (t, p) in list(SUSPECTS) + list(RENAMES) if p == sm["period"]}
+    out = {"dropped": set()}
+    for key in ("bought", "sold"):
+        keep = []
+        for s in sm[key]:
+            if s["ticker"] in sus:
+                out["dropped"].add(s["ticker"])
+            elif len(keep) < MAX_RANK:
+                keep.append(s)
+        out[key] = keep
+    for key in ("big_buys", "big_sells"):
+        keep = []
+        for mv in sm[key]:
+            if mv[2]["ticker"] in sus:
+                if len(keep) < MAX_RANK:
+                    out["dropped"].add(mv[2]["ticker"])
+            elif len(keep) < MAX_RANK:
+                keep.append(mv)
+        out[key] = keep
+    out["held"] = sm["held"][:MAX_RANK]
+    return out
+
+
+def rank_block(title: str, cls: str, lis: list[str]) -> str:
+    inner = "\n".join(lis) if lis else ""
+    body = f"<ul>\n{inner}\n</ul>" if lis else f'<p class="note">{L["q_none"]}</p>'
+    return f'<div class="mv rk"><div class="mvh {cls}"><h2>{title}</h2></div>\n{body}</div>'
+
+
+def multi_li(s: dict, side: str, with_who: bool) -> str:
+    pairs = s[side]
+    who = f'<span class="who">{who_txt(pairs)}</span>' if with_who else ""
+    return (f'<li><span class="n tk">{tk_link(s["r"])}</span><span class="nm">{e(name_txt(s["r"]))}</span>'
+            f'<span class="n ct">{L["n_whales"].format(n=len(pairs))}</span>{who}</li>')
+
+
+def move_li(mv: tuple) -> str:
+    side, m, r = mv
+    cls, sign = ("up", "+") if side == "buy" else ("dn", MINUS)
+    return (f'<li><span class="n tk">{tk_link(r)}</span><span class="nm">{e(mfield(m, "name"))} · {pct_txt(r)}</span>'
+            f'<span class="n ct {cls}">{usd_est(r["est"], sign)}</span></li>')
+
+
+def render_quarter(sm: dict) -> str:
+    period, ls = sm["period"], summary_lists(sm)
+    q = qlabel(period)
+    held = [f'<li><span class="n tk">{tk_link(s["r"])}</span><span class="nm">{e(name_txt(s["r"]))}</span>'
+            f'<span class="n ct">{L["n_whales"].format(n=len(s["hold"]))} · {usd_tbl(sum(r["value"] for _, r in s["hold"]))}</span></li>'
+            for s in ls["held"]]
+    dropped = ""
+    if ls["dropped"]:
+        dropped = f'<p class="note">{L["q_suspect"].format(list=", ".join(sorted(ls["dropped"])))}</p>'
+    cur = ' aria-current="true"'
+    others = "".join(
+        f'<a class="chip n" href="{quarter_url(p)}"{cur if p == period else ""}>{qlabel(p)}</a>'
+        for p in reversed(QUARTER_PAGES))
+    body = f"""
+<div class="head home">
+<div>
+<p class="crumb n">{q} · {L['as_of']} {dot(period)}</p>
+<h1>{L['q_h1'].format(q=q)}</h1>
+<p class="meta">{L['q_meta'].format(n=len(sm['whales']))}</p>
+</div>
+</div>
+<div class="grid2">
+{rank_block(L['q_bought'], 'up', [multi_li(s, 'buy', True) for s in ls['bought']])}
+{rank_block(L['q_sold'], 'dn', [multi_li(s, 'sell', True) for s in ls['sold']])}
+{rank_block(L['q_bigbuy'], 'up', [move_li(mv) for mv in ls['big_buys']])}
+{rank_block(L['q_bigsell'], 'dn', [move_li(mv) for mv in ls['big_sells']])}
+</div>
+<p class="note">{L['est_note']}</p>
+{dropped}
+
+<section>
+<h2>{L['q_held']}</h2>
+<p class="cap">{L['q_held_cap']}</p>
+<div class="mv rk one"><ul>
+{chr(10).join(held)}
+</ul></div>
+</section>
+
+<section>
+<h2>{L['q_other']}</h2>
+<div class="chips qs">{others}</div>
+</section>
+"""
+    a = ls["bought"][0]["ticker"] if ls["bought"] else "—"
+    b = ls["sold"][0]["ticker"] if ls["sold"] else "—"
+    fmt = dict(q=q, site=L["site"], n=len(sm["whales"]), a=a, b=b)
+    return page(L["q_title"].format(**fmt), L["q_desc"].format(**fmt), body,
+                {lg: quarter_url(period, lg) for lg in LANGS}, section="quarters")
+
+
+def home_summary(sm: dict | None) -> str:
+    """홈 맨 위에 올리는 이번 분기 요약. 자세한 것은 분기 요약 페이지에 있다."""
+    if not sm:
+        return ""
+    ls = summary_lists(sm)
+    big = sorted(ls["big_buys"] + ls["big_sells"], key=lambda mv: -mv[2]["est"])[:5]
+    return f"""
+<section class="qsum">
+<div class="maph"><h2>{L['home_q'].format(q=qlabel(sm['period']))}</h2>
+<a class="more" href="{quarter_url(sm['period'])}">{L['home_q_more']}</a></div>
+<div class="grid3">
+{rank_block(L['q_bought'], 'up', [multi_li(s, 'buy', False) for s in ls['bought'][:5]])}
+{rank_block(L['q_sold'], 'dn', [multi_li(s, 'sell', False) for s in ls['sold'][:5]])}
+{rank_block(L['q_big'], 'nt', [move_li(mv) for mv in big])}
+</div>
+</section>
+"""
+
+
+# ------------------------------------------------------------------ 안내 페이지
+
+GUIDE = {
+    "ko": """
+<div class="head home">
+<div>
+<p class="crumb">13F 안내</p>
+<h1>13F 읽는 법</h1>
+<p class="meta">이 사이트의 숫자가 어디서 왔고, 어디까지 믿을 수 있는지 정리했습니다.</p>
+</div>
+</div>
+<div class="prose">
+<section>
+<h2>13F란</h2>
+<p>미국 상장 주식 같은 대상 증권을 1억 달러 이상 운용하는 기관 투자자는 분기마다 보유 내역을 미국 증권거래위원회(SEC)에 내야 합니다. 이 보고서가 Form 13F입니다. 분기가 끝나고 45일 안에 내며, 누구나 SEC 사이트에서 볼 수 있습니다.</p>
+</section>
+<section>
+<h2>들어가는 것과 빠지는 것</h2>
+<ul>
+<li><b>들어가는 것</b> 미국 거래소에 상장된 주식과 ETF, 미국에 상장된 해외 기업 주식(ADR), 일부 옵션(풋·콜)과 전환사채.</li>
+<li><b>빠지는 것</b> 공매도, 현금, 대부분의 채권, 미국 밖 거래소의 주식, 비상장 지분. 예를 들어 버크셔 해서웨이의 일본 종합상사 지분은 13F에 나오지 않습니다.</li>
+<li><b>늦게 나오는 것</b> 기관이 SEC에 비공개를 요청하면 일부 종목은 몇 분기 뒤에야 공개됩니다.</li>
+</ul>
+</section>
+<section>
+<h2>읽을 때 알아둘 점</h2>
+<ul>
+<li><b>최대 45일 전의 모습입니다.</b> 13F는 분기 말 하루의 사진입니다. 그 뒤에 사고판 것은 다음 공시가 나올 때까지 알 수 없습니다.</li>
+<li><b>분기 중에 사고판 것은 보이지 않습니다.</b> 분기 초에 샀다가 분기 말 전에 팔았다면 흔적이 남지 않습니다.</li>
+<li><b>평가액은 분기 말 가격입니다.</b> 실제로 얼마에 샀는지는 13F에 없습니다.</li>
+<li><b>옵션은 크게 잡힙니다.</b> 풋·콜은 옵션 가격이 아니라 기초자산의 명목 금액으로 적습니다. 그래서 옵션이 많은 곳은 공시 총액이 실제 투자금보다 커 보입니다.</li>
+<li><b>전체 자산이 아닙니다.</b> 연금이나 재단은 13F에 나오는 미국 주식이 전체 자산의 일부일 뿐입니다.</li>
+</ul>
+</section>
+<section>
+<h2>이 사이트의 계산 방식</h2>
+<ul>
+<li><b>늘림·줄임</b> 직전 분기와 주식 수를 비교합니다. 가격이 올라 평가액이 커진 것은 늘림이 아닙니다.</li>
+<li><b>추정 금액</b> 주식 수 변화에 분기 말 가격을 곱했습니다. 전부 판 종목은 직전 분기 말 평가액을 씁니다. 실제 거래 금액과는 다릅니다.</li>
+<li><b>주식 분할</b> 공시로 확인한 분할은 분할 전 주식 수에 비율을 곱해 비교합니다. 아직 확인하지 못한 분할은 매수처럼 보일 수 있어, 분기 요약의 순위에서는 뺍니다.</li>
+<li><b>분사와 종목 코드 변경</b> 회사가 사업부를 떼어 내 주주에게 새 주식을 나눠 주면 그 주식은 신규 매수처럼 보입니다. 회사 재편으로 종목 코드가 바뀌면 확인된 것만 같은 종목으로 잇습니다.</li>
+<li><b>정정 공시</b> 기관이 공시를 고쳐 내면 고친 내용을 반영합니다.</li>
+<li><b>종목 이름과 티커</b> 13F에는 티커가 없어 증권 식별 번호(CUSIP)로 찾습니다. 찾지 못한 종목은 CUSIP 번호로 표시합니다.</li>
+<li><b>분기 요약</b> 직전 분기 자료가 있는 큰손만 셉니다. 종목이 수백 개인 곳은 거의 모든 종목을 조금씩 조정하므로, 주식 수를 5% 이상 바꾼 경우만 샀다·팔았다로 셉니다.</li>
+<li><b>종목 페이지</b> 세 곳 이상이 들고 있거나 어느 한 곳의 상위 25위 안에 드는 종목에 만듭니다.</li>
+<li><b>갱신</b> 평일마다 SEC에 새 공시가 있는지 확인합니다.</li>
+</ul>
+</section>
+<section>
+<h2>추적 대상</h2>
+<p class="wl">{whales}</p>
+</section>
+<section>
+<h2>투자 권유가 아닙니다</h2>
+<p>이 사이트는 공개된 공시를 보기 쉽게 옮긴 것입니다. 큰손이 샀다는 사실이 지금 사도 된다는 뜻은 아닙니다. 공시가 나왔을 때는 이미 팔았을 수도 있습니다.</p>
+</section>
+</div>
+""",
+    "ja": """
+<div class="head home">
+<div>
+<p class="crumb">13Fの読み方</p>
+<h1>13Fの読み方</h1>
+<p class="meta">このサイトの数字がどこから来て、どこまで信頼できるのかをまとめました。</p>
+</div>
+</div>
+<div class="prose">
+<section>
+<h2>13Fとは</h2>
+<p>米国上場株式などの対象証券を1億ドル以上運用する機関投資家は、四半期ごとに保有状況を米国証券取引委員会(SEC)に提出します。この報告書がForm 13Fです。四半期末から45日以内に提出され、誰でもSECのサイトで読めます。</p>
+</section>
+<section>
+<h2>含まれるもの、含まれないもの</h2>
+<ul>
+<li><b>含まれるもの</b> 米国の取引所に上場する株式とETF、米国に上場する海外企業の株式(ADR)、一部のオプション(プット・コール)と転換社債。</li>
+<li><b>含まれないもの</b> 空売り、現金、大半の債券、米国外の取引所の株式、非上場株。たとえばバークシャー・ハサウェイが保有する日本の総合商社株は13Fに出てきません。</li>
+<li><b>遅れて出るもの</b> 機関投資家がSECに非開示を申請すると、一部の銘柄は数四半期後に公開されます。</li>
+</ul>
+</section>
+<section>
+<h2>読むときの注意点</h2>
+<ul>
+<li><b>最大45日前の姿です。</b> 13Fは四半期末の一日を写したものです。その後の売買は次の開示まで分かりません。</li>
+<li><b>四半期の途中の売買は見えません。</b> 期初に買って期末までに売っていれば、跡は残りません。</li>
+<li><b>評価額は四半期末の株価です。</b> 実際にいくらで買ったかは13Fに載っていません。</li>
+<li><b>オプションは大きく見えます。</b> プット・コールはオプション価格ではなく原資産の想定元本で記載されます。オプションの多い投資家は、開示総額が実際の投資額より大きく見えます。</li>
+<li><b>資産の全体ではありません。</b> 年金基金や財団の場合、13Fに載る米国株は資産全体の一部です。</li>
+</ul>
+</section>
+<section>
+<h2>このサイトの計算方法</h2>
+<ul>
+<li><b>買い増し・売り</b> 前四半期と株数を比べます。株価が上がって評価額が増えただけでは買い増しになりません。</li>
+<li><b>推定金額</b> 株数の変化に四半期末の株価を掛けています。全売却は前四半期末の評価額です。実際の売買金額とは異なります。</li>
+<li><b>株式分割</b> 開示で確認できた分割は、分割前の株数に比率を掛けて比べます。未確認の分割は買いに見えることがあるため、四半期まとめの順位からは除きます。</li>
+<li><b>スピンオフと銘柄コードの変更</b> 企業が事業を切り離して株主に新しい株式を配ると、その株式は新規の買いに見えます。再編で銘柄コードが変わった場合は、確認できたものだけを同じ銘柄としてつなぎます。</li>
+<li><b>訂正報告</b> 機関投資家が報告を訂正した場合は、訂正後の内容を反映します。</li>
+<li><b>銘柄名とティッカー</b> 13Fにはティッカーがないため、証券識別番号(CUSIP)から調べます。見つからない銘柄はCUSIP番号で表示します。</li>
+<li><b>四半期まとめ</b> 前四半期のデータがある投資家だけを数えます。数百銘柄を持つ投資家はほぼ全銘柄を少しずつ調整するため、株数を5%以上変えた場合だけを買い・売りとして数えます。</li>
+<li><b>銘柄ページ</b> 3社以上が保有しているか、いずれかの投資家の上位25位に入る銘柄に作成します。</li>
+<li><b>更新</b> 平日は毎日、SECに新しい開示があるかを確認します。</li>
+</ul>
+</section>
+<section>
+<h2>追跡対象</h2>
+<p class="wl">{whales}</p>
+</section>
+<section>
+<h2>投資勧誘ではありません</h2>
+<p>このサイトは公開された開示情報を見やすく整理したものです。大口投資家が買ったという事実は、いま買ってよいという意味ではありません。開示が出た時点で、すでに売却している可能性もあります。</p>
+</section>
+</div>
+""",
+}
+
+
+def render_guide(entries: list[dict]) -> str:
+    whales = ", ".join(whale_a(x["m"]) if x["quarters"] else e(mfield(x["m"], "name")) for x in entries)
+    body = GUIDE[LANG].replace("{whales}", whales)
+    return page(L["guide_title"].format(site=L["site"]), L["guide_desc"], body,
+                {lg: PREFIX[lg] + "/guide/" for lg in LANGS}, section="guide")
+
 
 
 CSS = """
@@ -836,7 +1456,43 @@ a.row:hover{color:inherit;background:var(--sf)}
 .chip{display:inline-flex;align-items:baseline;gap:6px;padding:4px 8px;border-radius:4px;background:var(--sf);font-size:13px;white-space:nowrap}
 .row.off{grid-template-columns:minmax(220px,2fr) minmax(0,6fr);color:var(--mt)}.endn{font-size:14px}
 .wait{margin-top:20px}
-@media (max-width:640px){.wrap{padding:0 16px}h1{font-size:30px}.home h1{font-size:32px}.hist{gap:6px;padding:14px 10px}.col{font-size:11px}.stats b{font-size:20px}}
+.top nav{display:flex;flex-wrap:wrap;gap:2px;margin:0 auto 0 12px;font-size:14px}
+.top nav a{padding:12px 10px;color:var(--mt);text-decoration:none}
+.top nav a[aria-current]{color:var(--tx);font-weight:700}
+a.tile{text-decoration:none}a.tile:hover{filter:brightness(1.15)}a.tile.s-nt:hover,a.tile.etc:hover{color:var(--tx)}
+.tk a,.wn a,.mx a{text-decoration:none}.tk a:hover,.wn a:hover,.mx a:hover{text-decoration:underline}
+.stats small{display:block;margin-top:2px;font-size:12px;color:var(--mt)}
+.tkh{margin-left:8px;font-size:.5em;font-weight:500;color:var(--mt)}
+.wn{font-weight:700;white-space:nowrap}.tkc .tag{margin-left:0}
+.rkx{width:40px;font-size:12px;color:var(--mt);text-align:right;white-space:nowrap}
+.exits{margin-top:16px;font-size:14px;color:var(--mt)}.exits b{margin-right:10px}.exits a{color:var(--tx);text-underline-offset:4px}
+.mx{min-width:720px}.m1{width:24%}
+.mx th,.mx td{padding:5px 3px}.mx thead th{padding:8px 3px;text-align:center}.mx thead th:first-child,.mx tbody th{text-align:left}
+.mx td{text-align:center;font-size:13px}
+.mx td span{display:block;padding:6px 2px;border-radius:4px;font-weight:700;white-space:nowrap}
+.c-up{background:#FF8A4C;color:#1A0E06}.c-up2{background:#6B3A1E;color:#FFD8C2}.c-dn{background:#2A55BD;color:#fff}.c-dn2{background:#1F3A7A;color:#DCE6FF}
+.mx td .c-nt{background:var(--tile);color:var(--mt);font-weight:400}
+.c-x{border:1px dashed var(--dn);color:var(--dn)}
+.mx .na{color:var(--ft)}
+.sumr th,.sumr td{border-bottom:0;font-size:13px;color:var(--mt)}
+.k1{width:42%}.k2{width:26%}.k3{width:14%}.k4{width:18%}
+.idx{margin-top:36px}
+.tklist{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
+.tklist a{padding:9px 10px;border-radius:4px;background:var(--sf);font-size:13px;text-decoration:none}
+.grid2{margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:36px 48px}
+.grid3{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:28px 36px}
+.rk li{grid-template-columns:minmax(56px,auto) minmax(0,1fr) auto;row-gap:2px}
+.rk .nm{font-size:14px;color:var(--mt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rk .ct{font-weight:700;white-space:nowrap}
+.rk .who{grid-column:1/-1;font-size:13px;color:var(--mt)}
+.rk.one{margin-top:16px;max-width:720px}
+.mvh.nt{color:var(--tx);border-color:var(--ft)}
+.qsum{margin-top:36px}.qsum .more{font-size:14px;color:var(--mt);text-underline-offset:4px}
+.chips.qs{margin-top:16px}.chips.qs a{padding:10px 14px;text-decoration:none}.chips.qs a[aria-current]{background:var(--tx);color:var(--bg);font-weight:700}
+.prose{max-width:760px}.prose section{margin-top:44px}.prose p,.prose ul{margin-top:12px;line-height:1.7;color:#C9D1DC}
+.prose li{margin-top:10px;padding-left:14px;border-left:2px solid var(--ln)}.prose li b{margin-right:8px;color:var(--tx)}
+.prose .wl a{text-underline-offset:4px}
+@media (max-width:640px){.wrap{padding:0 16px}h1{font-size:30px}.home h1{font-size:32px}.hist{gap:6px;padding:14px 10px}.col{font-size:11px}.stats b{font-size:20px}.top nav{margin-left:0;order:3;width:100%}}
 """
 
 
@@ -846,14 +1502,79 @@ def write(path: str, text: str) -> None:
         f.write(text)
 
 
+def inputs_digest() -> str:
+    """사이트를 만드는 데 들어가는 모든 파일의 지문. site/build.txt에 적어 둔다.
+
+    소스나 데이터를 고치고 사이트를 다시 만들지 않으면 scripts/check_site.py가 이 값으로 알아챈다.
+    """
+    paths = [os.path.join(ROOT, "managers.json")]
+    for d, pat in ((HERE, r".*\.(py|json)$"), (os.path.join(ROOT, "pipeline"), r".*\.json$")):
+        paths += [os.path.join(d, f) for f in os.listdir(d) if re.fullmatch(pat, f)]
+    for d, _, files in os.walk(RAW):
+        paths += [os.path.join(d, f) for f in files if f.endswith(".json")]
+    h = hashlib.sha256()
+    for path in sorted(paths, key=lambda p: os.path.relpath(p, ROOT).replace(os.sep, "/")):
+        h.update(os.path.relpath(path, ROOT).replace(os.sep, "/").encode())
+        with open(path, "rb") as f:
+            h.update(f.read())
+    return h.hexdigest()
+
+
+def write_bytes(path: str, data: bytes) -> None:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "wb") as f:
+        f.write(data)
+
+
+# ------------------------------------------------------------------ 미리보기 그림
+
+def og_tiles(rows: list[dict]) -> list[tuple]:
+    """트리맵을 미리보기 그림의 칸으로 옮긴다. 글자는 영문·숫자만 쓸 수 있다."""
+    placed, rest, rest_share = treemap_layout(rows, ogimage.MAP_W, ogimage.MAP_H)
+    tiles = []
+    for r, x, y, w, h in placed:
+        if r is None:
+            tiles.append(("OTHER", f"{rest_share:.1f}%", "etc", x, y, w, h))
+            continue
+        label = r["ticker"] if r["mapped"] else (r["name"].split() or [""])[0]
+        if r["opt"]:
+            label += " " + r["opt"]
+        tiles.append((label, f"{r['w']:.1f}%", tile_class(r), x, y, w, h))
+    return tiles
+
+
+def og_whale(m: dict, q: dict) -> bytes:
+    sub = f"13F PORTFOLIO   {qlabel(q['period'])}   {usd_head(q['total'])}   {len(q['rows']):,} HOLDINGS"
+    return ogimage.card(m["en"], sub, og_tiles(q["rows"]))
+
+
+def og_site(stocks: dict[str, dict], n_whales: int) -> bytes:
+    """사이트 대표 그림. 큰손들이 합쳐서 가장 많이 들고 있는 종목을 면적으로 보여 준다."""
+    top = sorted((s for s in stocks.values() if s["holders"]), key=lambda s: -s["value"])[:60]
+    total = sum(s["value"] for s in top) or 1
+    rows = []
+    for s in top:
+        ups, dns, exits = stock_moves(s)
+        st = "add" if len(ups) > len(dns) + len(exits) else "trim" if len(dns) + len(exits) > len(ups) else "keep"
+        rows.append({"ticker": s["ticker"], "name": s["name"], "mapped": True, "opt": "", "value": s["value"],
+                     "w": s["value"] / total * 100, "st": st, "pct": 100.0, "n": len(s["holders"])})
+    placed, rest, rest_share = treemap_layout(rows, ogimage.MAP_W, ogimage.MAP_H)
+    tiles = [("OTHER", "", "etc", x, y, w, h) if r is None
+             else (r["ticker"], f"{r['n']} FUNDS", tile_class(r), x, y, w, h)
+             for r, x, y, w, h in placed]
+    sub = f"13F FILINGS   {qlabel(NEWEST)}   {n_whales} INVESTORS TRACKED"
+    return ogimage.card("WHAT THE WHALES HOLD", sub, tiles)
+
+
 def main() -> None:
+    global NEWEST
     managers = _json(os.path.join(ROOT, "managers.json"), [])
     tmap = load_tmap()
     for lang in LANGS:
         NAMES[lang] = _json(os.path.join(HERE, f"names_{lang}.json"), {})
 
     # 생성물만 지운다. site/privacy.html 같은 손으로 쓴 파일은 그대로 둔다.
-    for stale in ("whales", "assets", "data", "ja"):
+    for stale in ("whales", "stocks", "quarters", "guide", "assets", "data", "ja"):
         shutil.rmtree(os.path.join(SITE, stale), ignore_errors=True)
     write(os.path.join(SITE, "assets", "style.css"), CSS.strip() + "\n")
     # Cloudflare Pages는 site/_redirects를 읽는다. 쿼리스트링(?manager=...)은 구분하지 못한다.
@@ -862,26 +1583,91 @@ def main() -> None:
     write(os.path.join(SITE, "robots.txt"), f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
 
     entries = [{"m": m, "quarters": load_manager(m, tmap)} for m in managers]
+    live = [x for x in entries if x["quarters"] and x["m"].get("status") != "ended"]
+
+    # 주식 분할. 손으로 확인한 것만 계산에 반영하고, 추정뿐인 것은 순위에서 빼기만 한다.
+    pinned, vetoed = market.pinned_splits(_json(os.path.join(ROOT, "pipeline", "splits.json"), {}))
+    SPLITS.clear()
+    SPLITS.update(pinned)
+    SUSPECTS.clear()
+    SUSPECTS.update({k: v for k, v in market.find_splits(entries).items() if k not in pinned and k not in vetoed})
+    for x in entries:
+        by = {q["period"]: q for q in x["quarters"]}
+        for q in x["quarters"]:
+            q["mv"] = diff(q, by.get(prev_period(q["period"])), SPLITS)
+
+    RENAMES.clear()
+    RENAMES.update(market.find_renames(entries))
+
+    latest = [x["quarters"][-1]["period"] for x in live]
+    NEWEST = max(set(latest), key=lambda p: (latest.count(p), p)) if latest else ""
+    stocks = market.collect_stocks(entries)
+    SUMMARIES.clear()
+    QUARTER_PAGES.clear()
+    if NEWEST:
+        for p in hist_periods():
+            sm = market.quarter_summary(entries, p)
+            if sm:
+                SUMMARIES[p] = sm
+                QUARTER_PAGES.append(p)
+    STOCK_PAGES.clear()
+    STOCK_PAGES.update(market.pick_stocks(stocks))
+    if NEWEST in SUMMARIES:      # 홈과 최신 분기 요약에 나오는 종목은 눌러서 들어갈 수 있어야 한다
+        ls = summary_lists(SUMMARIES[NEWEST])
+        shown = [s["ticker"] for k in ("bought", "sold", "held") for s in ls[k]]
+        shown += [mv[2]["ticker"] for k in ("big_buys", "big_sells") for mv in ls[k]]
+        STOCK_PAGES.update(t for t in shown if t in stocks)
+
     pages, urls = 0, []
+
+    def emit(lang_root: str, rel: str, url: str, text: str) -> None:
+        nonlocal pages
+        write(os.path.join(lang_root, rel, "index.html"), text)
+        urls.append(url)
+        pages += 1
+
     for lang in LANGS:
         set_lang(lang)
         out_root = os.path.join(SITE, PREFIX[lang].strip("/"))
-        urls.append(PREFIX[lang] + "/")
+        emit(out_root, "", PREFIX[lang] + "/", render_home(entries))
         for x in entries:
             m, quarters = x["m"], x["quarters"]
             for i, q in enumerate(quarters):
                 sub = "" if i == len(quarters) - 1 else qslug(q["period"])
-                write(os.path.join(out_root, "whales", m["slug"], sub, "index.html"),
-                      render_whale(m, quarters, i))
-                urls.append(whale_url(m, q["period"], quarters[-1]["period"]))
-                pages += 1
-        write(os.path.join(out_root, "index.html"), render_home(entries))
-        pages += 1
+                emit(out_root, os.path.join("whales", m["slug"], sub),
+                     whale_url(m, q["period"], quarters[-1]["period"]), render_whale(m, quarters, i))
+        if NEWEST:
+            emit(out_root, "stocks", PREFIX[lang] + "/stocks/", render_stocks_index(stocks))
+            for t in sorted(STOCK_PAGES):
+                emit(out_root, os.path.join("stocks", stock_slug(t)), stock_url(t), render_stock(stocks[t], entries))
+        for p in QUARTER_PAGES:
+            emit(out_root, os.path.join("quarters", qslug(p)), quarter_url(p), render_quarter(SUMMARIES[p]))
+        emit(out_root, "guide", PREFIX[lang] + "/guide/", render_guide(entries))
+
+    # 미리보기 그림은 글자가 영문뿐이라 언어와 상관없이 한 벌만 만든다.
+    for x in entries:
+        if x["quarters"]:
+            q = x["quarters"][-1]
+            write_bytes(os.path.join(SITE, og_path(f"{x['m']['slug']}-{qslug(q['period'])}").lstrip("/")),
+                        og_whale(x["m"], q))
+    write_bytes(os.path.join(SITE, og_path(f"site-{qslug(NEWEST)}" if NEWEST else "site").lstrip("/")),
+                og_site(stocks, len(live)))
+
     write(os.path.join(SITE, "sitemap.xml"),
           '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"<url><loc>{SITE_URL}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
+    write(os.path.join(SITE, "build.txt"), f"inputs {inputs_digest()}\n")
     have = sum(1 for x in entries if x["quarters"])
-    print(f"built {pages} pages in {len(LANGS)} languages  ({have}/{len(managers)} managers with data)")
+    print(f"built {pages} pages in {len(LANGS)} languages  ({have}/{len(managers)} managers with data, "
+          f"{len(STOCK_PAGES)} stock pages, {len(QUARTER_PAGES)} quarter summaries)")
+    if SUSPECTS:
+        # 확인하면 pipeline/splits.json에 옮겨 적는다. 그 전까지는 매매처럼 계산된다.
+        todo = ", ".join(f"{t} {p} ~{market.split_label(k)}" for (t, p), k in sorted(SUSPECTS.items(), key=lambda kv: (kv[0][1], kv[0][0])))
+        print(f"unconfirmed split suspects ({len(SUSPECTS)}): {todo}")
+    if RENAMES:
+        # 같은 종목이면 pipeline/ticker_map.json에서 옛 CUSIP을 새 티커로 잇는다.
+        todo = ", ".join(f"{old} -> {t} {p} ({n} whales)" for (t, p), (old, n) in sorted(RENAMES.items(), key=lambda kv: (kv[0][1], kv[0][0])))
+        print(f"identifier change suspects ({len(RENAMES)}): {todo}")
 
 
 if __name__ == "__main__":
